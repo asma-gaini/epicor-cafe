@@ -44,3 +44,55 @@ body{
 
 /* ************************************************************************ */
 
+.breakfast{
+   direction: rtl;
+   display: flex;
+   flex-wrap: wrap; 
+}
+.breakfast_contant{
+    display: flex;
+    margin: 10px;
+    max-width: 100%;
+    width: 695px;
+    background-color: var(--menu-item);
+    border-radius: 5px;
+    position: relative;
+}
+.breakfast_contant_image img{
+    padding-bottom: 0px;
+    border-radius: 5px;
+    width: 150px;
+    height: auto;
+}
+.breakfast_contant_info h4{
+    line-height: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 10px;
+}
+.breakfast_contant_info p{
+    line-height: 15px;
+    width: 90%;
+    font-size: 0.75rem;
+    opacity: 0.65;
+    padding: 10px;
+
+}
+.breakfast_contant_info_price{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.breakfast_contant_info_price_contant{
+    display: flex;
+}
+.breakfast_contant_info_price_btn{
+    background-color: var(--btn-order);
+    cursor: pointer;
+    padding: 3px;
+    color: var(--white);
+    border-radius: 5px;
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+}
