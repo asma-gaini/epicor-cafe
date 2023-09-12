@@ -96,3 +96,19 @@ body{
     left: 15px;
     bottom: 20px;
 }
+.Purchase-count{
+    border: none;
+    /* width: 70px; */
+    cursor: pointer;
+    padding: 3px;
+    color: var(--white);
+    border-radius: 5px;
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+}
+.btn-counter{
+    width: 20px;
+    background-color: var(--btn-counter);
+    border-radius: 3px;
+}
