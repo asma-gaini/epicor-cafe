@@ -120,6 +120,22 @@ body{
     /* background-color: var(--btn-counter); */
     border-radius: 50%;
 }
+
+.pay-off{
+    box-shadow: rgb(134, 53, 0) 0px -20px 30px -30px inset;
+    background-color: rgb(192, 160, 40);
+    width: 100%;
+    border: none;
+    min-height: 60px;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    direction: rtl;
+    font-family: 'iransans';
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .show{
     display: block;
 }

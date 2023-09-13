@@ -1,7 +1,8 @@
 
 
 $(document).ready(function(){
-    // var counter = 1;
+    var pay = parseInt($(".pay_counter").html());
+    console.log(pay);
     $(".Purchase-count").hide();
     $(".breakfast_contant_info_price_btn").click(function(e){
        
@@ -14,11 +15,20 @@ $(document).ready(function(){
         var counter_val = $(".span").html();
         var counter = parseInt(counter_val);
         console.log(counter);
+        price=0;
+        var price = parseInt($(".price").html());
+        console.log(price);
+        pay += price;
+
+        $(".pay_counter").html(pay + "/000");
         
         $(".btn-counter-Increment").click(function(e){
             counter++;
             console.log(counter);
             $(".span").html(" "+counter+" ");
+            pay += price;
+            console.log(pay);
+            $(".pay_counter").html(pay + "/000");
         })
 
         $(".btn-counter-Decrement").click(function(e){
@@ -32,13 +42,16 @@ $(document).ready(function(){
                 // $(".Purchase-count").append(new_button);
                 // alert("salam")
                 $(".Purchase-count").hide();
-
+                
+                $(".pay_counter").html("0");
 
                 $(".breakfast_contant_info_price_btn").show();
-                console.log(new_button)
             }
             console.log(counter);
             $(".span").html(" "+counter+" ");
+            pay -= price;
+            console.log(pay);
+            $(".pay_counter").html(pay + "/000");
         })
     })
 });
