@@ -106,9 +106,20 @@ body{
     position: absolute;
     left: 15px;
     bottom: 20px;
+    /* display: none; */
 }
-.btn-counter{
+.btn-counter-Decrement{
     width: 20px;
-    background-color: var(--btn-counter);
-    border-radius: 3px;
+    background-color: var(--white);
+    border-radius: 50%;
+   
+}
+.btn-counter-Increment{
+    width: 20px;
+    background-color: var(--white);
+    /* background-color: var(--btn-counter); */
+    border-radius: 50%;
+}
+.show{
+    display: block;
 }
