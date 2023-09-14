@@ -53,11 +53,13 @@ $(document).ready(function(){
 
             spanContantCounter--;
             if (spanContantCounter < 1) {
-                $(".Purchase-count").hide();
+                $(this).parent().hide();
+                // $(".Purchase-count").hide();
                 
                 $(".pay_counter").html("0");
 
-                $(".breakfast_contant_info_price_btn").show();
+                $(this).parent().parent().find("button").show();
+                // $(".breakfast_contant_info_price_btn").show();
             }
             $(this).parent().find("span").html(" "+spanContantCounter+" ");
             console.log("meghdar span bade kam"+$(this).parent().find("span").html());
