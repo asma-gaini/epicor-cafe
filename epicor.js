@@ -26,8 +26,11 @@ $(document).ready(function(){
         console.log("spanContantCounter= " + spanContantCounter);
 
         
-        var price = parseInt($(".price").html());
-        console.log(price);
+        // var price = parseInt($(".price").html());
+        // console.log(price);
+
+        var price = parseInt($(this).parent().siblings("div").find(".price").html());
+        console.log("price = "+price);
         pay += price;
 
         $(".pay_counter").html(pay + "/000");
@@ -36,13 +39,18 @@ $(document).ready(function(){
             spanContantCounter = $(this).parent().find("span").html();
             console.log(" ghbl ezafe kardan = "+spanContantCounter);
             spanContantCounter++;
-            // console.log( "spanContantCounter" + spanContantCounter);
-            // console.log("temp= " + temp);
             
             $(this).parent().find("span").html(" "+spanContantCounter+" ");
             console.log("meghdar span bade ezafe"+$(this).parent().find("span").html());
+
+
+            price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
+            console.log(price)
+            console.log("pay ghabl = "+pay);
+            console.log("price = "+price);
             pay += price;
-            console.log(pay);
+            console.log("price = "+price);
+            console.log("pay bad = "+pay);
             $(".pay_counter").html(pay + "/000");
         })
 
@@ -64,12 +72,16 @@ $(document).ready(function(){
             $(this).parent().find("span").html(" "+spanContantCounter+" ");
             console.log("meghdar span bade kam"+$(this).parent().find("span").html());
 
+
+            price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
             pay -= price;
             console.log(pay);
             $(".pay_counter").html(pay + "/000");
         })
 
     })
-
-    // counter = 1;
 });
+
+
+
+// che bara addad che bara gheymat az yeki ru in yeki miam  yedone az ghabl ezafe karde
