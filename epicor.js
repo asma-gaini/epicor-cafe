@@ -28,7 +28,7 @@ $(document).ready(function(){
             // spanContantCounter = $(this).parent().find("span").html();
 
             spanContantCounter = $(this).siblings("span").html();
-
+// debugger
             console.log(" ghbl ezafe kardan = "+spanContantCounter);
             spanContantCounter++;
             // $(this).parent().find("span").html(" "+spanContantCounter+" ");
@@ -36,14 +36,14 @@ $(document).ready(function(){
             console.log("meghdar span bade ezafe"+$(this).siblings("span").html());
 
 
-            price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
-            console.log(price)
-            console.log("pay ghabl = "+pay);
-            console.log("price = "+price);
-            pay += price;
-            console.log("price = "+price);
-            console.log("pay bad = "+pay);
-            $(".pay_counter").html(pay + "/000");
+            // price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
+            // console.log(price)
+            // console.log("pay ghabl = "+pay);
+            // console.log("price = "+price);
+            // pay += price;
+            // console.log("price = "+price);
+            // console.log("pay bad = "+pay);
+            // $(".pay_counter").html(pay + "/000");
         })
 
         $(".btn-counter-Decrement").click(function(e){
@@ -59,10 +59,10 @@ $(document).ready(function(){
             console.log("meghdar span bade kam" + $(this).siblings("span").html());
 
 
-            price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
-            pay -= price;
-            console.log(pay);
-            $(".pay_counter").html(pay + "/000");
+            // price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
+            // pay -= price;
+            // console.log(pay);
+            // $(".pay_counter").html(pay + "/000");
         })
 
     })
