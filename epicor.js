@@ -1,33 +1,22 @@
 
 $(document).ready(function(){
-    var pay = parseInt($(".pay_counter").html());
-    console.log(pay);
+    // var pay = parseInt($(".pay_counter").html());
+    var pay = 0;
+    console.log("tarif pay = "+pay);
     $(".Purchase-count").hide();
     $(".breakfast_contant_info_price_btn").on("click" ,function(e){
        
         $(this).hide();
         var span = "menu = '" + $(this).attr("menu") + "'"
         console.log(span);
-        // var section_count = $('<div class="Purchase-count"><button class="btn-counter-Decrement">-</button><span class="span"'+span+'>'+$(this).attr('menu')+ '</span><button class="btn-counter-Increment">+</button></div>');
         var section_count = $('<div class="Purchase-count"><button class="btn-counter-Decrement">-</button><span class="span"'+span+'> 1 </span><button class="btn-counter-Increment">+</button></div>');
         $(this).after(section_count);
-
-        // **********************ta inja code dorost kar mikone va span ba menu attribute unic ro dorost sar jash mizare *************
 
         var temp = $(this).attr("menu");
         console.log("temp= " + temp);
 
-        // var counter_val =  $(".span").attr("menu", temp).html();
-        // var counter = parseInt(counter_val);
-        // console.log("counter= " + counter);
-
-       
         var spanContantCounter = parseInt($(this).siblings("div").find("span").html());
         console.log("spanContantCounter= " + spanContantCounter);
-
-        
-        // var price = parseInt($(".price").html());
-        // console.log(price);
 
         var price = parseInt($(this).parent().siblings("div").find(".price").html());
         console.log("price = "+price);
@@ -36,12 +25,15 @@ $(document).ready(function(){
         $(".pay_counter").html(pay + "/000");
         
         $(".btn-counter-Increment").click(function(e){
-            spanContantCounter = $(this).parent().find("span").html();
+            // spanContantCounter = $(this).parent().find("span").html();
+
+            spanContantCounter = $(this).siblings("span").html();
+
             console.log(" ghbl ezafe kardan = "+spanContantCounter);
             spanContantCounter++;
-            
-            $(this).parent().find("span").html(" "+spanContantCounter+" ");
-            console.log("meghdar span bade ezafe"+$(this).parent().find("span").html());
+            // $(this).parent().find("span").html(" "+spanContantCounter+" ");
+            $(this).siblings("span").html(" "+spanContantCounter+" ");
+            console.log("meghdar span bade ezafe"+$(this).siblings("span").html());
 
 
             price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
@@ -55,22 +47,16 @@ $(document).ready(function(){
         })
 
         $(".btn-counter-Decrement").click(function(e){
-            spanContantCounter = $(this).parent().find("span").html();
+            spanContantCounter = $(this).siblings("span").html();
             console.log(" ghbl kam kardan = "+spanContantCounter);
-
-
             spanContantCounter--;
             if (spanContantCounter < 1) {
                 $(this).parent().hide();
-                // $(".Purchase-count").hide();
-                
                 $(".pay_counter").html("0");
-
                 $(this).parent().parent().find("button").show();
-                // $(".breakfast_contant_info_price_btn").show();
             }
-            $(this).parent().find("span").html(" "+spanContantCounter+" ");
-            console.log("meghdar span bade kam"+$(this).parent().find("span").html());
+            $(this).siblings("span").html(" "+spanContantCounter+" ");
+            console.log("meghdar span bade kam" + $(this).siblings("span").html());
 
 
             price = parseInt($(this).parent().parent().siblings("div").find(".price").html());
