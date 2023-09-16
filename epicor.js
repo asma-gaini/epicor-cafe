@@ -1,12 +1,25 @@
 // ********************* global var *********************
+var linkClass = 'menu-bar_section';
 var mainBtnClass = 'breakfast_contant_info_price_btn';
 var mainBtnClass2 = 'minabar_contant_info_price_btn';
+
 
 var pay = 0;
 
 
 $(document).ready(function(){
+	
 });
+
+
+function linked(dataInfo){
+	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
+	// var menuBarSlide = $("div [data-info='"+dataInfo+"']");
+	menuBarSlide.show().siblings("div").hide();
+	// alert("test");
+	// $("button [data-info='"+dataInfo+"']").addClass(".menu-bar_section_click");
+}
+
 
 // ---------------------------------------------------------------------------> breakfast item <---------------------------------------------------------------------------
 
@@ -14,6 +27,7 @@ $(document).ready(function(){
 // ********************* main button for increment or decrement order ----> breakfast *********************
 function AddToBreakfast(customAttr)
 {
+	// var myHtmlTag = sender.getAttribute('menuID');
 	var myHtmlTag = $("button." +mainBtnClass+"[menuID='"+customAttr+"']");
 	myHtmlTag.hide();
     var span = "menuID = '" + myHtmlTag.attr("menuID") + "'";
