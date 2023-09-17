@@ -2,6 +2,7 @@
 var linkClass = 'menu-bar_section';
 var mainBtnClass = 'breakfast_contant_info_price_btn';
 var mainBtnClass2 = 'minabar_contant_info_price_btn';
+var mainBtnClass3 = 'espressobar_contant_info_price_btn';
 
 
 var pay = 0;
@@ -14,10 +15,7 @@ $(document).ready(function(){
 
 function linked(dataInfo){
 	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
-	// var menuBarSlide = $("div [data-info='"+dataInfo+"']");
 	menuBarSlide.show().siblings("div").hide();
-	// alert("test");
-	// $("button [data-info='"+dataInfo+"']").addClass(".menu-bar_section_click");
 }
 
 
@@ -159,4 +157,72 @@ function Decreament2(customClass,customAttr)
 	DecrementPrice2(customAttr);
 }
 
+
+// ---------------------------------------------------------------------------> espressobar item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> espressobar *********************
+function AddToEspressobar(customAttr)
+{
+	var myHtmlTag3 = $("button." +mainBtnClass3+"[menuID3='"+customAttr+"']");
+	myHtmlTag3.hide();
+    var span3 = "menuID3 = '" + myHtmlTag3.attr("menuID3") + "'";
+	var menuIDContent3 = myHtmlTag3.attr("menuID3");
+	var increament_onclick = "onclick=Increament3('span','"+menuIDContent3+"')";
+	var decreament_onclick = "onclick=Decreament3('span','"+menuIDContent3+"')";
+    var section_count3 = $('<div class="Purchase-count" menuID3="'+menuIDContent3+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span3+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag3.after(section_count3);
+
+	primaryPrice3(customAttr);
+}
+// ********************* Click the main button at the same time price ----> espressobar *********************
+function primaryPrice3(customAttr){
+	var price3 = $("h4.price"+"[menuID3='"+customAttr+"']");
+	var price_info3 = parseInt(price3.html());
+	pay += price_info3;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> espressobar *********************
+function IncrementPrice3(customAttr){
+	price3 = $("h4.price"+"[menuID3='"+customAttr+"']");
+	price_info3 = parseInt(price3.html());
+	pay += price_info3;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> espressobar *********************
+function DecrementPrice3(customAttr){
+	price3 = $("h4.price"+"[menuID3='"+customAttr+"']");
+	price_info3 = parseInt(price3.html());
+	pay -= price_info3;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> espressobar *********************
+function Increament3(customClass,customAttr)
+{
+	var increament_counter3 = $("span."+customClass+"[menuID3='"+customAttr+ "']");
+	var counter3 = increament_counter3.html();
+	counter3++;
+	increament_counter3.html(" "+counter3+" ");
+	
+	IncrementPrice3(customAttr);
+}
+// ********************* decrement order button ----> espressobar *********************
+function Decreament3(customClass,customAttr)
+{
+	var decreament_counter3 = $("span."+customClass+"[menuID3='"+customAttr+ "']");
+	var counter3 = decreament_counter3.html();
+	counter3--;
+	
+	if(counter3 < 1)
+	{
+		var parentDiv3 = $("div.Purchase-count[menuID3='"+customAttr+ "']");
+		parentDiv3.hide();
+		var mainButton3 = $("button."+mainBtnClass2+"[menuID3='"+customAttr+"']");
+		mainButton3.show();
+	}
+	
+	decreament_counter3.html(" "+counter3+" ");
+
+	DecrementPrice3(customAttr);
+}
 
