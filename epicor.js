@@ -17,8 +17,11 @@ $(document).ready(function(){
 
 
 function linked(dataInfo){
+	// $("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
+	
 	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
 	menuBarSlide.show().siblings("div").hide();
+	// console.log("asma")
 }
 
 
@@ -366,4 +369,3 @@ function Decreament5(customClass,customAttr)
 
 	DecrementPrice5(customAttr);
 }
-
