@@ -8,7 +8,7 @@ var pay = 0;
 
 
 $(document).ready(function(){
-	
+	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 });
 
 
