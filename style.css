@@ -61,6 +61,18 @@ body{
     flex-wrap: wrap;
     margin-top: -200px;
 }
+.iceCoffee{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -300px;
+}
+.coffeeBar{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -400px;
+}
 
 .menu_contant{
     display: flex;
@@ -75,7 +87,7 @@ body{
     padding-bottom: 0px;
     border-radius: 5px;
     width: 150px;
-    height: auto;
+    height: 100%;
 }
 .menu_contant_info h4{
     line-height: 15px;

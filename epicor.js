@@ -3,6 +3,9 @@ var linkClass = 'menu-bar_section';
 var mainBtnClass = 'breakfast_contant_info_price_btn';
 var mainBtnClass2 = 'minabar_contant_info_price_btn';
 var mainBtnClass3 = 'espressobar_contant_info_price_btn';
+var mainBtnClass4 = 'icecoffee_contant_info_price_btn';
+var mainBtnClass5 = 'coffeebar_contant_info_price_btn';
+
 
 
 var pay = 0;
@@ -224,5 +227,143 @@ function Decreament3(customClass,customAttr)
 	decreament_counter3.html(" "+counter3+" ");
 
 	DecrementPrice3(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> icecoffee item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> icecoffee *********************
+function AddToIcecoffee(customAttr)
+{
+	var myHtmlTag4 = $("button." +mainBtnClass4+"[menuID4='"+customAttr+"']");
+	myHtmlTag4.hide();
+    var span4 = "menuID4 = '" + myHtmlTag4.attr("menuID4") + "'";
+	var menuIDContent4 = myHtmlTag4.attr("menuID4");
+	var increament_onclick = "onclick=Increament4('span','"+menuIDContent4+"')";
+	var decreament_onclick = "onclick=Decreament4('span','"+menuIDContent4+"')";
+    var section_count4 = $('<div class="Purchase-count" menuID4="'+menuIDContent4+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span4+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag4.after(section_count4);
+
+	primaryPrice4(customAttr);
+}
+// ********************* Click the main button at the same time price ----> icecoffee *********************
+function primaryPrice4(customAttr){
+	var price4 = $("h4.price"+"[menuID4='"+customAttr+"']");
+	var price_info4 = parseInt(price4.html());
+	pay += price_info4;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> espressobar *********************
+function IncrementPrice4(customAttr){
+	price4 = $("h4.price"+"[menuID4='"+customAttr+"']");
+	price_info4 = parseInt(price4.html());
+	pay += price_info4;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> espressobar *********************
+function DecrementPrice4(customAttr){
+	price4 = $("h4.price"+"[menuID4='"+customAttr+"']");
+	price_info4 = parseInt(price4.html());
+	pay -= price_info4;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> icecoffee *********************
+function Increament4(customClass,customAttr)
+{
+	var increament_counter4 = $("span."+customClass+"[menuID4='"+customAttr+ "']");
+	var counter4 = increament_counter4.html();
+	counter4++;
+	increament_counter4.html(" "+counter4+" ");
+	
+	IncrementPrice4(customAttr);
+}
+// ********************* decrement order button ----> icecoffee *********************
+function Decreament4(customClass,customAttr)
+{
+	var decreament_counter4 = $("span."+customClass+"[menuID4='"+customAttr+ "']");
+	var counter4 = decreament_counter4.html();
+	counter4--;
+	
+	if(counter4 < 1)
+	{
+		var parentDiv4 = $("div.Purchase-count[menuID4='"+customAttr+ "']");
+		parentDiv4.hide();
+		var mainButton4 = $("button."+mainBtnClass4+"[menuID4='"+customAttr+"']");
+		mainButton4.show();
+	}
+	
+	decreament_counter4.html(" "+counter4+" ");
+
+	DecrementPrice4(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> coffeebar item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> coffeebar *********************
+function AddToCoffeebar(customAttr)
+{
+	var myHtmlTag5 = $("button." +mainBtnClass5+"[menuID5='"+customAttr+"']");
+	myHtmlTag5.hide();
+    var span5 = "menuID5 = '" + myHtmlTag5.attr("menuID5") + "'";
+	var menuIDContent5 = myHtmlTag5.attr("menuID5");
+	var increament_onclick = "onclick=Increament5('span','"+menuIDContent5+"')";
+	var decreament_onclick = "onclick=Decreament5('span','"+menuIDContent5+"')";
+    var section_count5 = $('<div class="Purchase-count" menuID5="'+menuIDContent5+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span5+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag5.after(section_count5);
+
+	primaryPrice5(customAttr);
+}
+// ********************* Click the main button at the same time price ----> coffeebar *********************
+function primaryPrice5(customAttr){
+	var price5 = $("h4.price"+"[menuID5='"+customAttr+"']");
+	var price_info5 = parseInt(price5.html());
+	pay += price_info5;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> coffeebar *********************
+function IncrementPrice5(customAttr){
+	price5 = $("h4.price"+"[menuID5='"+customAttr+"']");
+	price_info5 = parseInt(price5.html());
+	pay += price_info5;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> coffeebar *********************
+function DecrementPrice5(customAttr){
+	price5 = $("h4.price"+"[menuID5='"+customAttr+"']");
+	price_info5 = parseInt(price5.html());
+	pay -= price_info5;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> coffeebar *********************
+function Increament5(customClass,customAttr)
+{
+	var increament_counter5 = $("span."+customClass+"[menuID5='"+customAttr+ "']");
+	var counter5 = increament_counter5.html();
+	counter5++;
+	increament_counter5.html(" "+counter5+" ");
+	
+	IncrementPrice5(customAttr);
+}
+// ********************* decrement order button ----> coffeebar *********************
+function Decreament5(customClass,customAttr)
+{
+	var decreament_counter5 = $("span."+customClass+"[menuID5='"+customAttr+ "']");
+	var counter5 = decreament_counter5.html();
+	counter5--;
+	
+	if(counter5 < 1)
+	{
+		var parentDiv5 = $("div.Purchase-count[menuID5='"+customAttr+ "']");
+		parentDiv5.hide();
+		var mainButton5 = $("button."+mainBtnClass5+"[menuID5='"+customAttr+"']");
+		mainButton5.show();
+	}
+	
+	decreament_counter5.html(" "+counter5+" ");
+
+	DecrementPrice5(customAttr);
 }
 
