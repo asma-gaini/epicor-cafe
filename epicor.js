@@ -6,25 +6,27 @@ var mainBtnClass3 = 'espressobar_contant_info_price_btn';
 var mainBtnClass4 = 'icecoffee_contant_info_price_btn';
 var mainBtnClass5 = 'coffeebar_contant_info_price_btn';
 var mainBtnClass6 = 'hotdrinks_contant_info_price_btn';
-
+var mainBtnClass7 = 'drinkchoise_contant_info_price_btn';
+var mainBtnClass8 = 'naturaljuise_contant_info_price_btn';
+var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
 
 
 var pay = 0;
 
 
 $(document).ready(function(){
-	// $( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
+	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 });
 
 
-// function linked(dataInfo){
+function linked(dataInfo){
 	// $("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
 	
-	// var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
-	// menuBarSlide.show().siblings("div").fadeOut(300);
+	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
+	menuBarSlide.show().siblings("div").fadeOut(300);
 
 	// console.log("asma")
-// }
+}
 
 
 // ---------------------------------------------------------------------------> breakfast item <---------------------------------------------------------------------------
@@ -440,4 +442,212 @@ function Decreament6(customClass,customAttr)
 
 	DecrementPrice6(customAttr);
 }
+
+
+// ---------------------------------------------------------------------------> drinkchoise item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> drinkchoise *********************
+function AddToDrinkchoise(customAttr)
+{
+	var myHtmlTag7 = $("button." +mainBtnClass7+"[menuID7='"+customAttr+"']");
+	myHtmlTag7.hide();
+    var span7 = "menuID7 = '" + myHtmlTag7.attr("menuID7") + "'";
+	var menuIDContent7 = myHtmlTag7.attr("menuID7");
+	var increament_onclick = "onclick=Increament7('span','"+menuIDContent7+"')";
+	var decreament_onclick = "onclick=Decreament7('span','"+menuIDContent7+"')";
+    var section_count7 = $('<div class="Purchase-count" menuID7="'+menuIDContent7+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span7+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag7.after(section_count7);
+
+	primaryPrice7(customAttr);
+}
+// ********************* Click the main button at the same time price ----> drinkchoise *********************
+function primaryPrice7(customAttr){
+	var price7 = $("h4.price"+"[menuID7='"+customAttr+"']");
+	var price_info7 = parseInt(price7.html());
+	pay += price_info7;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> drinkchoise *********************
+function IncrementPrice7(customAttr){
+	price7 = $("h4.price"+"[menuID7='"+customAttr+"']");
+	price_info7 = parseInt(price7.html());
+	pay += price_info7;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> drinkchoise *********************
+function DecrementPrice7(customAttr){
+	price7 = $("h4.price"+"[menuID7='"+customAttr+"']");
+	price_info7 = parseInt(price7.html());
+	pay -= price_info7;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> drinkchoise *********************
+function Increament7(customClass,customAttr)
+{
+	var increament_counter7 = $("span."+customClass+"[menuID7='"+customAttr+ "']");
+	var counter7 = increament_counter7.html();
+	counter7++;
+	increament_counter7.html(" "+counter7+" ");
+	
+	IncrementPrice7(customAttr);
+}
+// ********************* decrement order button ----> drinkchoise *********************
+function Decreament7(customClass,customAttr)
+{
+	var decreament_counter7 = $("span."+customClass+"[menuID7='"+customAttr+ "']");
+	var counter7 = decreament_counter7.html();
+	counter7--;
+	
+	if(counter7 < 1)
+	{
+		var parentDiv7 = $("div.Purchase-count[menuID7='"+customAttr+ "']");
+		parentDiv7.hide();
+		var mainButton7 = $("button."+mainBtnClass7+"[menuID7='"+customAttr+"']");
+		mainButton7.show();
+	}
+	
+	decreament_counter7.html(" "+counter7+" ");
+
+	DecrementPrice7(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> naturaljuise item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> naturaljuise *********************
+function AddToNaturaljuise(customAttr)
+{
+	var myHtmlTag8 = $("button." +mainBtnClass8+"[menuID8='"+customAttr+"']");
+	myHtmlTag8.hide();
+    var span8 = "menuID8 = '" + myHtmlTag8.attr("menuID8") + "'";
+	var menuIDContent8 = myHtmlTag8.attr("menuID8");
+	var increament_onclick = "onclick=Increament8('span','"+menuIDContent8+"')";
+	var decreament_onclick = "onclick=Decreament8('span','"+menuIDContent8+"')";
+    var section_count8 = $('<div class="Purchase-count" menuID8="'+menuIDContent8+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span8+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag8.after(section_count8);
+
+	primaryPrice8(customAttr);
+}
+// ********************* Click the main button at the same time price ----> naturaljuise *********************
+function primaryPrice8(customAttr){
+	var price8 = $("h4.price"+"[menuID8='"+customAttr+"']");
+	var price_info8 = parseInt(price8.html());
+	pay += price_info8;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> naturaljuise *********************
+function IncrementPrice8(customAttr){
+	price8 = $("h4.price"+"[menuID8='"+customAttr+"']");
+	price_info8 = parseInt(price8.html());
+	pay += price_info8;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> naturaljuise *********************
+function DecrementPrice8(customAttr){
+	price8 = $("h4.price"+"[menuID8='"+customAttr+"']");
+	price_info8 = parseInt(price8.html());
+	pay -= price_info8;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> naturaljuise *********************
+function Increament8(customClass,customAttr)
+{
+	var increament_counter8 = $("span."+customClass+"[menuID8='"+customAttr+ "']");
+	var counter8 = increament_counter8.html();
+	counter8++;
+	increament_counter8.html(" "+counter8+" ");
+	
+	IncrementPrice8(customAttr);
+}
+// ********************* decrement order button ----> naturaljuise *********************
+function Decreament8(customClass,customAttr)
+{
+	var decreament_counter8 = $("span."+customClass+"[menuID8='"+customAttr+ "']");
+	var counter8 = decreament_counter8.html();
+	counter8--;
+	
+	if(counter8 < 1)
+	{
+		var parentDiv8 = $("div.Purchase-count[menuID8='"+customAttr+ "']");
+		parentDiv8.hide();
+		var mainButton8 = $("button."+mainBtnClass8+"[menuID8='"+customAttr+"']");
+		mainButton8.show();
+	}
+	
+	decreament_counter8.html(" "+counter8+" ");
+
+	DecrementPrice8(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> smoothiebulls item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> smoothiebulls *********************
+function AddToSmoothiebulls(customAttr)
+{
+	var myHtmlTag9 = $("button." +mainBtnClass9+"[menuID9='"+customAttr+"']");
+	myHtmlTag9.hide();
+    var span9 = "menuID9 = '" + myHtmlTag9.attr("menuID9") + "'";
+	var menuIDContent9 = myHtmlTag9.attr("menuID9");
+	var increament_onclick = "onclick=Increament9('span','"+menuIDContent9+"')";
+	var decreament_onclick = "onclick=Decreament9('span','"+menuIDContent9+"')";
+    var section_count9 = $('<div class="Purchase-count" menuID9="'+menuIDContent9+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span9+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag9.after(section_count9);
+
+	primaryPrice9(customAttr);
+}
+// ********************* Click the main button at the same time price ----> smoothiebulls *********************
+function primaryPrice9(customAttr){
+	var price9 = $("h4.price"+"[menuID9='"+customAttr+"']");
+	var price_info9 = parseInt(price9.html());
+	pay += price_info9;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> smoothiebulls *********************
+function IncrementPrice9(customAttr){
+	price9 = $("h4.price"+"[menuID9='"+customAttr+"']");
+	price_info9 = parseInt(price9.html());
+	pay += price_info9;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> smoothiebulls *********************
+function DecrementPrice9(customAttr){
+	price9 = $("h4.price"+"[menuID9='"+customAttr+"']");
+	price_info9 = parseInt(price9.html());
+	pay -= price_info9;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> smoothiebulls *********************
+function Increament9(customClass,customAttr)
+{
+	var increament_counter9 = $("span."+customClass+"[menuID9='"+customAttr+ "']");
+	var counter9 = increament_counter9.html();
+	counter9++;
+	increament_counter9.html(" "+counter9+" ");
+	
+	IncrementPrice9(customAttr);
+}
+// ********************* decrement order button ----> smoothiebulls *********************
+function Decreament9(customClass,customAttr)
+{
+	var decreament_counter9 = $("span."+customClass+"[menuID9='"+customAttr+ "']");
+	var counter9 = decreament_counter9.html();
+	counter9--;
+	
+	if(counter9 < 1)
+	{
+		var parentDiv9 = $("div.Purchase-count[menuID9='"+customAttr+ "']");
+		parentDiv9.hide();
+		var mainButton9 = $("button."+mainBtnClass9+"[menuID9='"+customAttr+"']");
+		mainButton9.show();
+	}
+	
+	decreament_counter9.html(" "+counter9+" ");
+
+	DecrementPrice9(customAttr);
+}
+
 
