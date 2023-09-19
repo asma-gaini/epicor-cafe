@@ -98,6 +98,12 @@ body{
     flex-wrap: wrap;
     margin-top: -800px;
 }
+.milkShake{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -900px;
+}
 
 .menu_contant{
     display: flex;

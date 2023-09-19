@@ -9,6 +9,7 @@ var mainBtnClass6 = 'hotdrinks_contant_info_price_btn';
 var mainBtnClass7 = 'drinkchoise_contant_info_price_btn';
 var mainBtnClass8 = 'naturaljuise_contant_info_price_btn';
 var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
+var mainBtnClass10 = 'milkshake_contant_info_price_btn';
 
 
 var pay = 0;
@@ -648,6 +649,75 @@ function Decreament9(customClass,customAttr)
 	decreament_counter9.html(" "+counter9+" ");
 
 	DecrementPrice9(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> milkshake item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> milkshake *********************
+function AddToMilkshake(customAttr)
+{
+	var myHtmlTag10 = $("button." +mainBtnClass10+"[menuID10='"+customAttr+"']");
+	myHtmlTag10.hide();
+    var span10 = "menuID10 = '" + myHtmlTag10.attr("menuID10") + "'";
+	var menuIDContent10 = myHtmlTag10.attr("menuID10");
+	var increament_onclick = "onclick=Increament10('span','"+menuIDContent10+"')";
+	var decreament_onclick = "onclick=Decreament10('span','"+menuIDContent10+"')";
+    var section_count10 = $('<div class="Purchase-count" menuID10="'+menuIDContent10+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span10+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag10.after(section_count10);
+
+	primaryPrice10(customAttr);
+}
+// ********************* Click the main button at the same time price ----> milkshake *********************
+function primaryPrice10(customAttr){
+	var price10 = $("h4.price"+"[menuID10='"+customAttr+"']");
+	var price_info10 = parseInt(price10.html());
+	pay += price_info10;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> milkshake *********************
+function IncrementPrice10(customAttr){
+	price10 = $("h4.price"+"[menuID10='"+customAttr+"']");
+	price_info10 = parseInt(price10.html());
+	pay += price_info10;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> milkshake *********************
+function DecrementPrice10(customAttr){
+	price10 = $("h4.price"+"[menuID10='"+customAttr+"']");
+	price_info10 = parseInt(price10.html());
+	pay -= price_info10;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> milkshake *********************
+function Increament10(customClass,customAttr)
+{
+	var increament_counter10 = $("span."+customClass+"[menuID10='"+customAttr+ "']");
+	var counter10 = increament_counter10.html();
+	counter10++;
+	increament_counter10.html(" "+counter10+" ");
+	
+	IncrementPrice10(customAttr);
+}
+// ********************* decrement order button ----> milkshake *********************
+function Decreament10(customClass,customAttr)
+{
+	var decreament_counter10 = $("span."+customClass+"[menuID10='"+customAttr+ "']");
+	var counter10 = decreament_counter10.html();
+	counter10--;
+	
+	if(counter10 < 1)
+	{
+		var parentDiv10 = $("div.Purchase-count[menuID10='"+customAttr+ "']");
+		parentDiv10.hide();
+		var mainButton10 = $("button."+mainBtnClass10+"[menuID10='"+customAttr+"']");
+		mainButton10.show();
+	}
+	
+	decreament_counter10.html(" "+counter10+" ");
+
+	DecrementPrice10(customAttr);
 }
 
 
