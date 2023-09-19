@@ -10,21 +10,23 @@ var mainBtnClass7 = 'drinkchoise_contant_info_price_btn';
 var mainBtnClass8 = 'naturaljuise_contant_info_price_btn';
 var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
 var mainBtnClass10 = 'milkshake_contant_info_price_btn';
+var mainBtnClass11 = 'cake_contant_info_price_btn';
+var mainBtnClass12 = 'appetizers_contant_info_price_btn';
 
 
 var pay = 0;
 
 
 $(document).ready(function(){
-	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
+	// $( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 });
 
 
 function linked(dataInfo){
 	// $("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
 	
-	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
-	menuBarSlide.show().siblings("div").fadeOut(300);
+	// var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
+	// menuBarSlide.show().siblings("div").fadeOut(300);
 
 	// console.log("asma")
 }
@@ -719,5 +721,212 @@ function Decreament10(customClass,customAttr)
 
 	DecrementPrice10(customAttr);
 }
+
+
+// ---------------------------------------------------------------------------> cake item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> cake *********************
+function AddToCake(customAttr)
+{
+	var myHtmlTag11 = $("button." +mainBtnClass11+"[menuID11='"+customAttr+"']");
+	myHtmlTag11.hide();
+    var span11 = "menuID11 = '" + myHtmlTag11.attr("menuID11") + "'";
+	var menuIDContent11 = myHtmlTag11.attr("menuID11");
+	var increament_onclick = "onclick=Increament11('span','"+menuIDContent11+"')";
+	var decreament_onclick = "onclick=Decreament11('span','"+menuIDContent11+"')";
+    var section_count11 = $('<div class="Purchase-count" menuID11="'+menuIDContent11+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span11+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag11.after(section_count11);
+
+	primaryPrice11(customAttr);
+}
+// ********************* Click the main button at the same time price ----> cake *********************
+function primaryPrice11(customAttr){
+	var price11 = $("h4.price"+"[menuID11='"+customAttr+"']");
+	var price_info11 = parseInt(price11.html());
+	pay += price_info11;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> cake *********************
+function IncrementPrice11(customAttr){
+	price11 = $("h4.price"+"[menuID11='"+customAttr+"']");
+	price_info11 = parseInt(price11.html());
+	pay += price_info11;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> cake *********************
+function DecrementPrice11(customAttr){
+	price11 = $("h4.price"+"[menuID11='"+customAttr+"']");
+	price_info11 = parseInt(price11.html());
+	pay -= price_info11;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> cake *********************
+function Increament11(customClass,customAttr)
+{
+	var increament_counter11 = $("span."+customClass+"[menuID11='"+customAttr+ "']");
+	var counter11 = increament_counter11.html();
+	counter11++;
+	increament_counter11.html(" "+counter11+" ");
+	
+	IncrementPrice11(customAttr);
+}
+// ********************* decrement order button ----> cake *********************
+function Decreament11(customClass,customAttr)
+{
+	var decreament_counter11 = $("span."+customClass+"[menuID11='"+customAttr+ "']");
+	var counter11 = decreament_counter11.html();
+	counter11--;
+	
+	if(counter11 < 1)
+	{
+		var parentDiv11 = $("div.Purchase-count[menuID11='"+customAttr+ "']");
+		parentDiv11.hide();
+		var mainButton11 = $("button."+mainBtnClass11+"[menuID11='"+customAttr+"']");
+		mainButton11.show();
+	}
+	
+	decreament_counter11.html(" "+counter11+" ");
+
+	DecrementPrice11(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> appetizers item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> appetizers *********************
+function AddToAppetizers(customAttr)
+{
+	var myHtmlTag12 = $("button." +mainBtnClass12+"[menuID12='"+customAttr+"']");
+	myHtmlTag12.hide();
+    var span12 = "menuID12 = '" + myHtmlTag12.attr("menuID12") + "'";
+	var menuIDContent12 = myHtmlTag12.attr("menuID12");
+	var increament_onclick = "onclick=Increament12('span','"+menuIDContent12+"')";
+	var decreament_onclick = "onclick=Decreament12('span','"+menuIDContent12+"')";
+    var section_count12 = $('<div class="Purchase-count" menuID12="'+menuIDContent12+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span12+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag12.after(section_count12);
+
+	primaryPrice12(customAttr);
+}
+// ********************* Click the main button at the same time price ----> appetizers *********************
+function primaryPrice12(customAttr){
+	var price12 = $("h4.price"+"[menuID12='"+customAttr+"']");
+	var price_info12 = parseInt(price12.html());
+	pay += price_info12;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> appetizers *********************
+function IncrementPrice12(customAttr){
+	price12 = $("h4.price"+"[menuID12='"+customAttr+"']");
+	price_info12 = parseInt(price12.html());
+	pay += price_info12;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> appetizers *********************
+function DecrementPrice12(customAttr){
+	price12 = $("h4.price"+"[menuID12='"+customAttr+"']");
+	price_info12 = parseInt(price12.html());
+	pay -= price_info12;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> appetizers *********************
+function Increament12(customClass,customAttr)
+{
+	var increament_counter12 = $("span."+customClass+"[menuID12='"+customAttr+ "']");
+	var counter12 = increament_counter12.html();
+	counter12++;
+	increament_counter12.html(" "+counter12+" ");
+	
+	IncrementPrice12(customAttr);
+}
+// ********************* decrement order button ----> appetizers *********************
+function Decreament12(customClass,customAttr)
+{
+	var decreament_counter12 = $("span."+customClass+"[menuID12='"+customAttr+ "']");
+	var counter12 = decreament_counter12.html();
+	counter12--;
+	
+	if(counter12 < 1)
+	{
+		var parentDiv12 = $("div.Purchase-count[menuID12='"+customAttr+ "']");
+		parentDiv12.hide();
+		var mainButton12 = $("button."+mainBtnClass12+"[menuID12='"+customAttr+"']");
+		mainButton12.show();
+	}
+	
+	decreament_counter12.html(" "+counter12+" ");
+
+	DecrementPrice12(customAttr);
+}
+
+
+// // ---------------------------------------------------------------------------> milkshake item <---------------------------------------------------------------------------
+
+
+// // ********************* main button for increment or decrement order ----> milkshake *********************
+// function AddToMilkshake(customAttr)
+// {
+// 	var myHtmlTag13 = $("button." +mainBtnClass13+"[menuID13='"+customAttr+"']");
+// 	myHtmlTag13.hide();
+//     var span13 = "menuID13 = '" + myHtmlTag13.attr("menuID13") + "'";
+// 	var menuIDContent13 = myHtmlTag13.attr("menuID13");
+// 	var increament_onclick = "onclick=Increament13('span','"+menuIDContent13+"')";
+// 	var decreament_onclick = "onclick=Decreament13('span','"+menuIDContent13+"')";
+//     var section_count13 = $('<div class="Purchase-count" menuID13="'+menuIDContent13+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span13+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+//     myHtmlTag13.after(section_count13);
+
+// 	primaryPrice13(customAttr);
+// }
+// // ********************* Click the main button at the same time price ----> milkshake *********************
+// function primaryPrice13(customAttr){
+// 	var price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
+// 	var price_info13 = parseInt(price13.html());
+// 	pay += price_info13;
+// 	$(".pay_counter").html(" "+pay + "/000 ");
+// }
+// // ********************* increment price ----> milkshake *********************
+// function IncrementPrice13(customAttr){
+// 	price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
+// 	price_info13 = parseInt(price13.html());
+// 	pay += price_info13;
+// 	$(".pay_counter").html(" "+pay + "/000 ");
+// }
+// // ********************* decrement price ----> milkshake *********************
+// function DecrementPrice13(customAttr){
+// 	price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
+// 	price_info13 = parseInt(price13.html());
+// 	pay -= price_info13;
+// 	$(".pay_counter").html(" "+pay + "/000 ");
+// }
+// // ********************* increment order button ----> milkshake *********************
+// function Increament13(customClass,customAttr)
+// {
+// 	var increament_counter13 = $("span."+customClass+"[menuID13='"+customAttr+ "']");
+// 	var counter13 = increament_counter13.html();
+// 	counter13++;
+// 	increament_counter13.html(" "+counter13+" ");
+	
+// 	IncrementPrice13(customAttr);
+// }
+// // ********************* decrement order button ----> milkshake *********************
+// function Decreament13(customClass,customAttr)
+// {
+// 	var decreament_counter13 = $("span."+customClass+"[menuID13='"+customAttr+ "']");
+// 	var counter13 = decreament_counter13.html();
+// 	counter13--;
+	
+// 	if(counter13 < 1)
+// 	{
+// 		var parentDiv13 = $("div.Purchase-count[menuID13='"+customAttr+ "']");
+// 		parentDiv13.hide();
+// 		var mainButton13 = $("button."+mainBtnClass13+"[menuID13='"+customAttr+"']");
+// 		mainButton13.show();
+// 	}
+	
+// 	decreament_counter13.html(" "+counter13+" ");
+
+// 	DecrementPrice13(customAttr);
+// }
 
 
