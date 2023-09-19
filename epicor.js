@@ -5,6 +5,7 @@ var mainBtnClass2 = 'minabar_contant_info_price_btn';
 var mainBtnClass3 = 'espressobar_contant_info_price_btn';
 var mainBtnClass4 = 'icecoffee_contant_info_price_btn';
 var mainBtnClass5 = 'coffeebar_contant_info_price_btn';
+var mainBtnClass6 = 'hotdrinks_contant_info_price_btn';
 
 
 
@@ -12,17 +13,18 @@ var pay = 0;
 
 
 $(document).ready(function(){
-	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
+	// $( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 });
 
 
-function linked(dataInfo){
+// function linked(dataInfo){
 	// $("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
 	
-	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
-	menuBarSlide.show().siblings("div").hide();
+	// var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
+	// menuBarSlide.show().siblings("div").fadeOut(300);
+
 	// console.log("asma")
-}
+// }
 
 
 // ---------------------------------------------------------------------------> breakfast item <---------------------------------------------------------------------------
@@ -369,3 +371,73 @@ function Decreament5(customClass,customAttr)
 
 	DecrementPrice5(customAttr);
 }
+
+
+// ---------------------------------------------------------------------------> hotdrinks item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> hotdrinks *********************
+function AddToHotdrinks(customAttr)
+{
+	var myHtmlTag6 = $("button." +mainBtnClass6+"[menuID6='"+customAttr+"']");
+	myHtmlTag6.hide();
+    var span6 = "menuID6 = '" + myHtmlTag6.attr("menuID6") + "'";
+	var menuIDContent6 = myHtmlTag6.attr("menuID6");
+	var increament_onclick = "onclick=Increament6('span','"+menuIDContent6+"')";
+	var decreament_onclick = "onclick=Decreament6('span','"+menuIDContent6+"')";
+    var section_count6 = $('<div class="Purchase-count" menuID6="'+menuIDContent6+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span6+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag6.after(section_count6);
+
+	primaryPrice6(customAttr);
+}
+// ********************* Click the main button at the same time price ----> hotdrinks *********************
+function primaryPrice6(customAttr){
+	var price6 = $("h4.price"+"[menuID6='"+customAttr+"']");
+	var price_info6 = parseInt(price6.html());
+	pay += price_info6;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> hotdrinks *********************
+function IncrementPrice6(customAttr){
+	price6 = $("h4.price"+"[menuID6='"+customAttr+"']");
+	price_info6 = parseInt(price6.html());
+	pay += price_info6;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> hotdrinks *********************
+function DecrementPrice6(customAttr){
+	price6 = $("h4.price"+"[menuID6='"+customAttr+"']");
+	price_info6 = parseInt(price6.html());
+	pay -= price_info6;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> hotdrinks *********************
+function Increament6(customClass,customAttr)
+{
+	var increament_counter6 = $("span."+customClass+"[menuID6='"+customAttr+ "']");
+	var counter6 = increament_counter6.html();
+	counter6++;
+	increament_counter6.html(" "+counter6+" ");
+	
+	IncrementPrice6(customAttr);
+}
+// ********************* decrement order button ----> hotdrinks *********************
+function Decreament6(customClass,customAttr)
+{
+	var decreament_counter6 = $("span."+customClass+"[menuID6='"+customAttr+ "']");
+	var counter6 = decreament_counter6.html();
+	counter6--;
+	
+	if(counter6 < 1)
+	{
+		var parentDiv6 = $("div.Purchase-count[menuID6='"+customAttr+ "']");
+		parentDiv6.hide();
+		var mainButton6 = $("button."+mainBtnClass6+"[menuID6='"+customAttr+"']");
+		mainButton6.show();
+	}
+	
+	decreament_counter6.html(" "+counter6+" ");
+
+	DecrementPrice6(customAttr);
+}
+

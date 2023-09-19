@@ -53,25 +53,32 @@ body{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -100px;
+    /* margin-top: -100px; */
 }
 .espressoBar{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -200px;
+    /* margin-top: -200px; */
 }
 .iceCoffee{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -300px;
+    /* margin-top: -300px; */
 }
 .coffeeBar{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -400px;
+    /* margin-top: -400px; */
+}
+
+.hotDrinks{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: -500px; */
 }
 
 .menu_contant{
@@ -182,6 +189,7 @@ body{
      rgba(134, 53, 0, 0.02);
     margin: 10px 5px;
     min-width: 90px;
+    border: none;
 }
 .menu-bar_section_click{
     background-color: rgb(196, 145, 91);
