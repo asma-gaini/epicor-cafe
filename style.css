@@ -53,68 +53,116 @@ body{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -100px; */
+    margin-top: -100px;
 }
 .espressoBar{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -200px; */
+    margin-top: -200px;
 }
 .iceCoffee{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -300px; */
+    margin-top: -300px;
 }
 .coffeeBar{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -400px; */
+    margin-top: -400px;
 }
 
 .hotDrinks{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -500px; */
+    margin-top: -500px;
 }
 .drinkChoise{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -600px; */
+    margin-top: -600px;
 }
 .naturalJuise{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -700px; */
+    margin-top: -700px;
 }
 .smoothieBulls{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -800px; */
+    margin-top: -800px;
 }
 .milkShake{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -900px; */
+    margin-top: -900px;
 }
 .cake{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -1000px; */
+    margin-top: -1000px;
 }
 .appetizers{
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -1100px; */
+    margin-top: -1100px;
+}
+.fries{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1200px;
+}
+.sandwiches{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1300px;
+}
+.pasta{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1400px;
+}
+.grill{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1500px;
+}
+.accompanying{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1600px;
+}
+.sauces{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1700px;
+}
+.pizza{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1800px;
+}
+.persian{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1900px;
 }
 
 .menu_contant{

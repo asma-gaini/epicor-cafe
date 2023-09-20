@@ -12,21 +12,29 @@ var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
 var mainBtnClass10 = 'milkshake_contant_info_price_btn';
 var mainBtnClass11 = 'cake_contant_info_price_btn';
 var mainBtnClass12 = 'appetizers_contant_info_price_btn';
+var mainBtnClass13 = 'fries_contant_info_price_btn';
+var mainBtnClass14 = 'sandwiches_contant_info_price_btn';
+var mainBtnClass15 = 'pasta_contant_info_price_btn';
+var mainBtnClass16 = 'grill_contant_info_price_btn';
+var mainBtnClass17 = 'accompanying_contant_info_price_btn';
+var mainBtnClass18 = 'sauces_contant_info_price_btn';
+var mainBtnClass19 = 'pizza_contant_info_price_btn';
+var mainBtnClass20 = 'persian_contant_info_price_btn';
 
 
 var pay = 0;
 
 
 $(document).ready(function(){
-	// $( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
+	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 });
 
 
 function linked(dataInfo){
 	// $("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
 	
-	// var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
-	// menuBarSlide.show().siblings("div").fadeOut(300);
+	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
+	menuBarSlide.show().siblings("div").fadeOut(300);
 
 	// console.log("asma")
 }
@@ -861,72 +869,556 @@ function Decreament12(customClass,customAttr)
 }
 
 
-// // ---------------------------------------------------------------------------> milkshake item <---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------> fries item <---------------------------------------------------------------------------
 
 
-// // ********************* main button for increment or decrement order ----> milkshake *********************
-// function AddToMilkshake(customAttr)
-// {
-// 	var myHtmlTag13 = $("button." +mainBtnClass13+"[menuID13='"+customAttr+"']");
-// 	myHtmlTag13.hide();
-//     var span13 = "menuID13 = '" + myHtmlTag13.attr("menuID13") + "'";
-// 	var menuIDContent13 = myHtmlTag13.attr("menuID13");
-// 	var increament_onclick = "onclick=Increament13('span','"+menuIDContent13+"')";
-// 	var decreament_onclick = "onclick=Decreament13('span','"+menuIDContent13+"')";
-//     var section_count13 = $('<div class="Purchase-count" menuID13="'+menuIDContent13+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span13+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
-//     myHtmlTag13.after(section_count13);
+// ********************* main button for increment or decrement order ----> fries *********************
+function AddToFries(customAttr)
+{
+	var myHtmlTag13 = $("button." +mainBtnClass13+"[menuID13='"+customAttr+"']");
+	myHtmlTag13.hide();
+    var span13 = "menuID13 = '" + myHtmlTag13.attr("menuID13") + "'";
+	var menuIDContent13 = myHtmlTag13.attr("menuID13");
+	var increament_onclick = "onclick=Increament13('span','"+menuIDContent13+"')";
+	var decreament_onclick = "onclick=Decreament13('span','"+menuIDContent13+"')";
+    var section_count13 = $('<div class="Purchase-count" menuID13="'+menuIDContent13+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span13+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag13.after(section_count13);
 
-// 	primaryPrice13(customAttr);
-// }
-// // ********************* Click the main button at the same time price ----> milkshake *********************
-// function primaryPrice13(customAttr){
-// 	var price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
-// 	var price_info13 = parseInt(price13.html());
-// 	pay += price_info13;
-// 	$(".pay_counter").html(" "+pay + "/000 ");
-// }
-// // ********************* increment price ----> milkshake *********************
-// function IncrementPrice13(customAttr){
-// 	price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
-// 	price_info13 = parseInt(price13.html());
-// 	pay += price_info13;
-// 	$(".pay_counter").html(" "+pay + "/000 ");
-// }
-// // ********************* decrement price ----> milkshake *********************
-// function DecrementPrice13(customAttr){
-// 	price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
-// 	price_info13 = parseInt(price13.html());
-// 	pay -= price_info13;
-// 	$(".pay_counter").html(" "+pay + "/000 ");
-// }
-// // ********************* increment order button ----> milkshake *********************
-// function Increament13(customClass,customAttr)
-// {
-// 	var increament_counter13 = $("span."+customClass+"[menuID13='"+customAttr+ "']");
-// 	var counter13 = increament_counter13.html();
-// 	counter13++;
-// 	increament_counter13.html(" "+counter13+" ");
+	primaryPrice13(customAttr);
+}
+// ********************* Click the main button at the same time price ----> fries *********************
+function primaryPrice13(customAttr){
+	var price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
+	var price_info13 = parseInt(price13.html());
+	pay += price_info13;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> fries *********************
+function IncrementPrice13(customAttr){
+	price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
+	price_info13 = parseInt(price13.html());
+	pay += price_info13;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> fries *********************
+function DecrementPrice13(customAttr){
+	price13 = $("h4.price"+"[menuID13='"+customAttr+"']");
+	price_info13 = parseInt(price13.html());
+	pay -= price_info13;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> fries *********************
+function Increament13(customClass,customAttr)
+{
+	var increament_counter13 = $("span."+customClass+"[menuID13='"+customAttr+ "']");
+	var counter13 = increament_counter13.html();
+	counter13++;
+	increament_counter13.html(" "+counter13+" ");
 	
-// 	IncrementPrice13(customAttr);
-// }
-// // ********************* decrement order button ----> milkshake *********************
-// function Decreament13(customClass,customAttr)
-// {
-// 	var decreament_counter13 = $("span."+customClass+"[menuID13='"+customAttr+ "']");
-// 	var counter13 = decreament_counter13.html();
-// 	counter13--;
+	IncrementPrice13(customAttr);
+}
+// ********************* decrement order button ----> fries *********************
+function Decreament13(customClass,customAttr)
+{
+	var decreament_counter13 = $("span."+customClass+"[menuID13='"+customAttr+ "']");
+	var counter13 = decreament_counter13.html();
+	counter13--;
 	
-// 	if(counter13 < 1)
-// 	{
-// 		var parentDiv13 = $("div.Purchase-count[menuID13='"+customAttr+ "']");
-// 		parentDiv13.hide();
-// 		var mainButton13 = $("button."+mainBtnClass13+"[menuID13='"+customAttr+"']");
-// 		mainButton13.show();
-// 	}
+	if(counter13 < 1)
+	{
+		var parentDiv13 = $("div.Purchase-count[menuID13='"+customAttr+ "']");
+		parentDiv13.hide();
+		var mainButton13 = $("button."+mainBtnClass13+"[menuID13='"+customAttr+"']");
+		mainButton13.show();
+	}
 	
-// 	decreament_counter13.html(" "+counter13+" ");
+	decreament_counter13.html(" "+counter13+" ");
 
-// 	DecrementPrice13(customAttr);
-// }
+	DecrementPrice13(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> sandwiches item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> sandwiches *********************
+function AddToSandwiches(customAttr)
+{
+	var myHtmlTag14 = $("button." +mainBtnClass14+"[menuID14='"+customAttr+"']");
+	myHtmlTag14.hide();
+    var span14 = "menuID14 = '" + myHtmlTag14.attr("menuID14") + "'";
+	var menuIDContent14 = myHtmlTag14.attr("menuID14");
+	var increament_onclick = "onclick=Increament14('span','"+menuIDContent14+"')";
+	var decreament_onclick = "onclick=Decreament14('span','"+menuIDContent14+"')";
+    var section_count14 = $('<div class="Purchase-count" menuID14="'+menuIDContent14+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span14+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag14.after(section_count14);
+
+	primaryPrice14(customAttr);
+}
+// ********************* Click the main button at the same time price ----> sandwiches *********************
+function primaryPrice14(customAttr){
+	var price14 = $("h4.price"+"[menuID14='"+customAttr+"']");
+	var price_info14 = parseInt(price14.html());
+	pay += price_info14;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> sandwiches *********************
+function IncrementPrice14(customAttr){
+	price14 = $("h4.price"+"[menuID14='"+customAttr+"']");
+	price_info14 = parseInt(price14.html());
+	pay += price_info14;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> sandwiches *********************
+function DecrementPrice14(customAttr){
+	price14 = $("h4.price"+"[menuID14='"+customAttr+"']");
+	price_info14 = parseInt(price14.html());
+	pay -= price_info14;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> sandwiches *********************
+function Increament14(customClass,customAttr)
+{
+	var increament_counter14 = $("span."+customClass+"[menuID14='"+customAttr+ "']");
+	var counter14 = increament_counter14.html();
+	counter14++;
+	increament_counter14.html(" "+counter14+" ");
+	
+	IncrementPrice14(customAttr);
+}
+// ********************* decrement order button ----> sandwiches *********************
+function Decreament14(customClass,customAttr)
+{
+	var decreament_counter14 = $("span."+customClass+"[menuID14='"+customAttr+ "']");
+	var counter14 = decreament_counter14.html();
+	counter14--;
+	
+	if(counter14 < 1)
+	{
+		var parentDiv14 = $("div.Purchase-count[menuID14='"+customAttr+ "']");
+		parentDiv14.hide();
+		var mainButton14 = $("button."+mainBtnClass14+"[menuID14='"+customAttr+"']");
+		mainButton14.show();
+	}
+	
+	decreament_counter14.html(" "+counter14+" ");
+
+	DecrementPrice14(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> pasta item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> pasta *********************
+function AddToPasta(customAttr)
+{
+	var myHtmlTag15 = $("button." +mainBtnClass15+"[menuID15='"+customAttr+"']");
+	myHtmlTag15.hide();
+    var span15 = "menuID15 = '" + myHtmlTag15.attr("menuID15") + "'";
+	var menuIDContent15 = myHtmlTag15.attr("menuID15");
+	var increament_onclick = "onclick=Increament15('span','"+menuIDContent15+"')";
+	var decreament_onclick = "onclick=Decreament15('span','"+menuIDContent15+"')";
+    var section_count15 = $('<div class="Purchase-count" menuID15="'+menuIDContent15+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span15+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag15.after(section_count15);
+
+	primaryPrice15(customAttr);
+}
+// ********************* Click the main button at the same time price ----> pasta *********************
+function primaryPrice15(customAttr){
+	var price15 = $("h4.price"+"[menuID15='"+customAttr+"']");
+	var price_info15 = parseInt(price15.html());
+	pay += price_info15;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> pasta *********************
+function IncrementPrice15(customAttr){
+	price15 = $("h4.price"+"[menuID15='"+customAttr+"']");
+	price_info15 = parseInt(price15.html());
+	pay += price_info15;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> pasta *********************
+function DecrementPrice15(customAttr){
+	price15 = $("h4.price"+"[menuID15='"+customAttr+"']");
+	price_info15 = parseInt(price15.html());
+	pay -= price_info15;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> pasta *********************
+function Increament15(customClass,customAttr)
+{
+	var increament_counter15 = $("span."+customClass+"[menuID15='"+customAttr+ "']");
+	var counter15 = increament_counter15.html();
+	counter15++;
+	increament_counter15.html(" "+counter15+" ");
+	
+	IncrementPrice15(customAttr);
+}
+// ********************* decrement order button ----> pasta *********************
+function Decreament15(customClass,customAttr)
+{
+	var decreament_counter15 = $("span."+customClass+"[menuID15='"+customAttr+ "']");
+	var counter15 = decreament_counter15.html();
+	counter15--;
+	
+	if(counter15 < 1)
+	{
+		var parentDiv15 = $("div.Purchase-count[menuID15='"+customAttr+ "']");
+		parentDiv15.hide();
+		var mainButton15 = $("button."+mainBtnClass15+"[menuID15='"+customAttr+"']");
+		mainButton15.show();
+	}
+	
+	decreament_counter15.html(" "+counter15+" ");
+
+	DecrementPrice15(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> grill item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> grill *********************
+function AddToGrill(customAttr)
+{
+	var myHtmlTag16 = $("button." +mainBtnClass16+"[menuID16='"+customAttr+"']");
+	myHtmlTag16.hide();
+    var span16 = "menuID16 = '" + myHtmlTag16.attr("menuID16") + "'";
+	var menuIDContent16 = myHtmlTag16.attr("menuID16");
+	var increament_onclick = "onclick=Increament16('span','"+menuIDContent16+"')";
+	var decreament_onclick = "onclick=Decreament16('span','"+menuIDContent16+"')";
+    var section_count16 = $('<div class="Purchase-count" menuID16="'+menuIDContent16+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span16+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag16.after(section_count16);
+
+	primaryPrice16(customAttr);
+}
+// ********************* Click the main button at the same time price ----> grill *********************
+function primaryPrice16(customAttr){
+	var price16 = $("h4.price"+"[menuID16='"+customAttr+"']");
+	var price_info16 = parseInt(price16.html());
+	pay += price_info16;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> grill *********************
+function IncrementPrice16(customAttr){
+	price16 = $("h4.price"+"[menuID16='"+customAttr+"']");
+	price_info16 = parseInt(price16.html());
+	pay += price_info16;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> grill *********************
+function DecrementPrice16(customAttr){
+	price16 = $("h4.price"+"[menuID16='"+customAttr+"']");
+	price_info16 = parseInt(price16.html());
+	pay -= price_info16;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> grill *********************
+function Increament16(customClass,customAttr)
+{
+	var increament_counter16 = $("span."+customClass+"[menuID16='"+customAttr+ "']");
+	var counter16 = increament_counter16.html();
+	counter16++;
+	increament_counter16.html(" "+counter16+" ");
+	
+	IncrementPrice16(customAttr);
+}
+// ********************* decrement order button ----> grill *********************
+function Decreament16(customClass,customAttr)
+{
+	var decreament_counter16 = $("span."+customClass+"[menuID16='"+customAttr+ "']");
+	var counter16 = decreament_counter16.html();
+	counter16--;
+	
+	if(counter16 < 1)
+	{
+		var parentDiv16 = $("div.Purchase-count[menuID16='"+customAttr+ "']");
+		parentDiv16.hide();
+		var mainButton16 = $("button."+mainBtnClass16+"[menuID16='"+customAttr+"']");
+		mainButton16.show();
+	}
+	
+	decreament_counter16.html(" "+counter16+" ");
+
+	DecrementPrice16(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> accompanying item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> accompanying *********************
+function AddToAccompanying(customAttr)
+{
+	var myHtmlTag17 = $("button." +mainBtnClass17+"[menuID17='"+customAttr+"']");
+	myHtmlTag17.hide();
+    var span17 = "menuID17 = '" + myHtmlTag17.attr("menuID17") + "'";
+	var menuIDContent17 = myHtmlTag17.attr("menuID17");
+	var increament_onclick = "onclick=Increament17('span','"+menuIDContent17+"')";
+	var decreament_onclick = "onclick=Decreament17('span','"+menuIDContent17+"')";
+    var section_count17 = $('<div class="Purchase-count" menuID17="'+menuIDContent17+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span17+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag17.after(section_count17);
+
+	primaryPrice17(customAttr);
+}
+// ********************* Click the main button at the same time price ----> accompanying *********************
+function primaryPrice17(customAttr){
+	var price17 = $("h4.price"+"[menuID17='"+customAttr+"']");
+	var price_info17 = parseInt(price17.html());
+	pay += price_info17;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> accompanying *********************
+function IncrementPrice17(customAttr){
+	price17 = $("h4.price"+"[menuID17='"+customAttr+"']");
+	price_info17 = parseInt(price17.html());
+	pay += price_info17;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> accompanying *********************
+function DecrementPrice17(customAttr){
+	price17 = $("h4.price"+"[menuID17='"+customAttr+"']");
+	price_info17 = parseInt(price17.html());
+	pay -= price_info17;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> accompanying *********************
+function Increament17(customClass,customAttr)
+{
+	var increament_counter17 = $("span."+customClass+"[menuID17='"+customAttr+ "']");
+	var counter17 = increament_counter17.html();
+	counter17++;
+	increament_counter17.html(" "+counter17+" ");
+	
+	IncrementPrice17(customAttr);
+}
+// ********************* decrement order button ----> accompanying *********************
+function Decreament17(customClass,customAttr)
+{
+	var decreament_counter17 = $("span."+customClass+"[menuID17='"+customAttr+ "']");
+	var counter17 = decreament_counter17.html();
+	counter17--;
+	
+	if(counter17 < 1)
+	{
+		var parentDiv17 = $("div.Purchase-count[menuID17='"+customAttr+ "']");
+		parentDiv17.hide();
+		var mainButton17 = $("button."+mainBtnClass17+"[menuID17='"+customAttr+"']");
+		mainButton17.show();
+	}
+	
+	decreament_counter17.html(" "+counter17+" ");
+
+	DecrementPrice17(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> sauces item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> sauces *********************
+function AddToSauces(customAttr)
+{
+	var myHtmlTag18 = $("button." +mainBtnClass18+"[menuID18='"+customAttr+"']");
+	myHtmlTag18.hide();
+    var span18 = "menuID18 = '" + myHtmlTag18.attr("menuID18") + "'";
+	var menuIDContent18 = myHtmlTag18.attr("menuID18");
+	var increament_onclick = "onclick=Increament18('span','"+menuIDContent18+"')";
+	var decreament_onclick = "onclick=Decreament18('span','"+menuIDContent18+"')";
+    var section_count18 = $('<div class="Purchase-count" menuID18="'+menuIDContent18+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span18+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag18.after(section_count18);
+
+	primaryPrice18(customAttr);
+}
+// ********************* Click the main button at the same time price ----> sauces *********************
+function primaryPrice18(customAttr){
+	var price18 = $("h4.price"+"[menuID18='"+customAttr+"']");
+	var price_info18 = parseInt(price18.html());
+	pay += price_info18;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> sauces *********************
+function IncrementPrice18(customAttr){
+	price18 = $("h4.price"+"[menuID18='"+customAttr+"']");
+	price_info18 = parseInt(price18.html());
+	pay += price_info18;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> sauces *********************
+function DecrementPrice18(customAttr){
+	price18 = $("h4.price"+"[menuID18='"+customAttr+"']");
+	price_info18 = parseInt(price18.html());
+	pay -= price_info18;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> sauces *********************
+function Increament18(customClass,customAttr)
+{
+	var increament_counter18 = $("span."+customClass+"[menuID18='"+customAttr+ "']");
+	var counter18 = increament_counter18.html();
+	counter18++;
+	increament_counter18.html(" "+counter18+" ");
+	
+	IncrementPrice18(customAttr);
+}
+// ********************* decrement order button ----> sauces *********************
+function Decreament18(customClass,customAttr)
+{
+	var decreament_counter18 = $("span."+customClass+"[menuID18='"+customAttr+ "']");
+	var counter18 = decreament_counter18.html();
+	counter18--;
+	
+	if(counter18 < 1)
+	{
+		var parentDiv18 = $("div.Purchase-count[menuID18='"+customAttr+ "']");
+		parentDiv18.hide();
+		var mainButton18 = $("button."+mainBtnClass18+"[menuID18='"+customAttr+"']");
+		mainButton18.show();
+	}
+	
+	decreament_counter18.html(" "+counter18+" ");
+
+	DecrementPrice18(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> pizza item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> pizza *********************
+function AddToPizza(customAttr)
+{
+	var myHtmlTag19 = $("button." +mainBtnClass19+"[menuID19='"+customAttr+"']");
+	myHtmlTag19.hide();
+    var span19 = "menuID19 = '" + myHtmlTag19.attr("menuID19") + "'";
+	var menuIDContent19 = myHtmlTag19.attr("menuID19");
+	var increament_onclick = "onclick=Increament19('span','"+menuIDContent19+"')";
+	var decreament_onclick = "onclick=Decreament19('span','"+menuIDContent19+"')";
+    var section_count19 = $('<div class="Purchase-count" menuID13="'+menuIDContent19+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span19+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag19.after(section_count19);
+
+	primaryPrice19(customAttr);
+}
+// ********************* Click the main button at the same time price ----> pizza *********************
+function primaryPrice19(customAttr){
+	var price19 = $("h4.price"+"[menuID19='"+customAttr+"']");
+	var price_info19 = parseInt(price19.html());
+	pay += price_info19;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> pizza *********************
+function IncrementPrice19(customAttr){
+	price19 = $("h4.price"+"[menuID19='"+customAttr+"']");
+	price_info19 = parseInt(price19.html());
+	pay += price_info19;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> pizza *********************
+function DecrementPrice19(customAttr){
+	price19 = $("h4.price"+"[menuID19='"+customAttr+"']");
+	price_info19 = parseInt(price19.html());
+	pay -= price_info19;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> pizza *********************
+function Increament19(customClass,customAttr)
+{
+	var increament_counter19 = $("span."+customClass+"[menuID19='"+customAttr+ "']");
+	var counter19 = increament_counter19.html();
+	counter19++;
+	increament_counter19.html(" "+counter19+" ");
+	
+	IncrementPrice19(customAttr);
+}
+// ********************* decrement order button ----> pizza *********************
+function Decreament19(customClass,customAttr)
+{
+	var decreament_counter19 = $("span."+customClass+"[menuID19='"+customAttr+ "']");
+	var counter19 = decreament_counter19.html();
+	counter19--;
+	
+	if(counter19 < 1)
+	{
+		var parentDiv19 = $("div.Purchase-count[menuID19='"+customAttr+ "']");
+		parentDiv19.hide();
+		var mainButton19 = $("button."+mainBtnClass19+"[menuID19='"+customAttr+"']");
+		mainButton19.show();
+	}
+	
+	decreament_counter19.html(" "+counter19+" ");
+
+	DecrementPrice19(customAttr);
+}
+
+
+// ---------------------------------------------------------------------------> milkshake item <---------------------------------------------------------------------------
+
+
+// ********************* main button for increment or decrement order ----> milkshake *********************
+function AddToPersian(customAttr)
+{
+	var myHtmlTag20 = $("button." +mainBtnClass20+"[menuID20='"+customAttr+"']");
+	myHtmlTag20.hide();
+    var span20 = "menuID20 = '" + myHtmlTag20.attr("menuID20") + "'";
+	var menuIDContent20 = myHtmlTag20.attr("menuID20");
+	var increament_onclick = "onclick=Increament20('span','"+menuIDContent20+"')";
+	var decreament_onclick = "onclick=Decreament20('span','"+menuIDContent20+"')";
+    var section_count20 = $('<div class="Purchase-count" menuID20="'+menuIDContent20+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span20+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    myHtmlTag20.after(section_count20);
+
+	primaryPrice20(customAttr);
+}
+// ********************* Click the main button at the same time price ----> milkshake *********************
+function primaryPrice20(customAttr){
+	var price20 = $("h4.price"+"[menuID20='"+customAttr+"']");
+	var price_info20 = parseInt(price20.html());
+	pay += price_info20;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment price ----> milkshake *********************
+function IncrementPrice20(customAttr){
+	price20 = $("h4.price"+"[menuID20='"+customAttr+"']");
+	price_info20 = parseInt(price20.html());
+	pay += price_info20;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* decrement price ----> milkshake *********************
+function DecrementPrice20(customAttr){
+	price20 = $("h4.price"+"[menuID20='"+customAttr+"']");
+	price_info20 = parseInt(price20.html());
+	pay -= price_info20;
+	$(".pay_counter").html(" "+pay + "/000 ");
+}
+// ********************* increment order button ----> milkshake *********************
+function Increament20(customClass,customAttr)
+{
+	var increament_counter20 = $("span."+customClass+"[menuID20='"+customAttr+ "']");
+	var counter20 = increament_counter20.html();
+	counter20++;
+	increament_counter20.html(" "+counter20+" ");
+	
+	IncrementPrice20(customAttr);
+}
+// ********************* decrement order button ----> milkshake *********************
+function Decreament20(customClass,customAttr)
+{
+	var decreament_counter20 = $("span."+customClass+"[menuID20='"+customAttr+ "']");
+	var counter20 = decreament_counter20.html();
+	counter20--;
+	
+	if(counter20 < 1)
+	{
+		var parentDiv20 = $("div.Purchase-count[menuID20='"+customAttr+ "']");
+		parentDiv20.hide();
+		var mainButton20 = $("button."+mainBtnClass20+"[menuID20='"+customAttr+"']");
+		mainButton20.show();
+	}
+	
+	decreament_counter20.html(" "+counter20+" ");
+
+	DecrementPrice20(customAttr);
+}
+
 
 
