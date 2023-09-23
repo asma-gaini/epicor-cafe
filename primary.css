@@ -4,4 +4,9 @@
     --menu-item: rgba(178, 157, 84, 0.8);
     --btn-order: #ab6130;
     --btn-counter: rgb(207, 137, 80);
+    --menubar: linear-gradient(to left top, rgba(134, 53, 0, 0.09),
+    rgba(134, 53, 0, 0))
+    rgba(134, 53, 0, 0.02);
+    --menubar-click-primary: rgb(196, 145, 91);
+    --menubar-click: radial-gradient(circle, rgb(221, 178, 131), rgb(210, 119, 21), rgb(106, 56, 2));
 }

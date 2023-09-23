@@ -38,8 +38,6 @@ function linked(dataInfo){
 	
 	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
 	menuBarSlide.show().siblings("div").fadeOut(300);
-
-	// console.log("asma")
 }
 
 
@@ -1355,10 +1353,10 @@ function Decreament19(customClass,customAttr)
 }
 
 
-// ---------------------------------------------------------------------------> milkshake item <---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------> Persian item <---------------------------------------------------------------------------
 
 
-// ********************* main button for increment or decrement order ----> milkshake *********************
+// ********************* main button for increment or decrement order ----> Persian *********************
 function AddToPersian(customAttr)
 {
 	var myHtmlTag20 = $("button." +mainBtnClass20+"[menuID20='"+customAttr+"']");
@@ -1372,28 +1370,28 @@ function AddToPersian(customAttr)
 
 	primaryPrice20(customAttr);
 }
-// ********************* Click the main button at the same time price ----> milkshake *********************
+// ********************* Click the main button at the same time price ----> Persian *********************
 function primaryPrice20(customAttr){
 	var price20 = $("h4.price"+"[menuID20='"+customAttr+"']");
 	var price_info20 = parseInt(price20.html());
 	pay += price_info20;
 	$(".pay_counter").html(" "+pay + "/000 ");
 }
-// ********************* increment price ----> milkshake *********************
+// ********************* increment price ----> Persian *********************
 function IncrementPrice20(customAttr){
 	price20 = $("h4.price"+"[menuID20='"+customAttr+"']");
 	price_info20 = parseInt(price20.html());
 	pay += price_info20;
 	$(".pay_counter").html(" "+pay + "/000 ");
 }
-// ********************* decrement price ----> milkshake *********************
+// ********************* decrement price ----> Persian *********************
 function DecrementPrice20(customAttr){
 	price20 = $("h4.price"+"[menuID20='"+customAttr+"']");
 	price_info20 = parseInt(price20.html());
 	pay -= price_info20;
 	$(".pay_counter").html(" "+pay + "/000 ");
 }
-// ********************* increment order button ----> milkshake *********************
+// ********************* increment order button ----> Persian *********************
 function Increament20(customClass,customAttr)
 {
 	var increament_counter20 = $("span."+customClass+"[menuID20='"+customAttr+ "']");
@@ -1403,7 +1401,7 @@ function Increament20(customClass,customAttr)
 	
 	IncrementPrice20(customAttr);
 }
-// ********************* decrement order button ----> milkshake *********************
+// ********************* decrement order button ----> Persian *********************
 function Decreament20(customClass,customAttr)
 {
 	var decreament_counter20 = $("span."+customClass+"[menuID20='"+customAttr+ "']");
