@@ -27,11 +27,14 @@ var pay = 0;
 
 $(document).ready(function(){
 	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
+	$( "button"+"[data-info ='1']" ).addClass("menu-bar_section_click");
+
 });
 
 
 function linked(dataInfo){
-	// $("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
+	$("button.menu-bar_section").removeClass("menu-bar_section_click");
+	$("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
 	
 	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
 	menuBarSlide.show().siblings("div").fadeOut(300);
