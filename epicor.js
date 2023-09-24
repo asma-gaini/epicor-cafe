@@ -28,7 +28,9 @@ var pay = 0;
 $(document).ready(function(){
 	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 	$( "button"+"[data-info ='1']" ).addClass("menu-bar_section_click");
-
+	if (pay == 0) {
+		$("div.pay").hide();
+	}
 });
 
 
@@ -58,6 +60,11 @@ function AddToBreakfast(customAttr)
     myHtmlTag.after(section_count);
 
 	primaryPrice(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> breakfast *********************
 function primaryPrice(customAttr){
@@ -79,6 +86,11 @@ function DecrementPrice(customAttr){
 	price_info = parseInt(price.html());
 	pay -= price_info;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> breakfast *********************
 function Increament(customClass,customAttr)
@@ -104,7 +116,9 @@ function Decreament(customClass,customAttr)
 		var mainButton = $("button."+mainBtnClass+"[menuID='"+customAttr+"']");
 		mainButton.show();
 	}
-	
+	// if (pay == 0) {
+	// 	$("div.pay").hide();
+	// }
 	decreament_counter.html(" "+counter+" ");
 
 	DecrementPrice(customAttr);
@@ -127,6 +141,11 @@ function AddToMinabar(customAttr)
     myHtmlTag2.after(section_count2);
 
 	primaryPrice2(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> minabar *********************
 function primaryPrice2(customAttr){
@@ -148,6 +167,11 @@ function DecrementPrice2(customAttr){
 	price_info2 = parseInt(price2.html());
 	pay -= price_info2;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> minabar *********************
 function Increament2(customClass,customAttr)
@@ -196,6 +220,11 @@ function AddToEspressobar(customAttr)
     myHtmlTag3.after(section_count3);
 
 	primaryPrice3(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> espressobar *********************
 function primaryPrice3(customAttr){
@@ -217,6 +246,11 @@ function DecrementPrice3(customAttr){
 	price_info3 = parseInt(price3.html());
 	pay -= price_info3;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> espressobar *********************
 function Increament3(customClass,customAttr)
@@ -265,6 +299,11 @@ function AddToIcecoffee(customAttr)
     myHtmlTag4.after(section_count4);
 
 	primaryPrice4(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> icecoffee *********************
 function primaryPrice4(customAttr){
@@ -286,6 +325,11 @@ function DecrementPrice4(customAttr){
 	price_info4 = parseInt(price4.html());
 	pay -= price_info4;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> icecoffee *********************
 function Increament4(customClass,customAttr)
@@ -334,6 +378,11 @@ function AddToCoffeebar(customAttr)
     myHtmlTag5.after(section_count5);
 
 	primaryPrice5(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> coffeebar *********************
 function primaryPrice5(customAttr){
@@ -355,6 +404,11 @@ function DecrementPrice5(customAttr){
 	price_info5 = parseInt(price5.html());
 	pay -= price_info5;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> coffeebar *********************
 function Increament5(customClass,customAttr)
@@ -403,6 +457,11 @@ function AddToHotdrinks(customAttr)
     myHtmlTag6.after(section_count6);
 
 	primaryPrice6(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> hotdrinks *********************
 function primaryPrice6(customAttr){
@@ -424,6 +483,11 @@ function DecrementPrice6(customAttr){
 	price_info6 = parseInt(price6.html());
 	pay -= price_info6;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> hotdrinks *********************
 function Increament6(customClass,customAttr)
@@ -472,6 +536,11 @@ function AddToDrinkchoise(customAttr)
     myHtmlTag7.after(section_count7);
 
 	primaryPrice7(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> drinkchoise *********************
 function primaryPrice7(customAttr){
@@ -493,6 +562,11 @@ function DecrementPrice7(customAttr){
 	price_info7 = parseInt(price7.html());
 	pay -= price_info7;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> drinkchoise *********************
 function Increament7(customClass,customAttr)
@@ -541,6 +615,11 @@ function AddToNaturaljuise(customAttr)
     myHtmlTag8.after(section_count8);
 
 	primaryPrice8(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> naturaljuise *********************
 function primaryPrice8(customAttr){
@@ -562,6 +641,11 @@ function DecrementPrice8(customAttr){
 	price_info8 = parseInt(price8.html());
 	pay -= price_info8;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> naturaljuise *********************
 function Increament8(customClass,customAttr)
@@ -610,6 +694,11 @@ function AddToSmoothiebulls(customAttr)
     myHtmlTag9.after(section_count9);
 
 	primaryPrice9(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> smoothiebulls *********************
 function primaryPrice9(customAttr){
@@ -631,6 +720,11 @@ function DecrementPrice9(customAttr){
 	price_info9 = parseInt(price9.html());
 	pay -= price_info9;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> smoothiebulls *********************
 function Increament9(customClass,customAttr)
@@ -679,6 +773,11 @@ function AddToMilkshake(customAttr)
     myHtmlTag10.after(section_count10);
 
 	primaryPrice10(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> milkshake *********************
 function primaryPrice10(customAttr){
@@ -700,6 +799,11 @@ function DecrementPrice10(customAttr){
 	price_info10 = parseInt(price10.html());
 	pay -= price_info10;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> milkshake *********************
 function Increament10(customClass,customAttr)
@@ -748,6 +852,11 @@ function AddToCake(customAttr)
     myHtmlTag11.after(section_count11);
 
 	primaryPrice11(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> cake *********************
 function primaryPrice11(customAttr){
@@ -769,6 +878,11 @@ function DecrementPrice11(customAttr){
 	price_info11 = parseInt(price11.html());
 	pay -= price_info11;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> cake *********************
 function Increament11(customClass,customAttr)
@@ -817,6 +931,11 @@ function AddToAppetizers(customAttr)
     myHtmlTag12.after(section_count12);
 
 	primaryPrice12(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> appetizers *********************
 function primaryPrice12(customAttr){
@@ -838,6 +957,11 @@ function DecrementPrice12(customAttr){
 	price_info12 = parseInt(price12.html());
 	pay -= price_info12;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> appetizers *********************
 function Increament12(customClass,customAttr)
@@ -886,6 +1010,11 @@ function AddToFries(customAttr)
     myHtmlTag13.after(section_count13);
 
 	primaryPrice13(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> fries *********************
 function primaryPrice13(customAttr){
@@ -907,6 +1036,11 @@ function DecrementPrice13(customAttr){
 	price_info13 = parseInt(price13.html());
 	pay -= price_info13;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> fries *********************
 function Increament13(customClass,customAttr)
@@ -955,6 +1089,11 @@ function AddToSandwiches(customAttr)
     myHtmlTag14.after(section_count14);
 
 	primaryPrice14(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> sandwiches *********************
 function primaryPrice14(customAttr){
@@ -976,6 +1115,11 @@ function DecrementPrice14(customAttr){
 	price_info14 = parseInt(price14.html());
 	pay -= price_info14;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> sandwiches *********************
 function Increament14(customClass,customAttr)
@@ -1024,6 +1168,11 @@ function AddToPasta(customAttr)
     myHtmlTag15.after(section_count15);
 
 	primaryPrice15(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> pasta *********************
 function primaryPrice15(customAttr){
@@ -1045,6 +1194,11 @@ function DecrementPrice15(customAttr){
 	price_info15 = parseInt(price15.html());
 	pay -= price_info15;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> pasta *********************
 function Increament15(customClass,customAttr)
@@ -1093,6 +1247,11 @@ function AddToGrill(customAttr)
     myHtmlTag16.after(section_count16);
 
 	primaryPrice16(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> grill *********************
 function primaryPrice16(customAttr){
@@ -1114,6 +1273,11 @@ function DecrementPrice16(customAttr){
 	price_info16 = parseInt(price16.html());
 	pay -= price_info16;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> grill *********************
 function Increament16(customClass,customAttr)
@@ -1162,6 +1326,11 @@ function AddToAccompanying(customAttr)
     myHtmlTag17.after(section_count17);
 
 	primaryPrice17(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> accompanying *********************
 function primaryPrice17(customAttr){
@@ -1183,6 +1352,11 @@ function DecrementPrice17(customAttr){
 	price_info17 = parseInt(price17.html());
 	pay -= price_info17;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> accompanying *********************
 function Increament17(customClass,customAttr)
@@ -1231,6 +1405,11 @@ function AddToSauces(customAttr)
     myHtmlTag18.after(section_count18);
 
 	primaryPrice18(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> sauces *********************
 function primaryPrice18(customAttr){
@@ -1252,6 +1431,11 @@ function DecrementPrice18(customAttr){
 	price_info18 = parseInt(price18.html());
 	pay -= price_info18;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> sauces *********************
 function Increament18(customClass,customAttr)
@@ -1300,6 +1484,11 @@ function AddToPizza(customAttr)
     myHtmlTag19.after(section_count19);
 
 	primaryPrice19(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> pizza *********************
 function primaryPrice19(customAttr){
@@ -1321,6 +1510,11 @@ function DecrementPrice19(customAttr){
 	price_info19 = parseInt(price19.html());
 	pay -= price_info19;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> pizza *********************
 function Increament19(customClass,customAttr)
@@ -1369,6 +1563,11 @@ function AddToPersian(customAttr)
     myHtmlTag20.after(section_count20);
 
 	primaryPrice20(customAttr);
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* Click the main button at the same time price ----> Persian *********************
 function primaryPrice20(customAttr){
@@ -1390,6 +1589,11 @@ function DecrementPrice20(customAttr){
 	price_info20 = parseInt(price20.html());
 	pay -= price_info20;
 	$(".pay_counter").html(" "+pay + "/000 ");
+	if (pay == 0) {
+		$("div.pay").hide();
+	}else{
+		$("div.pay").show();
+	}
 }
 // ********************* increment order button ----> Persian *********************
 function Increament20(customClass,customAttr)

@@ -8,7 +8,6 @@ body{
     box-sizing: border-box;
     color: var(--white);
 }
-/* dir="rtl" */
 
 .info-header{
     display: flex;
@@ -237,7 +236,9 @@ body{
     display: block;
 }
 
-
+.sliders{
+    margin: 0px 30px;
+}
 .menu-bar{
     direction: rtl;
     display: flex;
@@ -275,4 +276,21 @@ body{
     font-size: 11px;
     padding: 3px 0;
     padding-bottom: 8px;
+}
+.hrLine{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 30px;
+}
+.hrLine p{
+    color: var(--hrLineFont);
+}
+.hrLine span{
+    background-color:var(--hrLineBack);
+    flex-grow: 1;
+    height: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }

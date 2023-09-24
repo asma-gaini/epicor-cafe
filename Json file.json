@@ -3,6 +3,9 @@
     [
         {
             "CategoryID" : 1,
+            "headerNameFA": "صبحانه",
+            "headerNameEN": "breakfast",
+            "headerImg": "./menu cafe/breakfast/63fd588c75bdd.png",
             "breakfastInfo":[
                 {
                     "Title": "صبحانه ایرانی",
@@ -48,6 +51,9 @@
         },
         {
             "CategoryID" : 2,
+            "headerNameFA": "مینا بار",
+            "headerNameEN": "mina bar",
+            "headerImg": "./menu cafe/minabar/minabar.png",
             "minabarInfo":[
                 {
                     "Title": "اسپرسو",
@@ -93,6 +99,9 @@
         },
         {
             "CategoryID" : 3,
+            "headerNameFA": "اسپرسو بلند",
+            "headerNameEN": "Espresso Bar",
+            "headerImg": "./menu cafe/espresso bar/espressobar.png",
             "espressoBarInfo":[
                 {
                     "Title": "اسپرسو سینگل",
@@ -133,6 +142,9 @@
         },
         {
             "CategoryID" : 4,
+            "headerNameFA": "قهوه های سرد",
+            "headerNameEN": "Ice Coffee",
+            "headerImg": "./menu cafe/ice cofee/ice cofee.png",
             "iceCoffeeInfo":[
                 {
                     "Title": "آیس لاته",
@@ -163,6 +175,9 @@
         },
         {
             "CategoryID" : 5,
+            "headerNameFA": "سایفون بار و قهوه های دمی",
+            "headerNameEN": "Cofee bar",
+            "headerImg": "./menu cafe/cofee bar/cofee bar.png",
             "minaBarInfo":[
                 {
                     "Title": "سایفون تک نفره",
@@ -208,6 +223,9 @@
         },
         {
             "CategoryID" : 6,
+            "headerNameFA": "چای بار و نوشیدنی های گرم",
+            "headerNameEN": "Hot Drinks",
+            "headerImg": "./menu cafe/hot drinks/hot drinks.png",
             "hotDrinksInfo":[
                 {
                     "Title": "چای سیاه ایرونی تک نفره",
@@ -278,6 +296,9 @@
         },
         {
             "CategoryID" : 7,
+            "headerNameFA": "دمنوش انتخابی شما",
+            "headerNameEN": "the drink of your choice",
+            "headerImg": "./menu cafe/drink chois/drink chois.png",
             "drinkChoiseInfo":[
                 {
                     "Title": "آرامش",
@@ -293,6 +314,9 @@
         },
         {
             "CategoryID" : 8,
+            "headerNameFA": "آبمیوه طبیعی،موکتل،اسموتی",
+            "headerNameEN": "Natural juice",
+            "headerImg": "./menu cafe/natural juice/natural juice.png",
             "naturalJuiseInfo":[
                 {
                     "Title": "آبمیوه طبیعی",
@@ -362,6 +386,9 @@
         },
         {
             "CategoryID" : 9,
+            "headerNameFA": "اسموتی بولز",
+            "headerNameEN": "Smoothie bulls",
+            "headerImg": "./menu cafe/smoothie/smoothie.png",
             "smoothieBullsInfo":[
                 {
                     "Title": "شکلات دیوانه",
@@ -379,6 +406,9 @@
         },
         {
             "CategoryID" : 10,
+            "headerNameFA": "شیک ها",
+            "headerNameEN": "Milkshake",
+            "headerImg": "./menu cafe/shake/shake.png",
             "milkShakeInfo":[
                 {
                     "Title": "شکلات",
@@ -434,6 +464,9 @@
         },
         {
             "CategoryID" : 11,
+            "headerNameFA": "کیک و شیرینی",
+            "headerNameEN": "Cakes and sweets",
+            "headerImg": "./menu cafe/cakes/cakes.png",
             "cakeInfo":[
                 {
                     "Title": "چیز کیک نیویورکی",
@@ -510,6 +543,9 @@
         },
         {
             "CategoryID" : 12,
+            "headerNameFA": "پیش غذا ها و سالاد ها",
+            "headerNameEN": "Appetizars",
+            "headerImg": "./menu cafe/appetizers/appetizers.png",
             "appetizersInfo":[
                 {
                     "Title": "سالاد سزار",
@@ -569,6 +605,9 @@
         },
         {
             "CategoryID" : 13,
+            "headerNameFA": "سرخ شدنی ها",
+            "headerNameEN": "Fries",
+            "headerImg": "./menu cafe/fries/fries.png",
             "friesInfo":[
                 {
                     "Title": "فرنچ فرایز",
@@ -596,6 +635,9 @@
         },
         {
             "CategoryID" : 14,
+            "headerNameFA": "پنی و ساندویچ ها",
+            "headerNameEN": "Sandwiches",
+            "headerImg": "./menu cafe/sandwich/sandwich.png",
             "sandwichesInfo":[
                 {
                     "Title": "پنی مرغ و سبزیجات",
@@ -636,6 +678,9 @@
         },
         {
             "CategoryID" : 15,
+            "headerNameFA": "پاستا",
+            "headerNameEN": "Pasta",
+            "headerImg": "./menu cafe/pasta/pasta.png",
             "pastaInfo":[
                 {
                     "Title": "پاستا آلفردو",
@@ -651,6 +696,9 @@
         },
         {
             "CategoryID" : 16,
+            "headerNameFA": "گریل",
+            "headerNameEN": "Grill",
+            "headerImg": "./menu cafe/grill/grill.png",
             "grillInfo":[
                 {
                     "Title": "آیس لاته",
@@ -681,6 +729,9 @@
         },
         {
             "CategoryID" : 17,
+            "headerNameFA": "همراه های کنار غذا",
+            "headerNameEN": "Accompanying food",
+            "headerImg": "./menu cafe/accompanying/accompanying.png",
             "accompanyingInfo":[
                 {
                     "Title": "آبجو کلاسیک/لیمویی",
@@ -711,6 +762,9 @@
         },
         {
             "CategoryID" : 18,
+            "headerNameFA": "سس های انتخابی شما",
+            "headerNameEN": "Sauces",
+            "headerImg": "./menu cafe/sauces/sauces.png",
             "saucesInfo":[
                 {
                     "Title": "سس قارچ",
@@ -741,6 +795,9 @@
         },
         {
             "CategoryID" : 19,
+            "headerNameFA": "پیتزا",
+            "headerNameEN": "pizza",
+            "headerImg": "./menu cafe/pizza/pizza.png",
             "pizzaInfo":[
                 {
                     "Title": "پیتزا مخصوص اپیکور",
@@ -786,6 +843,9 @@
         },
         {
             "CategoryID" : 20,
+            "headerNameFA": "غذاهای ایرانی",
+            "headerNameEN": "persian cuisine",
+            "headerImg": "./menu cafe/persian/persian.png",
             "persianInfo":[
                 {
                     "Title": "جوجه بی استخوان",
