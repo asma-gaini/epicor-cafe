@@ -214,7 +214,7 @@ body{
     width: 20px;
     background-color: var(--white);
     border-radius: 50%;
-    color: black;
+    color: var(--font-button);
    
 }
 .btn-counter-Increment{
@@ -222,8 +222,7 @@ body{
     background-color: var(--white);
     /* background-color: var(--btn-counter); */
     border-radius: 50%;
-    color: black;
-
+    color: var(--font-button);
 }
 .unavalable img{
     position: absolute;
@@ -353,14 +352,25 @@ body{
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    color: black;
+    color: var(--font-button);
     text-align: center;
     padding-bottom: 10px;
 }
 .button-counter span{
     margin: 0px 5px;
 }
-
+.btn-info:active, .btn-info:hover, .btn-info:focus {
+    color: #fff;
+    /* background-color: #31b0d5; */
+    /* border-color: #269abc; */
+    background-color: var(--menubar-click-primary);
+    background-image: var(--menubar-click);
+}
+.btn-info:focus{
+    /* outline: 5px auto -webkit-focus-ring-color; */
+    /* outline-offset: -2px; */
+    outline: none;
+}
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: 

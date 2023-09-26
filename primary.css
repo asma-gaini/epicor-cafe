@@ -11,4 +11,5 @@
     --menubar-click: radial-gradient(circle, rgb(221, 178, 131), rgb(210, 119, 21), rgb(106, 56, 2));
     --hrLineFont: rgb(237, 237, 237);
     --hrLineBack: rgb(134 53 0 / 15%);
+    --font-button: #000000;
 }
