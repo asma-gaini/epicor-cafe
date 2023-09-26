@@ -8,6 +8,12 @@ body{
     box-sizing: border-box;
     color: var(--white);
 }
+::-webkit-scrollbar {
+    height: 5px;              /* height of horizontal scrollbar ← You're missing this */
+    width: 4px;               /* width of vertical scrollbar */
+    border: 3px solid #cf871c;
+  }
+
 
 .info-header{
     display: flex;
@@ -208,6 +214,7 @@ body{
     width: 20px;
     background-color: var(--white);
     border-radius: 50%;
+    color: black;
    
 }
 .btn-counter-Increment{
@@ -215,8 +222,20 @@ body{
     background-color: var(--white);
     /* background-color: var(--btn-counter); */
     border-radius: 50%;
-}
+    color: black;
 
+}
+.unavalable img{
+    position: absolute;
+    border-radius: 5px;
+    height: 80%;
+    right: 300px;
+    top: 10px;
+    opacity: 1 !important;
+}
+.non{
+    opacity: 0.6;
+}
 .pay-off{
     box-shadow: rgb(134, 53, 0) 0px -20px 30px -30px inset;
     background-color: rgb(192, 160, 40);
@@ -240,11 +259,22 @@ body{
     margin: 0px 30px;
 }
 .menu-bar{
+    margin: 40px 70px 0px 70px;
     direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+
+
+    /* -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    /* scrollbar-width: none; for Firefox */
+    /* overflow-x: scroll;   */
+
+    overflow: auto;
+    white-space: nowrap;
+    /* scrollbar-width: thin; */
+
+    /* align-items: center; */
+    /* justify-content: center; */
     text-align: center;
 }
 .menu-bar_section{
