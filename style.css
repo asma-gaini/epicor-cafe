@@ -191,12 +191,15 @@ body{
 .menu_contant_info_price_btn{
     background-color: var(--btn-order);
     cursor: pointer;
-    padding: 3px;
+    padding: 8px;
     color: var(--white);
     border-radius: 5px;
     position: absolute;
     left: 15px;
     bottom: 20px;
+    font-size: 9px;
+    font-family: 'iransans';
+    width: 90px;
 }
 .Purchase-count{
     border: none;
@@ -324,6 +327,89 @@ body{
     margin-right: 10px;
     margin-top: 10px;
 }
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* .grid-container { */
+    /* background: rgb(201, 107, 107); */
+    /* font-family: 'Rubik', sans-serif; */
+  /* } */
+  /* .grid-item {
+    color: #fff;
+    background: skyblue;
+    padding: 3.5em 1em;
+    font-size: 1em;
+    font-weight: 700;
+  } */
+  .main {
+    /* color: lighten(gray, 25%); */
+    background-color: inherit;
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .items {
+    position: relative;
+    /* width: 100%; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .items.active {
+    background: rgba(255,255,255,0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+  
+  .item {
+    display: inline-block;
+    /* background: #b74476; */
+    /* min-height: 250px; */
+    /* min-width: 400px; */
+    margin: 2em 1em;
+  }
+  
+  a {
+    display: block;
+    color: lighten(skyblue, 15%);
+    text-decoration: underline;
+    margin: 1em auto;
+    
+  }
+  a:hover {
+    cursor: pointer;
+  }
+  
+  p {
+    text-align: left;
+    text-indent: 20px;
+    font-weight: 100;
+  }
+  
+  i {
+    color: skyblue;
+  }
+  
+  /* .grid-container { */
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: auto 1fr auto; */
+    
+    /* grid-template-areas: */
+      /* "header header header" */
+      /* "title title footer" */
+      /* "main main main"; */
+    
+  /* } */
+      
 
 
 @media only screen and (max-width: 768px) {
