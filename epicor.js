@@ -23,7 +23,8 @@ var mainBtnClass20 = 'persian_contant_info_price_btn';
 
 
 var pay = 0;
-
+var paymentArray = [];
+console.log(paymentArray)
 
 $(document).ready(function(){
 	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
@@ -42,12 +43,20 @@ function linked(dataInfo){
 	menuBarSlide.show().siblings("div").fadeOut(300);
 }
 
+function payBox(payIdNum){
+	var PayableName = $("h4.generalclass"+"[payId='"+payIdNum+"']");
+	var name = PayableName.html();
+	var PayablePrices = $("h4.price"+"[payId='"+payIdNum+"']")
+	var PayablePrice = parseInt(PayablePrices.html());
+	console.log(name);
+	console.log(PayablePrice);
+}
 
 // ---------------------------------------------------------------------------> breakfast item <---------------------------------------------------------------------------
 
 
 // ********************* main button for increment or decrement order ----> breakfast *********************
-function AddToBreakfast(customAttr)
+function AddToBreakfast(customAttr, payIdNum)
 {
 	// var myHtmlTag = sender.getAttribute('menuID');
 	var myHtmlTag = $("button." +mainBtnClass+"[menuID='"+customAttr+"']");
@@ -65,6 +74,7 @@ function AddToBreakfast(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
 }
 // ********************* Click the main button at the same time price ----> breakfast *********************
 function primaryPrice(customAttr){
@@ -129,7 +139,7 @@ function Decreament(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> minabar *********************
-function AddToMinabar(customAttr)
+function AddToMinabar(customAttr, payIdNum)
 {
 	var myHtmlTag2 = $("button." +mainBtnClass2+"[menuID2='"+customAttr+"']");
 	myHtmlTag2.hide();
@@ -146,6 +156,8 @@ function AddToMinabar(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> minabar *********************
 function primaryPrice2(customAttr){
@@ -208,7 +220,7 @@ function Decreament2(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> espressobar *********************
-function AddToEspressobar(customAttr)
+function AddToEspressobar(customAttr, payIdNum)
 {
 	var myHtmlTag3 = $("button." +mainBtnClass3+"[menuID3='"+customAttr+"']");
 	myHtmlTag3.hide();
@@ -225,6 +237,8 @@ function AddToEspressobar(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> espressobar *********************
 function primaryPrice3(customAttr){
@@ -287,7 +301,7 @@ function Decreament3(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> icecoffee *********************
-function AddToIcecoffee(customAttr)
+function AddToIcecoffee(customAttr, payIdNum)
 {
 	var myHtmlTag4 = $("button." +mainBtnClass4+"[menuID4='"+customAttr+"']");
 	myHtmlTag4.hide();
@@ -304,6 +318,8 @@ function AddToIcecoffee(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> icecoffee *********************
 function primaryPrice4(customAttr){
@@ -366,7 +382,7 @@ function Decreament4(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> coffeebar *********************
-function AddToCoffeebar(customAttr)
+function AddToCoffeebar(customAttr, payIdNum)
 {
 	var myHtmlTag5 = $("button." +mainBtnClass5+"[menuID5='"+customAttr+"']");
 	myHtmlTag5.hide();
@@ -383,6 +399,8 @@ function AddToCoffeebar(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> coffeebar *********************
 function primaryPrice5(customAttr){
@@ -445,7 +463,7 @@ function Decreament5(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> hotdrinks *********************
-function AddToHotdrinks(customAttr)
+function AddToHotdrinks(customAttr, payIdNum)
 {
 	var myHtmlTag6 = $("button." +mainBtnClass6+"[menuID6='"+customAttr+"']");
 	myHtmlTag6.hide();
@@ -462,6 +480,8 @@ function AddToHotdrinks(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> hotdrinks *********************
 function primaryPrice6(customAttr){
@@ -524,7 +544,7 @@ function Decreament6(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> drinkchoise *********************
-function AddToDrinkchoise(customAttr)
+function AddToDrinkchoise(customAttr, payIdNum)
 {
 	var myHtmlTag7 = $("button." +mainBtnClass7+"[menuID7='"+customAttr+"']");
 	myHtmlTag7.hide();
@@ -541,6 +561,8 @@ function AddToDrinkchoise(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> drinkchoise *********************
 function primaryPrice7(customAttr){
@@ -603,7 +625,7 @@ function Decreament7(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> naturaljuise *********************
-function AddToNaturaljuise(customAttr)
+function AddToNaturaljuise(customAttr, payIdNum)
 {
 	var myHtmlTag8 = $("button." +mainBtnClass8+"[menuID8='"+customAttr+"']");
 	myHtmlTag8.hide();
@@ -620,6 +642,8 @@ function AddToNaturaljuise(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> naturaljuise *********************
 function primaryPrice8(customAttr){
@@ -682,7 +706,7 @@ function Decreament8(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> smoothiebulls *********************
-function AddToSmoothiebulls(customAttr)
+function AddToSmoothiebulls(customAttr, payIdNum)
 {
 	var myHtmlTag9 = $("button." +mainBtnClass9+"[menuID9='"+customAttr+"']");
 	myHtmlTag9.hide();
@@ -699,6 +723,8 @@ function AddToSmoothiebulls(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> smoothiebulls *********************
 function primaryPrice9(customAttr){
@@ -761,7 +787,7 @@ function Decreament9(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> milkshake *********************
-function AddToMilkshake(customAttr)
+function AddToMilkshake(customAttr, payIdNum)
 {
 	var myHtmlTag10 = $("button." +mainBtnClass10+"[menuID10='"+customAttr+"']");
 	myHtmlTag10.hide();
@@ -778,6 +804,8 @@ function AddToMilkshake(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> milkshake *********************
 function primaryPrice10(customAttr){
@@ -840,7 +868,7 @@ function Decreament10(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> cake *********************
-function AddToCake(customAttr)
+function AddToCake(customAttr, payIdNum)
 {
 	var myHtmlTag11 = $("button." +mainBtnClass11+"[menuID11='"+customAttr+"']");
 	myHtmlTag11.hide();
@@ -857,6 +885,8 @@ function AddToCake(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> cake *********************
 function primaryPrice11(customAttr){
@@ -919,7 +949,7 @@ function Decreament11(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> appetizers *********************
-function AddToAppetizers(customAttr)
+function AddToAppetizers(customAttr , payIdNum)
 {
 	var myHtmlTag12 = $("button." +mainBtnClass12+"[menuID12='"+customAttr+"']");
 	myHtmlTag12.hide();
@@ -936,6 +966,8 @@ function AddToAppetizers(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> appetizers *********************
 function primaryPrice12(customAttr){
@@ -998,7 +1030,7 @@ function Decreament12(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> fries *********************
-function AddToFries(customAttr)
+function AddToFries(customAttr, payIdNum)
 {
 	var myHtmlTag13 = $("button." +mainBtnClass13+"[menuID13='"+customAttr+"']");
 	myHtmlTag13.hide();
@@ -1015,6 +1047,8 @@ function AddToFries(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> fries *********************
 function primaryPrice13(customAttr){
@@ -1077,7 +1111,7 @@ function Decreament13(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> sandwiches *********************
-function AddToSandwiches(customAttr)
+function AddToSandwiches(customAttr, payIdNum)
 {
 	var myHtmlTag14 = $("button." +mainBtnClass14+"[menuID14='"+customAttr+"']");
 	myHtmlTag14.hide();
@@ -1094,6 +1128,8 @@ function AddToSandwiches(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> sandwiches *********************
 function primaryPrice14(customAttr){
@@ -1156,7 +1192,7 @@ function Decreament14(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> pasta *********************
-function AddToPasta(customAttr)
+function AddToPasta(customAttr, payIdNum)
 {
 	var myHtmlTag15 = $("button." +mainBtnClass15+"[menuID15='"+customAttr+"']");
 	myHtmlTag15.hide();
@@ -1173,6 +1209,8 @@ function AddToPasta(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> pasta *********************
 function primaryPrice15(customAttr){
@@ -1235,7 +1273,7 @@ function Decreament15(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> grill *********************
-function AddToGrill(customAttr)
+function AddToGrill(customAttr, payIdNum)
 {
 	var myHtmlTag16 = $("button." +mainBtnClass16+"[menuID16='"+customAttr+"']");
 	myHtmlTag16.hide();
@@ -1252,6 +1290,8 @@ function AddToGrill(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> grill *********************
 function primaryPrice16(customAttr){
@@ -1314,7 +1354,7 @@ function Decreament16(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> accompanying *********************
-function AddToAccompanying(customAttr)
+function AddToAccompanying(customAttr, payIdNum)
 {
 	var myHtmlTag17 = $("button." +mainBtnClass17+"[menuID17='"+customAttr+"']");
 	myHtmlTag17.hide();
@@ -1331,6 +1371,8 @@ function AddToAccompanying(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> accompanying *********************
 function primaryPrice17(customAttr){
@@ -1393,7 +1435,7 @@ function Decreament17(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> sauces *********************
-function AddToSauces(customAttr)
+function AddToSauces(customAttr, payIdNum)
 {
 	var myHtmlTag18 = $("button." +mainBtnClass18+"[menuID18='"+customAttr+"']");
 	myHtmlTag18.hide();
@@ -1410,6 +1452,8 @@ function AddToSauces(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> sauces *********************
 function primaryPrice18(customAttr){
@@ -1472,7 +1516,7 @@ function Decreament18(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> pizza *********************
-function AddToPizza(customAttr)
+function AddToPizza(customAttr, payIdNum)
 {
 	var myHtmlTag19 = $("button." +mainBtnClass19+"[menuID19='"+customAttr+"']");
 	myHtmlTag19.hide();
@@ -1489,6 +1533,8 @@ function AddToPizza(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> pizza *********************
 function primaryPrice19(customAttr){
@@ -1551,7 +1597,7 @@ function Decreament19(customClass,customAttr)
 
 
 // ********************* main button for increment or decrement order ----> Persian *********************
-function AddToPersian(customAttr)
+function AddToPersian(customAttr, payIdNum)
 {
 	var myHtmlTag20 = $("button." +mainBtnClass20+"[menuID20='"+customAttr+"']");
 	myHtmlTag20.hide();
@@ -1568,6 +1614,8 @@ function AddToPersian(customAttr)
 	}else{
 		$("div.pay").show();
 	}
+	payBox(payIdNum);
+
 }
 // ********************* Click the main button at the same time price ----> Persian *********************
 function primaryPrice20(customAttr){
