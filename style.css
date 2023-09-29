@@ -345,8 +345,8 @@ body{
     background-color: inherit;
     grid-area: main;
     padding: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    /* overflow-x: scroll; */
+    /* overflow-y: hidden; */
   }
 
   .items {
@@ -363,7 +363,7 @@ body{
   }
   
   .items.active {
-    background: rgba(255,255,255,0.3);
+    /* background: rgba(255,255,255,0.3); */
     cursor: grabbing;
     cursor: -webkit-grabbing;
     transform: scale(1);
@@ -374,29 +374,29 @@ body{
     /* background: #b74476; */
     /* min-height: 250px; */
     /* min-width: 400px; */
-    margin: 2em 1em;
+    /* margin: 2em 1em; */
   }
   
-  a {
+  /* a {
     display: block;
     color: lighten(skyblue, 15%);
     text-decoration: underline;
     margin: 1em auto;
     
-  }
+  } */
   a:hover {
     cursor: pointer;
   }
   
-  p {
+  /* p {
     text-align: left;
     text-indent: 20px;
     font-weight: 100;
-  }
+  } */
   
-  i {
+  /* i {
     color: skyblue;
-  }
+  } */
   
   /* .grid-container { */
     /* display: grid; */
