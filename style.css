@@ -333,11 +333,16 @@ body{
 
 
 /* //////////////////////////////////////////// css popup//////////////////////////////////////////////// */
-
+.modal{
+    height: 600px;
+    overflow-y: scroll !important;
+}
 
 .modal-content{
     background-color: var(--body);
     direction: rtl;
+    border-radius: 30px;
+
 }
 .modal-title{
     margin-right: 25px;
