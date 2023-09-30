@@ -25,6 +25,9 @@ var mainBtnClass20 = 'persian_contant_info_price_btn';
 var pay = 0;
 var paymentArray = [];
 console.log(paymentArray)
+var temp = {};
+// var section_count_pay = $('<div class="Purchase-count" style="bottom:3px;" ><button class="btn-counter-Decrement">-</button><span class="span"> 1 </span><button class="btn-counter-Increment" >+</button></div>');
+
 
 $(document).ready(function(){
 	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
@@ -48,8 +51,22 @@ function payBox(payIdNum){
 	var name = PayableName.html();
 	var PayablePrices = $("h4.price"+"[payId='"+payIdNum+"']")
 	var PayablePrice = parseInt(PayablePrices.html());
+	var spanPayNum = $("span.span"+"[payId='"+payIdNum+"']").html();
+	var urlImagePay = $("img"+"[payId='"+payIdNum+"']").attr('src');
+	temp.Id = payIdNum;
+	temp.Name = name;
+	temp.Payable = PayablePrice;
+	temp.urlImage = urlImagePay;
+	console.log(temp);
+	paymentArray.push(temp);
+	temp={};
+	console.log(paymentArray);
+
+	console.log(payIdNum);
 	console.log(name);
 	console.log(PayablePrice);
+	console.log(spanPayNum);
+	console.log(urlImagePay);
 }
 
 // ---------------------------------------------------------------------------> breakfast item <---------------------------------------------------------------------------
@@ -65,9 +82,9 @@ function AddToBreakfast(customAttr, payIdNum)
 	var menuIDContent = myHtmlTag.attr("menuID");
 	var increament_onclick = "onclick=Increament('span','"+menuIDContent+"')";
 	var decreament_onclick = "onclick=Decreament('span','"+menuIDContent+"')";
-    var section_count = $('<div class="Purchase-count" menuID="'+menuIDContent+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count = $('<div class="Purchase-count" menuID="'+menuIDContent+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag.after(section_count);
-
+		// $(".button-counter").append( section_count_pay );
 	primaryPrice(customAttr);
 	if (pay == 0) {
 		$("div.pay").hide();
@@ -103,7 +120,7 @@ function DecrementPrice(customAttr){
 	}
 }
 // ********************* increment order button ----> breakfast *********************
-function Increament(customClass,customAttr)
+function Increament(customClass,customAttr,payIdNum)
 {
 	var increament_counter = $("span."+customClass+"[menuID='"+customAttr+ "']");
 	var counter = increament_counter.html();
@@ -111,9 +128,11 @@ function Increament(customClass,customAttr)
 	increament_counter.html(" "+counter+" ");
 	
 	IncrementPrice(customAttr);
+	payBox(payIdNum);
+
 }
 // ********************* decrement order button ----> breakfast *********************
-function Decreament(customClass,customAttr)
+function Decreament(customClass,customAttr,payIdNum)
 {
 	var decreament_counter = $("span."+customClass+"[menuID='"+customAttr+ "']");
 	var counter = decreament_counter.html();
@@ -132,6 +151,8 @@ function Decreament(customClass,customAttr)
 	decreament_counter.html(" "+counter+" ");
 
 	DecrementPrice(customAttr);
+	payBox(payIdNum);
+
 }
 
 
@@ -147,9 +168,8 @@ function AddToMinabar(customAttr, payIdNum)
 	var menuIDContent2 = myHtmlTag2.attr("menuID2");
 	var increament_onclick = "onclick=Increament2('span','"+menuIDContent2+"')";
 	var decreament_onclick = "onclick=Decreament2('span','"+menuIDContent2+"')";
-    var section_count2 = $('<div class="Purchase-count" menuID2="'+menuIDContent2+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span2+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count2 = $('<div class="Purchase-count" menuID2="'+menuIDContent2+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span2+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag2.after(section_count2);
-
 	primaryPrice2(customAttr);
 	if (pay == 0) {
 		$("div.pay").hide();
@@ -228,7 +248,7 @@ function AddToEspressobar(customAttr, payIdNum)
 	var menuIDContent3 = myHtmlTag3.attr("menuID3");
 	var increament_onclick = "onclick=Increament3('span','"+menuIDContent3+"')";
 	var decreament_onclick = "onclick=Decreament3('span','"+menuIDContent3+"')";
-    var section_count3 = $('<div class="Purchase-count" menuID3="'+menuIDContent3+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span3+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count3 = $('<div class="Purchase-count" menuID3="'+menuIDContent3+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span3+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag3.after(section_count3);
 
 	primaryPrice3(customAttr);
@@ -309,7 +329,7 @@ function AddToIcecoffee(customAttr, payIdNum)
 	var menuIDContent4 = myHtmlTag4.attr("menuID4");
 	var increament_onclick = "onclick=Increament4('span','"+menuIDContent4+"')";
 	var decreament_onclick = "onclick=Decreament4('span','"+menuIDContent4+"')";
-    var section_count4 = $('<div class="Purchase-count" menuID4="'+menuIDContent4+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span4+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count4 = $('<div class="Purchase-count" menuID4="'+menuIDContent4+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span4+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag4.after(section_count4);
 
 	primaryPrice4(customAttr);
@@ -390,7 +410,7 @@ function AddToCoffeebar(customAttr, payIdNum)
 	var menuIDContent5 = myHtmlTag5.attr("menuID5");
 	var increament_onclick = "onclick=Increament5('span','"+menuIDContent5+"')";
 	var decreament_onclick = "onclick=Decreament5('span','"+menuIDContent5+"')";
-    var section_count5 = $('<div class="Purchase-count" menuID5="'+menuIDContent5+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span5+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count5 = $('<div class="Purchase-count" menuID5="'+menuIDContent5+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span5+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag5.after(section_count5);
 
 	primaryPrice5(customAttr);
@@ -471,7 +491,7 @@ function AddToHotdrinks(customAttr, payIdNum)
 	var menuIDContent6 = myHtmlTag6.attr("menuID6");
 	var increament_onclick = "onclick=Increament6('span','"+menuIDContent6+"')";
 	var decreament_onclick = "onclick=Decreament6('span','"+menuIDContent6+"')";
-    var section_count6 = $('<div class="Purchase-count" menuID6="'+menuIDContent6+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span6+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count6 = $('<div class="Purchase-count" menuID6="'+menuIDContent6+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span6+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag6.after(section_count6);
 
 	primaryPrice6(customAttr);
@@ -552,7 +572,7 @@ function AddToDrinkchoise(customAttr, payIdNum)
 	var menuIDContent7 = myHtmlTag7.attr("menuID7");
 	var increament_onclick = "onclick=Increament7('span','"+menuIDContent7+"')";
 	var decreament_onclick = "onclick=Decreament7('span','"+menuIDContent7+"')";
-    var section_count7 = $('<div class="Purchase-count" menuID7="'+menuIDContent7+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span7+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count7 = $('<div class="Purchase-count" menuID7="'+menuIDContent7+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span7+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag7.after(section_count7);
 
 	primaryPrice7(customAttr);
@@ -633,7 +653,7 @@ function AddToNaturaljuise(customAttr, payIdNum)
 	var menuIDContent8 = myHtmlTag8.attr("menuID8");
 	var increament_onclick = "onclick=Increament8('span','"+menuIDContent8+"')";
 	var decreament_onclick = "onclick=Decreament8('span','"+menuIDContent8+"')";
-    var section_count8 = $('<div class="Purchase-count" menuID8="'+menuIDContent8+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span8+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count8 = $('<div class="Purchase-count" menuID8="'+menuIDContent8+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span8+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag8.after(section_count8);
 
 	primaryPrice8(customAttr);
@@ -714,7 +734,7 @@ function AddToSmoothiebulls(customAttr, payIdNum)
 	var menuIDContent9 = myHtmlTag9.attr("menuID9");
 	var increament_onclick = "onclick=Increament9('span','"+menuIDContent9+"')";
 	var decreament_onclick = "onclick=Decreament9('span','"+menuIDContent9+"')";
-    var section_count9 = $('<div class="Purchase-count" menuID9="'+menuIDContent9+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span9+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count9 = $('<div class="Purchase-count" menuID9="'+menuIDContent9+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span9+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag9.after(section_count9);
 
 	primaryPrice9(customAttr);
@@ -795,7 +815,7 @@ function AddToMilkshake(customAttr, payIdNum)
 	var menuIDContent10 = myHtmlTag10.attr("menuID10");
 	var increament_onclick = "onclick=Increament10('span','"+menuIDContent10+"')";
 	var decreament_onclick = "onclick=Decreament10('span','"+menuIDContent10+"')";
-    var section_count10 = $('<div class="Purchase-count" menuID10="'+menuIDContent10+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span10+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count10 = $('<div class="Purchase-count" menuID10="'+menuIDContent10+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span10+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag10.after(section_count10);
 
 	primaryPrice10(customAttr);
@@ -876,7 +896,7 @@ function AddToCake(customAttr, payIdNum)
 	var menuIDContent11 = myHtmlTag11.attr("menuID11");
 	var increament_onclick = "onclick=Increament11('span','"+menuIDContent11+"')";
 	var decreament_onclick = "onclick=Decreament11('span','"+menuIDContent11+"')";
-    var section_count11 = $('<div class="Purchase-count" menuID11="'+menuIDContent11+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span11+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count11 = $('<div class="Purchase-count" menuID11="'+menuIDContent11+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span11+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag11.after(section_count11);
 
 	primaryPrice11(customAttr);
@@ -957,7 +977,7 @@ function AddToAppetizers(customAttr , payIdNum)
 	var menuIDContent12 = myHtmlTag12.attr("menuID12");
 	var increament_onclick = "onclick=Increament12('span','"+menuIDContent12+"')";
 	var decreament_onclick = "onclick=Decreament12('span','"+menuIDContent12+"')";
-    var section_count12 = $('<div class="Purchase-count" menuID12="'+menuIDContent12+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span12+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count12 = $('<div class="Purchase-count" menuID12="'+menuIDContent12+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span12+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag12.after(section_count12);
 
 	primaryPrice12(customAttr);
@@ -1038,7 +1058,7 @@ function AddToFries(customAttr, payIdNum)
 	var menuIDContent13 = myHtmlTag13.attr("menuID13");
 	var increament_onclick = "onclick=Increament13('span','"+menuIDContent13+"')";
 	var decreament_onclick = "onclick=Decreament13('span','"+menuIDContent13+"')";
-    var section_count13 = $('<div class="Purchase-count" menuID13="'+menuIDContent13+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span13+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count13 = $('<div class="Purchase-count" menuID13="'+menuIDContent13+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span13+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag13.after(section_count13);
 
 	primaryPrice13(customAttr);
@@ -1119,7 +1139,7 @@ function AddToSandwiches(customAttr, payIdNum)
 	var menuIDContent14 = myHtmlTag14.attr("menuID14");
 	var increament_onclick = "onclick=Increament14('span','"+menuIDContent14+"')";
 	var decreament_onclick = "onclick=Decreament14('span','"+menuIDContent14+"')";
-    var section_count14 = $('<div class="Purchase-count" menuID14="'+menuIDContent14+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span14+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count14 = $('<div class="Purchase-count" menuID14="'+menuIDContent14+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span14+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag14.after(section_count14);
 
 	primaryPrice14(customAttr);
@@ -1200,7 +1220,7 @@ function AddToPasta(customAttr, payIdNum)
 	var menuIDContent15 = myHtmlTag15.attr("menuID15");
 	var increament_onclick = "onclick=Increament15('span','"+menuIDContent15+"')";
 	var decreament_onclick = "onclick=Decreament15('span','"+menuIDContent15+"')";
-    var section_count15 = $('<div class="Purchase-count" menuID15="'+menuIDContent15+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span15+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count15 = $('<div class="Purchase-count" menuID15="'+menuIDContent15+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span15+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag15.after(section_count15);
 
 	primaryPrice15(customAttr);
@@ -1281,7 +1301,7 @@ function AddToGrill(customAttr, payIdNum)
 	var menuIDContent16 = myHtmlTag16.attr("menuID16");
 	var increament_onclick = "onclick=Increament16('span','"+menuIDContent16+"')";
 	var decreament_onclick = "onclick=Decreament16('span','"+menuIDContent16+"')";
-    var section_count16 = $('<div class="Purchase-count" menuID16="'+menuIDContent16+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span16+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count16 = $('<div class="Purchase-count" menuID16="'+menuIDContent16+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span16+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag16.after(section_count16);
 
 	primaryPrice16(customAttr);
@@ -1362,7 +1382,7 @@ function AddToAccompanying(customAttr, payIdNum)
 	var menuIDContent17 = myHtmlTag17.attr("menuID17");
 	var increament_onclick = "onclick=Increament17('span','"+menuIDContent17+"')";
 	var decreament_onclick = "onclick=Decreament17('span','"+menuIDContent17+"')";
-    var section_count17 = $('<div class="Purchase-count" menuID17="'+menuIDContent17+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span17+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count17 = $('<div class="Purchase-count" menuID17="'+menuIDContent17+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span17+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag17.after(section_count17);
 
 	primaryPrice17(customAttr);
@@ -1443,7 +1463,7 @@ function AddToSauces(customAttr, payIdNum)
 	var menuIDContent18 = myHtmlTag18.attr("menuID18");
 	var increament_onclick = "onclick=Increament18('span','"+menuIDContent18+"')";
 	var decreament_onclick = "onclick=Decreament18('span','"+menuIDContent18+"')";
-    var section_count18 = $('<div class="Purchase-count" menuID18="'+menuIDContent18+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span18+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count18 = $('<div class="Purchase-count" menuID18="'+menuIDContent18+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span18+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag18.after(section_count18);
 
 	primaryPrice18(customAttr);
@@ -1524,7 +1544,7 @@ function AddToPizza(customAttr, payIdNum)
 	var menuIDContent19 = myHtmlTag19.attr("menuID19");
 	var increament_onclick = "onclick=Increament19('span','"+menuIDContent19+"')";
 	var decreament_onclick = "onclick=Decreament19('span','"+menuIDContent19+"')";
-    var section_count19 = $('<div class="Purchase-count" menuID13="'+menuIDContent19+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span19+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count19 = $('<div class="Purchase-count" menuID13="'+menuIDContent19+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span19+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag19.after(section_count19);
 
 	primaryPrice19(customAttr);
@@ -1605,7 +1625,7 @@ function AddToPersian(customAttr, payIdNum)
 	var menuIDContent20 = myHtmlTag20.attr("menuID20");
 	var increament_onclick = "onclick=Increament20('span','"+menuIDContent20+"')";
 	var decreament_onclick = "onclick=Decreament20('span','"+menuIDContent20+"')";
-    var section_count20 = $('<div class="Purchase-count" menuID20="'+menuIDContent20+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span20+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var section_count20 = $('<div class="Purchase-count" menuID20="'+menuIDContent20+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span payId="'+payIdNum+'" class="span"'+span20+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     myHtmlTag20.after(section_count20);
 
 	primaryPrice20(customAttr);

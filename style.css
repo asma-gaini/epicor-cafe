@@ -381,7 +381,7 @@ body{
     border-radius: 50%;
     color: var(--font-button);
     font-size: 10px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 .button-counter span{
     margin: 0px 5px;
