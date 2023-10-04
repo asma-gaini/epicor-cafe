@@ -1,3 +1,6 @@
+        
+        /* ******************************* primary ******************************* */
+
 @font-face {
     font-family: iransans;
     src: url(./FontsFree-Net-ir_sans.ttf);
@@ -14,7 +17,16 @@ body{
     border: 3px solid #cf871c;
   }
 
-
+         /* ******************************* header of page ******************************* */
+.logo{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin-top: 15px;
+}
+.logo img{
+    border-radius: 3px;
+}
 .info-header{
     display: flex;
     justify-content: center;
@@ -47,8 +59,159 @@ body{
     font-size: 12px;
 }
 
-/* ************************************************************************ */
+         /* ******************************* menu bar ******************************* */
 
+.menu-bar{
+    margin: 40px 70px 0px 70px;
+    direction: rtl;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+}
+.menu-bar_section{
+    cursor: pointer;
+    border-radius: 10px;
+    background: var(--menubar);
+    margin: 10px 5px;
+    min-width: 90px;
+    border: none;
+    color: var(--white);
+}
+.menu-bar_section_click{
+    background-color: var(--menubar-click-primary);
+    background-image: var(--menubar-click);
+}
+.menu-bar_section img{
+    width: 30px;
+    vertical-align: middle;
+    margin: 5px auto;
+}
+.menu-bar_section_info{
+    text-align: center;
+}
+.menu-bar_section_name-en{
+    font-size: 10px;
+    padding: 3px 0;
+}
+.menu-bar_section_name-fa{
+    font-size: 11px;
+    padding: 3px 0;
+    padding-bottom: 8px;
+}
+        
+.main {
+    /* color: lighten(gray, 25%); */
+    background-color: inherit;
+    grid-area: main;
+    padding: 0;
+}
+.items {
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+}
+.items.active {
+    /* background: rgba(255,255,255,0.3); */
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+.item {
+    display: inline-block;
+    /* background: #b74476; */
+    /* min-height: 250px; */
+    /* min-width: 400px; */
+    /* margin: 2em 1em; */
+}
+a:hover {
+    cursor: pointer;
+}
+
+         /* ******************************* dropdown ******************************* */
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgb(46 36 18 / 95%); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-right: 100px;
+    padding: 0 100px;
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .overlay-content a button:hover {
+    background: rgb(235,173,96);
+    background: radial-gradient(circle, rgba(235,173,96,1) 0%, rgba(133,90,37,1) 100%);
+  }
+  .dropdownButton{
+    text-align: center;
+    margin-top: 24px;
+  }
+  .dropdownButton button{
+    border: none;
+    background-color: inherit;
+    font-size: 13px;
+  }
+
+         /* ******************************* sliders ******************************* */
+
+.sliders{
+    margin: 0px 30px;
+}
+.slider {
+    display: flex;
+    justify-content: space-between;
+} 
+
+  /* silders main style */
 .breakfast{
    direction: rtl;
    display: flex;
@@ -74,7 +237,6 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-
 .hotDrinks{
     direction: rtl;
     display: flex;
@@ -151,11 +313,31 @@ body{
     flex-wrap: wrap;
 }
 
+  /* Top line of all slides */
+.hrLine{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 30px;
+}
+.hrLine p{
+    color: var(--hrLineFont);
+}
+.hrLine span{
+    background-color:var(--hrLineBack);
+    flex-grow: 1;
+    height: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+  /* The contents of the slides */
 .menu_contant{
     display: flex;
     margin: 10px;
     max-width: 100%;
-    width: 695px;
+    width: 600px;
     background-color: var(--menu-item);
     border-radius: 5px;
     position: relative;
@@ -229,6 +411,8 @@ body{
     border-radius: 50%;
     color: var(--font-button);
 }
+
+  /* When the product is finished */
 .unavalable img{
     position: absolute;
     border-radius: 5px;
@@ -240,6 +424,8 @@ body{
 .non{
     opacity: 0.6;
 }
+
+
 .pay-off{
     box-shadow: rgb(134, 53, 0) 0px -20px 30px -30px inset;
     background-color: rgb(192, 160, 40);
@@ -260,229 +446,12 @@ body{
     display: block;
 }
 
-.sliders{
-    margin: 0px 30px;
-}
-.menu-bar{
-    margin: 40px 70px 0px 70px;
-    direction: rtl;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
 
 
-    /* -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    /* scrollbar-width: none; for Firefox */
-    /* overflow-x: scroll;   */
-
-    overflow: auto;
-    white-space: nowrap;
-    /* scrollbar-width: thin; */
-
-    /* align-items: center; */
-    /* justify-content: center; */
-    text-align: center;
-}
-.menu-bar_section{
-    cursor: pointer;
-    border-radius: 10px;
-    background: var(--menubar);
-    margin: 10px 5px;
-    min-width: 90px;
-    border: none;
-    color: var(--white);
-}
-.menu-bar_section_click{
-    background-color: var(--menubar-click-primary);
-    background-image: var(--menubar-click);
-}
-.menu-bar_section img{
-    width: 30px;
-    vertical-align: middle;
-    margin: 5px auto;
-}
-.nu-bar_section_info{
-    text-align: center;
-}
-.menu-bar_section_name-en{
-    font-size: 10px;
-    padding: 3px 0;
-}
-.menu-bar_section_name-fa{
-    font-size: 11px;
-    padding: 3px 0;
-    padding-bottom: 8px;
-}
-.hrLine{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 30px;
-}
-.hrLine p{
-    color: var(--hrLineFont);
-}
-.hrLine span{
-    background-color:var(--hrLineBack);
-    flex-grow: 1;
-    height: 2px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-}
- /* ///////////////////////////// dropdown ///////////////////////////// */
-/* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgb(46 36 18 / 95%); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
+         /* ******************************* media ******************************* */
   
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-    margin-right: 100px;
-    padding: 0 100px;
-  }
-  
-  /* The navigation links inside the overlay */
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-  .overlay-content a button:hover {
-    background: rgb(235,173,96);
-    background: radial-gradient(circle, rgba(235,173,96,1) 0%, rgba(133,90,37,1) 100%);
-  }
-  .dropdownButton{
-    text-align: center;
-  }
-  .dropdownButton button{
-    border: none;
-    background-color: inherit;
-    font-size: 13px;
-  }
-
-/* //////////////////////////////////////////////////////////////////////////////// */
-/* .grid-container { */
-    /* background: rgb(201, 107, 107); */
-    /* font-family: 'Rubik', sans-serif; */
-  /* } */
-  /* .grid-item {
-    color: #fff;
-    background: skyblue;
-    padding: 3.5em 1em;
-    font-size: 1em;
-    font-weight: 700;
-  } */
-  .main {
-    /* color: lighten(gray, 25%); */
-    background-color: inherit;
-    grid-area: main;
-    padding: 0;
-    /* overflow-x: scroll; */
-    /* overflow-y: hidden; */
-  }
-
-  .items {
-    position: relative;
-    /* width: 100%; */
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    transition: all 0.2s;
-    transform: scale(0.98);
-    will-change: transform;
-    user-select: none;
-    cursor: pointer;
-  }
-  
-  .items.active {
-    /* background: rgba(255,255,255,0.3); */
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-    transform: scale(1);
-  }
-  
-  .item {
-    display: inline-block;
-    /* background: #b74476; */
-    /* min-height: 250px; */
-    /* min-width: 400px; */
-    /* margin: 2em 1em; */
-  }
-  
-  /* a {
-    display: block;
-    color: lighten(skyblue, 15%);
-    text-decoration: underline;
-    margin: 1em auto;
-    
-  } */
-  a:hover {
-    cursor: pointer;
-  }
-  
-  /* p {
-    text-align: left;
-    text-indent: 20px;
-    font-weight: 100;
-  } */
-  
-  /* i {
-    color: skyblue;
-  } */
-  
-  /* .grid-container { */
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: auto 1fr auto; */
-    
-    /* grid-template-areas: */
-      /* "header header header" */
-      /* "title title footer" */
-      /* "main main main"; */
-    
-  /* } */
-      
-
-
-
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
       font-size: 40px;
@@ -490,15 +459,15 @@ body{
       right: 35px;
     }
   }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
     /* For mobile phones: 
     vaghti safhe barek tar v akochik tar az 768*/
     .menu_contant {width: 100%;}
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) and (min-width: 760px) {
     /* For mobile phones: */
     .menu_contant {
-        width: 400px;
+        width: 330px;
         flex-grow: 1;
     }
 }

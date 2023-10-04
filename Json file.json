@@ -701,28 +701,28 @@
             "headerImg": "./menu cafe/grill/grill.png",
             "grillInfo":[
                 {
-                    "Title": "آیس لاته",
-                    "Price": 69,
+                    "Title": "فیله مینیون",
+                    "Price": 665,
                     "ImageURL": "./menu cafe/grill/1.jpg"
                 },
                 {
-                    "Title": "آیس آمریکانو",
-                    "Price": 79,
+                    "Title": "لم چاپس",
+                    "Price": 555,
                     "ImageURL": "./menu cafe/grill/2.jpg"
                 },
                 {
-                    "Title": "آیس کارامل ماکیاتو",
-                    "Price": 95,
+                    "Title": "اپیکور برگر",
+                    "Price": 330,
                     "ImageURL": "./menu cafe/grill/3.jpg"
                 },
                 {
-                    "Title": "آیس موکا",
-                    "Price": 90,
+                    "Title": "استیک مرغ",
+                    "Price": 485,
                     "ImageURL": "./menu cafe/grill/4.jpg"
                 },
                 {
-                    "Title": "کلدبرو",
-                    "Price": 78,
+                    "Title": "استیک گوشت اپیکور",
+                    "Price": 665,
                     "ImageURL": "./menu cafe/grill/noimagefood.png"
                 }
             ]
