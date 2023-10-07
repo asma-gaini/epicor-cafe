@@ -921,6 +921,7 @@ $(document).ready(function(){
 		$("div.pay").hide();
 	}
     displayMenubar();
+	displayMenubarAll();
 });
 
 function displayMenubar(){
@@ -936,6 +937,17 @@ function displayMenubar(){
         ')"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
         '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></div>');
         Citem.append(menuBar_json);
+        
+    }
+}
+function displayMenubarAll(){
+    var CmenuAll = $("div.overlay-content");
+    for (let i = 1; i <= menu.Information.length; i++) {
+        var menuBarAll_json = $('<a onclick="closeNav()" href="#"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
+        ')"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
+        '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></a>');
+        
+        CmenuAll.append(menuBarAll_json);
         
     }
 }
