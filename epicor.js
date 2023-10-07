@@ -1,4 +1,893 @@
 // ********************* global var *********************
+var menu = {
+    "Information":
+    [
+        {
+            "CategoryID" : 1,
+            "headerNameFA": "صبحانه",
+            "headerNameEN": "breakfast",
+            "headerImg": "./menu cafe/breakfast/63fd588c75bdd.png",
+            "Info":[
+                {
+                    "Title": "صبحانه ایرانی",
+                    "Description": "خیار، گوجه فرنگی، سبزی خوردن ، کره،  پنیر، عسل ،  تخم مرغ آبپز ",
+                    "Price": 175,
+                    "ImageURL": "./menu cafe/breakfast/61ee584723571.jpg"
+                },
+                {
+                    "Title": "املت ایرونی",
+                    "Description": "نان تست ،  نخم مرغ،  گوجه فرنگی",
+                    "Price": 155,
+                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                },
+                {
+                    "Title": "صبحانه انگلیسی",
+                    "Description": "سوسیس،  بیکن،  تخم مرغ نیمرو، خوراک لوبیا،  سیب زمینی،  قارچ ، گوجه فرنگی، خیار شور",
+                    "Price": 195,
+                    "ImageURL": "./menu cafe/breakfast/61ee57fcc00cd.jpg"
+                },
+                {
+                    "Title": "املت مکزیکی",
+                    "Description": "نان تست ، تخم مرغ ، گوجه،  فلفل هالوپینو",
+                    "Price": 135,
+                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                },
+                {
+                    "Title": "مک مافین",
+                    "Description": "نان مک،  تخم مرغ نیمرو، بیکن، پنیر ورقه ای، کاهو،  گوجه فرنگی",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/breakfast/61f3e2420f1cc.jpg"
+                },
+                {
+                    "Title": "خوراک لوبیا",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                },
+                {
+                    "Title": "نیمرو",
+                    "Price": 110,
+                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 2,
+            "headerNameFA": "مینا بار",
+            "headerNameEN": "mina bar",
+            "headerImg": "./menu cafe/minabar/minabar.png",
+            "Info":[
+                {
+                    "Title": "اسپرسو",
+                    "Price": 68,
+                    "ImageURL": "./menu cafe/minabar/1.jpg"
+                },
+                {
+                    "Title": "اسپرسو دبل",
+                    "Price": 72,
+                    "ImageURL": "./menu cafe/minabar/2.jpg"
+                },
+                {
+                    "Title": "آمریکانو",
+                    "Price": 78,
+                    "ImageURL": "./menu cafe/minabar/3.jpg"
+                },
+                {
+                    "Title": "اسپرسو ماکیاتو",
+                    "Price": 75,
+                    "ImageURL": "./menu cafe/minabar/noimagefood.png"
+                },
+                {
+                    "Title": "کورتادو",
+                    "Price": 70,
+                    "ImageURL": "./menu cafe/minabar/5.jpg"
+                },
+                {
+                    "Title": "کاپوچینو",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/minabar/6.jpg"
+                },
+                {
+                    "Title": "لاته دبل",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/minabar/7.jpg"
+                },
+                {
+                    "Title": "قهوه شیخ",
+                    "Price": 98,
+                    "ImageURL": "./menu cafe/minabar/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 3,
+            "headerNameFA": "اسپرسو بلند",
+            "headerNameEN": "Espresso Bar",
+            "headerImg": "./menu cafe/espresso bar/espressobar.png",
+            "Info":[
+                {
+                    "Title": "اسپرسو سینگل",
+                    "Price": 69,
+                    "ImageURL": "./menu cafe/espresso bar/1.jpg"
+                },
+                {
+                    "Title": "اسپرسو دابل",
+                    "Price": 74,
+                    "ImageURL": "./menu cafe/espresso bar/2.jpg"
+                },
+                {
+                    "Title": "موکا",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/espresso bar/3.jpg"
+                },
+                {
+                    "Title": "کارامل ماکیاتو",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/espresso bar/4.jpg"
+                },
+                {
+                    "Title": "آمریکانو",
+                    "Price": 75,
+                    "ImageURL": "./menu cafe/espresso bar/5.jpg"
+                },
+                {
+                    "Title": "لاته",
+                    "Price": 83,
+                    "ImageURL": "./menu cafe/espresso bar/6.jpg"
+                },
+                {
+                    "Title": "آفوگاتو",
+                    "Price": 105,
+                    "ImageURL": "./menu cafe/espresso bar/7.jpg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 4,
+            "headerNameFA": "قهوه های سرد",
+            "headerNameEN": "Ice Coffee",
+            "headerImg": "./menu cafe/ice cofee/ice cofee.png",
+            "Info":[
+                {
+                    "Title": "آیس لاته",
+                    "Price": 69,
+                    "ImageURL": "./menu cafe/ice cofee/1.jpg"
+                },
+                {
+                    "Title": "آیس آمریکانو",
+                    "Price": 79,
+                    "ImageURL": "./menu cafe/ice cofee/2.jpg"
+                },
+                {
+                    "Title": "آیس کارامل ماکیاتو",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/ice cofee/3.jpg"
+                },
+                {
+                    "Title": "آیس موکا",
+                    "Price": 90,
+                    "ImageURL": "./menu cafe/ice cofee/4.jpg"
+                },
+                {
+                    "Title": "کلدبرو",
+                    "Price": 78,
+                    "ImageURL": "./menu cafe/ice cofee/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 5,
+            "headerNameFA": "سایفون بار و قهوه های دمی",
+            "headerNameEN": "Cofee bar",
+            "headerImg": "./menu cafe/cofee bar/cofee bar.png",
+            "Info":[
+                {
+                    "Title": "سایفون تک نفره",
+                    "Price": 68,
+                    "ImageURL": "./menu cafe/cofee bar/1.jpg"
+                },
+                {
+                    "Title": "سایفون دو نفره",
+                    "Price": 110,
+                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                },
+                {
+                    "Title": "سایفون سه نفره",
+                    "Price": 155,
+                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                },
+                {
+                    "Title": "کمکس تک نفره",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/cofee bar/4.jpg"
+                },
+                {
+                    "Title": "کمکس دو نفره",
+                    "Price": 110,
+                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                },
+                {
+                    "Title": "کمکس سه نفره",
+                    "Price": 145,
+                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                },
+                {
+                    "Title": "ترک",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                },
+                {
+                    "Title": "فرنچ پرس به همراه شیر",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/cofee bar/8.jpg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 6,
+            "headerNameFA": "چای بار و نوشیدنی های گرم",
+            "headerNameEN": "Hot Drinks",
+            "headerImg": "./menu cafe/hot drinks/hot drinks.png",
+            "Info":[
+                {
+                    "Title": "چای سیاه ایرونی تک نفره",
+                    "Price": 42,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای سیاه ایرونی دو نفره",
+                    "Price": 62,
+                    "ImageURL": "./menu cafe/hot drinks/2.jpg"
+                },
+                {
+                    "Title": "چای سیاه ایرونی چهار نفره",
+                    "Price": 155,
+                    "ImageURL": "./menu cafe/hot drinks/3.jpg"
+                },
+                {
+                    "Title": "چای سبز جزمین تک نفره",
+                    "Price": 65,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای سبز جزمین دو نفره",
+                    "Price": 75,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای سبز جزمین چهر نفره",
+                    "Price": 80,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای سفید(بارد جنسینگ و عسل)",
+                    "Price": 110,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای سفید(با زنجبیل و پوست مرکبات)",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای ماسالا",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/hot drinks/9.jpg"
+                },
+                {
+                    "Title": "هات چاکلت",
+                    "Price": 93,
+                    "ImageURL": "./menu cafe/hot drinks/10.jpg"
+                },
+                {
+                    "Title": "وایت چاکلت با کره بادام زمینی",
+                    "Price": 105,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                },
+                {
+                    "Title": "چای لاته",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/hot drinks/12.jpg"
+                },
+                {
+                    "Title": "چای مراکشی تک نفره",
+                    "Price": 62,
+                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 7,
+            "headerNameFA": "دمنوش انتخابی شما",
+            "headerNameEN": "the drink of your choice",
+            "headerImg": "./menu cafe/drink chois/drink chois.png",
+            "Info":[
+                {
+                    "Title": "آرامش",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/drink chois/1.jpg"
+                },
+                {
+                    "Title": "لیمو،زنجبیل،عسل",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/drink chois/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 8,
+            "headerNameFA": "آبمیوه طبیعی،موکتل،اسموتی",
+            "headerNameEN": "Natural juice",
+            "headerImg": "./menu cafe/natural juice/natural juice.png",
+            "Info":[
+                {
+                    "Title": "آبمیوه طبیعی",
+                    "Description": "  اب هندوانه /آب طالبی /اب پرتقال",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/natural juice/noimagefood.png"
+                },
+                {
+                    "Title": "لیموناد",
+                    "Description": "لیمو ترش ساده، سیروپ، سودا+زنجبیل در صورت تمایل اضافه میشود ",
+                    "Price": 105,
+                    "ImageURL": "./menu cafe/natural juice/2.jpg"
+                },
+                {
+                    "Title": "موهیتو",
+                    "Description": "ترکیب نعنا، لیمو ترش تازه، سوییت اندساور ، سودا ",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/natural juice/3.jpeg"
+                },
+                {
+                    "Title": "اسموتی تروپیکال",
+                    "Description": "موز/ آناناس/ توت فرنگی ، / انبه/نارگیل ",
+                    "Price": 165,
+                    "ImageURL": "./menu cafe/natural juice/4.jpeg"
+                },
+                {
+                    "Title": "استراپشن",
+                    "Description": " آب آلوورا، توت فرنگی، هندوانه و پشن فروت ",
+                    "Price": 145,
+                    "ImageURL": "./menu cafe/natural juice/5.jpeg"
+                },
+                {
+                    "Title": "اسموتی بری",
+                    "Description": "توت فرنگی، شاتوت، سیروپ گرانادین، آب آلوورا",
+                    "Price": 155,
+                    "ImageURL": "./menu cafe/natural juice/noimagefood.png"
+                },
+                {
+                    "Title": "پانچ پست مدرن دو نفره",
+                    "Price": 195,
+                    "ImageURL": "./menu cafe/natural juice/7.jpeg"
+                },
+                {
+                    "Title": "میدسامر",
+                    "Description": "  توت فرنگی تازه/ طعم دهنده توت فرنگی/ آب پرتقال/ آب انبه/ سرددم پنیرک ",
+                    "Price": 150,
+                    "ImageURL": "./menu cafe/natural juice/8.jpeg"
+                },
+                {
+                    "Title": "بری موهیتو",
+                    "Price": 135,
+                    "ImageURL": "./menu cafe/natural juice/9.jpeg"
+                },
+                {
+                    "Title": "هلیکس",
+                    "Description": "بلوکاراسائو/طعم دهنده نعنا/آب آلوورا/اب سیب",
+                    "Price": 185,
+                    "ImageURL": "./menu cafe/natural juice/10.jpeg"
+                },
+                {
+                    "Title": "فراپاچینو",
+                    "Description": " اسپرسو/ بستنی وانیل/ طعم دهنده وانیل/ طعم دهنده نارگیل ",
+                    "Price": 145,
+                    "ImageURL": "./menu cafe/natural juice/11.jpeg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 9,
+            "headerNameFA": "اسموتی بولز",
+            "headerNameEN": "Smoothie bulls",
+            "headerImg": "./menu cafe/smoothie/smoothie.png",
+            "Info":[
+                {
+                    "Title": "شکلات دیوانه",
+                    "Description": " ترکیبات هیجان انگیز جلاتو شکلاتی، کره بادام زمینی، موز به همراه تاپینک شکلات ، کرن فلکس",
+                    "Price": 175,
+                    "ImageURL": "./menu cafe/smoothie/1.jpg"
+                },
+                {
+                    "Title": "بری وحشی",
+                    "Description": "ترکیب توت فرنگی ، سیروپ کرلبری،  جلاتو شاتوت",
+                    "Price": 185,
+                    "ImageURL": "./menu cafe/smoothie/2.jpg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 10,
+            "headerNameFA": "شیک ها",
+            "headerNameEN": "Milkshake",
+            "headerImg": "./menu cafe/shake/shake.png",
+            "Info":[
+                {
+                    "Title": "شکلات",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/shake/1.jpg"
+                },
+                {
+                    "Title": "شاتوت",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/shake/2.jpg"
+                },
+                {
+                    "Title": "وانیل",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/shake/3.jpg"
+                },
+                {
+                    "Title": "توت فرنگی",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/shake/4.jpg"
+                },
+                {
+                    "Title": "وانیل نوتلا",
+                    "Price": 135,
+                    "ImageURL": "./menu cafe/shake/5.jpg"
+                },
+                {
+                    "Title": "موز شکلات",
+                    "Price": 120,
+                    "ImageURL": "./menu cafe/shake/6.jpg"
+                },
+                {
+                    "Title": "قهوه",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/shake/7.jpg"
+                },
+                {
+                    "Title": "بادام زمینی",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/shake/8.jpg"
+                },
+                {
+                    "Title": "فریک شیک چاکلت براونی",
+                    "Price": 165,
+                    "ImageURL": "./menu cafe/shake/9.jpg"
+                },
+                {
+                    "Title": "شیک لوتوس",
+                    "Price": 155,
+                    "ImageURL": "./menu cafe/shake/10.jpeg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 11,
+            "headerNameFA": "کیک و شیرینی",
+            "headerNameEN": "Cakes and sweets",
+            "headerImg": "./menu cafe/cakes/cakes.png",
+            "Info":[
+                {
+                    "Title": "چیز کیک نیویورکی",
+                    "Price": 98,
+                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                },
+                {
+                    "Title": "کیک هویج",
+                    "Price": 93,
+                    "ImageURL": "./menu cafe/cakes/2.jpg"
+                },
+                {
+                    "Title": "ردولوت",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/cakes/2.jpg"
+                },
+                {
+                    "Title": "کرامبل آلبالو",
+                    "Price": 83,
+                    "ImageURL": "./menu cafe/cakes/4.jpg"
+                },
+                {
+                    "Title": "براونی",
+                    "Price": 89,
+                    "ImageURL": "./menu cafe/cakes/5.jpg"
+                },
+                {
+                    "Title": "تریپل چاکلت",
+                    "Price": 92,
+                    "ImageURL": "./menu cafe/cakes/6.jpeg"
+                },
+                {
+                    "Title": "کوکی چکلت چیپ",
+                    "Price": 9,
+                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                },
+                {
+                    "Title": "کنافه",
+                    "Price": 185,
+                    "ImageURL": "./menu cafe/cakes/8.jpeg"
+                },
+                {
+                    "Title": "کنافه با بستنی",
+                    "Price": 215,
+                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                },
+                {
+                    "Title": "وافل",
+                    "Price": 195,
+                    "ImageURL": "./menu cafe/cakes/10.jpeg"
+                },
+                {
+                    "Title": "باقلوا",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                },
+                {
+                    "Title": "کروسان کلاسیک",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/cakes/12.jpeg"
+                },
+                {
+                    "Title": "کروسان با نوتلا و توت فرنگی",
+                    "Price": 170,
+                    "ImageURL": "./menu cafe/cakes/13.jpeg"
+                },
+                {
+                    "Title": "براونی با جلاتو وانیل",
+                    "Price": 125,
+                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                }
+
+            ]
+        },
+        {
+            "CategoryID" : 12,
+            "headerNameFA": "پیش غذا ها و سالاد ها",
+            "headerNameEN": "Appetizars",
+            "headerImg": "./menu cafe/appetizers/appetizers.png",
+            "Info":[
+                {
+                    "Title": "سالاد سزار",
+                    "Price": 265,
+                    "ImageURL": "./menu cafe/appetizers/1.jpg"
+                },
+                {
+                    "Title": "سالاد سزار (سخاری)",
+                    "Price": 285,
+                    "ImageURL": "./menu cafe/appetizers/2.jpg"
+                },
+                {
+                    "Title": "چیکن سالاد",
+                    "Description": "کاهو/سبزی میکس/گوجه گیلاسی/، قارچ بخارپز/هویج/سینه مرغ/سس گارنر",
+                    "Price": 235,
+                    "ImageURL": "./menu cafe/appetizers/3.jpeg"
+                },
+                {
+                    "Title": "سالاد سبز",
+                    "Description": "کاهو/سبزی میکس/کرفس/گوجه گیلاسی/خیار/فلفل رنگی/هویج/کنجد/سس خردل لیمو",
+                    "Price": 225,
+                    "ImageURL": "./menu cafe/appetizers/4.jpeg"
+                },
+                {
+                    "Title": "سالاد والموستارد",
+                    "Description": "کاهو.سیب سبز.لیمو.بیکن.پنیر.گردو",
+                    "Price": 245,
+                    "ImageURL": "./menu cafe/appetizers/5.jpg"
+                },
+                {
+                    "Title": "بشقاب سبزیجات بخارپز",
+                    "Price": 215,
+                    "ImageURL": "./menu cafe/appetizers/6.jpg"
+                },
+                {
+                    "Title": "سوپ سیب زمینی فرانسوی",
+                    "Price": 105,
+                    "ImageURL": "./menu cafe/appetizers/7.jpg"
+                },
+                {
+                    "Title": "نان مکزیکی با سس سالسا",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/appetizers/8.jpg"
+                },
+                {
+                    "Title": "زیتون پرورده",
+                    "Price": 55,
+                    "ImageURL": "./menu cafe/appetizers/noimagefood.png"
+                },
+                {
+                    "Title": "ماست و خیار",
+                    "Description": "ماست/خیار/نعنا/گردو",
+                    "Price": 35,
+                    "ImageURL": "./menu cafe/appetizers/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 13,
+            "headerNameFA": "سرخ شدنی ها",
+            "headerNameEN": "Fries",
+            "headerImg": "./menu cafe/fries/fries.png",
+            "Info":[
+                {
+                    "Title": "فرنچ فرایز",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/fries/1.jpg"
+                },
+                {
+                    "Title": "چیکن وینگز",
+                    "Price": 195,
+                    "ImageURL": "./menu cafe/fries/2.jpg"
+                },
+                {
+                    "Title": "سیب زمینی با پنیر",
+                    "Description": "سیب زمینی خلال، پنیر پیتزا",
+                    "Price": 135,
+                    "ImageURL": "./menu cafe/fries/noimagefood.png"
+                },
+                {
+                    "Title": "بشقاب سوخاری",
+                    "Description": "دوعددفیله/2عددبال/2عددکتف/قارچ/سبزیجات سوخاری فرانسوی/4 نوع سس",
+                    "Price": 115,
+                    "ImageURL": "./menu cafe/fries/4.jpeg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 14,
+            "headerNameFA": "پنی و ساندویچ ها",
+            "headerNameEN": "Sandwiches",
+            "headerImg": "./menu cafe/sandwich/sandwich.png",
+            "Info":[
+                {
+                    "Title": "پنی مرغ و سبزیجات",
+                    "Price": 225,
+                    "ImageURL": "./menu cafe/sandwich/1.jpg"
+                },
+                {
+                    "Title": "پنی مرغ و بادام زمینی",
+                    "Price": 210,
+                    "ImageURL": "./menu cafe/sandwich/2.jpg"
+                },
+                {
+                    "Title": "پنی سبزیجات",
+                    "Price": 175,
+                    "ImageURL": "./menu cafe/sandwich/3.jpg"
+                },
+                {
+                    "Title": "پنی گوشت",
+                    "Price": 245,
+                    "ImageURL": "./menu cafe/sandwich/4.jpg"
+                },
+                {
+                    "Title": "پنی ژامبون",
+                    "Price": 175,
+                    "ImageURL": "./menu cafe/sandwich/5.jpg"
+                },
+                {
+                    "Title": "پنی بیکن",
+                    "Price": 205,
+                    "ImageURL": "./menu cafe/sandwich/6.jpg"
+                },
+                {
+                    "Title": "پنی رست بیف",
+                    "Price": 315,
+                    "ImageURL": "./menu cafe/sandwich/7.jpeg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 15,
+            "headerNameFA": "پاستا",
+            "headerNameEN": "Pasta",
+            "headerImg": "./menu cafe/pasta/pasta.png",
+            "Info":[
+                {
+                    "Title": "پاستا آلفردو",
+                    "Price": 235,
+                    "ImageURL": "./menu cafe/pasta/1.jpg"
+                },
+                {
+                    "Title": "پاستا عربیتا",
+                    "Price": 255,
+                    "ImageURL": "./menu cafe/pasta/2.jpg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 16,
+            "headerNameFA": "گریل",
+            "headerNameEN": "Grill",
+            "headerImg": "./menu cafe/grill/grill.png",
+            "Info":[
+                {
+                    "Title": "آیس لاته",
+                    "Price": 69,
+                    "ImageURL": "./menu cafe/grill/1.jpg"
+                },
+                {
+                    "Title": "آیس آمریکانو",
+                    "Price": 79,
+                    "ImageURL": "./menu cafe/grill/2.jpg"
+                },
+                {
+                    "Title": "آیس کارامل ماکیاتو",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/grill/3.jpg"
+                },
+                {
+                    "Title": "آیس موکا",
+                    "Price": 90,
+                    "ImageURL": "./menu cafe/grill/4.jpg"
+                },
+                {
+                    "Title": "کلدبرو",
+                    "Price": 78,
+                    "ImageURL": "./menu cafe/grill/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 17,
+            "headerNameFA": "همراه های کنار غذا",
+            "headerNameEN": "Accompanying food",
+            "headerImg": "./menu cafe/accompanying/accompanying.png",
+            "Info":[
+                {
+                    "Title": "آبجو کلاسیک/لیمویی",
+                    "Price": 85,
+                    "ImageURL": "./menu cafe/accompanying/1.jpg"
+                },
+                {
+                    "Title": "سودا با لیمو",
+                    "Price": 55,
+                    "ImageURL": "./menu cafe/accompanying/2.jpg"
+                },
+                {
+                    "Title": "کوکا/اسپرایت/زیرو/فانتا",
+                    "Price": 25,
+                    "ImageURL": "./menu cafe/accompanying/noimagefood.png"
+                },
+                {
+                    "Title": "آب معدنی",
+                    "Price": 15,
+                    "ImageURL": "./menu cafe/accompanying/noimagefood.png"
+                },
+                {
+                    "Title": "دوغ",
+                    "Price": 42,
+                    "ImageURL": "./menu cafe/accompanying/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 18,
+            "headerNameFA": "سس های انتخابی شما",
+            "headerNameEN": "Sauces",
+            "headerImg": "./menu cafe/sauces/sauces.png",
+            "Info":[
+                {
+                    "Title": "سس قارچ",
+                    "Price": 20,
+                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                },
+                {
+                    "Title": "سس بوفالو",
+                    "Price": 20,
+                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                },
+                {
+                    "Title": "سس سزار",
+                    "Price": 20,
+                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                },
+                {
+                    "Title": "سس ترش",
+                    "Price": 20,
+                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                },
+                {
+                    "Title": "سس چی لی تای",
+                    "Price": 20,
+                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 19,
+            "headerNameFA": "پیتزا",
+            "headerNameEN": "pizza",
+            "headerImg": "./menu cafe/pizza/pizza.png",
+            "Info":[
+                {
+                    "Title": "پیتزا مخصوص اپیکور",
+                    "Price": 335,
+                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                },
+                {
+                    "Title": "پیتزا مرغ",
+                    "Price": 275,
+                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                },
+                {
+                    "Title": "پیتزا سبزیجات",
+                    "Price": 215,
+                    "ImageURL": "./menu cafe/pizza/3.jpg"
+                },
+                {
+                    "Title": "پیتزا گوشت",
+                    "Price": 315,
+                    "ImageURL": "./menu cafe/pizza/4.jpg"
+                },
+                {
+                    "Title": "پیتزا بیکن",
+                    "Price": 325,
+                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                },
+                {
+                    "Title": "پیتزا پپرونی",
+                    "Price": 285,
+                    "ImageURL": "./menu cafe/pizza/6.jpg"
+                },
+                {
+                    "Title": "پیتزا مرغ و گوشت",
+                    "Price": 310,
+                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                },
+                {
+                    "Title": "نان سیر",
+                    "Price": 185,
+                    "ImageURL": "./menu cafe/pizza/8.jpg"
+                }
+            ]
+        },
+        {
+            "CategoryID" : 20,
+            "headerNameFA": "غذاهای ایرانی",
+            "headerNameEN": "persian cuisine",
+            "headerImg": "./menu cafe/persian/persian.png",
+            "Info":[
+                {
+                    "Title": "جوجه بی استخوان",
+                    "Price": 245,
+                    "ImageURL": "./menu cafe/persian/1.jpeg"
+                },
+                {
+                    "Title": "شیشلیک",
+                    "Price": 465,
+                    "ImageURL": "./menu cafe/persian/2.jpg"
+                },
+                {
+                    "Title": "برنج کته ای",
+                    "Price": 95,
+                    "ImageURL": "./menu cafe/persian/3.jpeg"
+                },
+                {
+                    "Title": "کوبیده مخصوص زعفرانی",
+                    "Price": 255,
+                    "ImageURL": "./menu cafe/persian/4.jpg"
+                },
+                {
+                    "Title": "چنجه",
+                    "Price": 365,
+                    "ImageURL": "./menu cafe/persian/noimagefood.png"
+                },
+                {
+                    "Title": "فیله ترش",
+                    "Price": 435,
+                    "ImageURL": "./menu cafe/persian/6.jpeg"
+                },
+                {
+                    "Title": "کباب برگ",
+                    "Price": 415,
+                    "ImageURL": "./menu cafe/persian/noimagefood.png"
+                }
+            ]
+        }
+    ]
+}
+
 var linkClass = 'menu-bar_section';
 var mainBtnClass = 'breakfast_contant_info_price_btn';
 var mainBtnClass2 = 'minabar_contant_info_price_btn';
@@ -31,10 +920,27 @@ $(document).ready(function(){
 	if (pay == 0) {
 		$("div.pay").hide();
 	}
+    displayMenubar();
 });
 
+function displayMenubar(){
+    // console.log(menu.Information.length)
+    var Citem = $("div.items");
+    for (let i = 1; i <= menu.Information.length; i++) {
+        // console.log(menu.Information[i-1].CategoryID + " : " + menu.Information[i-1].headerNameFA + " ..................." + menu.Information[i-1].headerNameEN);
+        // var menuBar_json = $('<div class="item item1"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
+        // ')"> img src='+ menu.Information[i-1].headerImg +'class="menu-bar_section_image"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
+        // '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button>');
+       
+        var menuBar_json = $('<div class="item item1"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
+        ')"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
+        '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></div>');
+        Citem.append(menuBar_json);
+        
+    }
+}
 
-/////////scroll new///
+/////////scroll new/////////
 const slider = document.querySelector('.items');
 let isDown = false;
 let startX;
