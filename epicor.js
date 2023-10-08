@@ -9,41 +9,48 @@ var menu = {
             "headerImg": "./menu cafe/breakfast/63fd588c75bdd.png",
             "Info":[
                 {
+                    "barcodeID" : 1,
                     "Title": "صبحانه ایرانی",
                     "Description": "خیار، گوجه فرنگی، سبزی خوردن ، کره،  پنیر، عسل ،  تخم مرغ آبپز ",
                     "Price": 175,
                     "ImageURL": "./menu cafe/breakfast/61ee584723571.jpg"
                 },
                 {
+                    "barcodeID" : 2,
                     "Title": "املت ایرونی",
                     "Description": "نان تست ،  نخم مرغ،  گوجه فرنگی",
                     "Price": 155,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
+                    "barcodeID" : 3,
                     "Title": "صبحانه انگلیسی",
                     "Description": "سوسیس،  بیکن،  تخم مرغ نیمرو، خوراک لوبیا،  سیب زمینی،  قارچ ، گوجه فرنگی، خیار شور",
                     "Price": 195,
                     "ImageURL": "./menu cafe/breakfast/61ee57fcc00cd.jpg"
                 },
                 {
+                    "barcodeID" : 4,
                     "Title": "املت مکزیکی",
                     "Description": "نان تست ، تخم مرغ ، گوجه،  فلفل هالوپینو",
                     "Price": 135,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
+                    "barcodeID" : 5,
                     "Title": "مک مافین",
                     "Description": "نان مک،  تخم مرغ نیمرو، بیکن، پنیر ورقه ای، کاهو،  گوجه فرنگی",
                     "Price": 125,
                     "ImageURL": "./menu cafe/breakfast/61f3e2420f1cc.jpg"
                 },
                 {
+                    "barcodeID" : 6,
                     "Title": "خوراک لوبیا",
                     "Price": 95,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
+                    "barcodeID" : 7,
                     "Title": "نیمرو",
                     "Price": 110,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
@@ -57,41 +64,49 @@ var menu = {
             "headerImg": "./menu cafe/minabar/minabar.png",
             "Info":[
                 {
+                    "barcodeID" : 8,
                     "Title": "اسپرسو",
                     "Price": 68,
                     "ImageURL": "./menu cafe/minabar/1.jpg"
                 },
                 {
+                    "barcodeID" : 9,
                     "Title": "اسپرسو دبل",
                     "Price": 72,
                     "ImageURL": "./menu cafe/minabar/2.jpg"
                 },
                 {
+                    "barcodeID" : 10,
                     "Title": "آمریکانو",
                     "Price": 78,
                     "ImageURL": "./menu cafe/minabar/3.jpg"
                 },
                 {
+                    "barcodeID" : 11,
                     "Title": "اسپرسو ماکیاتو",
                     "Price": 75,
                     "ImageURL": "./menu cafe/minabar/noimagefood.png"
                 },
                 {
+                    "barcodeID" : 12,
                     "Title": "کورتادو",
                     "Price": 70,
                     "ImageURL": "./menu cafe/minabar/5.jpg"
                 },
                 {
+                    "barcodeID" : 13,
                     "Title": "کاپوچینو",
                     "Price": 85,
                     "ImageURL": "./menu cafe/minabar/6.jpg"
                 },
                 {
+                    "barcodeID" : 14,
                     "Title": "لاته دبل",
                     "Price": 85,
                     "ImageURL": "./menu cafe/minabar/7.jpg"
                 },
                 {
+                    "barcodeID" : 15,
                     "Title": "قهوه شیخ",
                     "Price": 98,
                     "ImageURL": "./menu cafe/minabar/noimagefood.png"
@@ -915,7 +930,8 @@ var pay = 0;
 
 
 $(document).ready(function(){
-	// displaySlides();
+    // displaySlides();
+	
 	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 	$( "button"+"[data-info ='1']" ).addClass("menu-bar_section_click");
 	if (pay == 0) {
@@ -963,8 +979,8 @@ function displayMenubarAll(){
 //             var sliderContents_json = $('<div class="menu_contant"><div class="menu_contant_image"><img src="'+menu.Information[i-1].Info[j-1].ImageURL+
 // 			'" alt="صبحانه ایرانی"></div><div class="menu_contant_info"><h4>'+menu.Information[i-1].Info[j-1].Title+
 //             '</h4><p>'+menu.Information[i-1].Info[j-1].Description+
-//             '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" menuID="1">'+menu.Information[i-1].Info[j-1].Price+
-//             '</h4><p>تومان</p></div><div class="btn-class"><button menuID="'+j+'" class="menu_contant_info_price_btn  breakfast_contant_info_price_btn" onclick="AddToBreakfast(\''+j+
+//             '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" barcode="'+menu.Information[i-1].Info[j-1].barcodeID+'">'+menu.Information[i-1].Info[j-1].Price+
+//             '</h4><p>تومان</p></div><div class="btn-class"><button barcode="'+menu.Information[i-1].Info[j-1].barcodeID+'" menuID="'+j+'" class="menu_contant_info_price_btn" onclick="AddToslide(\''+menu.Information[i-1].Info[j-1].barcodeID+
 //             '\')">افزودن ب دفترچه</button></div></div></div></div>');
 // 			CInfo.after(sliderContents_json);
 //         }
@@ -1023,31 +1039,21 @@ function openNav() {
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
-// ---------------------------------------------------------------------------> breakfast item <---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------> unifying functions <---------------------------------------------------------------------------
 
-
-
-
-function AddToslide (barcode , customAttr)
+function AddToslide (barcode )
 {
     console.log("barcode= "+barcode)
-    console.log("customAttr= "+customAttr)
+    // console.log("customAttr= "+customAttr)
     var buttonHtmlTag = $("button." +newMainBtnC+"[barcode='"+barcode+"']");
     buttonHtmlTag.hide();
-    // console.log(buttonHtmlTag.html());
     var span = "barcode = '" + buttonHtmlTag.attr("barcode") + "' menuID = '" + buttonHtmlTag.attr("menuID") + "'";
-    // console.log(span);
     var menuIDContent = buttonHtmlTag.attr("menuID");
-	// console.log(menuIDContent);
     var menuBarcodeContent = buttonHtmlTag.attr("barcode");
-    // console.log(menuBarcodeContent);
     var increament_onclick = "onclick=Increament('span','"+menuBarcodeContent+"')";
-    // console.log(increament_onclick);
 	var decreament_onclick = "onclick=Decreament('span','"+menuBarcodeContent+"')";
-    // console.log(decreament_onclick);
     var section_count = $('<div class="Purchase-count" barcode="'+barcode+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
-    // console.log(section_count.html());
     buttonHtmlTag.after(section_count);
 
 
@@ -1095,11 +1101,8 @@ function DecrementPrice(barcode){
 
 function Increament(customClass ,barcode )
 {
-    console.log("barcode increament = "+barcode);
 	var increament_counter = $("span."+customClass+"[barcode='"+barcode+"']");
-    // console.log(increament_counter)
     var counter = increament_counter.html();
-    // console.log(counter)
 	counter++;
 	increament_counter.html(" "+counter+" ");
 	
@@ -1124,6 +1127,17 @@ function Decreament(customClass ,barcode)
 
 	DecrementPrice(barcode);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
