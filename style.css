@@ -209,10 +209,12 @@ a:hover {
 .slider {
     display: flex;
     justify-content: space-between;
+    direction: rtl;
+    flex-wrap: wrap; 
 } 
 
   /* silders main style */
-.breakfast{
+/* .breakfast{
    direction: rtl;
    display: flex;
    flex-wrap: wrap; 
@@ -311,7 +313,7 @@ a:hover {
     direction: rtl;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
   /* Top line of all slides */
 .hrLine{
@@ -322,6 +324,7 @@ a:hover {
 }
 .hrLine p{
     color: var(--hrLineFont);
+    /* margin-right: -50px; */
 }
 .hrLine span{
     background-color:var(--hrLineBack);

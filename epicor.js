@@ -915,6 +915,7 @@ var pay = 0;
 
 
 $(document).ready(function(){
+	// displaySlides();
 	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
 	$( "button"+"[data-info ='1']" ).addClass("menu-bar_section_click");
 	if (pay == 0) {
@@ -927,15 +928,12 @@ $(document).ready(function(){
 function displayMenubar(){
     // console.log(menu.Information.length)
     var Citem = $("div.items");
-    for (let i = 1; i <= menu.Information.length; i++) {
-        // console.log(menu.Information[i-1].CategoryID + " : " + menu.Information[i-1].headerNameFA + " ..................." + menu.Information[i-1].headerNameEN);
-        // var menuBar_json = $('<div class="item item1"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
-        // ')"> img src='+ menu.Information[i-1].headerImg +'class="menu-bar_section_image"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
-        // '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button>');
-       
+    for (let i = 1; i <= menu.Information.length; i++) {  
+
         var menuBar_json = $('<div class="item item1"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
-        ')"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
+        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="breakfast" class="menu-bar_section_image"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
         '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></div>');
+
         Citem.append(menuBar_json);
         
     }
@@ -943,14 +941,39 @@ function displayMenubar(){
 function displayMenubarAll(){
     var CmenuAll = $("div.overlay-content");
     for (let i = 1; i <= menu.Information.length; i++) {
+
         var menuBarAll_json = $('<a onclick="closeNav()" href="#"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
-        ')"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
+        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="breakfast" class="menu-bar_section_image"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
         '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></a>');
         
         CmenuAll.append(menuBarAll_json);
         
     }
 }
+// function displaySlides(){
+//     console.log(menu.Information.length)
+//     var Csliders = $("div.sliders");
+//     for (let i = 1; i <= menu.Information.length; i++) {
+
+//         var sliderContentsHeader_json = $('<div data-info="'+i+'" class=" slider"><div class="hrLine"><p>'+menu.Information[i-1].headerNameFA+
+//         '</p><span></span><p>'+menu.Information[i-1].headerNameEN+'</p></div>');
+
+// 		var CInfo = $("div.hrLine");
+// 		for (let j = 1; j <= menu.Information[i-1].Info.length; j++) {
+//             var sliderContents_json = $('<div class="menu_contant"><div class="menu_contant_image"><img src="'+menu.Information[i-1].Info[j-1].ImageURL+
+// 			'" alt="صبحانه ایرانی"></div><div class="menu_contant_info"><h4>'+menu.Information[i-1].Info[j-1].Title+
+//             '</h4><p>'+menu.Information[i-1].Info[j-1].Description+
+//             '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" menuID="1">'+menu.Information[i-1].Info[j-1].Price+
+//             '</h4><p>تومان</p></div><div class="btn-class"><button menuID="'+j+'" class="menu_contant_info_price_btn  breakfast_contant_info_price_btn" onclick="AddToBreakfast(\''+j+
+//             '\')">افزودن ب دفترچه</button></div></div></div></div>');
+// 			CInfo.after(sliderContents_json);
+//         }
+    
+
+//     Csliders.append(sliderContentsHeader_json);
+
+// 	}
+// }
 
 /////////scroll new/////////
 const slider = document.querySelector('.items');
@@ -2581,6 +2604,3 @@ function Decreament20(customClass,customAttr)
 
 	DecrementPrice20(customAttr);
 }
-
-
-
