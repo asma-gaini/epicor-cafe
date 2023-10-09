@@ -976,17 +976,18 @@ function displaySlides(){
         '</p><span></span><p>'+menu.Information[IDNumMain-1].headerNameEN+'</p></div>');
 
         console.log(menu.Information[IDNumMain-1].Info[1].barcodeID)
-		// var CInfo = $("div.hrLine");
-        // for (var InfoNum = 1; InfoNum < menu.Information[IDNumMain-1].Info.length; InfoNum++) {
+		var CInfo = $("div.hrLine");
+        for (var InfoNum = 1; InfoNum < menu.Information[IDNumMain-1].Info.length; InfoNum++) {
             
-        //     var sliderContents_json = $('<div class="menu_contant"><div class="menu_contant_image"><img src="'+menu.Information[IDNumMain-1].Info[InfoNum-1].ImageURL+'" alt="'+menu.Information[IDNumMain-1].Info[InfoNum-1].Title+
-        //     '"></div><div class="menu_contant_info"><h4>'+menu.Information[IDNumMain-1].Info[InfoNum-1].Title+'</h4><p>'+menu.Information[IDNumMain-1].Info[InfoNum-1].Description+
-        //     '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" barcode="'+menu.Information[IDNumMain-1].Info[InfoNum-1].barcodeID+'">'+menu.Information[IDNumMain-1].Info[InfoNum-1].Price+
-        //     '.000</h4><p>تومان</p></div><div class="btn-class"><button barcode="'+menu.Information[IDNumMain-1].Info[InfoNum-1].barcodeID+'" class="menu_contant_info_price_btn onclick="AddToslide(\''+menu.Information[IDNumMain-1].Info[InfoNum-1].barcodeID+
-        //     '\')">افزودن ب دفترچه</button></div></div></div></div>');
+            var sliderContents_json = $('<div class="menu_contant"><div class="menu_contant_image"><img src="'+menu.Information[IDNumMain-1].Info[InfoNum-1].ImageURL+'" alt="'+menu.Information[IDNumMain-1].Info[InfoNum-1].Title+
+            '"></div><div class="menu_contant_info"><h4>'+menu.Information[IDNumMain-1].Info[InfoNum-1].Title+'</h4><p>'+menu.Information[IDNumMain-1].Info[InfoNum-1].Description+
+            '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" barcode="'+menu.Information[IDNumMain-1].Info[InfoNum-1].barcodeID+'" menuID="'+InfoNum+
+            '">'+menu.Information[IDNumMain-1].Info[InfoNum-1].Price+'.000</h4><p>تومان</p></div><div class="btn-class"><button barcode="'+menu.Information[IDNumMain-1].Info[InfoNum-1].barcodeID+
+            '" menuID="'+InfoNum+'" class="menu_contant_info_price_btn onclick="AddToslide(\''+menu.Information[IDNumMain-1].Info[InfoNum-1].barcodeID+
+            '\' ,\''+InfoNum+'\')">افزودن ب دفترچه</button></div></div></div></div>');
 
-		// 	CInfo.after(sliderContents_json);
-        // }
+			CInfo.after(sliderContents_json);
+        }
 
     Csliders.append(sliderContentsHeader_json);
 
