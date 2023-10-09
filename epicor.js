@@ -9,48 +9,48 @@ var menu = {
             "headerImg": "./menu cafe/breakfast/63fd588c75bdd.png",
             "Info":[
                 {
-                    "barcodeID" : 1,
+                    "codeNumber" : 1,
                     "Title": "صبحانه ایرانی",
                     "Description": "خیار، گوجه فرنگی، سبزی خوردن ، کره،  پنیر، عسل ،  تخم مرغ آبپز ",
                     "Price": 175,
                     "ImageURL": "./menu cafe/breakfast/61ee584723571.jpg"
                 },
                 {
-                    "barcodeID" : 2,
+                    "codeNumber" : 2,
                     "Title": "املت ایرونی",
                     "Description": "نان تست ،  نخم مرغ،  گوجه فرنگی",
                     "Price": 155,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
-                    "barcodeID" : 3,
+                    "codeNumber" : 3,
                     "Title": "صبحانه انگلیسی",
                     "Description": "سوسیس،  بیکن،  تخم مرغ نیمرو، خوراک لوبیا،  سیب زمینی،  قارچ ، گوجه فرنگی، خیار شور",
                     "Price": 195,
                     "ImageURL": "./menu cafe/breakfast/61ee57fcc00cd.jpg"
                 },
                 {
-                    "barcodeID" : 4,
+                    "codeNumber" : 4,
                     "Title": "املت مکزیکی",
                     "Description": "نان تست ، تخم مرغ ، گوجه،  فلفل هالوپینو",
                     "Price": 135,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
-                    "barcodeID" : 5,
+                    "codeNumber" : 5,
                     "Title": "مک مافین",
                     "Description": "نان مک،  تخم مرغ نیمرو، بیکن، پنیر ورقه ای، کاهو،  گوجه فرنگی",
                     "Price": 125,
                     "ImageURL": "./menu cafe/breakfast/61f3e2420f1cc.jpg"
                 },
                 {
-                    "barcodeID" : 6,
+                    "codeNumber" : 6,
                     "Title": "خوراک لوبیا",
                     "Price": 95,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
-                    "barcodeID" : 7,
+                    "codeNumber" : 7,
                     "Title": "نیمرو",
                     "Price": 110,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
@@ -64,49 +64,49 @@ var menu = {
             "headerImg": "./menu cafe/minabar/minabar.png",
             "Info":[
                 {
-                    "barcodeID" : 8,
+                    "codeNumber" : 8,
                     "Title": "اسپرسو",
                     "Price": 68,
                     "ImageURL": "./menu cafe/minabar/1.jpg"
                 },
                 {
-                    "barcodeID" : 9,
+                    "codeNumber" : 9,
                     "Title": "اسپرسو دبل",
                     "Price": 72,
                     "ImageURL": "./menu cafe/minabar/2.jpg"
                 },
                 {
-                    "barcodeID" : 10,
+                    "codeNumber" : 10,
                     "Title": "آمریکانو",
                     "Price": 78,
                     "ImageURL": "./menu cafe/minabar/3.jpg"
                 },
                 {
-                    "barcodeID" : 11,
+                    "codeNumber" : 11,
                     "Title": "اسپرسو ماکیاتو",
                     "Price": 75,
                     "ImageURL": "./menu cafe/minabar/noimagefood.png"
                 },
                 {
-                    "barcodeID" : 12,
+                    "codeNumber" : 12,
                     "Title": "کورتادو",
                     "Price": 70,
                     "ImageURL": "./menu cafe/minabar/5.jpg"
                 },
                 {
-                    "barcodeID" : 13,
+                    "codeNumber" : 13,
                     "Title": "کاپوچینو",
                     "Price": 85,
                     "ImageURL": "./menu cafe/minabar/6.jpg"
                 },
                 {
-                    "barcodeID" : 14,
+                    "codeNumber" : 14,
                     "Title": "لاته دبل",
                     "Price": 85,
                     "ImageURL": "./menu cafe/minabar/7.jpg"
                 },
                 {
-                    "barcodeID" : 15,
+                    "codeNumber" : 15,
                     "Title": "قهوه شیخ",
                     "Price": 98,
                     "ImageURL": "./menu cafe/minabar/noimagefood.png"
@@ -903,75 +903,80 @@ var menu = {
     ]
 }
 
-var linkClass = 'menu-bar_section';
-var mainBtnClass = 'breakfast_contant_info_price_btn';
-var mainBtnClass2 = 'minabar_contant_info_price_btn';
-var mainBtnClass3 = 'espressobar_contant_info_price_btn';
-var mainBtnClass4 = 'icecoffee_contant_info_price_btn';
-var mainBtnClass5 = 'coffeebar_contant_info_price_btn';
-var mainBtnClass6 = 'hotdrinks_contant_info_price_btn';
-var mainBtnClass7 = 'drinkchoise_contant_info_price_btn';
-var mainBtnClass8 = 'naturaljuise_contant_info_price_btn';
-var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
-var mainBtnClass10 = 'milkshake_contant_info_price_btn';
-var mainBtnClass11 = 'cake_contant_info_price_btn';
-var mainBtnClass12 = 'appetizers_contant_info_price_btn';
-var mainBtnClass13 = 'fries_contant_info_price_btn';
-var mainBtnClass14 = 'sandwiches_contant_info_price_btn';
-var mainBtnClass15 = 'pasta_contant_info_price_btn';
-var mainBtnClass16 = 'grill_contant_info_price_btn';
-var mainBtnClass17 = 'accompanying_contant_info_price_btn';
-var mainBtnClass18 = 'sauces_contant_info_price_btn';
-var mainBtnClass19 = 'pizza_contant_info_price_btn';
-var mainBtnClass20 = 'persian_contant_info_price_btn';
-var newMainBtnC = 'menu_contant_info_price_btn';
-var customClass = "span";
-var pay = 0;
+// var mainBtnClass = 'breakfast_contant_info_price_btn';
+// var mainBtnClass2 = 'minabar_contant_info_price_btn';
+// var mainBtnClass3 = 'espressobar_contant_info_price_btn';
+// var mainBtnClass4 = 'icecoffee_contant_info_price_btn';
+// var mainBtnClass5 = 'coffeebar_contant_info_price_btn';
+// var mainBtnClass6 = 'hotdrinks_contant_info_price_btn';
+// var mainBtnClass7 = 'drinkchoise_contant_info_price_btn';
+// var mainBtnClass8 = 'naturaljuise_contant_info_price_btn';
+// var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
+// var mainBtnClass10 = 'milkshake_contant_info_price_btn';
+// var mainBtnClass11 = 'cake_contant_info_price_btn';
+// var mainBtnClass12 = 'appetizers_contant_info_price_btn';
+// var mainBtnClass13 = 'fries_contant_info_price_btn';
+// var mainBtnClass14 = 'sandwiches_contant_info_price_btn';
+// var mainBtnClass15 = 'pasta_contant_info_price_btn';
+// var mainBtnClass16 = 'grill_contant_info_price_btn';
+// var mainBtnClass17 = 'accompanying_contant_info_price_btn';
+// var mainBtnClass18 = 'sauces_contant_info_price_btn';
+// var mainBtnClass19 = 'pizza_contant_info_price_btn';
+// var mainBtnClass20 = 'persian_contant_info_price_btn';
+// var linkClass = 'menu-bar_section';
+var menubarImageClass = 'menu-bar_section_image';
+var menubarInfoClass = 'menu-bar_section_info';
+var menubarNumeENClass = 'menu-bar_section_name-en';
+var menubarNameFAClass = 'menu-bar_section_name-fa';
+var menubarItem = 'menu-bar_section';
+var mainButtonClass = 'menu_contant_info_price_btn';
+var purchaseSpanClass = "span";
+var totalPrice = 0;
 
 
 $(document).ready(function(){
-    // displaySlides();
+    // showSlides();
 	
-	$( "div.slider"+"[data-info ='1']" ).siblings("div").hide();
-	$( "button"+"[data-info ='1']" ).addClass("menu-bar_section_click");
-	if (pay == 0) {
-		$("div.pay").hide();
+	$( "div.slider"+"[CategoryID ='1']" ).siblings("div").hide();
+	$( "button"+"[CategoryID ='1']" ).addClass("menu-bar_section_click");
+	if (totalPrice == 0) {
+		$("div.totalPrice").hide();
 	}
-    displayMenubar();
-	displayMenubarAll();
+    showMenubar();
+	showMenuGathe();
 });
 
-function displayMenubar(){
+function showMenubar(){
     // console.log(menu.Information.length)
-    var Citem = $("div.items");
+    var getItemClass = $("div.items");
     for (let i = 1; i <= menu.Information.length; i++) {  
 
-        var menuBar_json = $('<div class="item item1"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
-        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="breakfast" class="menu-bar_section_image"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
-        '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></div>');
+        var menuBar_json = $('<div class="item item1"><button CategoryID="'+i+'" class="'+menubarItem+'" onclick="linked('+i+
+        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="'+menu.Information[i-1].headerNameEN+'" class="'+menubarImageClass+'"><div class="'+menubarInfoClass+'"><p class="'+menubarNumeENClass+'">'+ menu.Information[i-1].headerNameEN+
+        '</p><p class="'+menubarNameFAClass+'">'+ menu.Information[i-1].headerNameFA+'</p></div></button></div>');
 
-        Citem.append(menuBar_json);
+        getItemClass.append(menuBar_json);
         
     }
 }
-function displayMenubarAll(){
-    var CmenuAll = $("div.overlay-content");
+function showMenuGathe(){
+    var menuGatherClass = $("div.overlay-content");
     for (let i = 1; i <= menu.Information.length; i++) {
 
-        var menuBarAll_json = $('<a onclick="closeNav()" href="#"><button data-info="'+i+'" class="menu-bar_section"onclick="linked('+i+
-        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="breakfast" class="menu-bar_section_image"><div class="menu-bar_section_info"><p class="menu-bar_section_name-en">'+ menu.Information[i-1].headerNameEN+
-        '</p><p class="menu-bar_section_name-fa">'+ menu.Information[i-1].headerNameFA+'</p></div></button></a>');
+        var menuGathe_json = $('<a onclick="closeNav()" href="#"><button CategoryID="'+i+'" class="'+menubarItem+'" onclick="linked('+i+
+        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="'+menu.Information[i-1].headerNameEN+'" class="'+menubarImageClass+'"><div class="'+menubarInfoClass+'"><p class="'+menubarNumeENClass+'">'+ menu.Information[i-1].headerNameEN+
+        '</p><p class="'+menubarNameFAClass+'">'+ menu.Information[i-1].headerNameFA+'</p></div></button></a>');
         
-        CmenuAll.append(menuBarAll_json);
+        menuGatherClass.append(menuGathe_json);
         
     }
 }
-// function displaySlides(){
+// function showSlides(){
 //     console.log(menu.Information.length)
 //     var Csliders = $("div.sliders");
 //     for (let i = 1; i <= menu.Information.length; i++) {
 
-//         var sliderContentsHeader_json = $('<div data-info="'+i+'" class=" slider"><div class="hrLine"><p>'+menu.Information[i-1].headerNameFA+
+//         var sliderContentsHeader_json = $('<div CategoryID="'+i+'" class=" slider"><div class="hrLine"><p>'+menu.Information[i-1].headerNameFA+
 //         '</p><span></span><p>'+menu.Information[i-1].headerNameEN+'</p></div>');
 
 // 		var CInfo = $("div.hrLine");
@@ -979,8 +984,8 @@ function displayMenubarAll(){
 //             var sliderContents_json = $('<div class="menu_contant"><div class="menu_contant_image"><img src="'+menu.Information[i-1].Info[j-1].ImageURL+
 // 			'" alt="صبحانه ایرانی"></div><div class="menu_contant_info"><h4>'+menu.Information[i-1].Info[j-1].Title+
 //             '</h4><p>'+menu.Information[i-1].Info[j-1].Description+
-//             '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" barcode="'+menu.Information[i-1].Info[j-1].barcodeID+'">'+menu.Information[i-1].Info[j-1].Price+
-//             '</h4><p>تومان</p></div><div class="btn-class"><button barcode="'+menu.Information[i-1].Info[j-1].barcodeID+'" menuID="'+j+'" class="menu_contant_info_price_btn" onclick="AddToslide(\''+menu.Information[i-1].Info[j-1].barcodeID+
+//             '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" codeNumber="'+menu.Information[i-1].Info[j-1].codeNumber+'">'+menu.Information[i-1].Info[j-1].Price+
+//             '</h4><p>تومان</p></div><div class="btn-class"><button codeNumber="'+menu.Information[i-1].Info[j-1].codeNumber+'" CategoryID="'+j+'" class="menu_contant_info_price_btn" onclick="AddPurchaseNumBtn(\''+menu.Information[i-1].Info[j-1].codeNumber+
 //             '\')">افزودن ب دفترچه</button></div></div></div></div>');
 // 			CInfo.after(sliderContents_json);
 //         }
@@ -1022,12 +1027,12 @@ slider.addEventListener('mousemove', (e) => {
 
 
 
-function linked(dataInfo){
+function linked(CategoryID){
 	$("button.menu-bar_section").removeClass("menu-bar_section_click");
-	$("button.menu-bar_section"+"[data-info ='"+dataInfo+"']").addClass("menu-bar_section_click");
+	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").addClass("menu-bar_section_click"); //on menu k rush click mishe hover kone
 	
-	var menuBarSlide = $( "div.slider"+"[data-info ='"+dataInfo+"']" );
-	menuBarSlide.show().siblings("div").fadeOut(300);
+	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
+	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
 }
 
 /* Open when someone clicks on the span element */
@@ -1042,90 +1047,82 @@ function openNav() {
 
 // ---------------------------------------------------------------------------> unifying functions <---------------------------------------------------------------------------
 
-function AddToslide (barcode )
+function AddPurchaseNumBtn (codeNumber )
 {
-    console.log("barcode= "+barcode)
+    console.log("codeNumber= "+codeNumber)
     // console.log("customAttr= "+customAttr)
-    var buttonHtmlTag = $("button." +newMainBtnC+"[barcode='"+barcode+"']");
-    buttonHtmlTag.hide();
-    var span = "barcode = '" + buttonHtmlTag.attr("barcode") + "' menuID = '" + buttonHtmlTag.attr("menuID") + "'";
-    var menuIDContent = buttonHtmlTag.attr("menuID");
-    var menuBarcodeContent = buttonHtmlTag.attr("barcode");
-    var increament_onclick = "onclick=Increament('span','"+menuBarcodeContent+"')";
-	var decreament_onclick = "onclick=Decreament('span','"+menuBarcodeContent+"')";
-    var section_count = $('<div class="Purchase-count" barcode="'+barcode+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
-    buttonHtmlTag.after(section_count);
+    var mainButtonHtml = $("button." +mainButtonClass+"[codeNumber='"+codeNumber+"']");
+    mainButtonHtml.hide();
+    var purchaseSpanAttr = "codeNumber = '" + mainButtonHtml.attr("codeNumber") + "' CategoryID = '" + mainButtonHtml.attr("CategoryID") + "'";
+    var getCategoryID = mainButtonHtml.attr("CategoryID");
+    var getCodeNumber = mainButtonHtml.attr("codeNumber");
+    var increament_onclick = "onclick=increaseNumOfProduct('span','"+getCodeNumber+"')";
+	var decreament_onclick = "onclick=decreaseNumOfProduct('span','"+getCodeNumber+"')";
+    var createPurchaseBtn = $('<div class="Purchase-count" codeNumber="'+codeNumber+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+purchaseSpanAttr+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    mainButtonHtml.after(createPurchaseBtn);
 
 
-    primaryPrice(barcode);
-	if (pay == 0) {
-		$("div.pay").hide();
+    IncrementPrice(codeNumber);
+	if (totalPrice == 0) {
+		$("div.totalPrice").hide();
 	}else{
-		$("div.pay").show();
+		$("div.totalPrice").show();
 	}
 }
 
-// ********************* Click the main button at the same time price *********************
-
-function primaryPrice(barcode){
-	var price = $("h4.price"+"[barcode='"+barcode+"']");
-	var price_info = parseInt(price.html());
-	pay += price_info;
-	$(".pay_counter").html(" "+pay + "/000 ");
-}
 
 // ********************* increment price *********************
 
-function IncrementPrice(barcode){
-	price = $("h4.price"+"[barcode='"+barcode+"']");
-	price_info = parseInt(price.html());
-	pay += price_info;
-	$(".pay_counter").html(" "+pay + "/000 ");
+function IncrementPrice(codeNumber){
+	getPriceHtml = $("h4.price"+"[codeNumber='"+codeNumber+"']");
+	price = parseInt(getPriceHtml.html());
+	totalPrice += price;
+	$(".bill").html(" "+totalPrice + "/000 ");
 }
 
 // ********************* decrement price  *********************
 
-function DecrementPrice(barcode){
-	price = $("h4.price"+"[barcode='"+barcode+"']");
-	price_info = parseInt(price.html());
-	pay -= price_info;
-	$(".pay_counter").html(" "+pay + "/000 ");
-	if (pay == 0) {
-		$("div.pay").hide();
+function DecrementPrice(codeNumber){
+	getPriceHtml = $("h4.price"+"[codeNumber='"+codeNumber+"']");
+	price = parseInt(getPriceHtml.html());
+	totalPrice -= price;
+	$(".bill").html(" "+totalPrice + "/000 ");
+	if (totalPrice == 0) {
+		$("div.totalPrice").hide();
 	}else{
-		$("div.pay").show();
+		$("div.totalPrice").show();
 	}
 }
 
 // ********************* increment order button *********************
 
-function Increament(customClass ,barcode )
+function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
 {
-	var increament_counter = $("span."+customClass+"[barcode='"+barcode+"']");
-    var counter = increament_counter.html();
-	counter++;
-	increament_counter.html(" "+counter+" ");
+	var purchaseSpanHtml = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']");
+    var numberOfPurchase = purchaseSpanHtml.html();
+	numberOfPurchase++;
+	purchaseSpanHtml.html(" "+numberOfPurchase+" ");
 	
-	IncrementPrice(barcode);
+	IncrementPrice(codeNumber);
 }
 // ********************* decrement order button ----> breakfast *********************
-function Decreament(customClass ,barcode)
+function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
 {
-	var decreament_counter = $("span."+customClass+"[barcode='"+barcode+"']");
-	var counter = decreament_counter.html();
-	counter--;
+	var purchaseSpanHtml = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']");
+	var numberOfPurchase = purchaseSpanHtml.html();
+	numberOfPurchase--;
 	
-	if(counter < 1)
+	if(numberOfPurchase < 1)
 	{
-		var parentDiv = $("div.Purchase-count[barcode='"+barcode+ "']");
-		parentDiv.hide();
-		var mainButton = $("button." +newMainBtnC+"[barcode='"+barcode+"']");
+		var PurchaseBtn = $("div.Purchase-count[codeNumber='"+codeNumber+ "']");
+		PurchaseBtn.hide();
+		var mainButton = $("button." +mainButtonClass+"[codeNumber='"+codeNumber+"']");
 		mainButton.show();
 	}
 
-	decreament_counter.html(" "+counter+" ");
+	purchaseSpanHtml.html(" "+numberOfPurchase+" ");
 
-	DecrementPrice(barcode);
+	DecrementPrice(codeNumber);
 }
 
 
@@ -1147,15 +1144,15 @@ function Decreament(customClass ,barcode)
 // ********************* main button for increment or decrement order ----> breakfast *********************
 // function AddToBreakfast(customAttr)
 // {
-// 	// var myHtmlTag = sender.getAttribute('menuID');
-// 	var myHtmlTag = $("button." +mainBtnClass+"[menuID='"+customAttr+"']");
+// 	// var myHtmlTag = sender.getAttribute('CategoryID');
+// 	var myHtmlTag = $("button." +mainBtnClass+"[CategoryID='"+customAttr+"']");
 // 	myHtmlTag.hide();
-//     var span = "menuID = '" + myHtmlTag.attr("menuID") + "'";
-// 	var menuIDContent = myHtmlTag.attr("menuID");
+//     var span = "CategoryID = '" + myHtmlTag.attr("CategoryID") + "'";
+// 	var menuIDContent = myHtmlTag.attr("CategoryID");
 // 	var increament_onclick = "onclick=Increament('span','"+menuIDContent+"')";
 // 	var decreament_onclick = "onclick=Decreament('span','"+menuIDContent+"')";
-//     var section_count = $('<div class="Purchase-count" menuID="'+menuIDContent+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
-//     myHtmlTag.after(section_count);
+//     var createPurchaseBtn = $('<div class="Purchase-count" CategoryID="'+menuIDContent+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+span+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+//     myHtmlTag.after(createPurchaseBtn);
 
 // 	primaryPrice(customAttr);
 // 	if (pay == 0) {
@@ -1166,21 +1163,21 @@ function Decreament(customClass ,barcode)
 // }
 // ********************* Click the main button at the same time price ----> breakfast *********************
 // function primaryPrice(customAttr){
-// 	var price = $("h4.price"+"[menuID='"+customAttr+"']");
+// 	var price = $("h4.price"+"[CategoryID='"+customAttr+"']");
 // 	var price_info = parseInt(price.html());
 // 	pay += price_info;
 // 	$(".pay_counter").html(" "+pay + "/000 ");
 // }
 // ********************* increment price ----> breakfast *********************
 // function IncrementPrice(customAttr){
-// 	price = $("h4.price"+"[menuID='"+customAttr+"']");
+// 	price = $("h4.price"+"[CategoryID='"+customAttr+"']");
 // 	price_info = parseInt(price.html());
 // 	pay += price_info;
 // 	$(".pay_counter").html(" "+pay + "/000 ");
 // }
 // ********************* decrement price ----> breakfast *********************
 // function DecrementPrice(customAttr){
-// 	price = $("h4.price"+"[menuID='"+customAttr+"']");
+// 	price = $("h4.price"+"[CategoryID='"+customAttr+"']");
 // 	price_info = parseInt(price.html());
 // 	pay -= price_info;
 // 	$(".pay_counter").html(" "+pay + "/000 ");
@@ -1193,7 +1190,7 @@ function Decreament(customClass ,barcode)
 // ********************* increment order button ----> breakfast *********************
 // function Increament(customClass,customAttr)
 // {
-// 	var increament_counter = $("span."+customClass+"[menuID='"+customAttr+ "']");
+// 	var increament_counter = $("span."+customClass+"[CategoryID='"+customAttr+ "']");
 // 	var counter = increament_counter.html();
 // 	counter++;
 // 	increament_counter.html(" "+counter+" ");
@@ -1203,15 +1200,15 @@ function Decreament(customClass ,barcode)
 // ********************* decrement order button ----> breakfast *********************
 // function Decreament(customClass,customAttr)
 // {
-// 	var decreament_counter = $("span."+customClass+"[menuID='"+customAttr+ "']");
+// 	var decreament_counter = $("span."+customClass+"[CategoryID='"+customAttr+ "']");
 // 	var counter = decreament_counter.html();
 // 	counter--;
 	
 // 	if(counter < 1)
 // 	{
-// 		var parentDiv = $("div.Purchase-count[menuID='"+customAttr+ "']");
+// 		var parentDiv = $("div.Purchase-count[CategoryID='"+customAttr+ "']");
 // 		parentDiv.hide();
-// 		var mainButton = $("button."+mainBtnClass+"[menuID='"+customAttr+"']");
+// 		var mainButton = $("button."+mainBtnClass+"[CategoryID='"+customAttr+"']");
 // 		mainButton.show();
 // 	}
 // 	// if (pay == 0) {
@@ -1229,9 +1226,9 @@ function Decreament(customClass ,barcode)
 // ********************* main button for increment or decrement order ----> minabar *********************
 // function AddToMinabar(customAttr)
 // {
-// 	var myHtmlTag2 = $("button." +mainBtnClass2+"[menuID2='"+customAttr+"']");
+// 	var myHtmlTag2 = $("button." +mainBtnClass2+"[CategoryID2='"+customAttr+"']");
 // 	myHtmlTag2.hide();
-//     var span2 = "menuID2 = '" + myHtmlTag2.attr("menuID2") + "'";
+//     var span2 = "CategoryID2 = '" + myHtmlTag2.attr("menuID2") + "'";
 // 	var menuIDContent2 = myHtmlTag2.attr("menuID2");
 // 	var increament_onclick = "onclick=Increament2('span','"+menuIDContent2+"')";
 // 	var decreament_onclick = "onclick=Decreament2('span','"+menuIDContent2+"')";
