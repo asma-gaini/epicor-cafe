@@ -929,6 +929,11 @@ var menubarInfoClass = 'menu-bar_section_info';
 var menubarNumeENClass = 'menu-bar_section_name-en';
 var menubarNameFAClass = 'menu-bar_section_name-fa';
 var menubarItem = 'menu-bar_section';
+var slideImageClass = 'menu_contant_image';
+var slideInformationClass = 'menu_contant_info';
+var slidePriceInformation = 'menut_contant_info_price';
+var slidePriceContent = 'menu_contant_info_price_contant';
+var AddPurchaseNumBtnFunction = 'AddPurchaseNumBtn';
 var mainButtonClass = 'menu_contant_info_price_btn';
 var purchaseSpanClass = "span";
 var totalPrice = 0;
@@ -971,30 +976,36 @@ function showMenuGathe(){
         
     }
 }
-// function showSlides(){
-//     console.log(menu.Information.length)
-//     var Csliders = $("div.sliders");
-//     for (let i = 1; i <= menu.Information.length; i++) {
+function showSlides(){
+    console.log(menu.Information.length)
+    var getSlidersClass = $("div.sliders");
+    for (var IDNumMain = 1; IDNumMain <= menu.Information.length; IDNumMain++) {
 
-//         var sliderContentsHeader_json = $('<div CategoryID="'+i+'" class=" slider"><div class="hrLine"><p>'+menu.Information[i-1].headerNameFA+
-//         '</p><span></span><p>'+menu.Information[i-1].headerNameEN+'</p></div>');
+        var sliderContentsHeader_json = $('<div CategoryID="'+IDNumMain+'" class=" slider"><div class="hrLine"><p>'+menu.Information[IDNumMain-1].headerNameFA+
+        '</p><span></span><p>'+menu.Information[IDNumMain-1].headerNameEN+'</p></div>');
 
-// 		var CInfo = $("div.hrLine");
-// 		for (let j = 1; j <= menu.Information[i-1].Info.length; j++) {
-//             var sliderContents_json = $('<div class="menu_contant"><div class="menu_contant_image"><img src="'+menu.Information[i-1].Info[j-1].ImageURL+
-// 			'" alt="صبحانه ایرانی"></div><div class="menu_contant_info"><h4>'+menu.Information[i-1].Info[j-1].Title+
-//             '</h4><p>'+menu.Information[i-1].Info[j-1].Description+
-//             '</p><div class="menut_contant_info_price"><div class="menu_contant_info_price_contant"><h4 class="price" codeNumber="'+menu.Information[i-1].Info[j-1].codeNumber+'">'+menu.Information[i-1].Info[j-1].Price+
-//             '</h4><p>تومان</p></div><div class="btn-class"><button codeNumber="'+menu.Information[i-1].Info[j-1].codeNumber+'" CategoryID="'+j+'" class="menu_contant_info_price_btn" onclick="AddPurchaseNumBtn(\''+menu.Information[i-1].Info[j-1].codeNumber+
-//             '\')">افزودن ب دفترچه</button></div></div></div></div>');
-// 			CInfo.after(sliderContents_json);
-//         }
+//         console.log(menu.Information[IDNumMain-1].Info[1].barcodeID)
+
+		var CInfo = $("div.hrLine");
+		for (var InfoNum = 1; InfoNum < menu.Information[IDNumMain-1].Info.length; InfoNum++) {
+            var sliderContents_json = $('<div class="menu_contant"><div class="'+slideImageClass+'"><img src="'+menu.Information[IDNumMain-1].Info[InfoNum-1].ImageURL+
+			'" alt="'+menu.Information[IDNumMain-1].Info[InfoNum-1].Title+
+            '"></div><div class="'+slideInformationClass+'"><h4>'+menu.Information[i-1].Info[j-1].Title+
+            '</h4><p>'+menu.Information[IDNumMain-1].Info[InfoNum-1].Description+
+            '</p><div class="'+slidePriceInformation+'"><div class="'+slidePriceContent+'"><h4 class="price" codeNumber="'+menu.Information[IDNumMain-1].Info[InfoNum-1].codeNumber+'" CategoryID="'+menu.Information[IDNumMain-1].CategoryID+
+            '">'+menu.Information[IDNumMain-1].Info[InfoNum-1].Price+
+            '.000</h4><p>تومان</p></div><div class="btn-class"><button codeNumber="'+menu.Information[IDNumMain-1].Info[InfoNum-1].codeNumber+'" CategoryID="'+menu.Information[IDNumMain-1].CategoryID+
+            '" class="'+mainButtonClass+'" onclick="'+AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain-1].Info[InfoNum-1].codeNumber+
+            '\',\''+menu.Information[IDNumMain-1].CategoryID+'\')">افزودن ب دفترچه</button></div></div></div></div>');
+			CInfo.after(sliderContents_json);
+        }
     
 
-//     Csliders.append(sliderContentsHeader_json);
+        getSlidersClass.append(sliderContentsHeader_json);
 
-// 	}
-// }
+	}
+}
+
 
 /////////scroll new/////////
 const slider = document.querySelector('.items');
