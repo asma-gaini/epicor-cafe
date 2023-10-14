@@ -17,6 +17,10 @@ body{
     border: 3px solid #cf871c;
   }
 
+.hideSlide{
+    display: none;
+}
+
          /* ******************************* header of page ******************************* */
 .logo{
     display: flex;
