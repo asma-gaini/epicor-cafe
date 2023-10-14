@@ -374,6 +374,9 @@ a:hover {
     display: flex;
     align-items: center;
     padding-right: 5px;
+    /* position: absolute; */
+    /* left: 15px; */
+    /* bottom: 20px; */
 }
 .menu_contant_info_price_btn{
     background-color: var(--btn-order);
