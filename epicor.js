@@ -1020,6 +1020,7 @@ var menu = {
                 {
                     "codeNumber" : 140,
                     "Title": "کباب برگ",
+                    "Description": "توضیحات کباب برگ تست",
                     "Price": 415,
                     "ImageURL": "./menu cafe/persian/noimagefood.png"
                 }
@@ -1063,19 +1064,15 @@ var mainButtonClass = 'menu_contant_info_price_btn';
 var purchaseSpanClass = "span";
 var totalPrice = 0;
 
-
 $(document).ready(function(){
     showSlides();
-	$("div.slider").hide();
-    $("div.slider"+"[CategoryID ='1']").show()
-	// $( "div.slider"+"[CategoryID ='1']" ).show().siblings("div").hide();
-	// $( "button"+"[CategoryID ='1']" ).addClass("menu-bar_section_click");
 	if (totalPrice == 0) {
 		$("div.totalPrice").hide();
 	}
-
     showMenubar();
 	showMenuGathe();
+	linked(1);
+
 });
 
 function showMenubar(){
@@ -1103,68 +1100,79 @@ function showMenuGathe(){
         
     }
 }
+
 function showSlides(){
     var getSlidersClass = $("div.sliders");
+    for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++) {
+        var mainDivSlide = $("<div>").attr("CategoryID", menu.Information[IDNumMain].CategoryID).addClass("slider");
+        
+        //------START : hrLine ------
+        var sliderContentsHeader_json = $("<div>").addClass("hrLine");
+        var lineNameFA = $("<p>").html(menu.Information[IDNumMain].headerNameFA);
+        var lineSpan = $("<span>");
+        var lineNameEN = $("<p>").html(menu.Information[IDNumMain].headerNameEN);
+        sliderContentsHeader_json.append(lineNameFA);
+        sliderContentsHeader_json.append(lineSpan);
+        sliderContentsHeader_json.append(lineNameEN);
+        mainDivSlide.append(sliderContentsHeader_json);
+        //------END : hrLine ------
+        
+        for (var InfoNum =0; InfoNum < menu.Information[IDNumMain].Info.length; InfoNum++) {
+            
+            //------START : menu_contant ------
+            var mainDiv = $("<div>").addClass("menu_contant");
 
-    // console.log("asma")
-        for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++) {
-            var mainDivSlide = $("<div>").attr("CategoryID", menu.Information[IDNumMain].CategoryID).addClass("slider");
-                // create hrline header of slides
-                var sliderContentsHeader_json = $("<div>").addClass("hrLine");
-                    var lineNameFA = $("<p>").html(menu.Information[IDNumMain].headerNameFA);
-                    var lineSpan = $("<span>");
-                    var lineNameEN = $("<p>").html(menu.Information[IDNumMain].headerNameEN);
-                    sliderContentsHeader_json.append(lineNameFA);
-                    sliderContentsHeader_json.append(lineSpan);
-                    sliderContentsHeader_json.append(lineNameEN);
+                //-------START : menu_contant_image-------
+                var containSlideImg = $("<div>").addClass(slideImageClass);
+                var slideImage = $("<img>").attr("src" , menu.Information[IDNumMain].Info[InfoNum].ImageURL).attr("alt" , menu.Information[IDNumMain].Info[InfoNum].Title);
+                containSlideImg.append(slideImage);
+                mainDiv.append(containSlideImg);
+                //-------END : menu_contant_image-------
 
-                // body slides 
-                var getLineClass = $("div.hrLine");
-                for (var InfoNum = (menu.Information[IDNumMain].Info.length)-1; InfoNum >= 0; InfoNum--) {
-                    // main div for slides with position after hrline
-                    var mainDiv = $("<div>").addClass("menu_contant").attr("CategoryID", menu.Information[IDNumMain].CategoryID);
+                //-------START : menu_contant_info------
+                var menuInformation = $("<div>").addClass(slideInformationClass);
+                var name = $('<h4>'+menu.Information[IDNumMain].Info[InfoNum].Title+'</h4>')
+                var descriptionMenu = $("<p>").html(menu.Information[IDNumMain].Info[InfoNum].Description);
+                menuInformation.append(name);
+                menuInformation.append(descriptionMenu);
 
-                        // create image tag in slides
-                        var containSlideImg = $("<div>").addClass(slideImageClass);
-                        var slideImage = $("<img>").attr("src" , menu.Information[IDNumMain].Info[InfoNum].ImageURL).attr("alt" , menu.Information[IDNumMain].Info[InfoNum].Title);
-                        var image = containSlideImg.append(slideImage);
-                        mainDiv.append(image);
+                    //ُ------START : menut_contant_info_price-----
+                    var containPriceAndMainbtnInfo = $("<div>").addClass(slidePriceInformation);
+                        //--------START : menu_contant_info_price_contant------
+                        var priceInfo = $("<div>").addClass(slidePriceContent);
+                        var price = $("<h4>").addClass("price").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).html(menu.Information[IDNumMain].Info[InfoNum].Price+".000");
+                        var toman = $("<p>").html("تومان");
+                        priceInfo.append(price);
+                        priceInfo.append(toman);
+                        containPriceAndMainbtnInfo.append(priceInfo);
+                        //--------START : menu_contant_info_price_contant------
 
-                        // div cantain informatin of menu :name .description price , ... 
-                        var menuInformation = $("<div>").addClass(slideInformationClass);
-                            // create name and descriptin 
-                            var name = $('<h4>'+menu.Information[IDNumMain].Info[InfoNum].Title+'</h4>')
-                            var descriptionMenu = $("<p>").html(menu.Information[IDNumMain].Info[InfoNum].Description);
-                            // create div contain price information and main button 
-                            var containPriceAndMainbtnInfo = $("<div>").addClass(slidePriceInformation);
-                                // create price information 
-                                var priceInfo = $("<div>").addClass(slidePriceContent);
-                                    var price = $("<h4>").addClass("price").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).html(menu.Information[IDNumMain].Info[InfoNum].Price+".000")
-                                    var toman = $("<p>").html("تومان")
-                                    priceInfo.append(price);
-                                    priceInfo.append(toman);
-                                // create main button     
-                                var containMainBtn = $("<div>").addClass("btn-class");
-                                    // var MainButton = $("<button>").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).addClass(mainButtonClass).attr("onclickMainBtn").html("افزودن ب دفترچه");
-                                    var MainButton = $("<button>").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).addClass(mainButtonClass).attr('onclick' , AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain].Info[InfoNum].codeNumber+'\',\''+menu.Information[IDNumMain].CategoryID+'\')').html("افزودن ب دفترچه");
-                                    containMainBtn.append(MainButton);
-                                containPriceAndMainbtnInfo.append(priceInfo);
-                                containPriceAndMainbtnInfo.append(containMainBtn);
-                            menuInformation.append(name);
-                            menuInformation.append(descriptionMenu);
-                            menuInformation.append(containPriceAndMainbtnInfo);
+                        //--------START : btn-class -------
+                        var containMainBtn = $("<div>").addClass("btn-class");
+                        var MainButton = $("<button>")
+                                         .attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber)
+                                         .attr("CategoryID", menu.Information[IDNumMain].CategoryID)
+                                         .addClass(mainButtonClass)
+                                         .attr('onclick' , AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain].Info[InfoNum].codeNumber+'\',\''+menu.Information[IDNumMain].CategoryID+'\')')
+                                         .html("افزودن ب دفترچه");
+                        containMainBtn.append(MainButton);
+                        containPriceAndMainbtnInfo.append(containMainBtn);
+                        //--------START : btn-class -------
 
+                    menuInformation.append(containPriceAndMainbtnInfo);
+                    //ُ------END : menut_contant_info_price-----
+                
+                mainDiv.append(menuInformation);
+                //-------END : menu_contant_info------
 
-                        mainDiv.append(menuInformation);
-                        
-
-                    getLineClass.after(mainDiv);
-                }
-                mainDivSlide.append(sliderContentsHeader_json);
-            getSlidersClass.append(mainDivSlide);
+            mainDivSlide.append(mainDiv);
+            //------END : menu_contant ------
         }
 
+        getSlidersClass.append(mainDivSlide);
+    }
 }
+
 
 
 
@@ -1205,8 +1213,6 @@ function linked(CategoryID){
 	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
 	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
 	$("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
-    console.log("asma")
-
 }
 
 /* Open when someone clicks on the span element */
@@ -1224,7 +1230,6 @@ function openNav() {
 function AddPurchaseNumBtn (codeNumber )
 {
     console.log("codeNumber= "+codeNumber)
-    // console.log("customAttr= "+customAttr)
     var mainButtonHtml = $("button." +mainButtonClass+"[codeNumber='"+codeNumber+"']");
     mainButtonHtml.hide();
     var purchaseSpanAttr = "codeNumber = '" + mainButtonHtml.attr("codeNumber") + "' CategoryID = '" + mainButtonHtml.attr("CategoryID") + "'";

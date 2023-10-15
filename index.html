@@ -1,597 +1,599 @@
 <!DOCTYPE html>
-<html  lang="fa-IR">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Epicor</title>
-        <link rel="icon" type="image/x-icon" href="./icon.ico">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./primary.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<html lang="fa-IR">
 
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Epicor</title>
+    <link rel="icon" type="image/x-icon" href="./icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./primary.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <div class="container-fluid">
+</head>
 
-<!-- ***********************header *************************** -->
-            <div class="logo">
-                <img src="./61ae15e0a4b5f.jpg" alt="logo">
+<body>
+
+    <div class="container-fluid">
+
+        <!-- ***********************header *************************** -->
+        <div class="logo">
+            <img src="./61ae15e0a4b5f.jpg" alt="logo">
+        </div>
+        <div class="info-header">
+            <div class="info-header_instagram">
+                <img src="./socialmedia pic/instagram_01.png" alt="instagram">
+                <span>instagram</span>
             </div>
-            <div class="info-header">
-                <div class="info-header_instagram">
-                    <img src="./socialmedia pic/instagram_01.png" alt="instagram">
-                    <span>instagram</span>
-                </div>
-                <div class="info-header_phone">
-                    <img src="./socialmedia pic/phone.png" alt="phone">
-                    <span> 02186128863 </span>
-                </div>
+            <div class="info-header_phone">
+                <img src="./socialmedia pic/phone.png" alt="phone">
+                <span> 02186128863 </span>
             </div>
+        </div>
 
-<!-- ***********************menu bar *************************** -->
+        <!-- ***********************menu bar *************************** -->
         <main class="grid-item main">
             <div class="items menu-bar">
             </div>
         </main>
-        
-<!-- ***********************dropdown menu *************************** -->
+
+        <!-- ***********************dropdown menu *************************** -->
         <div class="gatheringMenu">
             <!-- The overlay -->
             <div id="myNav" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            
+
                 <!-- Overlay content -->
                 <div class="overlay-content">
                 </div>
-            
+
             </div>
-            
+
             <div class="dropdownButton">
-                    <!-- Use any element to open/show the overlay navigation menu -->
+                <!-- Use any element to open/show the overlay navigation menu -->
                 <button onclick="openNav()">مشاهده کل منوها یکجا</button>
             </div>
         </div>
 
-<!-- ***********************sliders menu *************************** -->
+        <!-- ***********************sliders menu *************************** -->
 
         <div class="sliders">
-            
         </div>
-            <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
 
-<!-- ***********************Cart *************************** -->
-            
-            <div class="totalPrice">
-                <!-- <button class="pay-off""> -->
-                <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">
-                    <span>مشاهده سبد خرید </span>
-                    <span class="bill">0</span>
-                    <span>تومان</span>
-                </button>
-            </div>
+        <!-- ***********************Cart *************************** -->
 
-            <!-- **************************************** payment modal **************************** -->
-            <div class="modal-pay">
-                <!-- <h2>Modal Example</h2> -->
-                <!-- <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
-            
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-                    
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">سبد خرید</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <div class="totalPrice">
+            <!-- <button class="pay-off""> -->
+            <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">
+                <span>مشاهده سبد خرید </span>
+                <span class="bill">0</span>
+                <span>تومان</span>
+            </button>
+        </div>
 
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <!-- **************************************** payment modal **************************** -->
+        <div class="modal-pay">
+            <!-- <h2>Modal Example</h2> -->
+            <!-- <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
 
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">سبد خرید</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
                                 </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
-                                    </div>
-                                    <div class="menu_contant_info-modal">
-                                        <h4>صبحانه ایرانی</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID="1">175.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="menu_contant content_pay">
-                                    <div class="menu_contant_image image_pay">
-                                        <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
-                                    </div>
-                                    <div class="menu_contant_info-modal ">
-                                        <h4>آیس آمریکانو</h4>
-                                        <div class="menu_contant_info_price">
-                                            <div class="menu_contant_info_price_contant">
-                                                <h4 class="price" menuID4="2">79.000</h4>
-                                                <p>تومان</p>
-                                            </div>
-                                            <div class="button-counter">
-                                                <button>+</button>
-                                                <span> 1 </span>
-                                                <button>_</button>
-                                            </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="payment-modal">
-                                <span>جمع کل : </span>
-                                <span class="payment">450.000</span>
-                                <span>تومان</span>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-footer modal-payButton">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                                <button type="button" class="btn btn-default" >پرداخت</button>
-                               
-                                
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/breakfast/61ee584723571.jpg" alt="صبحانه ایرانی">
+                                </div>
+                                <div class="menu_contant_info-modal">
+                                    <h4>صبحانه ایرانی</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID="1">175.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu_contant content_pay">
+                                <div class="menu_contant_image image_pay">
+                                    <img src="./menu cafe/ice cofee/2.jpg" alt="آیس آمریکانو">
+                                </div>
+                                <div class="menu_contant_info-modal ">
+                                    <h4>آیس آمریکانو</h4>
+                                    <div class="menu_contant_info_price">
+                                        <div class="menu_contant_info_price_contant">
+                                            <h4 class="price" menuID4="2">79.000</h4>
+                                            <p>تومان</p>
+                                        </div>
+                                        <div class="button-counter">
+                                            <button>+</button>
+                                            <span> 1 </span>
+                                            <button>_</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
+                        <div class="payment-modal">
+                            <span>جمع کل : </span>
+                            <span class="payment">450.000</span>
+                            <span>تومان</span>
+                        </div>
+                        <div class="modal-footer modal-payButton">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                            <button type="button" class="btn btn-default">پرداخت</button>
+
+
+                        </div>
                     </div>
+
                 </div>
             </div>
-                
-            
-            <script src="./epicor.js" async defer></script>
-
         </div>
-    </body>
+
+
+        <script src="./epicor.js" async defer></script>
+
+    </div>
+</body>
+
 </html>
