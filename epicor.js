@@ -1029,27 +1029,6 @@ var menu = {
     ]
 }
 
-// var mainBtnClass = 'breakfast_contant_info_price_btn';
-// var mainBtnClass2 = 'minabar_contant_info_price_btn';
-// var mainBtnClass3 = 'espressobar_contant_info_price_btn';
-// var mainBtnClass4 = 'icecoffee_contant_info_price_btn';
-// var mainBtnClass5 = 'coffeebar_contant_info_price_btn';
-// var mainBtnClass6 = 'hotdrinks_contant_info_price_btn';
-// var mainBtnClass7 = 'drinkchoise_contant_info_price_btn';
-// var mainBtnClass8 = 'naturaljuise_contant_info_price_btn';
-// var mainBtnClass9 = 'smoothiebulls_contant_info_price_btn';
-// var mainBtnClass10 = 'milkshake_contant_info_price_btn';
-// var mainBtnClass11 = 'cake_contant_info_price_btn';
-// var mainBtnClass12 = 'appetizers_contant_info_price_btn';
-// var mainBtnClass13 = 'fries_contant_info_price_btn';
-// var mainBtnClass14 = 'sandwiches_contant_info_price_btn';
-// var mainBtnClass15 = 'pasta_contant_info_price_btn';
-// var mainBtnClass16 = 'grill_contant_info_price_btn';
-// var mainBtnClass17 = 'accompanying_contant_info_price_btn';
-// var mainBtnClass18 = 'sauces_contant_info_price_btn';
-// var mainBtnClass19 = 'pizza_contant_info_price_btn';
-// var mainBtnClass20 = 'persian_contant_info_price_btn';
-// var linkClass = 'menu-bar_section';
 var menubarImageClass = 'menu-bar_section_image';
 var menubarInfoClass = 'menu-bar_section_info';
 var menubarNumeENClass = 'menu-bar_section_name-en';
@@ -1063,6 +1042,9 @@ var AddPurchaseNumBtnFunction = 'AddPurchaseNumBtn';
 var mainButtonClass = 'menu_contant_info_price_btn';
 var purchaseSpanClass = "span";
 var totalPrice = 0;
+var map = new Map();
+var storage = [];
+var temp = {};
 
 $(document).ready(function(){
     showSlides();
@@ -1072,6 +1054,8 @@ $(document).ready(function(){
     showMenubar();
 	showMenuGathe();
 	linked(1);
+	$(".payment").html(" "+totalPrice + "/000 ");
+
 
 });
 
@@ -1100,7 +1084,6 @@ function showMenuGathe(){
         
     }
 }
-
 function showSlides(){
     var getSlidersClass = $("div.sliders");
     for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++) {
@@ -1173,7 +1156,89 @@ function showSlides(){
     }
 }
 
+function setPurchaseMap(codeNumber , numberOfPurchase){
+    map.set(codeNumber , numberOfPurchase);
+}
 
+function removeFromBill(key)
+{
+    $("div.content_pay[codeNumber='"+key+"']").remove();
+}
+
+function getInformationWithMap(){
+    $("div.modal-body").empty();
+    for (let key of map.keys()) {
+        if(map.get(key)== 0 ){
+            removeFromBill(key);
+        }
+        else {
+             // console.log(key);
+            for (let categoryI = 0; categoryI < menu.Information.length; categoryI++) {
+                // console.log(menu.Information.length)
+                for (let codNumI = 0; codNumI < menu.Information[categoryI].Info.length; codNumI++) {
+                // console.log(menu.Information[categoryI].Info.length); 
+
+                    if (menu.Information[categoryI].Info[codNumI].codeNumber == key) {
+   
+                        var imageUrlChosen = menu.Information[categoryI].Info[codNumI].ImageURL; 
+                        var nameChosen = menu.Information[categoryI].Info[codNumI].Title;
+                        var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
+                        
+                        var increamentSelectedFunc = "increaseNumOfProduct('span','"+key+"')";
+                        var decreamentSelectedFunc = "decreaseNumOfProduct('span','"+key+"')";
+    
+                        var modalBody = $("div.modal-body");
+                        var mainSelectedDiv = $("<div>").addClass("menu_contant").addClass("content_pay").attr("codeNumber" , menu.Information[categoryI].Info[codNumI].codeNumber);
+                        modalBody.append(mainSelectedDiv);
+    
+                        var imageDiv = $("<div>").addClass("menu_contant_image").addClass("image_pay");
+                        mainSelectedDiv.append(imageDiv);
+    
+                        var imageSelected = $("<img>").attr("src", imageUrlChosen).attr("alt", nameChosen);
+                        imageDiv.append(imageSelected);
+    
+                        var informationSelected = $("<div>").addClass("menu_contant_info-modal")
+                        mainSelectedDiv.append(informationSelected);
+    
+                        var nameSelected = $("<h4>").html(nameChosen);
+                        informationSelected.append(nameSelected);
+    
+                        var priceAndButton = $("<div>").addClass("menu_contant_info_price");
+                        informationSelected.append(priceAndButton);
+    
+                        var priceSelected = $("<div>").addClass("menu_contant_info_price_contant");
+                        priceAndButton.append(priceSelected);
+    
+                        var priceSelectedh4 = $("<h4>").addClass("price").html(priceChosen + ".000");
+                        priceSelected.append(priceSelectedh4);
+    
+                        var priceSelectedButton = $("<div>").addClass("button-counter");
+                        priceAndButton.append(priceSelectedButton);
+    
+                        var DecreaseButton = $("<button>").attr('onclick' , decreamentSelectedFunc).html("-");
+                        priceSelectedButton.append(DecreaseButton);
+                        var counterSelected = $("<span>").html(map.get(key));
+                        priceSelectedButton.append(counterSelected);
+                        var IncreaseButton = $("<button>").attr('onclick' , increamentSelectedFunc).html("+");
+                        priceSelectedButton.append(IncreaseButton);
+    
+                        
+    
+                        console.log("code number :  "+menu.Information[categoryI].Info[codNumI].codeNumber);
+                        console.log("name :  "+nameChosen);
+                        console.log("image : " + imageUrlChosen);
+                        console.log("price : " + priceChosen);
+                        continue;
+                    }
+
+                }
+            
+            }
+        }
+    }
+    // console.log("map fanc");
+    // console.log(map.keys());
+}
 
 
 /////////scroll new/////////
@@ -1240,8 +1305,13 @@ function AddPurchaseNumBtn (codeNumber )
     var createPurchaseBtn = $('<div class="Purchase-count" codeNumber="'+codeNumber+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+purchaseSpanAttr+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
     mainButtonHtml.after(createPurchaseBtn);
 
+	var numberOfPurchase = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']").html();
+    setPurchaseMap(codeNumber , numberOfPurchase);
+    getInformationWithMap();
 
     IncrementPrice(codeNumber);
+	// $(".payment").html(" "+totalPrice + "/000 ");
+
 	if (totalPrice == 0) {
 		$("div.totalPrice").hide();
 	}else{
@@ -1257,6 +1327,8 @@ function IncrementPrice(codeNumber){
 	price = parseInt(getPriceHtml.html());
 	totalPrice += price;
 	$(".bill").html(" "+totalPrice + "/000 ");
+	$(".payment").html(" "+totalPrice + "/000 ");
+
 }
 
 // ********************* decrement price  *********************
@@ -1266,6 +1338,8 @@ function DecrementPrice(codeNumber){
 	price = parseInt(getPriceHtml.html());
 	totalPrice -= price;
 	$(".bill").html(" "+totalPrice + "/000 ");
+	$(".payment").html(" "+totalPrice + "/000 ");
+
 	if (totalPrice == 0) {
 		$("div.totalPrice").hide();
 	}else{
@@ -1281,7 +1355,11 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     var numberOfPurchase = purchaseSpanHtml.html();
 	numberOfPurchase++;
 	purchaseSpanHtml.html(" "+numberOfPurchase+" ");
-	
+
+    removeFromBill(codeNumber);
+    setPurchaseMap(codeNumber , numberOfPurchase);
+    getInformationWithMap();
+        
 	IncrementPrice(codeNumber);
 }
 // ********************* decrement order button *********************
@@ -1290,6 +1368,10 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
 	var purchaseSpanHtml = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']");
 	var numberOfPurchase = purchaseSpanHtml.html();
 	numberOfPurchase--;
+
+    removeFromBill(codeNumber);
+    setPurchaseMap(codeNumber , numberOfPurchase);
+    getInformationWithMap(map);
 	
 	if(numberOfPurchase < 1)
 	{
@@ -1297,6 +1379,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
 		PurchaseBtn.hide();
 		var mainButton = $("button." +mainButtonClass+"[codeNumber='"+codeNumber+"']");
 		mainButton.show();
+        removeFromBill(codeNumber);
 	}
 
 	purchaseSpanHtml.html(" "+numberOfPurchase+" ");
