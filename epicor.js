@@ -1501,23 +1501,37 @@ function showMenubar(){
     var getItemClass = $("div.items");
     for (let i = 1; i <= menu.Information.length; i++) {  
 
-        var menuBar_json = $('<div class="item item1"><button CategoryID="'+i+'" class="'+menubarItem+'" onclick="linked('+i+
-        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="'+menu.Information[i-1].headerNameEN+'" class="'+menubarImageClass+'"><div class="'+menubarInfoClass+'"><p class="'+menubarNumeENClass+'">'+ menu.Information[i-1].headerNameEN+
-        '</p><p class="'+menubarNameFAClass+'">'+ menu.Information[i-1].headerNameFA+'</p></div></button></div>');
+        var DivItem = $("<div>").addClass("item").addClass("item1");
+        getItemClass.append(DivItem);
+        var menuBarButton = $("<button>").attr("CategoryID", i).addClass(menubarItem).attr('onclick' , 'linked(\''+i+'\')');
+        DivItem.append(menuBarButton);
+        var menuBarImage = $("<img>").attr("src" , menu.Information[i-1].headerImg).attr("alt" , menu.Information[i-1].headerNameEN).addClass(menubarImageClass);
+        menuBarButton.append(menuBarImage);
+        var MenuContent = $("<div>").addClass(menubarInfoClass);
+        menuBarButton.append(MenuContent);
+        var headerNameMenubarEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", menu.Information[i-1].headerNameEN).html(menu.Information[i-1].headerNameEN);
+        MenuContent.append(headerNameMenubarEn);
+        var headerNameMenubarFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", menu.Information[i-1].headerNameFA).html(menu.Information[i-1].headerNameFA);
+        MenuContent.append(headerNameMenubarFa);
 
-        getItemClass.append(menuBar_json);
-        
     }
 }
 function showMenuGathe(){
     var menuGatherClass = $("div.overlay-content");
     for (let i = 1; i <= menu.Information.length; i++) {
 
-        var menuGathe_json = $('<a onclick="closeNav()" href="#"><button CategoryID="'+i+'" class="'+menubarItem+'" onclick="linked('+i+
-        ')"><img src="'+menu.Information[i-1].headerImg+'" alt="'+menu.Information[i-1].headerNameEN+'" class="'+menubarImageClass+'"><div class="'+menubarInfoClass+'"><p class="'+menubarNumeENClass+'">'+ menu.Information[i-1].headerNameEN+
-        '</p><p class="'+menubarNameFAClass+'">'+ menu.Information[i-1].headerNameFA+'</p></div></button></a>');
-        
-        menuGatherClass.append(menuGathe_json);
+        var menubarGatherLink = $("<a>").attr('onclick' , 'closeNav()').attr("href", "#");
+        menuGatherClass.append(menubarGatherLink);
+        var menuBarButton = $("<button>").attr("CategoryID", i).addClass(menubarItem).attr('onclick' , 'linked(\''+i+'\')');
+        menubarGatherLink.append(menuBarButton);
+        var menuBarImage = $("<img>").attr("src" , menu.Information[i-1].headerImg).attr("alt" , menu.Information[i-1].headerNameEN).addClass(menubarImageClass);
+        menuBarButton.append(menuBarImage);
+        var MenuContent = $("<div>").addClass(menubarInfoClass);
+        menuBarButton.append(MenuContent);
+        var headerNameMenubarEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", menu.Information[i-1].headerNameEN).html(menu.Information[i-1].headerNameEN);
+        MenuContent.append(headerNameMenubarEn);
+        var headerNameMenubarFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", menu.Information[i-1].headerNameFA).html(menu.Information[i-1].headerNameFA);
+        MenuContent.append(headerNameMenubarFa);
         
     }
 }

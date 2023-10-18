@@ -163,6 +163,7 @@ a:hover {
   
   /* Position the content inside the overlay */
   .overlay-content {
+    direction: rtl;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -175,6 +176,7 @@ a:hover {
     margin-right: 100px;
     padding: 0 100px;
   }
+  
   
   /* The navigation links inside the overlay */
   .overlay a {
