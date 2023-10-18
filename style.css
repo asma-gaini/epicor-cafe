@@ -59,6 +59,17 @@ body{
     font-size: 12px;
 }
 
+.form-select{
+    color: black;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 140px;
+    height: 25px;
+    font-size: 11px;
+    background-color: #cf871c;
+    text-align: center;
+}
          /* ******************************* menu bar ******************************* */
 
 .menu-bar{

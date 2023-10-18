@@ -4,54 +4,54 @@ var menu = {
     [
         {
             "CategoryID" : 1,
-            "headerNameFA": "صبحانه",
-            "headerNameEN": "breakfast",
+            "headerNameFA": "breakfast",
+            "headerNameEN": "breakfastEn",
             "headerImg": "./menu cafe/breakfast/63fd588c75bdd.png",
             "Info":[
                 {
                     "codeNumber" : 1,
-                    "Title": "صبحانه ایرانی",
-                    "Description": "خیار، گوجه فرنگی، سبزی خوردن ، کره،  پنیر، عسل ،  تخم مرغ آبپز ",
+                    "Title": "PersianBreakfast",
+                    "Description": "Cucumbers-tomatoes-vegetables-butter-cheese-honey-boiled_eggs",
                     "Price": 175,
                     "ImageURL": "./menu cafe/breakfast/61ee584723571.jpg"
                 },
                 {
                     "codeNumber" : 2,
-                    "Title": "املت ایرونی",
-                    "Description": "نان تست ،  نخم مرغ،  گوجه فرنگی",
+                    "Title": "IranianOmelette",
+                    "Description": "Toast-eggs-tomatoes",
                     "Price": 155,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
                     "codeNumber" : 3,
-                    "Title": "صبحانه انگلیسی",
-                    "Description": "سوسیس،  بیکن،  تخم مرغ نیمرو، خوراک لوبیا،  سیب زمینی،  قارچ ، گوجه فرنگی، خیار شور",
+                    "Title": "EnglishBreakfast",
+                    "Description": "Sausage-bacon-halfBoiledEgg-beanFeed-potato-mushroom-tomato-pickledCucumber",
                     "Price": 195,
                     "ImageURL": "./menu cafe/breakfast/61ee57fcc00cd.jpg"
                 },
                 {
                     "codeNumber" : 4,
-                    "Title": "املت مکزیکی",
-                    "Description": "نان تست ، تخم مرغ ، گوجه،  فلفل هالوپینو",
+                    "Title": "MexicanOmelette",
+                    "Description": "Toast-egg-tomato-jalapenoPepper",
                     "Price": 135,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
                     "codeNumber" : 5,
-                    "Title": "مک مافین",
-                    "Description": "نان مک،  تخم مرغ نیمرو، بیکن، پنیر ورقه ای، کاهو،  گوجه فرنگی",
+                    "Title": "McMuffin",
+                    "Description": "MacBread-scrambledEggs-bacon-slicedCheese-lettuce-tomato",
                     "Price": 125,
                     "ImageURL": "./menu cafe/breakfast/61f3e2420f1cc.jpg"
                 },
                 {
                     "codeNumber" : 6,
-                    "Title": "خوراک لوبیا",
+                    "Title": "beanFeed",
                     "Price": 95,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 },
                 {
                     "codeNumber" : 7,
-                    "Title": "نیمرو",
+                    "Title": "friedEgg",
                     "Price": 110,
                     "ImageURL": "./menu cafe/breakfast/noimagefood.png"
                 }
@@ -59,55 +59,55 @@ var menu = {
         },
         {
             "CategoryID" : 2,
-            "headerNameFA": "مینا بار",
-            "headerNameEN": "mina bar",
+            "headerNameFA": "MinaBar",
+            "headerNameEN": "MinaBarEn",
             "headerImg": "./menu cafe/minabar/minabar.png",
             "Info":[
                 {
                     "codeNumber" : 8,
-                    "Title": "اسپرسو",
+                    "Title": "Espresso",
                     "Price": 68,
                     "ImageURL": "./menu cafe/minabar/1.jpg"
                 },
                 {
                     "codeNumber" : 9,
-                    "Title": "اسپرسو دبل",
+                    "Title": "DoubleEspresso",
                     "Price": 72,
                     "ImageURL": "./menu cafe/minabar/2.jpg"
                 },
                 {
                     "codeNumber" : 10,
-                    "Title": "آمریکانو",
+                    "Title": "Americans",
                     "Price": 78,
                     "ImageURL": "./menu cafe/minabar/3.jpg"
                 },
                 {
                     "codeNumber" : 11,
-                    "Title": "اسپرسو ماکیاتو",
+                    "Title": "EspressoMacchiato",
                     "Price": 75,
                     "ImageURL": "./menu cafe/minabar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 12,
-                    "Title": "کورتادو",
+                    "Title": "cortado",
                     "Price": 70,
                     "ImageURL": "./menu cafe/minabar/5.jpg"
                 },
                 {
                     "codeNumber" : 13,
-                    "Title": "کاپوچینو",
+                    "Title": "Cappuccino",
                     "Price": 85,
                     "ImageURL": "./menu cafe/minabar/6.jpg"
                 },
                 {
                     "codeNumber" : 14,
-                    "Title": "لاته دبل",
+                    "Title": "DoubleLatte",
                     "Price": 85,
                     "ImageURL": "./menu cafe/minabar/7.jpg"
                 },
                 {
                     "codeNumber" : 15,
-                    "Title": "قهوه شیخ",
+                    "Title": "SheikhCoffee",
                     "Price": 98,
                     "ImageURL": "./menu cafe/minabar/noimagefood.png"
                 }
@@ -115,49 +115,49 @@ var menu = {
         },
         {
             "CategoryID" : 3,
-            "headerNameFA": "اسپرسو بلند",
-            "headerNameEN": "Espresso Bar",
+            "headerNameFA": "EspressoBar",
+            "headerNameEN": "EspressoBarEn",
             "headerImg": "./menu cafe/espresso bar/espressobar.png",
             "Info":[
                 {
                     "codeNumber" : 16,
-                    "Title": "اسپرسو سینگل",
+                    "Title": "SingleEspresso",
                     "Price": 69,
                     "ImageURL": "./menu cafe/espresso bar/1.jpg"
                 },
                 {
                     "codeNumber" : 17,
-                    "Title": "اسپرسو دابل",
+                    "Title": "DoubleEspresso",
                     "Price": 74,
                     "ImageURL": "./menu cafe/espresso bar/2.jpg"
                 },
                 {
                     "codeNumber" : 18,
-                    "Title": "موکا",
+                    "Title": "Mocha",
                     "Price": 85,
                     "ImageURL": "./menu cafe/espresso bar/3.jpg"
                 },
                 {
                     "codeNumber" : 19,
-                    "Title": "کارامل ماکیاتو",
+                    "Title": "CaramelMacchiato",
                     "Price": 95,
                     "ImageURL": "./menu cafe/espresso bar/4.jpg"
                 },
                 {
                     "codeNumber" : 20,
-                    "Title": "آمریکانو",
+                    "Title": "Americans",
                     "Price": 75,
                     "ImageURL": "./menu cafe/espresso bar/5.jpg"
                 },
                 {
                     "codeNumber" : 21,
-                    "Title": "لاته",
+                    "Title": "latte",
                     "Price": 83,
                     "ImageURL": "./menu cafe/espresso bar/6.jpg"
                 },
                 {
                     "codeNumber" : 22,
-                    "Title": "آفوگاتو",
+                    "Title": "Affogato",
                     "Price": 105,
                     "ImageURL": "./menu cafe/espresso bar/7.jpg"
                 }
@@ -165,37 +165,37 @@ var menu = {
         },
         {
             "CategoryID" : 4,
-            "headerNameFA": "قهوه های سرد",
-            "headerNameEN": "Ice Coffee",
+            "headerNameFA": "IceCoffee",
+            "headerNameEN": "IceCoffeeEn",
             "headerImg": "./menu cafe/ice cofee/ice cofee.png",
             "Info":[
                 {
                     "codeNumber" : 23,
-                    "Title": "آیس لاته",
+                    "Title": "IcedLatte",
                     "Price": 69,
                     "ImageURL": "./menu cafe/ice cofee/1.jpg"
                 },
                 {
                     "codeNumber" : 24,
-                    "Title": "آیس آمریکانو",
+                    "Title": "IcedAmerican",
                     "Price": 79,
                     "ImageURL": "./menu cafe/ice cofee/2.jpg"
                 },
                 {
                     "codeNumber" : 25,
-                    "Title": "آیس کارامل ماکیاتو",
+                    "Title": "IcedCaramelMacchiato",
                     "Price": 95,
                     "ImageURL": "./menu cafe/ice cofee/3.jpg"
                 },
                 {
                     "codeNumber" : 26,
-                    "Title": "آیس موکا",
+                    "Title": "IceMocha",
                     "Price": 90,
                     "ImageURL": "./menu cafe/ice cofee/4.jpg"
                 },
                 {
                     "codeNumber" : 27,
-                    "Title": "کلدبرو",
+                    "Title": "Coldbrew",
                     "Price": 78,
                     "ImageURL": "./menu cafe/ice cofee/noimagefood.png"
                 }
@@ -203,55 +203,55 @@ var menu = {
         },
         {
             "CategoryID" : 5,
-            "headerNameFA": "سایفون بار و قهوه های دمی",
-            "headerNameEN": "Cofee bar",
+            "headerNameFA": "CofeeBar",
+            "headerNameEN": "CofeeBarEn",
             "headerImg": "./menu cafe/cofee bar/cofee bar.png",
             "Info":[
                 {
                     "codeNumber" : 28,
-                    "Title": "سایفون تک نفره",
+                    "Title": "SingleSiphon",
                     "Price": 68,
                     "ImageURL": "./menu cafe/cofee bar/1.jpg"
                 },
                 {
                     "codeNumber" : 29,
-                    "Title": "سایفون دو نفره",
+                    "Title": "Two-personSiphon",
                     "Price": 110,
                     "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 30,
-                    "Title": "سایفون سه نفره",
+                    "Title": "Three-personSiphon",
                     "Price": 155,
                     "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 31,
-                    "Title": "کمکس تک نفره",
+                    "Title": "singlePlayer",
                     "Price": 85,
                     "ImageURL": "./menu cafe/cofee bar/4.jpg"
                 },
                 {
                     "codeNumber" : 32,
-                    "Title": "کمکس دو نفره",
+                    "Title": "DoubleBed",
                     "Price": 110,
                     "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 33,
-                    "Title": "کمکس سه نفره",
+                    "Title": "AThree-personCamp",
                     "Price": 145,
                     "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 34,
-                    "Title": "ترک",
+                    "Title": "Turkish",
                     "Price": 95,
                     "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 35,
-                    "Title": "فرنچ پرس به همراه شیر",
+                    "Title": "FrenchPressWithMilk",
                     "Price": 125,
                     "ImageURL": "./menu cafe/cofee bar/8.jpg"
                 }
@@ -259,85 +259,85 @@ var menu = {
         },
         {
             "CategoryID" : 6,
-            "headerNameFA": "چای بار و نوشیدنی های گرم",
-            "headerNameEN": "Hot Drinks",
+            "headerNameFA": "HotDrinks",
+            "headerNameEN": "HotDrinksEn",
             "headerImg": "./menu cafe/hot drinks/hot drinks.png",
             "Info":[
                 {
                     "codeNumber" : 36,
-                    "Title": "چای سیاه ایرونی تک نفره",
+                    "Title": "SingleIranianBlackTea",
                     "Price": 42,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 37,
-                    "Title": "چای سیاه ایرونی دو نفره",
+                    "Title": "IranianBlackTeaForTwo",
                     "Price": 62,
                     "ImageURL": "./menu cafe/hot drinks/2.jpg"
                 },
                 {
                     "codeNumber" : 38,
-                    "Title": "چای سیاه ایرونی چهار نفره",
+                    "Title": "IranianBlackTeaForFour",
                     "Price": 155,
                     "ImageURL": "./menu cafe/hot drinks/3.jpg"
                 },
                 {
                     "codeNumber" : 39,
-                    "Title": "چای سبز جزمین تک نفره",
+                    "Title": "JazminGreenTeaForOnePerson",
                     "Price": 65,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 40,
-                    "Title": "چای سبز جزمین دو نفره",
+                    "Title": "JasmineGreenTeaForTwo",
                     "Price": 75,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 41,
-                    "Title": "چای سبز جزمین چهر نفره",
+                    "Title": "JasmineGreenTeaForFour",
                     "Price": 80,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 42,
-                    "Title": "چای سفید(بارد جنسینگ و عسل)",
+                    "Title": "WhiteTea(BardGinsengAndHoney)",
                     "Price": 110,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 43,
-                    "Title": "چای سفید(با زنجبیل و پوست مرکبات)",
+                    "Title": "WhiteTea(WithGingerAndCitrusPeel)",
                     "Price": 125,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 44,
-                    "Title": "چای ماسالا",
+                    "Title": "MasalaTea",
                     "Price": 95,
                     "ImageURL": "./menu cafe/hot drinks/9.jpg"
                 },
                 {
                     "codeNumber" : 45,
-                    "Title": "هات چاکلت",
+                    "Title": "hotChocolate",
                     "Price": 93,
                     "ImageURL": "./menu cafe/hot drinks/10.jpg"
                 },
                 {
                     "codeNumber" : 46,
-                    "Title": "وایت چاکلت با کره بادام زمینی",
+                    "Title": "WhiteChocolateWithPeanutButter",
                     "Price": 105,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 47,
-                    "Title": "چای لاته",
+                    "Title": "teaLatte",
                     "Price": 85,
                     "ImageURL": "./menu cafe/hot drinks/12.jpg"
                 },
                 {
                     "codeNumber" : 48,
-                    "Title": "چای مراکشی تک نفره",
+                    "Title": "SingleMoroccanTea",
                     "Price": 62,
                     "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
                 }
@@ -345,19 +345,19 @@ var menu = {
         },
         {
             "CategoryID" : 7,
-            "headerNameFA": "دمنوش انتخابی شما",
-            "headerNameEN": "the drink of your choice",
+            "headerNameFA": "theDrinkOfYourChoice",
+            "headerNameEN": "theDrinkOfYourChoiceEn",
             "headerImg": "./menu cafe/drink chois/drink chois.png",
             "Info":[
                 {
                     "codeNumber" : 49,
-                    "Title": "آرامش",
+                    "Title": "peaceOfMind",
                     "Price": 85,
                     "ImageURL": "./menu cafe/drink chois/1.jpg"
                 },
                 {
                     "codeNumber" : 50,
-                    "Title": "لیمو،زنجبیل،عسل",
+                    "Title": "Lemon-Ginger-Honey",
                     "Price": 115,
                     "ImageURL": "./menu cafe/drink chois/noimagefood.png"
                 }
@@ -365,82 +365,82 @@ var menu = {
         },
         {
             "CategoryID" : 8,
-            "headerNameFA": "آبمیوه طبیعی،موکتل،اسموتی",
-            "headerNameEN": "Natural juice",
+            "headerNameFA": "NaturalJuice",
+            "headerNameEN": "NaturalJuiceEn",
             "headerImg": "./menu cafe/natural juice/natural juice.png",
             "Info":[
                 {
                     "codeNumber" : 51,
-                    "Title": "آبمیوه طبیعی",
-                    "Description": "  اب هندوانه /آب طالبی /اب پرتقال",
+                    "Title": "NaturalJuice",
+                    "Description": "WatermelonJuice-cantaloupeJuice-orangeJuice",
                     "Price": 95,
                     "ImageURL": "./menu cafe/natural juice/noimagefood.png"
                 },
                 {
                     "codeNumber" : 52,
-                    "Title": "لیموناد",
-                    "Description": "لیمو ترش ساده، سیروپ، سودا+زنجبیل در صورت تمایل اضافه میشود ",
+                    "Title": "lemonade",
+                    "Description": "SimpleLime-Syrup-Soda+GingerCanBeAddedIfDesired ",
                     "Price": 105,
                     "ImageURL": "./menu cafe/natural juice/2.jpg"
                 },
                 {
                     "codeNumber" : 53,
-                    "Title": "موهیتو",
-                    "Description": "ترکیب نعنا، لیمو ترش تازه، سوییت اندساور ، سودا ",
+                    "Title": "Mojito",
+                    "Description": "TheCompositionOfMint-FreshLime-SweetAndSour-Soda ",
                     "Price": 115,
                     "ImageURL": "./menu cafe/natural juice/3.jpeg"
                 },
                 {
                     "codeNumber" : 54,
-                    "Title": "اسموتی تروپیکال",
-                    "Description": "موز/ آناناس/ توت فرنگی ، / انبه/نارگیل ",
+                    "Title": "TropicalSmoothie",
+                    "Description": "Banana-pineapple-strawberry-mango-coconut",
                     "Price": 165,
                     "ImageURL": "./menu cafe/natural juice/4.jpeg"
                 },
                 {
                     "codeNumber" : 55,
-                    "Title": "استراپشن",
-                    "Description": " آب آلوورا، توت فرنگی، هندوانه و پشن فروت ",
+                    "Title": "Strapon",
+                    "Description": "AloeVeraJuice-Strawberry-WatermelonAndPassionFruit ",
                     "Price": 145,
                     "ImageURL": "./menu cafe/natural juice/5.jpeg"
                 },
                 {
                     "codeNumber" : 56,
-                    "Title": "اسموتی بری",
-                    "Description": "توت فرنگی، شاتوت، سیروپ گرانادین، آب آلوورا",
+                    "Title": "BerrySmoothie",
+                    "Description": "Strawberries-Blackberries-GrenadineSyrup-aloeVeraJuice",
                     "Price": 155,
                     "ImageURL": "./menu cafe/natural juice/noimagefood.png"
                 },
                 {
                     "codeNumber" : 57,
-                    "Title": "پانچ پست مدرن دو نفره",
+                    "Title": "PostmodernPunchForTwo",
                     "Price": 195,
                     "ImageURL": "./menu cafe/natural juice/7.jpeg"
                 },
                 {
                     "codeNumber" : 58,
-                    "Title": "میدسامر",
-                    "Description": "  توت فرنگی تازه/ طعم دهنده توت فرنگی/ آب پرتقال/ آب انبه/ سرددم پنیرک ",
+                    "Title": "Midsummer",
+                    "Description": "FreshStrawberries-strawberryFlavoring-orangeJuice-mangoJuice-cheeseCold ",
                     "Price": 150,
                     "ImageURL": "./menu cafe/natural juice/8.jpeg"
                 },
                 {
                     "codeNumber" : 59,
-                    "Title": "بری موهیتو",
+                    "Title": "BerryMojito",
                     "Price": 135,
                     "ImageURL": "./menu cafe/natural juice/9.jpeg"
                 },
                 {
                     "codeNumber" : 60,
-                    "Title": "هلیکس",
-                    "Description": "بلوکاراسائو/طعم دهنده نعنا/آب آلوورا/اب سیب",
+                    "Title": "Helix",
+                    "Description": "Blucarasao-MintFlavoring-AloeVeraJuice-AppleJuice",
                     "Price": 185,
                     "ImageURL": "./menu cafe/natural juice/10.jpeg"
                 },
                 {
                     "codeNumber" : 61,
-                    "Title": "فراپاچینو",
-                    "Description": " اسپرسو/ بستنی وانیل/ طعم دهنده وانیل/ طعم دهنده نارگیل ",
+                    "Title": "Frappuccino",
+                    "Description": "Espresso-VanillaIceCream-VanillaFlavor-CoconutFlavor",
                     "Price": 145,
                     "ImageURL": "./menu cafe/natural juice/11.jpeg"
                 }
@@ -448,21 +448,21 @@ var menu = {
         },
         {
             "CategoryID" : 9,
-            "headerNameFA": "اسموتی بولز",
-            "headerNameEN": "Smoothie bulls",
+            "headerNameFA": "SmoothieBulls",
+            "headerNameEN": "SmoothieBullsEn",
             "headerImg": "./menu cafe/smoothie/smoothie.png",
             "Info":[
                 {
                     "codeNumber" : 62,
-                    "Title": "شکلات دیوانه",
-                    "Description": " ترکیبات هیجان انگیز جلاتو شکلاتی، کره بادام زمینی، موز به همراه تاپینک شکلات ، کرن فلکس",
+                    "Title": "CrazyChocolate",
+                    "Description": "ExcitingCombinationsOfChocolateGelato-PeanutButter-BananaWithChocolateTopping-Cornflakes",
                     "Price": 175,
                     "ImageURL": "./menu cafe/smoothie/1.jpg"
                 },
                 {
                     "codeNumber" : 63,
-                    "Title": "بری وحشی",
-                    "Description": "ترکیب توت فرنگی ، سیروپ کرلبری،  جلاتو شاتوت",
+                    "Title": "wildBerry",
+                    "Description": "ACombinationOfStrawberries-CranberrySyrup-AndChocolateGelato",
                     "Price": 185,
                     "ImageURL": "./menu cafe/smoothie/2.jpg"
                 }
@@ -470,67 +470,67 @@ var menu = {
         },
         {
             "CategoryID" : 10,
-            "headerNameFA": "شیک ها",
-            "headerNameEN": "Milkshake",
+            "headerNameFA": "Milkshake",
+            "headerNameEN": "MilkshakeEn",
             "headerImg": "./menu cafe/shake/shake.png",
             "Info":[
                 {
                     "codeNumber" : 64,
-                    "Title": "شکلات",
+                    "Title": "Chocolate",
                     "Price": 115,
                     "ImageURL": "./menu cafe/shake/1.jpg"
                 },
                 {
                     "codeNumber" : 65,
-                    "Title": "شاتوت",
+                    "Title": "Shatot",
                     "Price": 115,
                     "ImageURL": "./menu cafe/shake/2.jpg"
                 },
                 {
                     "codeNumber" : 66,
-                    "Title": "وانیل",
+                    "Title": "vanilla",
                     "Price": 115,
                     "ImageURL": "./menu cafe/shake/3.jpg"
                 },
                 {
                     "codeNumber" : 67,
-                    "Title": "توت فرنگی",
+                    "Title": "Strawberry",
                     "Price": 125,
                     "ImageURL": "./menu cafe/shake/4.jpg"
                 },
                 {
                     "codeNumber" : 68,
-                    "Title": "وانیل نوتلا",
+                    "Title": "VanillaNutella",
                     "Price": 135,
                     "ImageURL": "./menu cafe/shake/5.jpg"
                 },
                 {
                     "codeNumber" : 69,
-                    "Title": "موز شکلات",
+                    "Title": "ChocolateBanana",
                     "Price": 120,
                     "ImageURL": "./menu cafe/shake/6.jpg"
                 },
                 {
                     "codeNumber" : 70,
-                    "Title": "قهوه",
+                    "Title": "Coffee",
                     "Price": 125,
                     "ImageURL": "./menu cafe/shake/7.jpg"
                 },
                 {
                     "codeNumber" : 71,
-                    "Title": "بادام زمینی",
+                    "Title": "peanut",
                     "Price": 115,
                     "ImageURL": "./menu cafe/shake/8.jpg"
                 },
                 {
                     "codeNumber" : 72,
-                    "Title": "فریک شیک چاکلت براونی",
+                    "Title": "ChocolateBrownieFreakShake",
                     "Price": 165,
                     "ImageURL": "./menu cafe/shake/9.jpg"
                 },
                 {
                     "codeNumber" : 73,
-                    "Title": "شیک لوتوس",
+                    "Title": "ChicLotus",
                     "Price": 155,
                     "ImageURL": "./menu cafe/shake/10.jpeg"
                 }
@@ -538,91 +538,91 @@ var menu = {
         },
         {
             "CategoryID" : 11,
-            "headerNameFA": "کیک و شیرینی",
-            "headerNameEN": "Cakes and sweets",
+            "headerNameFA": "CakesAndSweets",
+            "headerNameEN": "CakesAndSweetsEn",
             "headerImg": "./menu cafe/cakes/cakes.png",
             "Info":[
                 {
                     "codeNumber" : 74,
-                    "Title": "چیز کیک نیویورکی",
+                    "Title": "NewYorkCheesecake",
                     "Price": 98,
                     "ImageURL": "./menu cafe/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 75,
-                    "Title": "کیک هویج",
+                    "Title": "CarrotCake",
                     "Price": 93,
                     "ImageURL": "./menu cafe/cakes/2.jpg"
                 },
                 {
                     "codeNumber" : 76,
-                    "Title": "ردولوت",
+                    "Title": "redolot",
                     "Price": 85,
                     "ImageURL": "./menu cafe/cakes/2.jpg"
                 },
                 {
                     "codeNumber" : 77,
-                    "Title": "کرامبل آلبالو",
+                    "Title": "CherryCrumble",
                     "Price": 83,
                     "ImageURL": "./menu cafe/cakes/4.jpg"
                 },
                 {
                     "codeNumber" : 78,
-                    "Title": "براونی",
+                    "Title": "brownie",
                     "Price": 89,
                     "ImageURL": "./menu cafe/cakes/5.jpg"
                 },
                 {
                     "codeNumber" : 79,
-                    "Title": "تریپل چاکلت",
+                    "Title": "TripleChocolate",
                     "Price": 92,
                     "ImageURL": "./menu cafe/cakes/6.jpeg"
                 },
                 {
                     "codeNumber" : 80,
-                    "Title": "کوکی چکلت چیپ",
+                    "Title": "ChocolateChipCookie",
                     "Price": 9,
                     "ImageURL": "./menu cafe/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 81,
-                    "Title": "کنافه",
+                    "Title": "Kenafa",
                     "Price": 185,
                     "ImageURL": "./menu cafe/cakes/8.jpeg"
                 },
                 {
                     "codeNumber" : 82,
-                    "Title": "کنافه با بستنی",
+                    "Title": "KonafaWithIceCream",
                     "Price": 215,
                     "ImageURL": "./menu cafe/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 83,
-                    "Title": "وافل",
+                    "Title": "waffle",
                     "Price": 195,
                     "ImageURL": "./menu cafe/cakes/10.jpeg"
                 },
                 {
                     "codeNumber" : 84,
-                    "Title": "باقلوا",
+                    "Title": "Baklava",
                     "Price": 85,
                     "ImageURL": "./menu cafe/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 85,
-                    "Title": "کروسان کلاسیک",
+                    "Title": "ClassicCroissant",
                     "Price": 125,
                     "ImageURL": "./menu cafe/cakes/12.jpeg"
                 },
                 {
                     "codeNumber" : 86,
-                    "Title": "کروسان با نوتلا و توت فرنگی",
+                    "Title": "CroissantsWithNutellaAndStrawberries",
                     "Price": 170,
                     "ImageURL": "./menu cafe/cakes/13.jpeg"
                 },
                 {
                     "codeNumber" : 87,
-                    "Title": "براونی با جلاتو وانیل",
+                    "Title": "BrownieWithVanillaGelato",
                     "Price": 125,
                     "ImageURL": "./menu cafe/cakes/noimagefood.png"
                 }
@@ -631,71 +631,71 @@ var menu = {
         },
         {
             "CategoryID" : 12,
-            "headerNameFA": "پیش غذا ها و سالاد ها",
-            "headerNameEN": "Appetizars",
+            "headerNameFA": "Appetizars",
+            "headerNameEN": "AppetizarsEn",
             "headerImg": "./menu cafe/appetizers/appetizers.png",
             "Info":[
                 {
                     "codeNumber" : 88,
-                    "Title": "سالاد سزار",
+                    "Title": "CaesarSalad",
                     "Price": 265,
                     "ImageURL": "./menu cafe/appetizers/1.jpg"
                 },
                 {
                     "codeNumber" : 89,
-                    "Title": "سالاد سزار (سخاری)",
+                    "Title": "CaesarSalad(grilled)",
                     "Price": 285,
                     "ImageURL": "./menu cafe/appetizers/2.jpg"
                 },
                 {
                     "codeNumber" : 90,
-                    "Title": "چیکن سالاد",
-                    "Description": "کاهو/سبزی میکس/گوجه گیلاسی/، قارچ بخارپز/هویج/سینه مرغ/سس گارنر",
+                    "ChickenSalad": "چیکن سالاد",
+                    "Description": "Lettuce-MixedVegetables-cherryTomatoes-SteamedMushrooms-Carrots-ChickenBreast-GarnerSauce",
                     "Price": 235,
                     "ImageURL": "./menu cafe/appetizers/3.jpeg"
                 },
                 {
                     "codeNumber" : 91,
-                    "Title": "سالاد سبز",
-                    "Description": "کاهو/سبزی میکس/کرفس/گوجه گیلاسی/خیار/فلفل رنگی/هویج/کنجد/سس خردل لیمو",
+                    "Title": "greenSalad",
+                    "Description": "Lettuce-VegetableMix-Celery-CherryTomato-Cucumber-ColorPepper-Carrot-Sesame-LemoMustardSauce",
                     "Price": 225,
                     "ImageURL": "./menu cafe/appetizers/4.jpeg"
                 },
                 {
                     "codeNumber" : 92,
-                    "Title": "سالاد والموستارد",
-                    "Description": "کاهو.سیب سبز.لیمو.بیکن.پنیر.گردو",
+                    "Title": "WalmustardSalad",
+                    "Description": "Lettuce-GreenApple-Lemon-Bacon-Cheese-Walnuts",
                     "Price": 245,
                     "ImageURL": "./menu cafe/appetizers/5.jpg"
                 },
                 {
                     "codeNumber" : 93,
-                    "Title": "بشقاب سبزیجات بخارپز",
+                    "Title": "PlateOfSteamedVegetables",
                     "Price": 215,
                     "ImageURL": "./menu cafe/appetizers/6.jpg"
                 },
                 {
                     "codeNumber" : 94,
-                    "Title": "سوپ سیب زمینی فرانسوی",
+                    "Title": "FrenchPotatoSoup",
                     "Price": 105,
                     "ImageURL": "./menu cafe/appetizers/7.jpg"
                 },
                 {
                     "codeNumber" : 95,
-                    "Title": "نان مکزیکی با سس سالسا",
+                    "Title": "MexicanBreadWithSalsaSauce",
                     "Price": 115,
                     "ImageURL": "./menu cafe/appetizers/8.jpg"
                 },
                 {
                     "codeNumber" : 96,
-                    "Title": "زیتون پرورده",
+                    "Title": "Olive",
                     "Price": 55,
                     "ImageURL": "./menu cafe/appetizers/noimagefood.png"
                 },
                 {
                     "codeNumber" : 97,
-                    "Title": "ماست و خیار",
-                    "Description": "ماست/خیار/نعنا/گردو",
+                    "Title": "YogurtAndCucumber",
+                    "Description": "Yogurt-Cucumber-Mint-Walnut",
                     "Price": 35,
                     "ImageURL": "./menu cafe/appetizers/noimagefood.png"
                 }
@@ -703,33 +703,33 @@ var menu = {
         },
         {
             "CategoryID" : 13,
-            "headerNameFA": "سرخ شدنی ها",
-            "headerNameEN": "Fries",
+            "headerNameFA": "Fries",
+            "headerNameEN": "FriesEn",
             "headerImg": "./menu cafe/fries/fries.png",
             "Info":[
                 {
                     "codeNumber" : 98,
-                    "Title": "فرنچ فرایز",
+                    "Title": "FrenchFries",
                     "Price": 115,
                     "ImageURL": "./menu cafe/fries/1.jpg"
                 },
                 {
                     "codeNumber" : 99,
-                    "Title": "چیکن وینگز",
+                    "Title": "ChickenWings",
                     "Price": 195,
                     "ImageURL": "./menu cafe/fries/2.jpg"
                 },
                 {
                     "codeNumber" : 100,
-                    "Title": "سیب زمینی با پنیر",
-                    "Description": "سیب زمینی خلال، پنیر پیتزا",
+                    "Title": "PotatoesWithCheese",
+                    "Description": "SlicedPotatoes-PizzaCheese",
                     "Price": 135,
                     "ImageURL": "./menu cafe/fries/noimagefood.png"
                 },
                 {
                     "codeNumber" : 101,
-                    "Title": "بشقاب سوخاری",
-                    "Description": "دوعددفیله/2عددبال/2عددکتف/قارچ/سبزیجات سوخاری فرانسوی/4 نوع سس",
+                    "Title": "FryingPlate",
+                    "Description": "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces",
                     "Price": 115,
                     "ImageURL": "./menu cafe/fries/4.jpeg"
                 }
@@ -737,49 +737,49 @@ var menu = {
         },
         {
             "CategoryID" : 14,
-            "headerNameFA": "پنی و ساندویچ ها",
-            "headerNameEN": "Sandwiches",
+            "headerNameFA": "Sandwiches",
+            "headerNameEN": "SandwichesEn",
             "headerImg": "./menu cafe/sandwich/sandwich.png",
             "Info":[
                 {
                     "codeNumber" : 102,
-                    "Title": "پنی مرغ و سبزیجات",
+                    "Title": "ChickenAndVegetablePanini",
                     "Price": 225,
                     "ImageURL": "./menu cafe/sandwich/1.jpg"
                 },
                 {
                     "codeNumber" : 103,
-                    "Title": "پنی مرغ و بادام زمینی",
+                    "Title": "ChickenAndPeanutPanini",
                     "Price": 210,
                     "ImageURL": "./menu cafe/sandwich/2.jpg"
                 },
                 {
                     "codeNumber" : 104,
-                    "Title": "پنی سبزیجات",
+                    "Title": "VegetablePanini",
                     "Price": 175,
                     "ImageURL": "./menu cafe/sandwich/3.jpg"
                 },
                 {
                     "codeNumber" : 105,
-                    "Title": "پنی گوشت",
+                    "Title": "meatPanini",
                     "Price": 245,
                     "ImageURL": "./menu cafe/sandwich/4.jpg"
                 },
                 {
                     "codeNumber" : 106,
-                    "Title": "پنی ژامبون",
+                    "Title": "HamPanini",
                     "Price": 175,
                     "ImageURL": "./menu cafe/sandwich/5.jpg"
                 },
                 {
                     "codeNumber" : 107,
-                    "Title": "پنی بیکن",
+                    "Title": "BaconPanini",
                     "Price": 205,
                     "ImageURL": "./menu cafe/sandwich/6.jpg"
                 },
                 {
                     "codeNumber" : 108,
-                    "Title": "پنی رست بیف",
+                    "Title": "RoastBeefPanini",
                     "Price": 315,
                     "ImageURL": "./menu cafe/sandwich/7.jpeg"
                 }
@@ -787,19 +787,19 @@ var menu = {
         },
         {
             "CategoryID" : 15,
-            "headerNameFA": "پاستا",
-            "headerNameEN": "Pasta",
+            "headerNameFA": "Pasta",
+            "headerNameEN": "PastaEn",
             "headerImg": "./menu cafe/pasta/pasta.png",
             "Info":[
                 {
                     "codeNumber" : 109,
-                    "Title": "پاستا آلفردو",
+                    "Title": "AlfredoPasta",
                     "Price": 235,
                     "ImageURL": "./menu cafe/pasta/1.jpg"
                 },
                 {
                     "codeNumber" : 110,
-                    "Title": "پاستا عربیتا",
+                    "Title": "ArabicaPasta",
                     "Price": 255,
                     "ImageURL": "./menu cafe/pasta/2.jpg"
                 }
@@ -807,37 +807,37 @@ var menu = {
         },
         {
             "CategoryID" : 16,
-            "headerNameFA": "گریل",
-            "headerNameEN": "Grill",
+            "headerNameFA": "Grill",
+            "headerNameEN": "GrillEn",
             "headerImg": "./menu cafe/grill/grill.png",
             "Info":[
                 {
                     "codeNumber" : 111,
-                    "Title": "آیس لاته",
+                    "Title": "IcedLatte",
                     "Price": 69,
                     "ImageURL": "./menu cafe/grill/1.jpg"
                 },
                 {
                     "codeNumber" : 112,
-                    "Title": "آیس آمریکانو",
+                    "Title": "IceAmerican",
                     "Price": 79,
                     "ImageURL": "./menu cafe/grill/2.jpg"
                 },
                 {
                     "codeNumber" : 113,
-                    "Title": "آیس کارامل ماکیاتو",
+                    "Title": "IcedCaramelMacchiato",
                     "Price": 95,
                     "ImageURL": "./menu cafe/grill/3.jpg"
                 },
                 {
                     "codeNumber" : 114,
-                    "Title": "آیس موکا",
+                    "Title": "IceMocha",
                     "Price": 90,
                     "ImageURL": "./menu cafe/grill/4.jpg"
                 },
                 {
                     "codeNumber" : 115,
-                    "Title": "کلدبرو",
+                    "Title": "Coldbrew",
                     "Price": 78,
                     "ImageURL": "./menu cafe/grill/noimagefood.png"
                 }
@@ -845,37 +845,37 @@ var menu = {
         },
         {
             "CategoryID" : 17,
-            "headerNameFA": "همراه های کنار غذا",
-            "headerNameEN": "Accompanying food",
+            "headerNameFA": "AccompanyingFood",
+            "headerNameEN": "AccompanyingFoodEn",
             "headerImg": "./menu cafe/accompanying/accompanying.png",
             "Info":[
                 {
                     "codeNumber" : 116,
-                    "Title": "آبجو کلاسیک/لیمویی",
+                    "Title": "Classic-lemonBeer",
                     "Price": 85,
                     "ImageURL": "./menu cafe/accompanying/1.jpg"
                 },
                 {
                     "codeNumber" : 117,
-                    "Title": "سودا با لیمو",
+                    "Title": "SodaWithlemon",
                     "Price": 55,
                     "ImageURL": "./menu cafe/accompanying/2.jpg"
                 },
                 {
                     "codeNumber" : 118,
-                    "Title": "کوکا/اسپرایت/زیرو/فانتا",
+                    "Title": "Coca-Sprite-Zero-Fanta",
                     "Price": 25,
                     "ImageURL": "./menu cafe/accompanying/noimagefood.png"
                 },
                 {
                     "codeNumber" : 119,
-                    "Title": "آب معدنی",
+                    "Title": "mineralWater",
                     "Price": 15,
                     "ImageURL": "./menu cafe/accompanying/noimagefood.png"
                 },
                 {
                     "codeNumber" : 120,
-                    "Title": "دوغ",
+                    "Title": "Dough",
                     "Price": 42,
                     "ImageURL": "./menu cafe/accompanying/noimagefood.png"
                 }
@@ -883,37 +883,37 @@ var menu = {
         },
         {
             "CategoryID" : 18,
-            "headerNameFA": "سس های انتخابی شما",
-            "headerNameEN": "Sauces",
+            "headerNameFA": "Sauces",
+            "headerNameEN": "SaucesEn",
             "headerImg": "./menu cafe/sauces/sauces.png",
             "Info":[
                 {
                     "codeNumber" : 121,
-                    "Title": "سس قارچ",
+                    "Title": "MushroomSauce",
                     "Price": 20,
                     "ImageURL": "./menu cafe/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 122,
-                    "Title": "سس بوفالو",
+                    "Title": "BuffaloSauce",
                     "Price": 20,
                     "ImageURL": "./menu cafe/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 123,
-                    "Title": "سس سزار",
+                    "Title": "CaesarDressing",
                     "Price": 20,
                     "ImageURL": "./menu cafe/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 124,
-                    "Title": "سس ترش",
+                    "Title": "sourSauce",
                     "Price": 20,
                     "ImageURL": "./menu cafe/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 125,
-                    "Title": "سس چی لی تای",
+                    "Title": "ChiliThaiSauce",
                     "Price": 20,
                     "ImageURL": "./menu cafe/sauces/noimagefood.png"
                 }
@@ -921,55 +921,55 @@ var menu = {
         },
         {
             "CategoryID" : 19,
-            "headerNameFA": "پیتزا",
-            "headerNameEN": "pizza",
+            "headerNameFA": "pizza",
+            "headerNameEN": "pizzaEn",
             "headerImg": "./menu cafe/pizza/pizza.png",
             "Info":[
                 {
                     "codeNumber" : 126,
-                    "Title": "پیتزا مخصوص اپیکور",
+                    "Title": "EpicureanPizza",
                     "Price": 335,
                     "ImageURL": "./menu cafe/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 127,
-                    "Title": "پیتزا مرغ",
+                    "Title": "ChickenPizza",
                     "Price": 275,
                     "ImageURL": "./menu cafe/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 128,
-                    "Title": "پیتزا سبزیجات",
+                    "Title": "VegetablePizza",
                     "Price": 215,
                     "ImageURL": "./menu cafe/pizza/3.jpg"
                 },
                 {
                     "codeNumber" : 129,
-                    "Title": "پیتزا گوشت",
+                    "Title": "MeatPizza",
                     "Price": 315,
                     "ImageURL": "./menu cafe/pizza/4.jpg"
                 },
                 {
                     "codeNumber" : 130,
-                    "Title": "پیتزا بیکن",
+                    "Title": "BaconPizza",
                     "Price": 325,
                     "ImageURL": "./menu cafe/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 131,
-                    "Title": "پیتزا پپرونی",
+                    "Title": "PepperoniPizza",
                     "Price": 285,
                     "ImageURL": "./menu cafe/pizza/6.jpg"
                 },
                 {
                     "codeNumber" : 132,
-                    "Title": "پیتزا مرغ و گوشت",
+                    "Title": "ChickenAndMeatPizza",
                     "Price": 310,
                     "ImageURL": "./menu cafe/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 133,
-                    "Title": "نان سیر",
+                    "Title": "garlicBread",
                     "Price": 185,
                     "ImageURL": "./menu cafe/pizza/8.jpg"
                 }
@@ -977,50 +977,49 @@ var menu = {
         },
         {
             "CategoryID" : 20,
-            "headerNameFA": "غذاهای ایرانی",
-            "headerNameEN": "persian cuisine",
+            "headerNameFA": "persianCuisine",
+            "headerNameEN": "persianCuisineEn",
             "headerImg": "./menu cafe/persian/persian.png",
             "Info":[
                 {
                     "codeNumber" : 134,
-                    "Title": "جوجه بی استخوان",
+                    "Title": "bonelessChicken",
                     "Price": 245,
                     "ImageURL": "./menu cafe/persian/1.jpeg"
                 },
                 {
                     "codeNumber" : 135,
-                    "Title": "شیشلیک",
+                    "Title": "Shishlik",
                     "Price": 465,
                     "ImageURL": "./menu cafe/persian/2.jpg"
                 },
                 {
                     "codeNumber" : 136,
-                    "Title": "برنج کته ای",
+                    "Title": "CatRice",
                     "Price": 95,
                     "ImageURL": "./menu cafe/persian/3.jpeg"
                 },
                 {
                     "codeNumber" : 137,
-                    "Title": "کوبیده مخصوص زعفرانی",
+                    "Title": "SpeciallyPoundedSaffron",
                     "Price": 255,
                     "ImageURL": "./menu cafe/persian/4.jpg"
                 },
                 {
                     "codeNumber" : 138,
-                    "Title": "چنجه",
+                    "Title": "Chinja",
                     "Price": 365,
                     "ImageURL": "./menu cafe/persian/noimagefood.png"
                 },
                 {
                     "codeNumber" : 139,
-                    "Title": "فیله ترش",
+                    "Title": "SourFillet",
                     "Price": 435,
                     "ImageURL": "./menu cafe/persian/6.jpeg"
                 },
                 {
                     "codeNumber" : 140,
-                    "Title": "کباب برگ",
-                    "Description": "توضیحات کباب برگ تست",
+                    "Title": "GrilledLeaves",
                     "Price": 415,
                     "ImageURL": "./menu cafe/persian/noimagefood.png"
                 }
@@ -1028,6 +1027,428 @@ var menu = {
         }
     ]
 }
+
+var menuFa ={
+  
+    "breakfast": "صبحانه",
+    "breakfastEn": "breakfast",
+    "PersianBreakfast": "صبحانه ایرانی",
+    "Cucumbers-tomatoes-vegetables-butter-cheese-honey-boiled_eggs": "خیار، گوجه فرنگی، سبزی خوردن ، کره،  پنیر، عسل ،  تخم مرغ آبپز ",
+    "IranianOmelette": "املت ایرونی",
+    "Toast-eggs-tomatoes": "نان تست ،  نخم مرغ،  گوجه فرنگی",
+    "EnglishBreakfast": "صبحانه انگلیسی",
+    "Sausage-bacon-halfBoiledEgg-beanFeed-potato-mushroom-tomato-pickledCucumber": "سوسیس،  بیکن،  تخم مرغ نیمرو، خوراک لوبیا،  سیب زمینی،  قارچ ، گوجه فرنگی، خیار شور",
+    "MexicanOmelette": "املت مکزیکی",
+    "Toast-egg-tomato-jalapenoPepper": "نان تست ، تخم مرغ ، گوجه،  فلفل هالوپینو",
+    "McMuffin": "مک مافین",
+    "MacBread-scrambledEggs-bacon-slicedCheese-lettuce-tomato": "نان مک،  تخم مرغ نیمرو، بیکن، پنیر ورقه ای، کاهو،  گوجه فرنگی",
+    "beanFeed": "خوراک لوبیا",
+    "friedEgg": "نیمرو",
+    "MinaBar": "مینا بار",
+    "MinaBarEn": "mina bar",
+    "Espresso": "اسپرسو",
+    "DoubleEspresso":  "اسپرسو دبل",
+    "Americans": "آمریکانو",
+    "EspressoMacchiato": "اسپرسو ماکیاتو",
+    "cortado": "کورتادو",
+    "Cappuccino": "کاپوچینو",
+    "DoubleLatte": "لاته دبل",
+    "SheikhCoffee": "قهوه شیخ",
+    "EspressoBar": "اسپرسو بلند",
+    "EspressoBarEn": "Espresso Bar",
+    "SingleEspresso": "اسپرسو سینگل",
+    "DoubleEspresso": "اسپرسو دابل",
+    "Mocha": "موکا",
+    "CaramelMacchiato": "کارامل ماکیاتو",
+    "Americans": "آمریکانو",
+    "latte": "لاته",
+    "Affogato": "آفوگاتو",
+    "IceCoffeeE": "قهوه های سرد",
+    "IceCoffeeEn": "Ice Coffee",
+    "IcedLatte": "آیس لاته",
+    "IcedAmerican": "آیس آمریکانو",
+    "IcedCaramelMacchiato": "آیس کارامل ماکیاتو",
+    "IceMocha": "آیس موکا",
+    "Coldbrew": "کلدبرو",
+    "CofeeBar": "سایفون بار و قهوه های دمی",
+    "CofeeBarEn": "Cofee bar",
+    "SingleSiphon": "سایفون تک نفره",
+    "Two-personSiphon": "سایفون دو نفره",
+    "Three-personSiphon": "سایفون سه نفره",
+    "singlePlayer": "کمکس تک نفره",
+    "DoubleBed": "کمکس دو نفره",
+    "AThree-personCamp": "کمکس سه نفره",
+    "Turkish": "ترک",
+    "FrenchPressWithMilk": "فرنچ پرس به همراه شیر",
+    "HotDrinks": "چای بار و نوشیدنی های گرم",
+    "HotDrinksEn": "Hot Drinks",
+    "SingleIranianBlackTea": "چای سیاه ایرونی تک نفره",
+    "IranianBlackTeaForTwo": "چای سیاه ایرونی دو نفره",
+    "IranianBlackTeaForFour": "چای سیاه ایرونی چهار نفره",
+    "JazminGreenTeaForOnePerson": "چای سبز جزمین تک نفره",
+    "JasmineGreenTeaForTwo": "چای سبز جزمین دو نفره",
+    "JasmineGreenTeaForFour": "چای سبز جزمین چهر نفره",
+    "WhiteTea(BardGinsengAndHoney)": "چای سفید(بارد جنسینگ و عسل)",
+    "WhiteTea(WithGingerAndCitrusPeel)": "چای سفید(با زنجبیل و پوست مرکبات)",
+    "MasalaTea": "چای ماسالا",
+    "hotChocolate": "هات چاکلت",
+    "WhiteChocolateWithPeanutButter": "وایت چاکلت با کره بادام زمینی",
+    "teaLatte": "چای لاته",
+    "SingleMoroccanTea": "چای مراکشی تک نفره",
+    "theDrinkOfYourChoice": "دمنوش انتخابی شما",
+    "theDrinkOfYourChoiceEN": "the drink of your choice",
+    "peaceOfMind": "آرامش",
+    "Lemon-Ginger-Honey": "لیمو،زنجبیل،عسل",
+    "NaturalJuice": "آبمیوه طبیعی،موکتل،اسموتی",
+    "NaturalJuiceEn": "Natural juice",
+    "NaturalJuice": "آبمیوه طبیعی",
+    "WatermelonJuice-cantaloupeJuice-orangeJuice": "  اب هندوانه /آب طالبی /اب پرتقال",
+    "lemonade": "لیموناد",
+    "SimpleLime-Syrup-Soda+GingerCanBeAddedIfDesired": "لیمو ترش ساده، سیروپ، سودا+زنجبیل در صورت تمایل اضافه میشود ",
+    "Mojito": "موهیتو",
+    "TheCompositionOfMint-FreshLime-SweetAndSour-Soda": "ترکیب نعنا، لیمو ترش تازه، سوییت اندساور ، سودا ",
+    "TropicalSmoothie": "اسموتی تروپیکال",
+    "Banana-pineapple-strawberry-mango-coconut": "موز/ آناناس/ توت فرنگی ، / انبه/نارگیل ",
+    "Strapon": "استراپشن",
+    "AloeVeraJuice-Strawberry-WatermelonAndPassionFruit": " آب آلوورا، توت فرنگی، هندوانه و پشن فروت ",
+    "BerrySmoothie": "اسموتی بری",
+    "Strawberries-Blackberries-GrenadineSyrup-aloeVeraJuice": "توت فرنگی، شاتوت، سیروپ گرانادین، آب آلوورا",
+    "PostmodernPunchForTwo": "پانچ پست مدرن دو نفره",
+    "Midsummer": "میدسامر",
+    "FreshStrawberries-strawberryFlavoring-orangeJuice-mangoJuice-cheeseCold": "  توت فرنگی تازه/ طعم دهنده توت فرنگی/ آب پرتقال/ آب انبه/ سرددم پنیرک ",
+    "BerryMojito": "بری موهیتو",
+    "Helix": "هلیکس",
+    "Blucarasao-MintFlavoring-AloeVeraJuice-AppleJuice": "بلوکاراسائو/طعم دهنده نعنا/آب آلوورا/اب سیب",
+    "Frappuccino": "فراپاچینو",
+    "Espresso-VanillaIceCream-VanillaFlavor-CoconutFlavor": " اسپرسو/ بستنی وانیل/ طعم دهنده وانیل/ طعم دهنده نارگیل ",
+    "SmoothieBulls": "اسموتی بولز",
+    "SmoothieBullsEn": "Smoothie bulls",
+    "CrazyChocolate": "شکلات دیوانه",
+    "ExcitingCombinationsOfChocolateGelato-PeanutButter-BananaWithChocolateTopping-Cornflakes": " ترکیبات هیجان انگیز جلاتو شکلاتی، کره بادام زمینی، موز به همراه تاپینک شکلات ، کرن فلکس",
+    "wildBerry": "بری وحشی",
+    "ACombinationOfStrawberries-CranberrySyrup-AndChocolateGelato": "ترکیب توت فرنگی ، سیروپ کرلبری،  جلاتو شاتوت",
+    "Milkshake": "شیک ها",
+    "MilkshakeEn": "Milkshake",
+    "Chocolate": "شکلات",
+    "Shatot": "شاتوت",
+    "vanilla": "وانیل",
+    "Strawberry": "توت فرنگی",
+    "VanillaNutella": "وانیل نوتلا",
+    "ChocolateBanana": "موز شکلات",
+    "Coffee": "قهوه",
+    "peanut": "بادام زمینی",
+    "ChocolateBrownieFreakShake": "فریک شیک چاکلت براونی",
+    "ChicLotus": "شیک لوتوس",
+    "CakesAndSweets": "کیک و شیرینی",
+    "CakesAndSweetsEn": "Cakes and sweets",
+    "NewYorkCheesecake": "چیز کیک نیویورکی",
+    "CarrotCake": "کیک هویج",
+    "redolot": "ردولوت",
+    "CherryCrumble": "کرامبل آلبالو",
+    "brownie": "براونی",
+    "TripleChocolate": "تریپل چاکلت",
+    "ChocolateChipCookie": "کوکی چکلت چیپ",
+    "Kenafa": "کنافه",
+    "KonafaWithIceCream": "کنافه با بستنی",
+    "waffle": "وافل",
+    "Baklava": "باقلوا",
+    "ClassicCroissant": "کروسان کلاسیک",
+    "CroissantsWithNutellaAndStrawberries": "کروسان با نوتلا و توت فرنگی",
+    "BrownieWithVanillaGelato": "براونی با جلاتو وانیل",
+    "Appetizars": "پیش غذا ها و سالاد ها",
+    "AppetizarsEn": "Appetizars",
+    "CaesarSalad": "سالاد سزار",
+    "CaesarSalad(grilled)": "سالاد سزار (سخاری)",
+    "ChickenSalad": "چیکن سالاد",
+    "Lettuce-MixedVegetables-cherryTomatoes-SteamedMushrooms-Carrots-ChickenBreast-GarnerSauce": "کاهو/سبزیجات مخلوط/گوجه گیلاسی/ قارچ بخارپز/هویج/سینه مرغ/سس گارنر",
+    "greenSalad": "سالاد سبز",
+    "Lettuce-VegetableMix-Celery-CherryTomato-Cucumber-ColorPepper-Carrot-Sesame-LemoMustardSauce": "کاهو/سبزی میکس/کرفس/گوجه گیلاسی/خیار/فلفل رنگی/هویج/کنجد/سس خردل لیمو",
+    "WalmustardSalad": "سالاد والموستارد",
+    "Lettuce-GreenApple-Lemon-Bacon-Cheese-Walnuts": "کاهو.سیب سبز.لیمو.بیکن.پنیر.گردو",
+    "PlateOfSteamedVegetables": "بشقاب سبزیجات بخارپز",
+    "FrenchPotatoSoup": "سوپ سیب زمینی فرانسوی",
+    "MexicanBreadWithSalsaSauce": "نان مکزیکی با سس سالسا",
+    "Olive": "زیتون پرورده",
+    "YogurtAndCucumber": "ماست و خیار",
+    "Yogurt-Cucumber-Mint-Walnut": "ماست/خیار/نعنا/گردو",
+    "Fries": "سرخ شدنی ها",
+    "FriesEn": "Fries",
+    "FrenchFries": "فرنچ فرایز",
+    "ChickenWings": "چیکن وینگز",
+    "PotatoesWithCheese": "سیب زمینی با پنیر",
+    "SlicedPotatoes-PizzaCheese": "سیب زمینی خلال، پنیر پیتزا",
+    "FryingPlate": "بشقاب سوخاری",
+    "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces": "دوعددفیله/2عددبال/2عددکتف/قارچ/سبزیجات سوخاری فرانسوی/4 نوع سس",
+    "Sandwiches": "پنینی و ساندویچ ها",
+    "SandwichesEn": "Sandwiches",
+    "ChickenAndVegetablePanini": "پنی مرغ و سبزیجات",
+    "ChickenAndPeanutPanini": "پنی مرغ و بادام زمینی",
+    "VegetablePanini": "پنی سبزیجات",
+    "meatPanini": "پنی گوشت",
+    "HamPanini": "پنی ژامبون",
+    "BaconPanini": "پنی بیکن",
+    "RoastBeefPanini": "پنی رست بیف",
+    "Pasta": "پاستا",
+    "PastaEn": "Pasta",
+    "AlfredoPasta": "پاستا آلفردو",
+    "ArabicaPasta": "پاستا عربیتا",
+    "Grill": "گریل",
+    "GrillEn": "Grill",
+    "IcedLatte": "آیس لاته",
+    "IceAmerican": "آیس آمریکانو",
+    "IcedCaramelMacchiato": "آیس کارامل ماکیاتو",
+    "IceMocha": "آیس موکا",
+    "Coldbrew": "کلدبرو",
+    "AccompanyingFood": "همراه های کنار غذا",
+    "AccompanyingFoodEn": "Accompanying food",
+    "Classic-lemonBeer": "آبجو کلاسیک/لیمویی",
+    "SodaWithlemon": "سودا با لیمو",
+    "Coca-Sprite-Zero-Fanta": "کوکا/اسپرایت/زیرو/فانتا",
+    "mineralWater": "آب معدنی",
+    "Dough": "Dough",
+    "Sauces": "سس های انتخابی شما",
+    "SaucesEn": "Sauces",
+    "MushroomSauce": "سس قارچ",
+    "BuffaloSauce": "سس بوفالو",
+    "CaesarDressing": "سس سزار",
+    "sourSauce": "سس ترش",
+    "ChiliThaiSauce": "سس چی لی تای",
+    "pizza": "پیتزا",
+    "pizzaEn": "pizza",
+    "EpicureanPizza": "پیتزا مخصوص اپیکور",
+    "ChickenPizza": "پیتزا مرغ",
+    "VegetablePizza": "پیتزا سبزیجات",
+    "MeatPizza": "پیتزا گوشت",
+    "BaconPizza": "پیتزا بیکن",
+    "PepperoniPizza": "پیتزا پپرونی",
+    "ChickenAndMeatPizza": "پیتزا مرغ و گوشت",
+    "garlicBread": "نان سیر",
+    "persianCuisine": "غذاهای ایرانی",
+    "persianCuisineEn": "persian cuisine",
+    "bonelessChicken": "جوجه بی استخوان",
+    "Shishlik": "شیشلیک",
+    "CatRice": "برنج کته ای",
+    "SpeciallyPoundedSaffron": "کوبیده مخصوص زعفرانی",
+    "Chinja": "چنجه",
+    "SourFillet": "فیله ترش",
+    "GrilledLeaves": "کباب برگ",
+}
+
+var menuEn ={
+  
+    "breakfast": "breakfast",
+    "breakfastEn": "breakfast",
+    "PersianBreakfast": "Persian Breakfast",
+    "Cucumbers-tomatoes-vegetables-butter-cheese-honey-boiled_eggs": "Cucumbers , tomatoes , vegetable , butter , cheese , honey ,boiled eggs",
+    "IranianOmelette": "Iranian Omelette",
+    "Toast-eggs-tomatoes": "Toast , eggs , tomatoes",
+    "EnglishBreakfast": "English Breakfast",
+    "Sausage-bacon-halfBoiledEgg-beanFeed-potato-mushroom-tomato-pickledCucumber": "Sausage , bacon , half boiled egg , beanFeed , potato , mushroom , tomato , pickled Cucumber",
+    "MexicanOmelette": "Mexican Omelette",
+    "Toast-egg-tomato-jalapenoPepper": "Toast , egg , tomato , jalapeno Pepper",
+    "McMuffin": "McMuffin",
+    "MacBread-scrambledEggs-bacon-slicedCheese-lettuce-tomato": "Mac Bread , scrambled Eggs , bacon , sliced Cheese , lettuce , tomato",
+    "beanFeed": "beanFeed",
+    "friedEgg": "fried Egg",
+    "MinaBar": "Mina Bar",
+    "MinaBarEn": "Mina Bar",
+    "Espresso": "Espresso",
+    "DoubleEspresso": "Double Espresso",
+    "Americans": "Americans",
+    "EspressoMacchiato0": "Espresso Macchiato",
+    "cortado": "cortado",
+    "Cappuccino": "Cappuccino",
+    "DoubleLatte": "Double Latte",
+    "SheikhCoffee": "Sheikh Coffee",
+    "EspressoBar": "Espresso Bar",
+    "EspressoBarEn": "Espresso Bar",
+    "SingleEspresso": "Single Espresso",
+    "DoubleEspresso": "Double Espresso",
+    "Mocha": "Mocha",
+    "CaramelMacchiato": "CaramelMacchiato",
+    "Americans": "Americans",
+    "latte": "latte",
+    "Affogato": "Affogato",
+    "IceCoffee": "IceCoffee",
+    "IceCoffeeEn": "IceCoffeeEn",
+    "IcedLatte": "Iced Latte",
+    "IcedAmerican": "Iced American",
+    "IcedCaramelMacchiato": "Iced Caramel Macchiato",
+    "IceMocha": "Ice Mocha",
+    "Coldbrew": "Coldbrew",
+    "CofeeBar": "CofeeBar",
+    "CofeeBarEn": "Cofee bar",
+    "SingleSiphon": "Single siphon",
+    "Two-personSiphon": "Two-person Siphon",
+    "Three-personSiphon": "Three-person Siphon",
+    "singlePlayer": "single Player",
+    "DoubleBed": "DoubleBed",
+    "AThree-personCamp": "A three-person camp",
+    "Turkish": "Turkish",
+    "FrenchPressWithMilk": "French Press With Milk",
+    "HotDrinks": "Hot Drinks",
+    "HotDrinksEn": "Hot Drinks",
+    "SingleIranianBlackTea": "Single Iranian BlackTea",
+    "IranianBlackTeaForTwo": "Iranian BlackTea For Two",
+    "IranianBlackTeaForFour": "Iranian BlackTea For Four",
+    "JazminGreenTeaForOnePerson": "Jazmin Green Tea For One Person",
+    "JasmineGreenTeaForTwo": "Jasmine Green Tea For Two",
+    "JasmineGreenTeaForFour": "Jasmine Green Tea For Four",
+    "WhiteTea(BardGinsengAndHoney)": "White Tea (Bard Ginseng And Honey)",
+    "WhiteTea(WithGingerAndCitrusPeel)": "White Tea (With Ginger And Citrus Peel)",
+    "MasalaTea": "MasalaTea",
+    "hotChocolate": "hot Chocolate",
+    "WhiteChocolateWithPeanutButter": "WhiteChocolateWithPeanutButter",
+    "teaLatte": "tea Latte",
+    "SingleMoroccanTea": "Single Moroccan Tea",
+    "theDrinkOfYourChoice": "theDrinkOfYourChoice",
+    "theDrinkOfYourChoiceEn": "the Drink Of Your Choice",
+    "peaceOfMind": "peace Of Mind",
+    "Lemon-Ginger-Honey": "Lemon , Ginger , Honey",
+    "NaturalJuice": "Natural juice, mocktail, smoothie",
+    "NaturalJuiceEn": "Natural Juice",
+    "NaturalJuice": "NaturalJuice",
+    "WatermelonJuice-cantaloupeJuice-orangeJuice": "Watermelon Juice / cantaloupe Juice / orange Juice",
+    "lemonade": "lemonade",
+    "SimpleLime-Syrup-Soda+GingerCanBeAddedIfDesired": "Simple Lime , Syrup, Soda + Ginger Can Be Added If Desired ",
+    "Mojito": "Mojito",
+    "TheCompositionOfMint-FreshLime-SweetAndSour-Soda": "The Composition Of Mint , Fresh Lime , Sweet And Sour , Soda ",
+    "TropicalSmoothie": "Tropical Smoothie",
+    "Banana-pineapple-strawberry-mango-coconut": "Banana / pineapple / strawberry / mango / coconut ",
+    "Strapon": "Strapon",
+    "AloeVeraJuice-Strawberry-WatermelonAndPassionFruit": "Aloe Vera Juice / Strawberry / Watermelon And Passion Fruit ",
+    "BerrySmoothie": "Berry Smoothie",
+    "Strawberries-Blackberries-GrenadineSyrup-aloeVeraJuice": "Strawberries , Blackberries , GrenadineSyrup , aloe Vera Juice",
+    "PostmodernPunchForTwo": "Postmodern Punch For Two",
+    "Midsummer": "Midsummer",
+    "FreshStrawberries-strawberryFlavoring-orangeJuice-mangoJuice-cheeseCold": "Fresh strawberries/strawberry flavoring/orange juice/mango juice/cheese cold ",
+    "BerryMojito": "Berry Mojito",
+    "Helix": "Helix",
+    "Blucarasao-MintFlavoring-AloeVeraJuice-AppleJuice": "Blucarasao / Mint Flavoring / Aloe Vera Juice / Apple Juice",
+    "Frappuccino": "Frappuccino",
+    "Espresso-VanillaIceCream-VanillaFlavor-CoconutFlavor": " Espresso / VanillaIceCream / VanillaFlavor / CoconutFlavor ",
+    "SmoothieBulls": "SmoothieBulls",
+    "SmoothieBullsEn": "SmoothieBulls",
+    "CrazyChocolate": "Crazy Chocolate",
+    "ExcitingCombinationsOfChocolateGelato-PeanutButter-BananaWithChocolateTopping-Cornflakes": " Exciting Combinations Of Chocolate Gelato , Peanut Butter , Banana With Chocolate Topping , Corn flakes",
+    "wildBerry": "wild Berry",
+    "ACombinationOfStrawberries-CranberrySyrup-AndChocolateGelato": "A Combination Of Strawberries , Cranberry Syrup , And Chocolate Gelato",
+    "Milkshake": "Milkshake",
+    "MilkshakeEn": "Milkshake",
+    "Chocolate": "Chocolate",
+    "Shatot": "Shatot",
+    "vanilla": "vanilla",
+    "Strawberry": "Strawberry",
+    "VanillaNutella": "VanillaNutella",
+    "ChocolateBanana": "Chocolate Banana",
+    "Coffee": "Coffee",
+    "peanut": "peanut",
+    "ChocolateBrownieFreakShake": "Chocolate Brownie Freak Shake",
+    "ChicLotus": "Chic Lotus",
+    "CakesAndSweets": "Cakes And Sweets ",
+    "CakesAndSweetsEn": "Cakes and sweets",
+    "NewYorkCheesecake": "New York cheesecake",
+    "CarrotCake": "Carrot Cake",
+    "redolot": "redolot",
+    "CherryCrumble": "Cherry Crumble",
+    "brownie": "brownie",
+    "TripleChocolate": "Triple Chocolate",
+    "ChocolateChipCookie": "Chocolate chip cookie",
+    "Kenafa": "Kenafa",
+    "KonafaWithIceCream": "Konafa With Ice Cream",
+    "waffle": "waffle",
+    "Baklava": "Baklava",
+    "ClassicCroissant": "Classic Croissant",
+    "CroissantsWithNutellaAndStrawberries": "Croissants With Nutella And Strawberries",
+    "BrownieWithVanillaGelato": "Brownie With Vanilla Gelato",
+    "Appetizars": "Appetizars",
+    "AppetizarsEn": "Appetizars",
+    "CaesarSalad": "Caesar Salad",
+    "CaesarSalad(grilled)": "CaesarSalad(grilled)",
+    "ChickenSalad": "Chicken Salad",
+    "Lettuce-MixedVegetables-cherryTomatoes-SteamedMushrooms-Carrots-ChickenBreast-GarnerSauce": "Lettuce/mixed vegetables/cherry tomatoes/, steamed mushrooms/carrots/chicken breast/garner sauce",
+    "greenSalad": "green Salad",
+    "Lettuce-VegetableMix-Celery-CherryTomato-Cucumber-ColorPepper-Carrot-Sesame-LemoMustardSauce": "Lettuce/vegetable mix/celery/cherry tomato/cucumber/color pepper/carrot/sesame/lemon mustard sauce",
+    "WalmustardSalad": "Walmustard Salad",
+    "Lettuce-GreenApple-Lemon-Bacon-Cheese-Walnuts": "Lettuce, green apple, lemon, bacon, cheese, walnuts",
+    "PlateOfSteamedVegetables": "Plate Of Steamed Vegetables",
+    "FrenchPotatoSoup": "French Potato Soup",
+    "MexicanBreadWithSalsaSauce": "Mexican Bread With Salsa Sauce",
+    "Olive": "Olive",
+    "YogurtAndCucumber": "Yogurt And Cucumber",
+    "Yogurt-Cucumber-Mint-Walnut": "Yogurt/cucumber/mint/walnut",
+    "Fries": "Fries",
+    "FriesEn": "Fries",
+    "FrenchFries": "French Fries",
+    "ChickenWings": "Chicken Wings",
+    "PotatoesWithCheese": "Potatoes WithvCheese",
+    "SlicedPotatoes-PizzaCheese": "Sliced Potatoes , Pizza Cheese",
+    "FryingPlate": "Frying Plate",
+    "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces": "Two fillets/2 wings/2 shoulders/mushrooms/French fried vegetables/4 types of sauces",
+    "Sandwiches": "پنینی و ساندویچ ها",
+    "SandwichesEn": "Sandwiches",
+    "ChickenAndVegetablePanini": "Chicken And Vegetable Panini",
+    "ChickenAndPeanutPanini": "Chicken And Peanut Panini",
+    "VegetablePanini": "Vegetable Panini",
+    "meatPanini": "meat Panini",
+    "HamPanini": "Ham Panini",
+    "BaconPanini": "Bacon Panini",
+    "RoastBeefPanini": "Roast Beef Panini",
+    "Pasta": "Pasta",
+    "PastaEn": "Pasta",
+    "AlfredoPasta": "Alfredo Pasta",
+    "ArabicaPasta": "Arabica Pasta",
+    "Grill": "Grill",
+    "GrillEn": "Grill",
+    "IcedLatte": "Iced Latte",
+    "IceAmerican": "Ice American",
+    "IcedCaramelMacchiato": "Iced Caramel Macchiato",
+    "IceMocha": "Ice Mocha",
+    "Coldbrew": "کلدبرو",
+    "AccompanyingFood": "Accompanying Food",
+    "AccompanyingFoodEN": "Accompanying food",
+    "Classic-lemonBeer": "Classic / lemon beer",
+    "SodaWithlemon": "Soda With lemon",
+    "Coca-Sprite-Zero-Fanta": "Coca/Sprite/Zero/Fanta",
+    "mineralWater": "mineral Water",
+    "Dough": "Dough",
+    "Sauces": "Sauces",
+    "SaucesEn": "Sauces",
+    "MushroomSauce": "Mushroom Sauce",
+    "BuffaloSauce": "Buffalo Sauce",
+    "CaesarDressing": "CaesarDressing",
+    "sourSauce": "sour Sauce",
+    "ChiliThaiSauce": "Chili Thai Sauce",
+    "pizza": "pizza",
+    "pizzaEn": "pizza",
+    "EpicureanPizza": "Epicurean Pizza",
+    "ChickenPizza": "Chicken Pizza",
+    "VegetablePizza": "Vegetable Pizza",
+    "MeatPizza": "Meat Pizza",
+    "BaconPizza": "Bacon Pizza",
+    "PepperoniPizza": "Pepperoni Pizza",
+    "ChickenAndMeatPizza": "Chicken And Meat Pizza",
+    "garlicBread": "garlic Bread",
+    "persianCuisine": "غذاهای ایرانی",
+    "persianCuisineEn": "persian cuisine",
+    "bonelessChicken": "boneless Chicken",
+    "Shishlik": "Shishlik",
+    "CatRice": "Cat Rice",
+    "SpeciallyPoundedSaffron": "Specially Pounded Saffron",
+    "Chinja": "Chinja",
+    "SourFillet": "Sour Fillet",
+    "GrilledLeaves": "Grilled Leaves",
+}
+
+
+var menuFaJsonString = JSON.stringify(menuFa);
+var menuFaJson = JSON.parse(menuFaJsonString);
+
+
+var menuEnJsonString = JSON.stringify(menuEn);
+var menuEnJson = JSON.parse(menuEnJsonString);
+
+
 
 var menubarImageClass = 'menu-bar_section_image';
 var menubarInfoClass = 'menu-bar_section_info';
@@ -1056,8 +1477,24 @@ $(document).ready(function(){
 	linked(1);
 	$(".payment").html(" "+totalPrice + "/000 ");
 
-
+    getAndSetTranslateLanguage();
+   
 });
+
+function getAndSetTranslateLanguage(){
+    var ContainsKey = $("*[text_key]");
+
+    for(elementContainKey=0 ; elementContainKey<14 ; elementContainKey++){
+        for (let SpecificَAttr = 0; SpecificَAttr <ContainsKey[elementContainKey].attributes.length ; SpecificَAttr++) {
+            if (ContainsKey[elementContainKey].attributes[SpecificَAttr].name =="text_key") {
+                var keyValue = ContainsKey[elementContainKey].attributes[SpecificَAttr].value;
+                var translatedValue;
+                translatedValue = menuEnJson[keyValue];
+                ContainsKey[elementContainKey].innerHTML = translatedValue;
+            }
+        }
+    }
+}
 
 function showMenubar(){
     // console.log(menu.Information.length)
@@ -1091,9 +1528,9 @@ function showSlides(){
         
         //------START : hrLine ------
         var sliderContentsHeader_json = $("<div>").addClass("hrLine");
-        var lineNameFA = $("<p>").html(menu.Information[IDNumMain].headerNameFA);
+        var lineNameFA = $("<p>").attr("text_key", menu.Information[IDNumMain].headerNameFA).html(menu.Information[IDNumMain].headerNameFA);
         var lineSpan = $("<span>");
-        var lineNameEN = $("<p>").html(menu.Information[IDNumMain].headerNameEN);
+        var lineNameEN = $("<p>").attr("text_key", menu.Information[IDNumMain].headerNameEN).html(menu.Information[IDNumMain].headerNameEN);
         sliderContentsHeader_json.append(lineNameFA);
         sliderContentsHeader_json.append(lineSpan);
         sliderContentsHeader_json.append(lineNameEN);
@@ -1107,15 +1544,17 @@ function showSlides(){
 
                 //-------START : menu_contant_image-------
                 var containSlideImg = $("<div>").addClass(slideImageClass);
-                var slideImage = $("<img>").attr("src" , menu.Information[IDNumMain].Info[InfoNum].ImageURL).attr("alt" , menu.Information[IDNumMain].Info[InfoNum].Title);
+                var slideImage = $("<img>")
+                                .attr("src" , menu.Information[IDNumMain].Info[InfoNum].ImageURL)
+                                .attr("alt" , menu.Information[IDNumMain].Info[InfoNum].Title);
                 containSlideImg.append(slideImage);
                 mainDiv.append(containSlideImg);
                 //-------END : menu_contant_image-------
 
                 //-------START : menu_contant_info------
                 var menuInformation = $("<div>").addClass(slideInformationClass);
-                var name = $('<h4>'+menu.Information[IDNumMain].Info[InfoNum].Title+'</h4>')
-                var descriptionMenu = $("<p>").html(menu.Information[IDNumMain].Info[InfoNum].Description);
+                var name = $("<h4>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Title).html(menu.Information[IDNumMain].Info[InfoNum].Title);
+                var descriptionMenu = $("<p>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Description).html(menu.Information[IDNumMain].Info[InfoNum].Description);
                 menuInformation.append(name);
                 menuInformation.append(descriptionMenu);
 
@@ -1386,3 +1825,4 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
 
 	DecrementPrice(codeNumber);
 }
+
