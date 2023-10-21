@@ -1026,9 +1026,6 @@ var menu = {
                 }
             ]
         }
-        // {
-        //     "adding": "AddToNotebook"
-        // }
     ]
 }
 
@@ -1235,8 +1232,8 @@ var menuFa ={
     "SpeciallyPoundedSaffron": "کوبیده مخصوص زعفرانی",
     "Chinja": "چنجه",
     "SourFillet": "فیله ترش",
-    "GrilledLeaves": "کباب برگ"
-    // "AddToNotebook": "افزودن ب دفترچه"
+    "GrilledLeaves": "کباب برگ",
+    "AddToNotebook": "افزودن ب دفترچه"
 }
 
 var menuEn ={
@@ -1442,8 +1439,8 @@ var menuEn ={
     "SpeciallyPoundedSaffron": "Specially Pounded Saffron",
     "Chinja": "Chinja",
     "SourFillet": "Sour Fillet",
-    "GrilledLeaves": "Grilled Leaves"
-    // "AddToNotebook": "Add To Notebook"
+    "GrilledLeaves": "Grilled Leaves",
+    "AddToNotebook": "Add To Notebook"
 }
 
 
@@ -1614,6 +1611,7 @@ function showSlides(){
                                          .attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber)
                                          .attr("CategoryID", menu.Information[IDNumMain].CategoryID)
                                          .addClass(mainButtonClass)
+                                         .attr("text_key" , "AddToNotebook")
                                          .attr('onclick' , AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain].Info[InfoNum].codeNumber+'\',\''+menu.Information[IDNumMain].CategoryID+'\')')
                                          .html("افزودن ب دفترچه");
                         containMainBtn.append(MainButton);
@@ -1702,10 +1700,11 @@ function getInformationWithMap(){
     
                         
     
-                        console.log("code number :  "+menu.Information[categoryI].Info[codNumI].codeNumber);
-                        console.log("name :  "+nameChosen);
-                        console.log("image : " + imageUrlChosen);
-                        console.log("price : " + priceChosen);
+                        // console.log("code number :  "+menu.Information[categoryI].Info[codNumI].codeNumber);
+                        // console.log("name :  "+nameChosen);
+                        // console.log("image : " + imageUrlChosen);
+                        // console.log("price : " + priceChosen);
+
                         continue;
                     }
 
@@ -1714,8 +1713,6 @@ function getInformationWithMap(){
             }
         }
     }
-    // console.log("map fanc");
-    // console.log(map.keys());
 }
 
 
@@ -1772,7 +1769,7 @@ function openNav() {
 
 function AddPurchaseNumBtn (codeNumber )
 {
-    console.log("codeNumber= "+codeNumber)
+    // console.log("codeNumber= "+codeNumber)
     var mainButtonHtml = $("button." +mainButtonClass+"[codeNumber='"+codeNumber+"']");
     mainButtonHtml.hide();
     var purchaseSpanAttr = "codeNumber = '" + mainButtonHtml.attr("codeNumber") + "' CategoryID = '" + mainButtonHtml.attr("CategoryID") + "'";
@@ -1788,7 +1785,6 @@ function AddPurchaseNumBtn (codeNumber )
     getInformationWithMap();
 
     IncrementPrice(codeNumber);
-	// $(".payment").html(" "+totalPrice + "/000 ");
 
 	if (totalPrice == 0) {
 		$("div.totalPrice").hide();
