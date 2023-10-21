@@ -10,6 +10,7 @@ body{
     font-family: 'iransans';
     box-sizing: border-box;
     color: var(--white);
+
 }
 ::-webkit-scrollbar {
     height: 5px;              /* height of horizontal scrollbar ← You're missing this */
@@ -18,6 +19,33 @@ body{
   }
 
          /* ******************************* header of page ******************************* */
+.backgroundImg{
+    width: 100%;
+    height: 166px;
+    background-image:url("./background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.3;
+    z-index:-1;
+}      
+.backgroundImg::after {
+    background: linear-gradient(rgba(192,160,40,0), rgb(192,160,40)) !important;
+}
+
+.backgroundImg:after {
+    content: "";
+    top: -150px;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+}  
 .logo{
     display: flex;
     justify-content: center;
@@ -67,7 +95,10 @@ body{
     width: 140px;
     height: 25px;
     font-size: 11px;
-    background-color: #cf871c;
+    /* background-color: #cf871c; */
+    background-color: rgb(205 171 44);
+    border: none;
+    border-radius: 5px;
     text-align: center;
 }
          /* ******************************* menu bar ******************************* */
