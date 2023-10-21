@@ -1233,7 +1233,8 @@ var menuFa ={
     "Chinja": "چنجه",
     "SourFillet": "فیله ترش",
     "GrilledLeaves": "کباب برگ",
-    "AddToNotebook": "افزودن ب دفترچه"
+    "AddToNotebook": "افزودن ب دفترچه",
+    "MonetaryUnit" : "تومان"
 }
 
 var menuEn ={
@@ -1440,7 +1441,8 @@ var menuEn ={
     "Chinja": "Chinja",
     "SourFillet": "Sour Fillet",
     "GrilledLeaves": "Grilled Leaves",
-    "AddToNotebook": "Add To Notebook"
+    "AddToNotebook": "Add To Notebook",
+    "MonetaryUnit" : "toman"
 }
 
 
@@ -1599,7 +1601,7 @@ function showSlides(){
                         //--------START : menu_contant_info_price_contant------
                         var priceInfo = $("<div>").addClass(slidePriceContent);
                         var price = $("<h4>").addClass("price").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).html(menu.Information[IDNumMain].Info[InfoNum].Price+".000");
-                        var toman = $("<p>").html("تومان");
+                        var toman = $("<p>").attr("text_key" , "MonetaryUnit").html("تومان");
                         priceInfo.append(price);
                         priceInfo.append(toman);
                         containPriceAndMainbtnInfo.append(priceInfo);
