@@ -2,6 +2,7 @@
 var menu = {
     "Information":
     [
+       
         {
             "CategoryID" : 1,
             "headerNameFA": "breakfast",
@@ -1025,6 +1026,9 @@ var menu = {
                 }
             ]
         }
+        // {
+        //     "adding": "AddToNotebook"
+        // }
     ]
 }
 
@@ -1231,7 +1235,8 @@ var menuFa ={
     "SpeciallyPoundedSaffron": "کوبیده مخصوص زعفرانی",
     "Chinja": "چنجه",
     "SourFillet": "فیله ترش",
-    "GrilledLeaves": "کباب برگ",
+    "GrilledLeaves": "کباب برگ"
+    // "AddToNotebook": "افزودن ب دفترچه"
 }
 
 var menuEn ={
@@ -1385,7 +1390,7 @@ var menuEn ={
     "SlicedPotatoes-PizzaCheese": "Sliced Potatoes , Pizza Cheese",
     "FryingPlate": "Frying Plate",
     "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces": "Two fillets/2 wings/2 shoulders/mushrooms/French fried vegetables/4 types of sauces",
-    "Sandwiches": "پنینی و ساندویچ ها",
+    "Sandwiches": "Sandwiches",
     "SandwichesEn": "Sandwiches",
     "ChickenAndVegetablePanini": "Chicken And Vegetable Panini",
     "ChickenAndPeanutPanini": "Chicken And Peanut Panini",
@@ -1404,7 +1409,7 @@ var menuEn ={
     "IceAmerican": "Ice American",
     "IcedCaramelMacchiato": "Iced Caramel Macchiato",
     "IceMocha": "Ice Mocha",
-    "Coldbrew": "کلدبرو",
+    "Coldbrew": "Coldbrew",
     "AccompanyingFood": "Accompanying Food",
     "AccompanyingFoodEN": "Accompanying food",
     "Classic-lemonBeer": "Classic / lemon beer",
@@ -1429,7 +1434,7 @@ var menuEn ={
     "PepperoniPizza": "Pepperoni Pizza",
     "ChickenAndMeatPizza": "Chicken And Meat Pizza",
     "garlicBread": "garlic Bread",
-    "persianCuisine": "غذاهای ایرانی",
+    "persianCuisine": "persian cuisine",
     "persianCuisineEn": "persian cuisine",
     "bonelessChicken": "boneless Chicken",
     "Shishlik": "Shishlik",
@@ -1437,7 +1442,8 @@ var menuEn ={
     "SpeciallyPoundedSaffron": "Specially Pounded Saffron",
     "Chinja": "Chinja",
     "SourFillet": "Sour Fillet",
-    "GrilledLeaves": "Grilled Leaves",
+    "GrilledLeaves": "Grilled Leaves"
+    // "AddToNotebook": "Add To Notebook"
 }
 
 
@@ -1478,22 +1484,36 @@ $(document).ready(function(){
 	$(".payment").html(" "+totalPrice + "/000 ");
 
     getAndSetTranslateLanguage();
+    // $(".gatherMenu").attr("text_key" , ).html()
    
 });
 
 function getAndSetTranslateLanguage(){
     var ContainsKey = $("*[text_key]");
 
-    for(elementContainKey=0 ; elementContainKey<14 ; elementContainKey++){
+
+    for(elementContainKey=0 ; elementContainKey<ContainsKey.length ; elementContainKey++){
         for (let SpecificَAttr = 0; SpecificَAttr <ContainsKey[elementContainKey].attributes.length ; SpecificَAttr++) {
             if (ContainsKey[elementContainKey].attributes[SpecificَAttr].name =="text_key") {
                 var keyValue = ContainsKey[elementContainKey].attributes[SpecificَAttr].value;
                 var translatedValue;
-                translatedValue = menuEnJson[keyValue];
+                if(window.localStorage.getItem("lang") == "En"){
+                    translatedValue = menuEnJson[keyValue];
+                }
+                else{
+                    translatedValue = menuFaJson[keyValue];
+                }
                 ContainsKey[elementContainKey].innerHTML = translatedValue;
             }
         }
     }
+}
+
+function changeLanguage()
+{
+    var getLang = $("#language").val();
+    var setValueLang = window.localStorage.setItem("lang" ,getLang );
+    getAndSetTranslateLanguage();
 }
 
 function showMenubar(){
@@ -1653,7 +1673,7 @@ function getInformationWithMap(){
                         var informationSelected = $("<div>").addClass("menu_contant_info-modal")
                         mainSelectedDiv.append(informationSelected);
     
-                        var nameSelected = $("<h4>").html(nameChosen);
+                        var nameSelected = $("<h4>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(nameChosen);
                         informationSelected.append(nameSelected);
     
                         var priceAndButton = $("<div>").addClass("menu_contant_info_price");
