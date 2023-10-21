@@ -1233,8 +1233,16 @@ var menuFa ={
     "Chinja": "چنجه",
     "SourFillet": "فیله ترش",
     "GrilledLeaves": "کباب برگ",
+
+    // generaltext
     "AddToNotebook": "افزودن ب دفترچه",
-    "MonetaryUnit" : "تومان"
+    "MonetaryUnit" : "تومان",
+    "menuGathe" : "مشاهده کل منوها یکجا",
+    "bill" : "مشاهده سبد خرید ",
+    "invoice": "سبد خرید",
+    "totalPrice": "جمع کل : ",
+    "ClosingInvoice": "بستن",
+    "payment": "پرداخت"
 }
 
 var menuEn ={
@@ -1441,8 +1449,16 @@ var menuEn ={
     "Chinja": "Chinja",
     "SourFillet": "Sour Fillet",
     "GrilledLeaves": "Grilled Leaves",
+
+    // generaltext
     "AddToNotebook": "Add To Notebook",
-    "MonetaryUnit" : "toman"
+    "MonetaryUnit" : "toman",
+    "menuGathe" : "View all menus at once",
+    "bill": "View the bill",
+    "invoice": "invoice",
+    "totalPrice": "total Price : ",
+    "ClosingInvoice": "Close",
+    "payment": "payment"
 }
 
 

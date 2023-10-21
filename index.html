@@ -62,7 +62,7 @@
 
             <div class="dropdownButton">
                 <!-- Use any element to open/show the overlay navigation menu -->
-                <button class="gatherMenu" onclick="openNav()">مشاهده کل منوها یکجا</button>
+                <button class="gatherMenu" text_key="menuGathe" onclick="openNav()">مشاهده کل منوها یکجا</button>
             </div>
         </div>
 
@@ -77,7 +77,7 @@
         <div class="totalPrice">
             <!-- <button class="pay-off""> -->
             <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">
-                <span>مشاهده سبد خرید </span>
+                <span text_key="bill">مشاهده سبد خرید </span>
                 <span class="bill">0</span>
                 <span text_key="MonetaryUnit">تومان</span>
             </button>
@@ -94,18 +94,18 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">سبد خرید</h4>
+                            <h4 text_key="invoice" class="modal-title">سبد خرید</h4>
                         </div>
                         <div class="modal-body">
                         </div>
                         <div class="payment-modal">
-                            <span>جمع کل : </span>
+                            <span text_key="totalPrice">جمع کل : </span>
                             <span class="payment">450.000</span>
                             <span text_key="MonetaryUnit">تومان</span>
                         </div>
                         <div class="modal-footer modal-payButton">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                            <button type="button" class="btn btn-default">پرداخت</button>
+                            <button type="button" class="btn btn-default" text_key="ClosingInvoice" data-dismiss="modal">بستن</button>
+                            <button type="button" class="btn btn-default" text_key="payment" >پرداخت</button>
 
 
                         </div>
