@@ -1490,7 +1490,12 @@ $(document).ready(function(){
 
 function getAndSetTranslateLanguage(){
     var ContainsKey = $("*[text_key]");
-
+    // var asma = ContainsKey.filter("h4");
+    // for (let i = 0; i < asma.length; i++) {
+    //     console.log(asma[i]);
+        
+    // }
+    // console.log(asma)
 
     for(elementContainKey=0 ; elementContainKey<ContainsKey.length ; elementContainKey++){
         for (let SpecificَAttr = 0; SpecificَAttr <ContainsKey[elementContainKey].attributes.length ; SpecificَAttr++) {
@@ -1790,6 +1795,7 @@ function AddPurchaseNumBtn (codeNumber )
 	}else{
 		$("div.totalPrice").show();
 	}
+    changeLanguage();
 }
 
 
