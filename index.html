@@ -8,10 +8,13 @@
     <link rel="icon" type="image/x-icon" href="./img/icon/icon.ico">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/primary.css">
+    <link rel="stylesheet" href="./css/adminPanel.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -41,54 +44,49 @@
         <select class="form-select" aria-label="Default select example" id="language" onchange="changeLanguage()">
             <option class="optionSelectBox" selected value="Fa">فارسی </option>
             <option  class="optionSelectBox" value="En">English</option>
-          </select>
+        </select>
+
+        <div id="navBar"></div>
         <!-- ***********************menu bar *************************** -->
-        <main class="grid-item main">
+        <!-- <main class="grid-item main">
             <div class="items menu-bar">
             </div>
-        </main>
+        </main> -->
 
         <!-- ***********************dropdown menu *************************** -->
-        <div class="gatheringMenu">
-            <!-- The overlay -->
+        <!-- <div class="gatheringMenu">
             <div id="myNav" class="overlay">
 
-                <!-- Button to close the overlay navigation -->
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                <!-- Overlay content -->
                 <div class="overlay-content">
                 </div>
 
             </div>
 
             <div class="dropdownButton">
-                <!-- Use any element to open/show the overlay navigation menu -->
                 <button class="gatherMenu" text_key="menuGathe" onclick="openNav()">مشاهده کل منوها یکجا</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- ***********************sliders menu *************************** -->
 
-        <div class="sliders">
+        <!-- <div class="sliders">
         </div>
-        <br><br><br><br><br><br>
+        <br><br><br><br><br><br> -->
 
         <!-- ***********************Cart *************************** -->
 
-        <div class="totalPrice">
-            <!-- <button class="pay-off""> -->
+        <!-- <div class="totalPrice">
             <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">
                 <span text_key="bill">مشاهده سبد خرید </span>
                 <span class="bill">0</span>
                 <span text_key="MonetaryUnit">تومان</span>
             </button>
-        </div>
+        </div>  -->
 
         <!-- **************************************** payment modal **************************** -->
-        <div class="modal-pay">
-            <!-- <h2>Modal Example</h2> -->
-            <!-- <button type="button" class="btn btn-info btn-lg pay-off" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+        <!-- <div class="modal-pay">
 
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -115,10 +113,12 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
-        <script src="./js/epicor.js" async defer></script>
+        <!-- <script src="./js/epicor.js" async defer></script> -->
+        <script src="./js/admin panel/navigationBar" async defer></script>
+        <script src="./js/admin panel/menubar.js" async defer></script>
 
     </div>
 </body>
