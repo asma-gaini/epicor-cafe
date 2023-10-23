@@ -7,54 +7,54 @@ var menu = {
             "CategoryID" : 1,
             "headerNameFA": "breakfast",
             "headerNameEN": "breakfastEn",
-            "headerImg": "./menu cafe/breakfast/63fd588c75bdd.png",
+            "headerImg": "./img/breakfast/63fd588c75bdd.png",
             "Info":[
                 {
                     "codeNumber" : 1,
                     "Title": "PersianBreakfast",
                     "Description": "Cucumbers-tomatoes-vegetables-butter-cheese-honey-boiled_eggs",
                     "Price": 175,
-                    "ImageURL": "./menu cafe/breakfast/61ee584723571.jpg"
+                    "ImageURL": "./img/breakfast/61ee584723571.jpg"
                 },
                 {
                     "codeNumber" : 2,
                     "Title": "IranianOmelette",
                     "Description": "Toast-eggs-tomatoes",
                     "Price": 155,
-                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                    "ImageURL": "./img/breakfast/noimagefood.png"
                 },
                 {
                     "codeNumber" : 3,
                     "Title": "EnglishBreakfast",
                     "Description": "Sausage-bacon-halfBoiledEgg-beanFeed-potato-mushroom-tomato-pickledCucumber",
                     "Price": 195,
-                    "ImageURL": "./menu cafe/breakfast/61ee57fcc00cd.jpg"
+                    "ImageURL": "./img/breakfast/61ee57fcc00cd.jpg"
                 },
                 {
                     "codeNumber" : 4,
                     "Title": "MexicanOmelette",
                     "Description": "Toast-egg-tomato-jalapenoPepper",
                     "Price": 135,
-                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                    "ImageURL": "./img/breakfast/noimagefood.png"
                 },
                 {
                     "codeNumber" : 5,
                     "Title": "McMuffin",
                     "Description": "MacBread-scrambledEggs-bacon-slicedCheese-lettuce-tomato",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/breakfast/61f3e2420f1cc.jpg"
+                    "ImageURL": "./img/breakfast/61f3e2420f1cc.jpg"
                 },
                 {
                     "codeNumber" : 6,
                     "Title": "beanFeed",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                    "ImageURL": "./img/breakfast/noimagefood.png"
                 },
                 {
                     "codeNumber" : 7,
                     "Title": "friedEgg",
                     "Price": 110,
-                    "ImageURL": "./menu cafe/breakfast/noimagefood.png"
+                    "ImageURL": "./img/breakfast/noimagefood.png"
                 }
             ]
         },
@@ -62,55 +62,55 @@ var menu = {
             "CategoryID" : 2,
             "headerNameFA": "MinaBar",
             "headerNameEN": "MinaBarEn",
-            "headerImg": "./menu cafe/minabar/minabar.png",
+            "headerImg": "./img/minabar/minabar.png",
             "Info":[
                 {
                     "codeNumber" : 8,
                     "Title": "Espresso",
                     "Price": 68,
-                    "ImageURL": "./menu cafe/minabar/1.jpg"
+                    "ImageURL": "./img/minabar/1.jpg"
                 },
                 {
                     "codeNumber" : 9,
                     "Title": "DoubleEspresso",
                     "Price": 72,
-                    "ImageURL": "./menu cafe/minabar/2.jpg"
+                    "ImageURL": "./img/minabar/2.jpg"
                 },
                 {
                     "codeNumber" : 10,
                     "Title": "Americans",
                     "Price": 78,
-                    "ImageURL": "./menu cafe/minabar/3.jpg"
+                    "ImageURL": "./img/minabar/3.jpg"
                 },
                 {
                     "codeNumber" : 11,
                     "Title": "EspressoMacchiato",
                     "Price": 75,
-                    "ImageURL": "./menu cafe/minabar/noimagefood.png"
+                    "ImageURL": "./img/minabar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 12,
                     "Title": "cortado",
                     "Price": 70,
-                    "ImageURL": "./menu cafe/minabar/5.jpg"
+                    "ImageURL": "./img/minabar/5.jpg"
                 },
                 {
                     "codeNumber" : 13,
                     "Title": "Cappuccino",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/minabar/6.jpg"
+                    "ImageURL": "./img/minabar/6.jpg"
                 },
                 {
                     "codeNumber" : 14,
                     "Title": "DoubleLatte",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/minabar/7.jpg"
+                    "ImageURL": "./img/minabar/7.jpg"
                 },
                 {
                     "codeNumber" : 15,
                     "Title": "SheikhCoffee",
                     "Price": 98,
-                    "ImageURL": "./menu cafe/minabar/noimagefood.png"
+                    "ImageURL": "./img/minabar/noimagefood.png"
                 }
             ]
         },
@@ -118,49 +118,49 @@ var menu = {
             "CategoryID" : 3,
             "headerNameFA": "EspressoBar",
             "headerNameEN": "EspressoBarEn",
-            "headerImg": "./menu cafe/espresso bar/espressobar.png",
+            "headerImg": "./img/espresso bar/espressobar.png",
             "Info":[
                 {
                     "codeNumber" : 16,
                     "Title": "SingleEspresso",
                     "Price": 69,
-                    "ImageURL": "./menu cafe/espresso bar/1.jpg"
+                    "ImageURL": "./img/espresso bar/1.jpg"
                 },
                 {
                     "codeNumber" : 17,
                     "Title": "DoubleEspresso",
                     "Price": 74,
-                    "ImageURL": "./menu cafe/espresso bar/2.jpg"
+                    "ImageURL": "./img/espresso bar/2.jpg"
                 },
                 {
                     "codeNumber" : 18,
                     "Title": "Mocha",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/espresso bar/3.jpg"
+                    "ImageURL": "./img/espresso bar/3.jpg"
                 },
                 {
                     "codeNumber" : 19,
                     "Title": "CaramelMacchiato",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/espresso bar/4.jpg"
+                    "ImageURL": "./img/espresso bar/4.jpg"
                 },
                 {
                     "codeNumber" : 20,
                     "Title": "Americans",
                     "Price": 75,
-                    "ImageURL": "./menu cafe/espresso bar/5.jpg"
+                    "ImageURL": "./img/espresso bar/5.jpg"
                 },
                 {
                     "codeNumber" : 21,
                     "Title": "latte",
                     "Price": 83,
-                    "ImageURL": "./menu cafe/espresso bar/6.jpg"
+                    "ImageURL": "./img/espresso bar/6.jpg"
                 },
                 {
                     "codeNumber" : 22,
                     "Title": "Affogato",
                     "Price": 105,
-                    "ImageURL": "./menu cafe/espresso bar/7.jpg"
+                    "ImageURL": "./img/espresso bar/7.jpg"
                 }
             ]
         },
@@ -168,37 +168,37 @@ var menu = {
             "CategoryID" : 4,
             "headerNameFA": "IceCoffee",
             "headerNameEN": "IceCoffeeEn",
-            "headerImg": "./menu cafe/ice cofee/ice cofee.png",
+            "headerImg": "./img/ice cofee/ice cofee.png",
             "Info":[
                 {
                     "codeNumber" : 23,
                     "Title": "IcedLatte",
                     "Price": 69,
-                    "ImageURL": "./menu cafe/ice cofee/1.jpg"
+                    "ImageURL": "./img/ice cofee/1.jpg"
                 },
                 {
                     "codeNumber" : 24,
                     "Title": "IcedAmerican",
                     "Price": 79,
-                    "ImageURL": "./menu cafe/ice cofee/2.jpg"
+                    "ImageURL": "./img/ice cofee/2.jpg"
                 },
                 {
                     "codeNumber" : 25,
                     "Title": "IcedCaramelMacchiato",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/ice cofee/3.jpg"
+                    "ImageURL": "./img/ice cofee/3.jpg"
                 },
                 {
                     "codeNumber" : 26,
                     "Title": "IceMocha",
                     "Price": 90,
-                    "ImageURL": "./menu cafe/ice cofee/4.jpg"
+                    "ImageURL": "./img/ice cofee/4.jpg"
                 },
                 {
                     "codeNumber" : 27,
                     "Title": "Coldbrew",
                     "Price": 78,
-                    "ImageURL": "./menu cafe/ice cofee/noimagefood.png"
+                    "ImageURL": "./img/ice cofee/noimagefood.png"
                 }
             ]
         },
@@ -206,55 +206,55 @@ var menu = {
             "CategoryID" : 5,
             "headerNameFA": "CofeeBar",
             "headerNameEN": "CofeeBarEn",
-            "headerImg": "./menu cafe/cofee bar/cofee bar.png",
+            "headerImg": "./img/cofee bar/cofee bar.png",
             "Info":[
                 {
                     "codeNumber" : 28,
                     "Title": "SingleSiphon",
                     "Price": 68,
-                    "ImageURL": "./menu cafe/cofee bar/1.jpg"
+                    "ImageURL": "./img/cofee bar/1.jpg"
                 },
                 {
                     "codeNumber" : 29,
                     "Title": "Two-personSiphon",
                     "Price": 110,
-                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                    "ImageURL": "./img/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 30,
                     "Title": "Three-personSiphon",
                     "Price": 155,
-                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                    "ImageURL": "./img/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 31,
                     "Title": "singlePlayer",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/cofee bar/4.jpg"
+                    "ImageURL": "./img/cofee bar/4.jpg"
                 },
                 {
                     "codeNumber" : 32,
                     "Title": "DoubleBed",
                     "Price": 110,
-                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                    "ImageURL": "./img/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 33,
                     "Title": "AThree-personCamp",
                     "Price": 145,
-                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                    "ImageURL": "./img/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 34,
                     "Title": "Turkish",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/cofee bar/noimagefood.png"
+                    "ImageURL": "./img/cofee bar/noimagefood.png"
                 },
                 {
                     "codeNumber" : 35,
                     "Title": "FrenchPressWithMilk",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/cofee bar/8.jpg"
+                    "ImageURL": "./img/cofee bar/8.jpg"
                 }
             ]
         },
@@ -262,85 +262,85 @@ var menu = {
             "CategoryID" : 6,
             "headerNameFA": "HotDrinks",
             "headerNameEN": "HotDrinksEn",
-            "headerImg": "./menu cafe/hot drinks/hot drinks.png",
+            "headerImg": "./img/hot drinks/hot drinks.png",
             "Info":[
                 {
                     "codeNumber" : 36,
                     "Title": "SingleIranianBlackTea",
                     "Price": 42,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 37,
                     "Title": "IranianBlackTeaForTwo",
                     "Price": 62,
-                    "ImageURL": "./menu cafe/hot drinks/2.jpg"
+                    "ImageURL": "./img/hot drinks/2.jpg"
                 },
                 {
                     "codeNumber" : 38,
                     "Title": "IranianBlackTeaForFour",
                     "Price": 155,
-                    "ImageURL": "./menu cafe/hot drinks/3.jpg"
+                    "ImageURL": "./img/hot drinks/3.jpg"
                 },
                 {
                     "codeNumber" : 39,
                     "Title": "JazminGreenTeaForOnePerson",
                     "Price": 65,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 40,
                     "Title": "JasmineGreenTeaForTwo",
                     "Price": 75,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 41,
                     "Title": "JasmineGreenTeaForFour",
                     "Price": 80,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 42,
                     "Title": "WhiteTea(BardGinsengAndHoney)",
                     "Price": 110,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 43,
                     "Title": "WhiteTea(WithGingerAndCitrusPeel)",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 44,
                     "Title": "MasalaTea",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/hot drinks/9.jpg"
+                    "ImageURL": "./img/hot drinks/9.jpg"
                 },
                 {
                     "codeNumber" : 45,
                     "Title": "hotChocolate",
                     "Price": 93,
-                    "ImageURL": "./menu cafe/hot drinks/10.jpg"
+                    "ImageURL": "./img/hot drinks/10.jpg"
                 },
                 {
                     "codeNumber" : 46,
                     "Title": "WhiteChocolateWithPeanutButter",
                     "Price": 105,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 },
                 {
                     "codeNumber" : 47,
                     "Title": "teaLatte",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/hot drinks/12.jpg"
+                    "ImageURL": "./img/hot drinks/12.jpg"
                 },
                 {
                     "codeNumber" : 48,
                     "Title": "SingleMoroccanTea",
                     "Price": 62,
-                    "ImageURL": "./menu cafe/hot drinks/noimagefood.png"
+                    "ImageURL": "./img/hot drinks/noimagefood.png"
                 }
             ]
         },
@@ -348,19 +348,19 @@ var menu = {
             "CategoryID" : 7,
             "headerNameFA": "theDrinkOfYourChoice",
             "headerNameEN": "theDrinkOfYourChoiceEn",
-            "headerImg": "./menu cafe/drink chois/drink chois.png",
+            "headerImg": "./img/drink chois/drink chois.png",
             "Info":[
                 {
                     "codeNumber" : 49,
                     "Title": "peaceOfMind",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/drink chois/1.jpg"
+                    "ImageURL": "./img/drink chois/1.jpg"
                 },
                 {
                     "codeNumber" : 50,
                     "Title": "Lemon-Ginger-Honey",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/drink chois/noimagefood.png"
+                    "ImageURL": "./img/drink chois/noimagefood.png"
                 }
             ]
         },
@@ -368,82 +368,82 @@ var menu = {
             "CategoryID" : 8,
             "headerNameFA": "NaturalJuice",
             "headerNameEN": "NaturalJuiceEn",
-            "headerImg": "./menu cafe/natural juice/natural juice.png",
+            "headerImg": "./img/natural juice/natural juice.png",
             "Info":[
                 {
                     "codeNumber" : 51,
                     "Title": "NaturalJuice",
                     "Description": "WatermelonJuice-cantaloupeJuice-orangeJuice",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/natural juice/noimagefood.png"
+                    "ImageURL": "./img/natural juice/noimagefood.png"
                 },
                 {
                     "codeNumber" : 52,
                     "Title": "lemonade",
                     "Description": "SimpleLime-Syrup-Soda+GingerCanBeAddedIfDesired ",
                     "Price": 105,
-                    "ImageURL": "./menu cafe/natural juice/2.jpg"
+                    "ImageURL": "./img/natural juice/2.jpg"
                 },
                 {
                     "codeNumber" : 53,
                     "Title": "Mojito",
                     "Description": "TheCompositionOfMint-FreshLime-SweetAndSour-Soda ",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/natural juice/3.jpeg"
+                    "ImageURL": "./img/natural juice/3.jpeg"
                 },
                 {
                     "codeNumber" : 54,
                     "Title": "TropicalSmoothie",
                     "Description": "Banana-pineapple-strawberry-mango-coconut",
                     "Price": 165,
-                    "ImageURL": "./menu cafe/natural juice/4.jpeg"
+                    "ImageURL": "./img/natural juice/4.jpeg"
                 },
                 {
                     "codeNumber" : 55,
                     "Title": "Strapon",
                     "Description": "AloeVeraJuice-Strawberry-WatermelonAndPassionFruit ",
                     "Price": 145,
-                    "ImageURL": "./menu cafe/natural juice/5.jpeg"
+                    "ImageURL": "./img/natural juice/5.jpeg"
                 },
                 {
                     "codeNumber" : 56,
                     "Title": "BerrySmoothie",
                     "Description": "Strawberries-Blackberries-GrenadineSyrup-aloeVeraJuice",
                     "Price": 155,
-                    "ImageURL": "./menu cafe/natural juice/noimagefood.png"
+                    "ImageURL": "./img/natural juice/noimagefood.png"
                 },
                 {
                     "codeNumber" : 57,
                     "Title": "PostmodernPunchForTwo",
                     "Price": 195,
-                    "ImageURL": "./menu cafe/natural juice/7.jpeg"
+                    "ImageURL": "./img/natural juice/7.jpeg"
                 },
                 {
                     "codeNumber" : 58,
                     "Title": "Midsummer",
                     "Description": "FreshStrawberries-strawberryFlavoring-orangeJuice-mangoJuice-cheeseCold ",
                     "Price": 150,
-                    "ImageURL": "./menu cafe/natural juice/8.jpeg"
+                    "ImageURL": "./img/natural juice/8.jpeg"
                 },
                 {
                     "codeNumber" : 59,
                     "Title": "BerryMojito",
                     "Price": 135,
-                    "ImageURL": "./menu cafe/natural juice/9.jpeg"
+                    "ImageURL": "./img/natural juice/9.jpeg"
                 },
                 {
                     "codeNumber" : 60,
                     "Title": "Helix",
                     "Description": "Blucarasao-MintFlavoring-AloeVeraJuice-AppleJuice",
                     "Price": 185,
-                    "ImageURL": "./menu cafe/natural juice/10.jpeg"
+                    "ImageURL": "./img/natural juice/10.jpeg"
                 },
                 {
                     "codeNumber" : 61,
                     "Title": "Frappuccino",
                     "Description": "Espresso-VanillaIceCream-VanillaFlavor-CoconutFlavor",
                     "Price": 145,
-                    "ImageURL": "./menu cafe/natural juice/11.jpeg"
+                    "ImageURL": "./img/natural juice/11.jpeg"
                 }
             ]
         },
@@ -451,21 +451,21 @@ var menu = {
             "CategoryID" : 9,
             "headerNameFA": "SmoothieBulls",
             "headerNameEN": "SmoothieBullsEn",
-            "headerImg": "./menu cafe/smoothie/smoothie.png",
+            "headerImg": "./img/smoothie/smoothie.png",
             "Info":[
                 {
                     "codeNumber" : 62,
                     "Title": "CrazyChocolate",
                     "Description": "ExcitingCombinationsOfChocolateGelato-PeanutButter-BananaWithChocolateTopping-Cornflakes",
                     "Price": 175,
-                    "ImageURL": "./menu cafe/smoothie/1.jpg"
+                    "ImageURL": "./img/smoothie/1.jpg"
                 },
                 {
                     "codeNumber" : 63,
                     "Title": "wildBerry",
                     "Description": "ACombinationOfStrawberries-CranberrySyrup-AndChocolateGelato",
                     "Price": 185,
-                    "ImageURL": "./menu cafe/smoothie/2.jpg"
+                    "ImageURL": "./img/smoothie/2.jpg"
                 }
             ]
         },
@@ -473,67 +473,67 @@ var menu = {
             "CategoryID" : 10,
             "headerNameFA": "Milkshake",
             "headerNameEN": "MilkshakeEn",
-            "headerImg": "./menu cafe/shake/shake.png",
+            "headerImg": "./img/shake/shake.png",
             "Info":[
                 {
                     "codeNumber" : 64,
                     "Title": "Chocolate",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/shake/1.jpg"
+                    "ImageURL": "./img/shake/1.jpg"
                 },
                 {
                     "codeNumber" : 65,
                     "Title": "Shatot",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/shake/2.jpg"
+                    "ImageURL": "./img/shake/2.jpg"
                 },
                 {
                     "codeNumber" : 66,
                     "Title": "vanilla",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/shake/3.jpg"
+                    "ImageURL": "./img/shake/3.jpg"
                 },
                 {
                     "codeNumber" : 67,
                     "Title": "Strawberry",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/shake/4.jpg"
+                    "ImageURL": "./img/shake/4.jpg"
                 },
                 {
                     "codeNumber" : 68,
                     "Title": "VanillaNutella",
                     "Price": 135,
-                    "ImageURL": "./menu cafe/shake/5.jpg"
+                    "ImageURL": "./img/shake/5.jpg"
                 },
                 {
                     "codeNumber" : 69,
                     "Title": "ChocolateBanana",
                     "Price": 120,
-                    "ImageURL": "./menu cafe/shake/6.jpg"
+                    "ImageURL": "./img/shake/6.jpg"
                 },
                 {
                     "codeNumber" : 70,
                     "Title": "Coffee",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/shake/7.jpg"
+                    "ImageURL": "./img/shake/7.jpg"
                 },
                 {
                     "codeNumber" : 71,
                     "Title": "peanut",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/shake/8.jpg"
+                    "ImageURL": "./img/shake/8.jpg"
                 },
                 {
                     "codeNumber" : 72,
                     "Title": "ChocolateBrownieFreakShake",
                     "Price": 165,
-                    "ImageURL": "./menu cafe/shake/9.jpg"
+                    "ImageURL": "./img/shake/9.jpg"
                 },
                 {
                     "codeNumber" : 73,
                     "Title": "ChicLotus",
                     "Price": 155,
-                    "ImageURL": "./menu cafe/shake/10.jpeg"
+                    "ImageURL": "./img/shake/10.jpeg"
                 }
             ]
         },
@@ -541,91 +541,91 @@ var menu = {
             "CategoryID" : 11,
             "headerNameFA": "CakesAndSweets",
             "headerNameEN": "CakesAndSweetsEn",
-            "headerImg": "./menu cafe/cakes/cakes.png",
+            "headerImg": "./img/cakes/cakes.png",
             "Info":[
                 {
                     "codeNumber" : 74,
                     "Title": "NewYorkCheesecake",
                     "Price": 98,
-                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                    "ImageURL": "./img/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 75,
                     "Title": "CarrotCake",
                     "Price": 93,
-                    "ImageURL": "./menu cafe/cakes/2.jpg"
+                    "ImageURL": "./img/cakes/2.jpg"
                 },
                 {
                     "codeNumber" : 76,
                     "Title": "redolot",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/cakes/2.jpg"
+                    "ImageURL": "./img/cakes/2.jpg"
                 },
                 {
                     "codeNumber" : 77,
                     "Title": "CherryCrumble",
                     "Price": 83,
-                    "ImageURL": "./menu cafe/cakes/4.jpg"
+                    "ImageURL": "./img/cakes/4.jpg"
                 },
                 {
                     "codeNumber" : 78,
                     "Title": "brownie",
                     "Price": 89,
-                    "ImageURL": "./menu cafe/cakes/5.jpg"
+                    "ImageURL": "./img/cakes/5.jpg"
                 },
                 {
                     "codeNumber" : 79,
                     "Title": "TripleChocolate",
                     "Price": 92,
-                    "ImageURL": "./menu cafe/cakes/6.jpeg"
+                    "ImageURL": "./img/cakes/6.jpeg"
                 },
                 {
                     "codeNumber" : 80,
                     "Title": "ChocolateChipCookie",
                     "Price": 9,
-                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                    "ImageURL": "./img/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 81,
                     "Title": "Kenafa",
                     "Price": 185,
-                    "ImageURL": "./menu cafe/cakes/8.jpeg"
+                    "ImageURL": "./img/cakes/8.jpeg"
                 },
                 {
                     "codeNumber" : 82,
                     "Title": "KonafaWithIceCream",
                     "Price": 215,
-                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                    "ImageURL": "./img/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 83,
                     "Title": "waffle",
                     "Price": 195,
-                    "ImageURL": "./menu cafe/cakes/10.jpeg"
+                    "ImageURL": "./img/cakes/10.jpeg"
                 },
                 {
                     "codeNumber" : 84,
                     "Title": "Baklava",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                    "ImageURL": "./img/cakes/noimagefood.png"
                 },
                 {
                     "codeNumber" : 85,
                     "Title": "ClassicCroissant",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/cakes/12.jpeg"
+                    "ImageURL": "./img/cakes/12.jpeg"
                 },
                 {
                     "codeNumber" : 86,
                     "Title": "CroissantsWithNutellaAndStrawberries",
                     "Price": 170,
-                    "ImageURL": "./menu cafe/cakes/13.jpeg"
+                    "ImageURL": "./img/cakes/13.jpeg"
                 },
                 {
                     "codeNumber" : 87,
                     "Title": "BrownieWithVanillaGelato",
                     "Price": 125,
-                    "ImageURL": "./menu cafe/cakes/noimagefood.png"
+                    "ImageURL": "./img/cakes/noimagefood.png"
                 }
 
             ]
@@ -634,71 +634,71 @@ var menu = {
             "CategoryID" : 12,
             "headerNameFA": "Appetizars",
             "headerNameEN": "AppetizarsEn",
-            "headerImg": "./menu cafe/appetizers/appetizers.png",
+            "headerImg": "./img/appetizers/appetizers.png",
             "Info":[
                 {
                     "codeNumber" : 88,
                     "Title": "CaesarSalad",
                     "Price": 265,
-                    "ImageURL": "./menu cafe/appetizers/1.jpg"
+                    "ImageURL": "./img/appetizers/1.jpg"
                 },
                 {
                     "codeNumber" : 89,
                     "Title": "CaesarSalad(grilled)",
                     "Price": 285,
-                    "ImageURL": "./menu cafe/appetizers/2.jpg"
+                    "ImageURL": "./img/appetizers/2.jpg"
                 },
                 {
                     "codeNumber" : 90,
                     "ChickenSalad": "چیکن سالاد",
                     "Description": "Lettuce-MixedVegetables-cherryTomatoes-SteamedMushrooms-Carrots-ChickenBreast-GarnerSauce",
                     "Price": 235,
-                    "ImageURL": "./menu cafe/appetizers/3.jpeg"
+                    "ImageURL": "./img/appetizers/3.jpeg"
                 },
                 {
                     "codeNumber" : 91,
                     "Title": "greenSalad",
                     "Description": "Lettuce-VegetableMix-Celery-CherryTomato-Cucumber-ColorPepper-Carrot-Sesame-LemoMustardSauce",
                     "Price": 225,
-                    "ImageURL": "./menu cafe/appetizers/4.jpeg"
+                    "ImageURL": "./img/appetizers/4.jpeg"
                 },
                 {
                     "codeNumber" : 92,
                     "Title": "WalmustardSalad",
                     "Description": "Lettuce-GreenApple-Lemon-Bacon-Cheese-Walnuts",
                     "Price": 245,
-                    "ImageURL": "./menu cafe/appetizers/5.jpg"
+                    "ImageURL": "./img/appetizers/5.jpg"
                 },
                 {
                     "codeNumber" : 93,
                     "Title": "PlateOfSteamedVegetables",
                     "Price": 215,
-                    "ImageURL": "./menu cafe/appetizers/6.jpg"
+                    "ImageURL": "./img/appetizers/6.jpg"
                 },
                 {
                     "codeNumber" : 94,
                     "Title": "FrenchPotatoSoup",
                     "Price": 105,
-                    "ImageURL": "./menu cafe/appetizers/7.jpg"
+                    "ImageURL": "./img/appetizers/7.jpg"
                 },
                 {
                     "codeNumber" : 95,
                     "Title": "MexicanBreadWithSalsaSauce",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/appetizers/8.jpg"
+                    "ImageURL": "./img/appetizers/8.jpg"
                 },
                 {
                     "codeNumber" : 96,
                     "Title": "Olive",
                     "Price": 55,
-                    "ImageURL": "./menu cafe/appetizers/noimagefood.png"
+                    "ImageURL": "./img/appetizers/noimagefood.png"
                 },
                 {
                     "codeNumber" : 97,
                     "Title": "YogurtAndCucumber",
                     "Description": "Yogurt-Cucumber-Mint-Walnut",
                     "Price": 35,
-                    "ImageURL": "./menu cafe/appetizers/noimagefood.png"
+                    "ImageURL": "./img/appetizers/noimagefood.png"
                 }
             ]
         },
@@ -706,33 +706,33 @@ var menu = {
             "CategoryID" : 13,
             "headerNameFA": "Fries",
             "headerNameEN": "FriesEn",
-            "headerImg": "./menu cafe/fries/fries.png",
+            "headerImg": "./img/fries/fries.png",
             "Info":[
                 {
                     "codeNumber" : 98,
                     "Title": "FrenchFries",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/fries/1.jpg"
+                    "ImageURL": "./img/fries/1.jpg"
                 },
                 {
                     "codeNumber" : 99,
                     "Title": "ChickenWings",
                     "Price": 195,
-                    "ImageURL": "./menu cafe/fries/2.jpg"
+                    "ImageURL": "./img/fries/2.jpg"
                 },
                 {
                     "codeNumber" : 100,
                     "Title": "PotatoesWithCheese",
                     "Description": "SlicedPotatoes-PizzaCheese",
                     "Price": 135,
-                    "ImageURL": "./menu cafe/fries/noimagefood.png"
+                    "ImageURL": "./img/fries/noimagefood.png"
                 },
                 {
                     "codeNumber" : 101,
                     "Title": "FryingPlate",
                     "Description": "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces",
                     "Price": 115,
-                    "ImageURL": "./menu cafe/fries/4.jpeg"
+                    "ImageURL": "./img/fries/4.jpeg"
                 }
             ]
         },
@@ -740,49 +740,49 @@ var menu = {
             "CategoryID" : 14,
             "headerNameFA": "Sandwiches",
             "headerNameEN": "SandwichesEn",
-            "headerImg": "./menu cafe/sandwich/sandwich.png",
+            "headerImg": "./img/sandwich/sandwich.png",
             "Info":[
                 {
                     "codeNumber" : 102,
                     "Title": "ChickenAndVegetablePanini",
                     "Price": 225,
-                    "ImageURL": "./menu cafe/sandwich/1.jpg"
+                    "ImageURL": "./img/sandwich/1.jpg"
                 },
                 {
                     "codeNumber" : 103,
                     "Title": "ChickenAndPeanutPanini",
                     "Price": 210,
-                    "ImageURL": "./menu cafe/sandwich/2.jpg"
+                    "ImageURL": "./img/sandwich/2.jpg"
                 },
                 {
                     "codeNumber" : 104,
                     "Title": "VegetablePanini",
                     "Price": 175,
-                    "ImageURL": "./menu cafe/sandwich/3.jpg"
+                    "ImageURL": "./img/sandwich/3.jpg"
                 },
                 {
                     "codeNumber" : 105,
                     "Title": "meatPanini",
                     "Price": 245,
-                    "ImageURL": "./menu cafe/sandwich/4.jpg"
+                    "ImageURL": "./img/sandwich/4.jpg"
                 },
                 {
                     "codeNumber" : 106,
                     "Title": "HamPanini",
                     "Price": 175,
-                    "ImageURL": "./menu cafe/sandwich/5.jpg"
+                    "ImageURL": "./img/sandwich/5.jpg"
                 },
                 {
                     "codeNumber" : 107,
                     "Title": "BaconPanini",
                     "Price": 205,
-                    "ImageURL": "./menu cafe/sandwich/6.jpg"
+                    "ImageURL": "./img/sandwich/6.jpg"
                 },
                 {
                     "codeNumber" : 108,
                     "Title": "RoastBeefPanini",
                     "Price": 315,
-                    "ImageURL": "./menu cafe/sandwich/7.jpeg"
+                    "ImageURL": "./img/sandwich/7.jpeg"
                 }
             ]
         },
@@ -790,19 +790,19 @@ var menu = {
             "CategoryID" : 15,
             "headerNameFA": "Pasta",
             "headerNameEN": "PastaEn",
-            "headerImg": "./menu cafe/pasta/pasta.png",
+            "headerImg": "./img/pasta/pasta.png",
             "Info":[
                 {
                     "codeNumber" : 109,
                     "Title": "AlfredoPasta",
                     "Price": 235,
-                    "ImageURL": "./menu cafe/pasta/1.jpg"
+                    "ImageURL": "./img/pasta/1.jpg"
                 },
                 {
                     "codeNumber" : 110,
                     "Title": "ArabicaPasta",
                     "Price": 255,
-                    "ImageURL": "./menu cafe/pasta/2.jpg"
+                    "ImageURL": "./img/pasta/2.jpg"
                 }
             ]
         },
@@ -810,37 +810,37 @@ var menu = {
             "CategoryID" : 16,
             "headerNameFA": "Grill",
             "headerNameEN": "GrillEn",
-            "headerImg": "./menu cafe/grill/grill.png",
+            "headerImg": "./img/grill/grill.png",
             "Info":[
                 {
                     "codeNumber" : 111,
                     "Title": "IcedLatte",
                     "Price": 69,
-                    "ImageURL": "./menu cafe/grill/1.jpg"
+                    "ImageURL": "./img/grill/1.jpg"
                 },
                 {
                     "codeNumber" : 112,
                     "Title": "IceAmerican",
                     "Price": 79,
-                    "ImageURL": "./menu cafe/grill/2.jpg"
+                    "ImageURL": "./img/grill/2.jpg"
                 },
                 {
                     "codeNumber" : 113,
                     "Title": "IcedCaramelMacchiato",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/grill/3.jpg"
+                    "ImageURL": "./img/grill/3.jpg"
                 },
                 {
                     "codeNumber" : 114,
                     "Title": "IceMocha",
                     "Price": 90,
-                    "ImageURL": "./menu cafe/grill/4.jpg"
+                    "ImageURL": "./img/grill/4.jpg"
                 },
                 {
                     "codeNumber" : 115,
                     "Title": "Coldbrew",
                     "Price": 78,
-                    "ImageURL": "./menu cafe/grill/noimagefood.png"
+                    "ImageURL": "./img/grill/noimagefood.png"
                 }
             ]
         },
@@ -848,37 +848,37 @@ var menu = {
             "CategoryID" : 17,
             "headerNameFA": "AccompanyingFood",
             "headerNameEN": "AccompanyingFoodEn",
-            "headerImg": "./menu cafe/accompanying/accompanying.png",
+            "headerImg": "./img/accompanying/accompanying.png",
             "Info":[
                 {
                     "codeNumber" : 116,
                     "Title": "Classic-lemonBeer",
                     "Price": 85,
-                    "ImageURL": "./menu cafe/accompanying/1.jpg"
+                    "ImageURL": "./img/accompanying/1.jpg"
                 },
                 {
                     "codeNumber" : 117,
                     "Title": "SodaWithlemon",
                     "Price": 55,
-                    "ImageURL": "./menu cafe/accompanying/2.jpg"
+                    "ImageURL": "./img/accompanying/2.jpg"
                 },
                 {
                     "codeNumber" : 118,
                     "Title": "Coca-Sprite-Zero-Fanta",
                     "Price": 25,
-                    "ImageURL": "./menu cafe/accompanying/noimagefood.png"
+                    "ImageURL": "./img/accompanying/noimagefood.png"
                 },
                 {
                     "codeNumber" : 119,
                     "Title": "mineralWater",
                     "Price": 15,
-                    "ImageURL": "./menu cafe/accompanying/noimagefood.png"
+                    "ImageURL": "./img/accompanying/noimagefood.png"
                 },
                 {
                     "codeNumber" : 120,
                     "Title": "Dough",
                     "Price": 42,
-                    "ImageURL": "./menu cafe/accompanying/noimagefood.png"
+                    "ImageURL": "./img/accompanying/noimagefood.png"
                 }
             ]
         },
@@ -886,37 +886,37 @@ var menu = {
             "CategoryID" : 18,
             "headerNameFA": "Sauces",
             "headerNameEN": "SaucesEn",
-            "headerImg": "./menu cafe/sauces/sauces.png",
+            "headerImg": "./img/sauces/sauces.png",
             "Info":[
                 {
                     "codeNumber" : 121,
                     "Title": "MushroomSauce",
                     "Price": 20,
-                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                    "ImageURL": "./img/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 122,
                     "Title": "BuffaloSauce",
                     "Price": 20,
-                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                    "ImageURL": "./img/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 123,
                     "Title": "CaesarDressing",
                     "Price": 20,
-                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                    "ImageURL": "./img/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 124,
                     "Title": "sourSauce",
                     "Price": 20,
-                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                    "ImageURL": "./img/sauces/noimagefood.png"
                 },
                 {
                     "codeNumber" : 125,
                     "Title": "ChiliThaiSauce",
                     "Price": 20,
-                    "ImageURL": "./menu cafe/sauces/noimagefood.png"
+                    "ImageURL": "./img/sauces/noimagefood.png"
                 }
             ]
         },
@@ -924,55 +924,55 @@ var menu = {
             "CategoryID" : 19,
             "headerNameFA": "pizza",
             "headerNameEN": "pizzaEn",
-            "headerImg": "./menu cafe/pizza/pizza.png",
+            "headerImg": "./img/pizza/pizza.png",
             "Info":[
                 {
                     "codeNumber" : 126,
                     "Title": "EpicureanPizza",
                     "Price": 335,
-                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                    "ImageURL": "./img/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 127,
                     "Title": "ChickenPizza",
                     "Price": 275,
-                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                    "ImageURL": "./img/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 128,
                     "Title": "VegetablePizza",
                     "Price": 215,
-                    "ImageURL": "./menu cafe/pizza/3.jpg"
+                    "ImageURL": "./img/pizza/3.jpg"
                 },
                 {
                     "codeNumber" : 129,
                     "Title": "MeatPizza",
                     "Price": 315,
-                    "ImageURL": "./menu cafe/pizza/4.jpg"
+                    "ImageURL": "./img/pizza/4.jpg"
                 },
                 {
                     "codeNumber" : 130,
                     "Title": "BaconPizza",
                     "Price": 325,
-                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                    "ImageURL": "./img/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 131,
                     "Title": "PepperoniPizza",
                     "Price": 285,
-                    "ImageURL": "./menu cafe/pizza/6.jpg"
+                    "ImageURL": "./img/pizza/6.jpg"
                 },
                 {
                     "codeNumber" : 132,
                     "Title": "ChickenAndMeatPizza",
                     "Price": 310,
-                    "ImageURL": "./menu cafe/pizza/noimagefood.png"
+                    "ImageURL": "./img/pizza/noimagefood.png"
                 },
                 {
                     "codeNumber" : 133,
                     "Title": "garlicBread",
                     "Price": 185,
-                    "ImageURL": "./menu cafe/pizza/8.jpg"
+                    "ImageURL": "./img/pizza/8.jpg"
                 }
             ]
         },
@@ -980,49 +980,49 @@ var menu = {
             "CategoryID" : 20,
             "headerNameFA": "persianCuisine",
             "headerNameEN": "persianCuisineEn",
-            "headerImg": "./menu cafe/persian/persian.png",
+            "headerImg": "./img/persian/persian.png",
             "Info":[
                 {
                     "codeNumber" : 134,
                     "Title": "bonelessChicken",
                     "Price": 245,
-                    "ImageURL": "./menu cafe/persian/1.jpeg"
+                    "ImageURL": "./img/persian/1.jpeg"
                 },
                 {
                     "codeNumber" : 135,
                     "Title": "Shishlik",
                     "Price": 465,
-                    "ImageURL": "./menu cafe/persian/2.jpg"
+                    "ImageURL": "./img/persian/2.jpg"
                 },
                 {
                     "codeNumber" : 136,
                     "Title": "CatRice",
                     "Price": 95,
-                    "ImageURL": "./menu cafe/persian/3.jpeg"
+                    "ImageURL": "./img/persian/3.jpeg"
                 },
                 {
                     "codeNumber" : 137,
                     "Title": "SpeciallyPoundedSaffron",
                     "Price": 255,
-                    "ImageURL": "./menu cafe/persian/4.jpg"
+                    "ImageURL": "./img/persian/4.jpg"
                 },
                 {
                     "codeNumber" : 138,
                     "Title": "Chinja",
                     "Price": 365,
-                    "ImageURL": "./menu cafe/persian/noimagefood.png"
+                    "ImageURL": "./img/persian/noimagefood.png"
                 },
                 {
                     "codeNumber" : 139,
                     "Title": "SourFillet",
                     "Price": 435,
-                    "ImageURL": "./menu cafe/persian/6.jpeg"
+                    "ImageURL": "./img/persian/6.jpeg"
                 },
                 {
                     "codeNumber" : 140,
                     "Title": "GrilledLeaves",
                     "Price": 415,
-                    "ImageURL": "./menu cafe/persian/noimagefood.png"
+                    "ImageURL": "./img/persian/noimagefood.png"
                 }
             ]
         }
