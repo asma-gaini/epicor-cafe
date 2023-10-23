@@ -10,6 +10,7 @@ body{
     font-family: 'iransans';
     box-sizing: border-box;
     color: var(--white);
+    max-width: 1600px;
 
 }
 ::-webkit-scrollbar {
@@ -255,109 +256,8 @@ a:hover {
     justify-content: space-between;
     direction: rtl;
     flex-wrap: wrap; 
+    max-width: 1600px;
 } 
-
-  /* silders main style */
-/* .breakfast{
-   direction: rtl;
-   display: flex;
-   flex-wrap: wrap; 
-}
-.minaBar{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.espressoBar{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.iceCoffee{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.coffeeBar{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.hotDrinks{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.drinkChoise{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.naturalJuise{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.smoothieBulls{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.milkShake{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.cake{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.appetizers{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.fries{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.sandwiches{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.pasta{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.grill{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.accompanying{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.sauces{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.pizza{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-}
-.persian{
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-} */
 
   /* Top line of all slides */
 .hrLine{
@@ -384,7 +284,8 @@ a:hover {
     display: flex;
     margin: 10px;
     max-width: 100%;
-    width: 600px;
+    /* width: 600px; */
+    width: 47%;
     background-color: var(--menu-item);
     border-radius: 5px;
     position: relative;
@@ -418,9 +319,7 @@ a:hover {
     display: flex;
     align-items: center;
     padding-right: 5px;
-    /* position: absolute; */
-    /* left: 15px; */
-    /* bottom: 20px; */
+
 }
 .menu_contant_info_price_btn{
     background-color: var(--btn-order);
@@ -447,19 +346,10 @@ a:hover {
     bottom: 20px;
     /* display: none; */
 }
-.btn-counter-Decrement{
-    width: 20px;
-    background-color: var(--white);
-    border-radius: 50%;
-    color: var(--font-button);
-   
-}
-.btn-counter-Increment{
-    width: 20px;
-    background-color: var(--white);
-    /* background-color: var(--btn-counter); */
-    border-radius: 50%;
-    color: var(--font-button);
+
+.btn-counter{
+    background-color: inherit;
+    border: none;
 }
 
   /* When the product is finished */
@@ -523,14 +413,28 @@ a:hover {
 .button-counter button{
     width: 17px;
     height: 17px;
-    border-radius: 50%;
-    color: var(--font-button);
-    font-size: 10px;
-    /* padding-bottom: 10px; */
+    background-color: inherit;
+    border: none;
 }
-.button-counter span{
-    margin: 0px 5px;
+.spanPurchase{
+    /* margin: 0px 5px; */
     font-size: 12px;
+    padding: 0px 10px;
+    padding-left: 0px;
+}
+.btn-default {
+    color: #ffffff;
+    background-color:inherit;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    border: none;
+    border-color: #ccc;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active:focus, .btn-default:active {
+    color: #eec016;
+    background-color: inherit;
+    /* border-color: #adadad;
+    border-radius: 50%; */
+    border: none;
 }
 .btn-info:active, .btn-info:hover, .btn-info:focus {
     color: #fff;
@@ -582,15 +486,131 @@ a:hover {
       right: 35px;
     }
   }
-@media only screen and (max-width: 760px) {
+
+@media only screen and (max-width: 380px) {
     /* For mobile phones: 
     vaghti safhe barek tar v akochik tar az 768*/
-    .menu_contant {width: 100%;}
-}
-@media only screen and (max-width: 1200px) and (min-width: 760px) {
-    /* For mobile phones: */
     .menu_contant {
-        width: 330px;
-        flex-grow: 1;
+        width: 100%;
+        height: 180px;
+    }
+    .menu_contant_image img{
+        width: 50px;
+    }
+    .menu_contant_info_price_btn{
+        width: 40px;
+    }
+    .form-select{
+        width:80px ;
+    }
+    .optionSelectBox{
+        width:80px;
+    }
+    
+}
+
+@media only screen and (max-width: 720px) and (min-width: 380px) {
+    /* For mobile phones: 
+    vaghti safhe barek tar v akochik tar az 768*/
+    .menu_contant {
+        width: 100%;
+        height: 140px;
+    }
+    .menu_contant_image img{
+        width: 80px;
+    }
+    .menu_contant_info_price_btn{
+        width: 50px;
+    }
+    .form-select{
+        width:100px ;
+    }
+    .optionSelectBox{
+        width:50px !important;
+        height: 20px;
     }
 }
+
+@media only screen and (max-width: 768px) and (min-width: 720px) {
+    .menu_contant {
+        width: 46%;
+        height: 140px;
+    }
+    .menu_contant_image img{
+        width: 80px;
+    }
+    .menu_contant_info_price_btn{
+        width: 50px;
+    }
+} 
+@media only screen and (max-width: 960px) and (min-width: 768px) {
+    .menu_contant {
+        width: 47%;
+        height: 140px;
+    }
+    .menu_contant_image img{
+        width: 90px;
+    }
+    .menu_contant_info_price_btn{
+        width: 60px;
+    }
+} 
+@media only screen and (max-width: 992px) and (min-width: 960px) {
+    .menu_contant {
+        width: 47%;
+        height: 130px;
+    }
+    .menu_contant_image img{
+        width: 90px;
+    }
+    .menu_contant_info_price_btn{
+        width: 60px;
+    }
+} 
+@media only screen and (max-width: 1140px) and (min-width: 992px) {
+    .menu_contant {
+        width: 47%;
+        height: 130px;
+    }
+    .menu_contant_image img{
+        width: 100px;
+    }
+    .menu_contant_info_price_btn{
+        width: 60px;
+    }
+} 
+@media only screen and (max-width: 1200px) and (min-width: 1140px) {
+    .menu_contant {
+        width: 47%;
+        height: 130px;
+    }
+    .menu_contant_image img{
+        width: 130px;
+    }
+    .menu_contant_info_price_btn{
+        width: 80px;
+    }
+} 
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+    .menu_contant {
+        width: 47%;
+    }
+    .menu_contant_image img{
+        width: 150px;
+    }
+    .menu_contant_info_price_btn{
+        width: 90px;
+    }
+} 
+@media only screen and (min-width: 1610px) {
+  .slider{
+    position: absolute;
+    right: 20%;
+    left: 20%;
+  }
+  /* .item1{
+    position: absolute;
+    right: 25%;
+    left: 25%;
+  } */
+} 

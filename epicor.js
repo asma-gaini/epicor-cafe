@@ -1235,7 +1235,7 @@ var menuFa ={
     "GrilledLeaves": "کباب برگ",
 
     // generaltext
-    "AddToNotebook": "افزودن ب دفترچه",
+    "AddToNotebook": "افزودن",
     "MonetaryUnit" : "تومان",
     "menuGathe" : "مشاهده کل منوها یکجا",
     "bill" : "مشاهده سبد خرید ",
@@ -1451,7 +1451,7 @@ var menuEn ={
     "GrilledLeaves": "Grilled Leaves",
 
     // generaltext
-    "AddToNotebook": "Add To Notebook",
+    "AddToNotebook": "Add",
     "MonetaryUnit" : "toman",
     "menuGathe" : "View all menus at once",
     "bill": "View the bill",
@@ -1499,18 +1499,11 @@ $(document).ready(function(){
 	$(".payment").html(" "+totalPrice + "/000 ");
 
     getAndSetTranslateLanguage();
-    // $(".gatherMenu").attr("text_key" , ).html()
    
 });
 
 function getAndSetTranslateLanguage(){
     var ContainsKey = $("*[text_key]");
-    // var asma = ContainsKey.filter("h4");
-    // for (let i = 0; i < asma.length; i++) {
-    //     console.log(asma[i]);
-        
-    // }
-    // console.log(asma)
 
     for(elementContainKey=0 ; elementContainKey<ContainsKey.length ; elementContainKey++){
         for (let SpecificَAttr = 0; SpecificَAttr <ContainsKey[elementContainKey].attributes.length ; SpecificَAttr++) {
@@ -1537,7 +1530,6 @@ function changeLanguage()
 }
 
 function showMenubar(){
-    // console.log(menu.Information.length)
     var getItemClass = $("div.items");
     for (let i = 1; i <= menu.Information.length; i++) {  
 
@@ -1631,7 +1623,7 @@ function showSlides(){
                                          .addClass(mainButtonClass)
                                          .attr("text_key" , "AddToNotebook")
                                          .attr('onclick' , AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain].Info[InfoNum].codeNumber+'\',\''+menu.Information[IDNumMain].CategoryID+'\')')
-                                         .html("افزودن ب دفترچه");
+                                         .html("افزودن");
                         containMainBtn.append(MainButton);
                         containPriceAndMainbtnInfo.append(containMainBtn);
                         //--------START : btn-class -------
@@ -1666,11 +1658,8 @@ function getInformationWithMap(){
             removeFromBill(key);
         }
         else {
-             // console.log(key);
             for (let categoryI = 0; categoryI < menu.Information.length; categoryI++) {
-                // console.log(menu.Information.length)
                 for (let codNumI = 0; codNumI < menu.Information[categoryI].Info.length; codNumI++) {
-                // console.log(menu.Information[categoryI].Info.length); 
 
                     if (menu.Information[categoryI].Info[codNumI].codeNumber == key) {
    
@@ -1708,20 +1697,15 @@ function getInformationWithMap(){
     
                         var priceSelectedButton = $("<div>").addClass("button-counter");
                         priceAndButton.append(priceSelectedButton);
-    
-                        var DecreaseButton = $("<button>").attr('onclick' , decreamentSelectedFunc).html("-");
+
+                        var glyphiconDecreament = $("<span>").addClass("glyphicon").addClass("glyphicon-minus-sign");
+                        var DecreaseButton = $("<button>").attr('onclick' , decreamentSelectedFunc).html(glyphiconDecreament);
                         priceSelectedButton.append(DecreaseButton);
-                        var counterSelected = $("<span>").html(map.get(key));
+                        var counterSelected = $("<span>").addClass("spanPurchase").html(map.get(key));
                         priceSelectedButton.append(counterSelected);
-                        var IncreaseButton = $("<button>").attr('onclick' , increamentSelectedFunc).html("+");
+                        var glyphiconIncreament = $("<span>").addClass("glyphicon").addClass("glyphicon-plus-sign");
+                        var IncreaseButton = $("<button>").attr('onclick' , increamentSelectedFunc).html(glyphiconIncreament);
                         priceSelectedButton.append(IncreaseButton);
-    
-                        
-    
-                        // console.log("code number :  "+menu.Information[categoryI].Info[codNumI].codeNumber);
-                        // console.log("name :  "+nameChosen);
-                        // console.log("image : " + imageUrlChosen);
-                        // console.log("price : " + priceChosen);
 
                         continue;
                     }
@@ -1760,7 +1744,6 @@ slider.addEventListener('mousemove', (e) => {
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
 });
 
 
@@ -1787,7 +1770,6 @@ function openNav() {
 
 function AddPurchaseNumBtn (codeNumber )
 {
-    // console.log("codeNumber= "+codeNumber)
     var mainButtonHtml = $("button." +mainButtonClass+"[codeNumber='"+codeNumber+"']");
     mainButtonHtml.hide();
     var purchaseSpanAttr = "codeNumber = '" + mainButtonHtml.attr("codeNumber") + "' CategoryID = '" + mainButtonHtml.attr("CategoryID") + "'";
@@ -1795,7 +1777,7 @@ function AddPurchaseNumBtn (codeNumber )
     var getCodeNumber = mainButtonHtml.attr("codeNumber");
     var increament_onclick = "onclick=increaseNumOfProduct('span','"+getCodeNumber+"')";
 	var decreament_onclick = "onclick=decreaseNumOfProduct('span','"+getCodeNumber+"')";
-    var createPurchaseBtn = $('<div class="Purchase-count" codeNumber="'+codeNumber+'"><button class="btn-counter-Decrement"'+decreament_onclick+'>-</button><span class="span"'+purchaseSpanAttr+'> 1 </span><button class="btn-counter-Increment" '+increament_onclick+'  >+</button></div>');
+    var createPurchaseBtn = $('<div class="Purchase-count" codeNumber="'+codeNumber+'"><button class="btn-counter"'+decreament_onclick+'><span class="glyphicon glyphicon-minus-sign"></span></button><span class="span"'+purchaseSpanAttr+'> 1 </span><button class="btn-counter" '+increament_onclick+'  ><span class="glyphicon glyphicon-plus-sign"></span></button></div>');
     mainButtonHtml.after(createPurchaseBtn);
 
 	var numberOfPurchase = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']").html();
