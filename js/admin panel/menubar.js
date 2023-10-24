@@ -9,10 +9,10 @@ $( document ).ready(function() {
         <input type="text" class="form-control" id="nameFa" placeholder="نام فارسی منوی جدید را وارد کنید" name="nameFa">
       </div>
       <div class="form-group">
-        <label for="nameEn">نام انگلیسی:</label>
+        <label for="nameEn">نام انگلیسی :</label>
         <input type="text" class="form-control" id="nameEn" placeholder="نام انگلیسی منوی جدید را وارد کنید" name="nameEn">
       </div>
-      <p class="chooseImage">تصویر منو را انتخاب کنید:</p>
+      <p class="chooseImage">تصویر منو را انتخاب کنید :</p>
       <input type="file" id="myFile" name="filename2">
       <button type="submit" class="btn-submit ">ارسال</button>
     </form>
