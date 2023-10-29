@@ -164,11 +164,11 @@ body{
   }
   
   .displayInline {
-    display: inline;
+    display: inline !important;
   }
 
   displayNone{
-    display: none;
+    display: none !important;
   }
   
   /* scrroll  */

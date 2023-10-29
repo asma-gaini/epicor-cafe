@@ -127,20 +127,20 @@ function createNave(){
 
 function JqueryNavigationBar(){
     var navId = $("#navBar");
-    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar");
+    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthClose");
     navId.append(verticalNavigation);
-    var closeBtnNavBar = $("<a>").attr("href" , "javascript:void(0)")
-      .addClass("closebtn")
-      .attr("onclick" , "closeNav()")
-      .html("×");
-    verticalNavigation.append(closeBtnNavBar);
+    // var closeBtnNavBar = $("<a>").attr("href" , "javascript:void(0)")
+    //   .addClass("closebtn")
+    //   .attr("onclick" , "closeNav()")
+    //   .html("×");
+    // verticalNavigation.append(closeBtnNavBar);
     var createHeaderNav = $("<div>").addClass("header");
     verticalNavigation.append(createHeaderNav);
     var logoImage = $("<img>").addClass("logo")
       .attr("src" , navigationBar_key.headerNav[0].logoImg)
       .attr("alt", "epicor cafe");
     createHeaderNav.append(logoImage);
-    var berandNme = $("<span>").addClass("brandName").attr("text_key" , navigationBar_key.headerNav[0].berandName).html( navigationBar_key.headerNav[0].berandName);
+    var berandNme = $("<span>").addClass("brandName").addClass("displayNone").attr("text_key" , navigationBar_key.headerNav[0].berandName).html( navigationBar_key.headerNav[0].berandName);
     createHeaderNav.append(berandNme);
     var mainList = $("<ul>");
     verticalNavigation.append(mainList);
@@ -153,7 +153,7 @@ function JqueryNavigationBar(){
         mainListLi.append(glyphin);
 
         if (navigationBar_key.Information[listNumber].subLink) {
-            var linkList = $("<a>").addClass("link").attr("href" , "#")
+            var linkList = $("<a>").addClass("link").addClass("displayNone").attr("href" , "#")
             .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
             .css("display" , "none").html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
@@ -178,10 +178,10 @@ function JqueryNavigationBar(){
         
     }
 
-    var openNavBarBtn = $("<div>").attr("id" , "main");
+    var openNavBarBtn = $("<div>").attr("id" , "main").addClass("mainMarginleftClose");
     navId.append(openNavBarBtn);
     var Collapsibleflesh = $("<span>").addClass("glyphicon").addClass("glyphicon-triangle-right")
-    var openBtnShape = $("<button>").addClass("openbtn").attr("onclick" , "openNav()").html(Collapsibleflesh);
+    var openBtnShape = $("<button>").addClass("openbtn").addClass("openbtnToggleClose").attr("onclick" , "openAndClose()").html(Collapsibleflesh);
     openNavBarBtn.append(openBtnShape);
 }
 
@@ -217,29 +217,29 @@ function changeLanguageNavAdminPanel()
 function openAndClose(){
     $(".link").toggleClass("displayNone displayInline");
     $(".brandName").toggleClass("displayNone displayInline");
-    $(".openbtnToggleClose").toggleClass("openbtnToggleClose openbtnToggleOpen");
+    $(".openbtn").toggleClass("openbtnToggleClose openbtnToggleOpen");
     $("#main").toggleClass("mainMarginleftClose mainMarginleftOpen");
     $("#mySidebar").toggleClass("mySidebarWidthClose mySidebarWidthOpen");
 }
 
-function openNav() {
-    document.getElementById("mySidebar").style.width = "280px";
-    $('.link').css('display', 'inline');
-    $(".glyphicon").css('display', 'inline');
-    $(".brandName").css('display', 'inline');
-    $(".openbtn").css('left', '280px');
-    document.getElementById("main").style.marginLeft = "250px";
-  }
+// function openNav() {
+//     document.getElementById("mySidebar").style.width = "280px";
+//     $('.link').css('display', 'inline');
+//     $(".glyphicon").css('display', 'inline');
+//     $(".brandName").css('display', 'inline');
+//     $(".openbtn").css('left', '280px');
+//     document.getElementById("main").style.marginLeft = "250px";
+//   }
   
-  function closeNav() {
-    $(".glyphicon").css('display', 'inline');
-    $(".glyphinAccount").css('padding-left','10px');
-    $('.link').css('display', 'none');
-    $(".brandName").css('display', 'none');
-    $(".openbtn").css('left', '120px');
-    document.getElementById("mySidebar").style.width = "120px";
-    document.getElementById("main").style.marginLeft= "0";
-  }
+//   function closeNav() {
+//     $(".glyphicon").css('display', 'inline');
+//     $(".glyphinAccount").css('padding-left','10px');
+//     $('.link').css('display', 'none');
+//     $(".brandName").css('display', 'none');
+//     $(".openbtn").css('left', '120px');
+//     document.getElementById("mySidebar").style.width = "120px";
+//     document.getElementById("main").style.marginLeft= "0";
+//   }
   
   function dropdownSubLink(subID){
     var subLink = $("ul.subLink[subId='"+subID+"']");
