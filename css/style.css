@@ -296,6 +296,12 @@ a:hover {
     width: 150px;
     height: 100%;
 }
+.posPopular{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 20px;
+}
 .menu_contant_info h4{
     line-height: 15px;
     font-size: 0.85rem;
