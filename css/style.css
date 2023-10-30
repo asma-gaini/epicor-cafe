@@ -207,6 +207,7 @@ a:hover {
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     margin-right: 100px;
     padding: 0 100px;
+    padding-left: 200px;
   }
   
   
@@ -298,7 +299,7 @@ a:hover {
 }
 .posPopular{
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
     top: 15px;
     font-size: 20px;
 }
@@ -340,10 +341,10 @@ a:hover {
     font-family: 'iransans';
     width: 90px;
 }
-.menu_contant_info_price_btn_Direction-rtl{
+.Direction-rtl{
     left: 15px !important;
 }
-.menu_contant_info_price_btn_Direction-ltr{
+.Direction-ltr{
     right: 15px !important;
 }
 .Purchase-count{
