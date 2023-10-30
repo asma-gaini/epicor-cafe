@@ -1497,6 +1497,7 @@ $(document).ready(function(){
 	showMenuGathe();
 	linked(1);
 	$(".payment").html(" "+totalPrice + "/000 ");
+    $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-rtl")
 
     getAndSetTranslateLanguage();
    
