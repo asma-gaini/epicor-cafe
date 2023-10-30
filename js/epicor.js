@@ -1834,6 +1834,7 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
+    changeLanguage();
         
 	IncrementPrice(codeNumber);
 }
@@ -1847,6 +1848,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap(map);
+    changeLanguage();
 	
 	if(numberOfPurchase < 1)
 	{
