@@ -1750,7 +1750,7 @@ slider.addEventListener('mousemove', (e) => {
 
 function linked(CategoryID){
 	$("button.menu-bar_section").removeClass("menu-bar_section_click");
-	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").addClass("menu-bar_section_click"); //on menu k rush click mishe hover kone
+	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click"); //on menu k rush click mishe hover kone va focus kone rush
 	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
 	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
 	$("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
