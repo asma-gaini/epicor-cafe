@@ -1637,11 +1637,47 @@ $(document).ready(function(){
 	showMenuGathe();
 	linked(1);
 	$(".payment").html(" "+totalPrice + "/000 ");
+    $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-rtl");
 
     getAndSetTranslateLanguage();
-   
+    changeDirection();
+    
 });
 
+
+// ********************* chap chin rast chin kardan  *********************
+function changeDirection(){
+    var valueLanguage = $("#language").val();
+    console.log(valueLanguage)
+    
+    // $(".menu_contant_info_price_btn").css("left" , " ");
+    // $(".menu_contant_info_price_btn").css("right" , " ");
+    $(".menu_contant_info_price_btn").removeClass("menu_contant_info_price_btn_Direction-rtl");
+    $(".menu_contant_info_price_btn").removeClass("menu_contant_info_price_btn_Direction-ltr");
+    $(".Purchase-count").removeClass("menu_contant_info_price_btn_Direction-rtl");
+    $(".Purchase-count").removeClass("menu_contant_info_price_btn_Direction-ltr");
+    $(".button-counter").removeClass("menu_contant_info_price_btn_Direction-rtl");
+    $(".button-counter").removeClass("menu_contant_info_price_btn_Direction-ltr");
+
+
+    if(valueLanguage == "En"){
+        $(".menu_contant").css("direction","ltr");
+        $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-ltr");
+        $(".Purchase-count").addClass("menu_contant_info_price_btn_Direction-ltr");
+        $(".button-counter").addClass("menu_contant_info_price_btn_Direction-ltr");
+
+        
+    }
+    else{
+        $(".menu_contant").css("direction","rtl");
+        $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-rtl");
+        $(".Purchase-count").addClass("menu_contant_info_price_btn_Direction-rtl");
+        $(".button-counter").addClass("menu_contant_info_price_btn_Direction-rtl");
+        
+    }
+}
+
+// ********************* avaz kardan zaban  *********************
 function getAndSetTranslateLanguage(){
     var ContainsKey = $("*[text_key]");
 
@@ -1797,6 +1833,8 @@ function removeFromBill(key)
 }
 
 function getInformationWithMap(){
+    getAndSetTranslateLanguage();
+
     $("div.modal-body").empty();
     for (let key of map.keys()) {
         if(map.get(key)== 0 ){
@@ -1828,7 +1866,7 @@ function getInformationWithMap(){
                         var informationSelected = $("<div>").addClass("menu_contant_info-modal")
                         mainSelectedDiv.append(informationSelected);
     
-                        var nameSelected = $("<h4>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(nameChosen);
+                        var nameSelected = $("<h4>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(menu.Information[categoryI].Info[codNumI].Title);
                         informationSelected.append(nameSelected);
     
                         var priceAndButton = $("<div>").addClass("menu_contant_info_price");
@@ -1928,7 +1966,8 @@ function AddPurchaseNumBtn (codeNumber )
 	var numberOfPurchase = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']").html();
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
-
+    $(".Purchase-count").addClass("menu_contant_info_price_btn_Direction-rtl");
+    changeDirection();
     IncrementPrice(codeNumber);
 
 	if (totalPrice == 0) {
@@ -1982,6 +2021,7 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     changeLanguage();
         
 	IncrementPrice(codeNumber);
+    changeDirection();
 }
 // ********************* decrement order button *********************
 function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
@@ -2007,5 +2047,6 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
 	purchaseSpanHtml.html(" "+numberOfPurchase+" ");
 
 	DecrementPrice(codeNumber);
+    changeDirection();
 }
 

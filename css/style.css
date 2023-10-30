@@ -334,11 +334,17 @@ a:hover {
     color: var(--white);
     border-radius: 5px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
     bottom: 20px;
     font-size: 9px;
     font-family: 'iransans';
     width: 90px;
+}
+.menu_contant_info_price_btn_Direction-rtl{
+    left: 15px !important;
+}
+.menu_contant_info_price_btn_Direction-ltr{
+    right: 15px !important;
 }
 .Purchase-count{
     border: none;
@@ -348,7 +354,7 @@ a:hover {
     color: var(--white);
     border-radius: 5px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
     bottom: 20px;
     /* display: none; */
 }
@@ -397,6 +403,7 @@ a:hover {
 }
 .modal-body h4{
     font-size: 10px;
+    padding: 0 5px;
 }
 .modal-body p{
     font-size: 10px;
@@ -407,6 +414,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding-right: 10px;
+    padding-left: 10px;
 }
 .button-counter{
     display: flex;
@@ -414,7 +422,7 @@ a:hover {
     align-items: center;
     padding-right: 20px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
 }
 .button-counter button{
     width: 17px;
@@ -426,7 +434,7 @@ a:hover {
     /* margin: 0px 5px; */
     font-size: 12px;
     padding: 0px 10px;
-    padding-left: 0px;
+    /* padding-left: 0px; */
 }
 .btn-default {
     color: #ffffff;
