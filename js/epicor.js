@@ -1500,6 +1500,7 @@ $(document).ready(function(){
     $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-rtl");
 
     getAndSetTranslateLanguage();
+    changeDirection();
     
 });
 
@@ -1821,7 +1822,7 @@ function AddPurchaseNumBtn (codeNumber )
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
     $(".Purchase-count").addClass("menu_contant_info_price_btn_Direction-rtl");
-
+    changeDirection();
     IncrementPrice(codeNumber);
 
 	if (totalPrice == 0) {
@@ -1872,6 +1873,7 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
+    changeLanguage();
         
 	IncrementPrice(codeNumber);
     changeDirection();
@@ -1886,6 +1888,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap(map);
+    changeLanguage();
 	
 	if(numberOfPurchase < 1)
 	{

@@ -397,6 +397,7 @@ a:hover {
 }
 .modal-body h4{
     font-size: 10px;
+    padding: 0 5px;
 }
 .modal-body p{
     font-size: 10px;
@@ -407,6 +408,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding-right: 10px;
+    padding-left: 10px;
 }
 .button-counter{
     display: flex;
@@ -426,7 +428,7 @@ a:hover {
     /* margin: 0px 5px; */
     font-size: 12px;
     padding: 0px 10px;
-    padding-left: 0px;
+    /* padding-left: 0px; */
 }
 .btn-default {
     color: #ffffff;
