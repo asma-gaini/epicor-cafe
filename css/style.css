@@ -348,7 +348,7 @@ a:hover {
     color: var(--white);
     border-radius: 5px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
     bottom: 20px;
     /* display: none; */
 }
@@ -414,7 +414,7 @@ a:hover {
     align-items: center;
     padding-right: 20px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
 }
 .button-counter button{
     width: 17px;
