@@ -328,11 +328,17 @@ a:hover {
     color: var(--white);
     border-radius: 5px;
     position: absolute;
-    left: 15px;
+    /* left: 15px; */
     bottom: 20px;
     font-size: 9px;
     font-family: 'iransans';
     width: 90px;
+}
+.menu_contant_info_price_btn_Direction-rtl{
+    left: 15px !important;
+}
+.menu_contant_info_price_btn_Direction-ltr{
+    right: 15px !important;
 }
 .Purchase-count{
     border: none;

@@ -1502,6 +1502,24 @@ $(document).ready(function(){
    
 });
 
+function changeDirection(){
+    var valueLanguage = $("#language").val();
+    
+    // $(".menu_contant_info_price_btn").css("left" , " ");
+    // $(".menu_contant_info_price_btn").css("right" , " ");
+    $(".menu_contant_info_price_btn").removeClass("menu_contant_info_price_btn_Direction-rtl");
+    $(".menu_contant_info_price_btn").removeClass("menu_contant_info_price_btn_Direction-ltr");
+
+    if(valueLanguage == "En"){
+        $(".menu_contant").css("direction","ltr");
+        $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-ltr")
+    }
+    else{
+        $(".menu_contant").css("direction","rtl");
+        $(".menu_contant_info_price_btn").addClass("menu_contant_info_price_btn_Direction-rtl")
+    }
+}
+
 function getAndSetTranslateLanguage(){
     var ContainsKey = $("*[text_key]");
 
