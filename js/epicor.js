@@ -1751,9 +1751,24 @@ function CN() {
     $(".menu_contant_info_price_btn").toggleClass("menu_contant_info_price_btn-Backgroundlight menu_contant_info_price_btn-BackgroundDark");
     $(".form-select").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
     $(".aboutUsLink").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
-    // $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
-    // $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
-
+    // $(".menu-bar_section_click").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    // $("::-webkit-scrollbar").toggleClass("bodyBackgroundlight bodyBackgroundDark");
+    $(".pay-off").toggleClass("pay-off-Backgroundlight pay-off-BackgroundDark");
+    $(".modal-content").toggleClass("bodyBackgroundlight menu_contant-BackgroundDark");
+    $(".modal-body").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
+    $(".btn-info").hover(function(){
+        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    });
+    $(".btn-info").focus(function(){
+        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    });
+    $(".btn-info").active (function(){
+        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    });
+    
+    // $(".btn-info:active").focus(function(){
+    //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    // });
   }
 
 
@@ -1994,8 +2009,8 @@ slider.addEventListener('mousemove', (e) => {
 
 
 function linked(CategoryID){
-	$("button.menu-bar_section").removeClass("menu-bar_section_click");
-	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click"); //on menu k rush click mishe hover kone va focus kone rush
+	$("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
+	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
 	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
 	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
 	$("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();

@@ -646,13 +646,12 @@ a:hover {
     border-radius: 50%; */
     border: none;
 }
-.btn-info:active, .btn-info:hover, .btn-info:focus {
+/* .btn-info:active, .btn-info:hover, .btn-info:focus {
     color: #fff;
-    /* background-color: #31b0d5; */
-    /* border-color: #269abc; */
+   
     background-color: var(--menubar-click-primary);
     background-image: var(--menubar-click);
-}
+} */
 .btn-info:focus{
     /* outline: 5px auto -webkit-focus-ring-color; */
     /* outline-offset: -2px; */
@@ -712,10 +711,26 @@ a:hover {
 }
 .headerBtn-Backgroundlight{
     background-color: rgb(205 171 44);
+    /* color: #000000; */
+
 }
 .headerBtn-BackgroundDark{
     background-color: rgb(129 126 126);
-    color: #ffffff;
+    color: #ffffff !important;
+}
+.menu-bar_section_click-Backgroundlight{
+    background-color: var(--menubar-click-primary);
+    background-image: var(--menubar-click);
+}
+.menu-bar_section_click-BackgroundDark{
+    background-color: rgb(0, 0, 0);
+    background-image: radial-gradient(circle, rgb(216, 210, 202), rgb(105, 104, 103), rgb(0 0 0));
+}
+.pay-off-Backgroundlight{
+    background-color: rgb(192, 160, 40);
+}
+.pay-off-BackgroundDark{
+    background-color: rgb(74 74 73);
 }
 
          /* ******************************* media ******************************* */
