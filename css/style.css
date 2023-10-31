@@ -464,7 +464,7 @@ a:hover {
     outline: none;
 }
 .payment-modal{
-    padding: 10px 30px 30px 0px;
+    padding: 10px 30px 30px 30px;
     font-size: 14px;
     font-weight: bold;
 }

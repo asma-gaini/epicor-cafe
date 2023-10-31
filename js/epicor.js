@@ -1,4 +1,4 @@
-// ********************* global var *********************
+// ********************* json menu in diferent language and text_ky *********************
 var menu = {
     "Information":
     [
@@ -1601,7 +1601,7 @@ var menuEn ={
     "payment": "payment"
 }
 
-
+// ********************* global var *********************
 var menuFaJsonString = JSON.stringify(menuFa);
 var menuFaJson = JSON.parse(menuFaJsonString);
 
@@ -1628,6 +1628,8 @@ var map = new Map();
 var storage = [];
 var temp = {};
 
+
+
 $(document).ready(function(){
     showSlides();
 	if (totalPrice == 0) {
@@ -1648,10 +1650,8 @@ $(document).ready(function(){
 // ********************* chap chin rast chin kardan  *********************
 function changeDirection(){
     var valueLanguage = $("#language").val();
-    console.log(valueLanguage)
+    // console.log(valueLanguage)
     
-    // $(".menu_contant_info_price_btn").css("left" , " ");
-    // $(".menu_contant_info_price_btn").css("right" , " ");
     $(".menu_contant_info_price_btn").removeClass("Direction-rtl");
     $(".menu_contant_info_price_btn").removeClass("Direction-ltr");
     $(".Purchase-count").removeClass("Direction-rtl");
@@ -1663,6 +1663,8 @@ function changeDirection(){
 
     if(valueLanguage == "En"){
         $(".menu_contant").css("direction","ltr");
+        $(".payment-modal").css("direction","ltr");
+
         $(".menu_contant_info_price_btn").addClass("Direction-ltr");
         $(".Purchase-count").addClass("Direction-ltr");
         $(".button-counter").addClass("Direction-ltr");
@@ -1670,6 +1672,8 @@ function changeDirection(){
     }
     else{
         $(".menu_contant").css("direction","rtl");
+        $(".payment-modal").css("direction","rtl");
+        
         $(".menu_contant_info_price_btn").addClass("Direction-rtl");
         $(".Purchase-count").addClass("Direction-rtl");
         $(".button-counter").addClass("Direction-rtl");
@@ -1677,7 +1681,7 @@ function changeDirection(){
     }
 }
 
-// ********************* avaz kardan zaban  *********************
+// ********************* change language  *********************
 function getAndSetTranslateLanguage(){
     var ContainsKey = $("*[text_key]");
 
@@ -1697,7 +1701,6 @@ function getAndSetTranslateLanguage(){
         }
     }
 }
-
 function changeLanguage()
 {
     var getLang = $("#language").val();
@@ -1705,6 +1708,9 @@ function changeLanguage()
     getAndSetTranslateLanguage();
 }
 
+
+// ********************* display menu and biil va cearte this from json  *********************
+    // main menu in top 
 function showMenubar(){
     var getItemClass = $("div.items");
     for (let i = 1; i <= menu.Information.length; i++) {  
@@ -1724,6 +1730,7 @@ function showMenubar(){
 
     }
 }
+    // collapsible menu
 function showMenuGathe(){
     var menuGatherClass = $("div.overlay-content");
     for (let i = 1; i <= menu.Information.length; i++) {
@@ -1743,6 +1750,7 @@ function showMenuGathe(){
         
     }
 }
+    // slides food 
 function showSlides(){
     var getSlidersClass = $("div.sliders");
     for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++) {
@@ -1779,9 +1787,10 @@ function showSlides(){
                 var descriptionMenu = $("<p>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Description).html(menu.Information[IDNumMain].Info[InfoNum].Description);
                 menuInformation.append(name);
                 menuInformation.append(descriptionMenu);
+                // popular food 
                 if(menu.Information[IDNumMain].Info[InfoNum].isPopular == "true"){
-                    var popularFood = $("<span>").addClass("posPopular").addClass("glyphicon").addClass("glyphicon-heart");
-                    menuInformation.append(popularFood);
+                    var createPopularFoodShape  =$("<span>").addClass("posPopular").addClass("glyphicon").addClass("glyphicon-heart");
+                    menuInformation.append(createPopularFoodShape);
                 }
                 
 
@@ -1822,7 +1831,7 @@ function showSlides(){
         getSlidersClass.append(mainDivSlide);
     }
 }
-
+    // biil 
 function setPurchaseMap(codeNumber , numberOfPurchase){
     map.set(codeNumber , numberOfPurchase);
 }
@@ -2018,7 +2027,7 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
-    changeLanguage();
+    // changeLanguage();
         
 	IncrementPrice(codeNumber);
     changeDirection();
@@ -2033,7 +2042,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap(map);
-    changeLanguage();
+    // changeLanguage();
 	
 	if(numberOfPurchase < 1)
 	{
