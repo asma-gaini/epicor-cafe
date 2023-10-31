@@ -1745,6 +1745,10 @@ function CN() {
   }
 
 
+  function changeTheme(){
+    $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
+
+  }
 
 
 // ********************* Identify popular foods  *********************

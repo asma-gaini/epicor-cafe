@@ -13,6 +13,15 @@ body{
     max-width: 1600px;
 
 }
+
+.bodyBackgroundlight{
+    background-color:var(--body);
+}
+.bodyBackgroundDark{
+    background-color:rgb(129 126 126);
+}
+
+
 ::-webkit-scrollbar {
     height: 5px;              /* height of horizontal scrollbar ← You're missing this */
     width: 4px;               /* width of vertical scrollbar */
@@ -138,6 +147,7 @@ body{
 }
 
 /* Popup CSS */
+
 .wrap_popup{
 	display:none;
 	position: fixed;
@@ -203,6 +213,96 @@ body{
 
 
 
+
+
+
+:root {
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+  
+  /* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #cfafaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+   */
+  .toggle-switch {
+    position: relative;
+    width: 200px;
+    height: 100px;
+  }
+  
+  .themeLabel {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .themeInput {
+    position: absolute;
+    display: none;
+  }
+  
+  .sliderTheme {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  .themeInput:checked ~ .sliderTheme {
+    background-color: var(--light);
+  }
+  
+  .sliderTheme::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: inset 28px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+  }
+  
+  .themeInput:checked ~ .sliderTheme::before {
+    transform: translateX(95px);
+    background-color: var(--dark);
+    box-shadow: none;
+  }
+  
+  .switch {
+    position: relative;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    top: 150px;
+    left: 10px;
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .switch:hover {
+    color: var(--link-hover);
+  }
 
 
          /* ******************************* menu bar ******************************* */

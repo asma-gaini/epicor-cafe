@@ -18,7 +18,7 @@
 
 </head>
 
-<body onload="CN()">
+<body class="switchBackgroundColor backgroundColorlithe" onload="CN()">
 
     <div class="container-fluid">
 
@@ -38,12 +38,12 @@
                 <span> 02186128863 </span>
             </div>
         </div>
-
+            <!-- ***********************header ---- change language *************************** -->
         <select class="form-select" aria-label="Default select example" id="language" onclick="changeDirection()" onchange="changeLanguage()">
             <option class="optionSelectBox" selected value="Fa">فارسی </option>
             <option  class="optionSelectBox" value="En">English</option>
         </select>
-
+            <!-- ***********************header ---- about us button *************************** -->
         <div class="wrap" >
             <div class="intro">
                 <a text_key="aboutUs" onClick="openPopup('#wrap_popup1')">درباره ما</a>
@@ -75,6 +75,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- ***********************header ---- change themes *************************** -->
+        <div class = 'toggle-switch'>
+            <label class="themeLabel">
+                <input class="themeInput"  type = 'checkbox' onclick="changeTheme()">
+                <span class = 'sliderTheme'></span>
+            </label>
+            <!-- <a class="switch backgroundColorlithe" href = 'https://dribbble.com/shots/14199649-Dark-Light-Mode-Toggle-Switch-Pattern-A11y'>
+                Inspired by the design from Tim Silva
+            </a> -->
         </div>
     
         <!-- ***********************menu bar *************************** -->
