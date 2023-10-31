@@ -1386,7 +1386,8 @@ var menuFa ={
     "aboutUs" : "درباره ما",
     "ContactUs": " : راه های ارتباط با ما",
     "tel": "تلفن: 02186128863",
-    "adresse": " : آدرس  ما"
+    "adresse": " : آدرس  ما",
+    "closeAboutUsBtn": "بستن"
 }
 
 var menuEn ={
@@ -1606,7 +1607,8 @@ var menuEn ={
     "aboutUs": "about Us",
     "ContactUs": "Ways to contact us : ",
     "tel": "telephon : 02186128863",
-    "adresse": "our address : "
+    "adresse": "our address : ",
+    "closeAboutUsBtn": "close"
 }
 
 // ********************* global var *********************
