@@ -1382,7 +1382,11 @@ var menuFa ={
     "invoice": "سبد خرید",
     "totalPrice": "جمع کل : ",
     "ClosingInvoice": "بستن",
-    "payment": "پرداخت"
+    "payment": "پرداخت",
+    "aboutUs" : "درباره ما",
+    "ContactUs": " : راه های ارتباط با ما",
+    "tel": "تلفن: 02186128863",
+    "adresse": " : آدرس  ما"
 }
 
 var menuEn ={
@@ -1598,7 +1602,11 @@ var menuEn ={
     "invoice": "invoice",
     "totalPrice": "total Price : ",
     "ClosingInvoice": "Close",
-    "payment": "payment"
+    "payment": "payment",
+    "aboutUs": "about Us",
+    "ContactUs": "Ways to contact us : ",
+    "tel": "telephon : 02186128863",
+    "adresse": "our address : "
 }
 
 // ********************* global var *********************
@@ -1664,6 +1672,7 @@ function changeDirection(){
     if(valueLanguage == "En"){
         $(".menu_contant").css("direction","ltr");
         $(".payment-modal").css("direction","ltr");
+        $(".title").css("direction","ltr");
 
         $(".menu_contant_info_price_btn").addClass("Direction-ltr");
         $(".Purchase-count").addClass("Direction-ltr");
@@ -1673,6 +1682,7 @@ function changeDirection(){
     else{
         $(".menu_contant").css("direction","rtl");
         $(".payment-modal").css("direction","rtl");
+        $(".title").css("direction","rtl");
         
         $(".menu_contant_info_price_btn").addClass("Direction-rtl");
         $(".Purchase-count").addClass("Direction-rtl");
@@ -1707,6 +1717,33 @@ function changeLanguage()
     var setValueLang = window.localStorage.setItem("lang" ,getLang );
     getAndSetTranslateLanguage();
 }
+
+function openPopup(divPopup) {
+	$(divPopup).fadeIn(250);
+}
+
+function closePopup(divPopup) {
+	$(divPopup).fadeOut(250);
+}
+function CN() {
+	var CustomMapFn = {
+	  center: new google.maps.LatLng(28.44294, 77.05581),
+	  zoom: 19,
+	  mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+  
+	var map = new google.maps.Map(
+	  document.getElementById("MapID"),
+	  CustomMapFn
+	);
+	var marker = new google.maps.Marker({
+	  position: { lat: 28.44294, lng: 77.05581 },
+	  map: map
+	});
+  }
+
+
+
 
 // ********************* Identify popular foods  *********************
 function popularFoodShape(menuInformation){

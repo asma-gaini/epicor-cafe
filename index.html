@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/primary.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
-<body>
+<body onload="CN()">
 
     <div class="container-fluid">
 
@@ -41,7 +42,41 @@
         <select class="form-select" aria-label="Default select example" id="language" onclick="changeDirection()" onchange="changeLanguage()">
             <option class="optionSelectBox" selected value="Fa">فارسی </option>
             <option  class="optionSelectBox" value="En">English</option>
-          </select>
+        </select>
+
+        <div class="wrap" >
+            <div class="intro">
+                <a text_key="aboutUs" onClick="openPopup('#wrap_popup1')">درباره ما</a>
+            </div>
+        
+            <div id="wrap_popup1" class="wrap_popup"  >
+                <div class="popup">
+                    <div class="title">
+                        <p  text_key="aboutUs">درباره ما</p>
+                    </div>
+                    <!-- popup  -->
+                    <div class="box" >
+                        <p text_key="ContactUs" >راه های ارتباط با ما</p>
+                        <p text_key="tel" >تلفن: 02186128863</p>
+                        <p text_key="adresse" >آدرس</p>
+    
+    
+                        <center>
+                            <!-- <h1 style="color:whitesmoke">
+                                <i>CodingNinjas</i>
+                            </h1> -->
+                    
+                            <!-- <h3>Simple Google Map using jQuery</h3> -->
+                    
+                            <div id="MapID" style="width:500px; height:400px;"></div>
+                        </center>
+    
+                        <center><button onClick="closePopup('#wrap_popup1')">Close Popup</button></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         <!-- ***********************menu bar *************************** -->
         <main class="grid-item main">
             <div class="items menu-bar">
