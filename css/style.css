@@ -14,14 +14,6 @@ body{
 
 }
 
-.bodyBackgroundlight{
-    background-color:var(--body);
-}
-.bodyBackgroundDark{
-    background-color:rgb(129 126 126);
-}
-
-
 ::-webkit-scrollbar {
     height: 5px;              /* height of horizontal scrollbar ← You're missing this */
     width: 4px;               /* width of vertical scrollbar */
@@ -136,7 +128,6 @@ body{
 	color:#000000;
 	cursor:pointer;
     text-decoration: none;
-    background-color: rgb(205 171 44);
     padding: 5px;
     /* border: 1px solid; */
     border-radius: 5px;
@@ -144,6 +135,9 @@ body{
     right: 20px;
     top: 25px;
     font-size: 13px;
+}
+.aboutUsLink{
+    background-color: rgb(205 171 44);
 }
 
 /* Popup CSS */
@@ -210,8 +204,6 @@ body{
 	/* border:3px solid #0C63A4; */
 	border-radius:5px;
 }
-
-
 
 
 
@@ -692,6 +684,39 @@ a:hover {
 }
 
 
+
+
+
+
+
+
+
+
+.bodyBackgroundlight{
+    background-color:var(--body);
+}
+.bodyBackgroundDark{
+    background-color:rgb(129 126 126);
+}
+.menu_contant-Backgroundlight{
+    background-color: var(--menu-item);
+}
+.menu_contant-BackgroundDark{
+    background-color: rgb(16 16 16 / 80%);
+}
+.menu_contant_info_price_btn-Backgroundlight{
+    background-color: var(--btn-order);
+}
+.menu_contant_info_price_btn-BackgroundDark{
+    background-color: #b6a193;
+}
+.headerBtn-Backgroundlight{
+    background-color: rgb(205 171 44);
+}
+.headerBtn-BackgroundDark{
+    background-color: rgb(129 126 126);
+    color: #ffffff;
+}
 
          /* ******************************* media ******************************* */
   

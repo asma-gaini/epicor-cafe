@@ -1747,6 +1747,12 @@ function CN() {
 
   function changeTheme(){
     $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
+    $(".menu_contant").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
+    $(".menu_contant_info_price_btn").toggleClass("menu_contant_info_price_btn-Backgroundlight menu_contant_info_price_btn-BackgroundDark");
+    $(".form-select").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
+    $(".aboutUsLink").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
+    // $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
+    // $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
 
   }
 
