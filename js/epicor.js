@@ -1708,6 +1708,11 @@ function changeLanguage()
     getAndSetTranslateLanguage();
 }
 
+// ********************* Identify popular foods  *********************
+function popularFoodShape(menuInformation){
+    var createPopularFoodShape  =$("<span>").addClass("posPopular").addClass("glyphicon").addClass("glyphicon-heart");
+    menuInformation.append(createPopularFoodShape);
+}
 
 // ********************* display menu and biil va cearte this from json  *********************
     // main menu in top 
@@ -1789,8 +1794,7 @@ function showSlides(){
                 menuInformation.append(descriptionMenu);
                 // popular food 
                 if(menu.Information[IDNumMain].Info[InfoNum].isPopular == "true"){
-                    var createPopularFoodShape  =$("<span>").addClass("posPopular").addClass("glyphicon").addClass("glyphicon-heart");
-                    menuInformation.append(createPopularFoodShape);
+                    popularFoodShape(menuInformation);
                 }
                 
 
