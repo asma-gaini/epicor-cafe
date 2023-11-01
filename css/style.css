@@ -105,19 +105,6 @@ body{
 }
          /* ******************************* header of page ---->about us ******************************* */
 
-/* Web CSS */
-
-/* *{
-	margin:0;
-	padding:0;
-} */
-/* 
-body{
-	background:#fafafa;
-	font-family:Segoe UI;
-	color:#E6E6E6;
-} */
-
 .wrap{
 	width:80%;
 	display:block;
@@ -204,44 +191,28 @@ body{
 	/* border:3px solid #0C63A4; */
 	border-radius:5px;
 }
-
-
-
-
+         /* ******************************* header of page ---->change theme ******************************* */
 :root {
     --light: #d8dbe0;
     --dark: #28292c;
     --link: rgb(27, 129, 112);
     --link-hover: rgb(24, 94, 82);
   }
-  
-  /* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #cfafaf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-   */
   .toggle-switch {
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 50px;
   }
   
   .themeLabel {
     position: absolute;
-    width: 100%;
-    height: 100px;
+    width: 100px;
+    height: 20px;
     background-color: var(--dark);
     border-radius: 50px;
     cursor: pointer;
+    left: 200px;
+    top: -105px;
   }
   
   .themeInput {
@@ -251,7 +222,7 @@ body{
   
   .sliderTheme {
     position: absolute;
-    width: 100%;
+    width: 120px;
     height: 100%;
     border-radius: 50px;
     transition: 0.3s;
@@ -264,12 +235,12 @@ body{
   .sliderTheme::before {
     content: "";
     position: absolute;
-    top: 13px;
-    left: 16px;
-    width: 75px;
-    height: 75px;
+    top: 2px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    box-shadow: inset 28px -4px 0px 0px var(--light);
+    box-shadow: inset 8px -4px 0px 0px var(--light);
     background-color: var(--dark);
     transition: 0.3s;
   }
@@ -639,19 +610,18 @@ a:hover {
     border: none;
     border-color: #ccc;
 }
-.btn-default:hover, .btn-default:focus, .btn-default:active:focus, .btn-default:active {
+ .btn-default:hover, .btn-default:focus, .btn-default:active:focus, .btn-default:active {
     color: #eec016;
     background-color: inherit;
-    /* border-color: #adadad;
-    border-radius: 50%; */
+
     border: none;
 }
-/* .btn-info:active, .btn-info:hover, .btn-info:focus {
+.btn-info:active, .btn-info:hover, .btn-info:focus {
     color: #fff;
    
     background-color: var(--menubar-click-primary);
     background-image: var(--menubar-click);
-} */
+}
 .btn-info:focus{
     /* outline: 5px auto -webkit-focus-ring-color; */
     /* outline-offset: -2px; */
@@ -717,22 +687,60 @@ a:hover {
 .headerBtn-BackgroundDark{
     background-color: rgb(129 126 126);
     color: #ffffff !important;
+    border: 1px solid aqua;
 }
 .menu-bar_section_click-Backgroundlight{
-    background-color: var(--menubar-click-primary);
-    background-image: var(--menubar-click);
+    background-color: var(--menubar-click-primary) ;
+    background-image: var(--menubar-click) ;
 }
 .menu-bar_section_click-BackgroundDark{
-    background-color: rgb(0, 0, 0);
-    background-image: radial-gradient(circle, rgb(216, 210, 202), rgb(105, 104, 103), rgb(0 0 0));
+    background-color: rgb(0, 0, 0) !important;
+    background-image: radial-gradient(circle, rgb(216, 210, 202), rgb(105, 104, 103), rgb(0 0 0)) !important;
 }
 .pay-off-Backgroundlight{
-    background-color: rgb(192, 160, 40);
+    background-color: rgb(192, 160, 40) !important;
 }
 .pay-off-BackgroundDark{
-    background-color: rgb(74 74 73);
+    background-color: rgb(74 74 73) !important;
 }
-
+.menu_contant_bill-Backgroundlight{
+    background-color: var(--menu-item) ;
+}
+.menu_contant_bill-BackgroundDark{
+    background-color: rgb(16 16 16 / 80%) !important;
+}
+.box-Backgroundlight{
+	background:#c1a736;
+	color:#7f4711;
+}
+.box-BackgroundDark{
+	background:rgb(16 16 16 / 80%);
+	color:#ffffff;
+}
+.title-Backgroundlight{
+	background:#f2da71;
+}
+.title-BackgroundDark{
+	background:#d4d1c4;
+}
+.innerAboutBtn-Backgroundlight{
+	background:#c38710;
+}
+.innerAboutBtn-BackgroundDark{
+	background:#000000 !important;
+}
+.hrTheme-Backgroundlight{
+	background-color:var(--hrLineBack);
+}
+.hrTheme-BackgroundDark{
+	background-color:aqua !important;
+}
+.popular-Backgroundlight{
+    color: #ffffff;
+}
+.popular-BackgroundDark{
+    color: aqua;
+}
          /* ******************************* media ******************************* */
   
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */

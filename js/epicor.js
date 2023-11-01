@@ -1754,21 +1754,47 @@ function CN() {
     // $(".menu-bar_section_click").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
     // $("::-webkit-scrollbar").toggleClass("bodyBackgroundlight bodyBackgroundDark");
     $(".pay-off").toggleClass("pay-off-Backgroundlight pay-off-BackgroundDark");
+    // $(".modal-body").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
     $(".modal-content").toggleClass("bodyBackgroundlight menu_contant-BackgroundDark");
-    $(".modal-body").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
+    $(".menu_contant_bill").toggleClass("menu_contant_bill-Backgroundlight menu_contant_bill-BackgroundDark");
+    $(".content_pay").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
+    $(".box").toggleClass("box-Backgroundlight box-BackgroundDark");
+    $(".title").toggleClass("title-Backgroundlight title-BackgroundDark");
+    $(".box button").toggleClass("innerAboutBtn-Backgroundlight innerAboutBtn-BackgroundDark");
+    $(".hrTheme").toggleClass("hrTheme-Backgroundlight hrTheme-BackgroundDark");
+    $(".posPopular").toggleClass("popular-Backgroundlight popular-BackgroundDark");
+    
+
+
+
+
+
+
+
+
     $(".btn-info").hover(function(){
         $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
     });
-    $(".btn-info").focus(function(){
-        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    });
-    $(".btn-info").active (function(){
-        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    });
-    
-    // $(".btn-info:active").focus(function(){
+    // $(".btn-info").focus(function(){
     //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
     // });
+
+    
+    $( ".btn-info" ).on( "focus", function() {
+        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    } );
+    
+    // $(".btn-info .hover").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    $(".btn-info .focus").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    $(".btn-info .active").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+
+    // $(".btn-info").active(function(){
+    //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    // });
+    
+    $(".btn-info .active").focus(function(){
+        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    });
   }
 
 
@@ -1828,7 +1854,7 @@ function showSlides(){
         //------START : hrLine ------
         var sliderContentsHeader_json = $("<div>").addClass("hrLine");
         var lineNameFA = $("<p>").attr("text_key", menu.Information[IDNumMain].headerNameFA).html(menu.Information[IDNumMain].headerNameFA);
-        var lineSpan = $("<span>");
+        var lineSpan = $("<span>").addClass("hrTheme");
         var lineNameEN = $("<p>").attr("text_key", menu.Information[IDNumMain].headerNameEN).html(menu.Information[IDNumMain].headerNameEN);
         sliderContentsHeader_json.append(lineNameFA);
         sliderContentsHeader_json.append(lineSpan);
@@ -1931,7 +1957,7 @@ function getInformationWithMap(){
                         var decreamentSelectedFunc = "decreaseNumOfProduct('span','"+key+"')";
     
                         var modalBody = $("div.modal-body");
-                        var mainSelectedDiv = $("<div>").addClass("menu_contant").addClass("content_pay").attr("codeNumber" , menu.Information[categoryI].Info[codNumI].codeNumber);
+                        var mainSelectedDiv = $("<div>").addClass("menu_contant").addClass(".menu_contant_bill").addClass("content_pay").attr("codeNumber" , menu.Information[categoryI].Info[codNumI].codeNumber);
                         modalBody.append(mainSelectedDiv);
     
                         var imageDiv = $("<div>").addClass("menu_contant_image").addClass("image_pay");
