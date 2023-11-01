@@ -1772,9 +1772,9 @@ function CN() {
 
 
 
-    // $(".btn-info").hover(function(){
-    //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    // });
+    $(".btn-info").hover(function(){
+        $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    });
     // $(".btn-info").focus(function(){
     //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
     // });
