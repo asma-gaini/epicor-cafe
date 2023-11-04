@@ -1787,9 +1787,12 @@ function changeTheme(){
     $(".btn-info").hover(function(){
         $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
     });
-    // $(".btn-info").focus(function(){
-    //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    // });
+    $(".btn-info").active(function(){
+        $(this).toggleClass("active_menu-bar_section_click-Backgroundlight active_menu-bar_section_click-BackgroundDark");
+    });
+    $(".btn-info").focus(function(){
+        $(this).toggleClass("focus_menu-bar_section_click-Backgroundlight focus_menu-bar_section_click-BackgroundDark");
+    });
 
     
     // $( ".btn-info" ).on( "focus", function() {
@@ -1797,12 +1800,9 @@ function changeTheme(){
     // } );
     
     // $(".btn-info .hover").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    $(".btn-info .focus").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    $(".btn-info .active").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    // $(".btn-info .focus").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    // $(".btn-info .active").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
 
-    // $(".btn-info").active(function(){
-    //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    // });
     
     // $(".btn-info .active").focus(function(){
     //     $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
@@ -2093,7 +2093,7 @@ function linked(CategoryID){
 
     }
 
-    
+
     var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
     menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
     $("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();

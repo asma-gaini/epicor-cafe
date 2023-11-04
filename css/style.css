@@ -699,6 +699,22 @@ a:hover {
     background-color: rgb(0, 0, 0) !important;
     background-image: radial-gradient(circle, rgb(216, 210, 202), rgb(105, 104, 103), rgb(0 0 0)) !important;
 }
+.active_menu-bar_section_click-Backgroundlight{
+    background-color: var(--menubar-click-primary) ;
+    background-image: var(--menubar-click) ;
+}
+.active_menu-bar_section_click-BackgroundDark{
+    background-color: rgb(0, 0, 0) !important;
+    background-image: radial-gradient(circle, rgb(216, 210, 202), rgb(105, 104, 103), rgb(0 0 0)) !important;
+}
+.focus_menu-bar_section_click-Backgroundlight{
+    background-color: var(--menubar-click-primary) ;
+    background-image: var(--menubar-click) ;
+}
+.focus_menu-bar_section_click-BackgroundDark{
+    background-color: rgb(0, 0, 0) !important;
+    background-image: radial-gradient(circle, rgb(216, 210, 202), rgb(105, 104, 103), rgb(0 0 0)) !important;
+}
 .pay-off-Backgroundlight{
     background-color: rgb(192, 160, 40) !important;
 }
