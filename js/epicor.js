@@ -1745,7 +1745,17 @@ function CN() {
   }
 
 
-  function changeTheme(){
+function changeTheme(){
+    var themeAttr = $(".themeInput").attr("theme");
+    if (themeAttr == "light") {
+        $(".themeInput").attr("theme", "dark");
+        console.log($(".themeInput").attr("theme"));
+    }
+    else if(themeAttr == "dark") {
+        $(".themeInput").attr("theme", "light");
+        console.log($(".themeInput").attr("theme"));
+    }
+
     $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
     $(".menu_contant , .modal-content").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
     $(".menu_contant_info_price_btn").toggleClass("menu_contant_info_price_btn-Backgroundlight menu_contant_info_price_btn-BackgroundDark");
@@ -2032,15 +2042,38 @@ slider.addEventListener('mousemove', (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
-
-
 function linked(CategoryID){
-	$("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
-	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
-	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
-	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
-	$("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
+    var themeAttr = $(".themeInput").attr("theme");
+    if (themeAttr == "light") {
+
+        console.log($(".themeInput").attr("theme"));
+
+        $("button.menu-bar_section").removeClass("menu-bar_section_click-BackgroundDark");
+
+        $("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
+	    $("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
+    }
+    else if(themeAttr == "dark") {
+        console.log($(".themeInput").attr("theme"));
+
+        $("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
+
+        $("button.menu-bar_section").removeClass("menu-bar_section_click-BackgroundDark");
+	    $("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-BackgroundDark"); //on menu k rush click mishe hover kone va focus kone rush
+
+    }
+    var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
+    menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
+    $("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
 }
+
+// function linked(CategoryID){
+// 	$("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
+// 	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
+// 	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
+// 	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
+// 	$("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
+// }
 
 /* Open when someone clicks on the span element */
 function openNav() {
