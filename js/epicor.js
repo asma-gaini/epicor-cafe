@@ -1773,7 +1773,9 @@ function changeTheme(){
     $(".box button").toggleClass("innerAboutBtn-Backgroundlight innerAboutBtn-BackgroundDark");
     $(".hrTheme").toggleClass("hrTheme-Backgroundlight hrTheme-BackgroundDark");
     $(".posPopular").toggleClass("popular-Backgroundlight popular-BackgroundDark");
-    
+    $(".overlay-content a button").hover(function(){
+        $(this).toggleClass("hover-overlay-content-Backgroundlight hover-overlay-content-BackgroundDark");
+    });
 
 
 

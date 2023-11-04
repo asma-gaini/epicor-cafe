@@ -743,6 +743,14 @@ a:hover {
 .popular-BackgroundDark{
     color: aqua;
 }
+.hover-overlay-content-Backgroundlight {
+    background: rgb(235,173,96);
+    background: radial-gradient(circle, rgba(235,173,96,1) 0%, rgba(133,90,37,1) 100%);
+  }
+  .hover-overlay-content-BackgroundDark {
+    /* background: rgb(235,173,96); */
+    background: radial-gradient(circle, rgb(182 181 178) 0%, rgb(68 63 56) 100%) !important;
+  }
          /* ******************************* media ******************************* */
   
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
