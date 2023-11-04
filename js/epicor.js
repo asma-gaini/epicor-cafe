@@ -2013,6 +2013,33 @@ function getInformationWithMap(){
             }
         }
     }
+
+    // chane theme 
+    var themeAttr = $(".themeInput").attr("theme");
+    if (themeAttr == "light") {
+
+        console.log($(".themeInput").attr("theme"));
+
+        $(".modal-content").removeClass("menu_contant-BackgroundDark");
+        $(".modal-content").removeClass("menu_contant-Backgroundlight");
+        $(".modal-content").addClass("menu_contant-Backgroundlight");
+
+        $(".menu_contant").removeClass("menu_contant-BackgroundDark");
+        $(".menu_contant").removeClass("menu_contant-Backgroundlight");
+        $(".menu_contant").addClass("menu_contant-Backgroundlight");
+
+    }
+    else if(themeAttr == "dark") {
+        console.log($(".themeInput").attr("theme"));
+
+        $(".modal-content").removeClass("menu_contant-Backgroundlight");
+        $(".modal-content").removeClass("menu_contant-BackgroundDark");
+        $(".modal-content").addClass("menu_contant-BackgroundDark");
+
+        $(".menu_contant").removeClass("menu_contant-Backgroundlight");
+        $(".menu_contant").removeClass("menu_contant-BackgroundDark");
+        $(".menu_contant").addClass("menu_contant-BackgroundDark");
+    }
 }
 
 
@@ -2045,6 +2072,7 @@ slider.addEventListener('mousemove', (e) => {
 });
 
 function linked(CategoryID){
+    //change theme 
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
 
@@ -2064,6 +2092,8 @@ function linked(CategoryID){
 	    $("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-BackgroundDark"); //on menu k rush click mishe hover kone va focus kone rush
 
     }
+
+    
     var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
     menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
     $("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
@@ -2114,6 +2144,7 @@ function AddPurchaseNumBtn (codeNumber )
 		$("div.totalPrice").show();
 	}
     changeLanguage();
+   
 }
 
 
