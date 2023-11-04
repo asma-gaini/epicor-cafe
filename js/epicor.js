@@ -1637,6 +1637,10 @@ var totalPrice = 0;
 var map = new Map();
 var storage = [];
 var temp = {};
+var mobileDevice = 0;
+// var mobileTemp = 0;
+var desktopDevice = 0;
+// var desktopTemp = 0;
 
 
 
@@ -1653,10 +1657,34 @@ $(document).ready(function(){
 
     getAndSetTranslateLanguage();
     changeDirection();
-    
+    detectDvice();
 });
 
 
+function detectDvice(){
+    /* Storing user's device details in a variable*/
+    let details = navigator.userAgent; 
+    
+    /* Creating a regular expression  
+    containing some mobile devices keywords  
+    to search it in details string*/
+    let regexp = /android|iphone|kindle|ipad/i; 
+    
+    /* Using test() method to search regexp in details 
+    it returns boolean value*/
+    let isMobileDevice = regexp.test(details); 
+    
+    if (isMobileDevice) { 
+        console.log("You are using a Mobile Device"); 
+        mobileDevice++;
+        console.log("mobile =  "+mobileDevice);
+    } else { 
+        console.log("You are using Desktop"); 
+        desktopDevice++;
+        console.log("desktop =  "+desktopDevice);
+    }
+}
+   
 // ********************* chap chin rast chin kardan  *********************
 function changeDirection(){
     var valueLanguage = $("#language").val();
@@ -1744,7 +1772,7 @@ function CN() {
 	});
   }
 
-
+// ********************* change theme  *********************
 function changeTheme(){
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
@@ -2018,7 +2046,7 @@ function getInformationWithMap(){
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
 
-        console.log($(".themeInput").attr("theme"));
+        // console.log($(".themeInput").attr("theme"));
 
         $(".modal-content").removeClass("menu_contant-BackgroundDark");
         $(".modal-content").removeClass("menu_contant-Backgroundlight");
@@ -2030,7 +2058,7 @@ function getInformationWithMap(){
 
     }
     else if(themeAttr == "dark") {
-        console.log($(".themeInput").attr("theme"));
+        // console.log($(".themeInput").attr("theme"));
 
         $(".modal-content").removeClass("menu_contant-Backgroundlight");
         $(".modal-content").removeClass("menu_contant-BackgroundDark");
@@ -2076,7 +2104,7 @@ function linked(CategoryID){
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
 
-        console.log($(".themeInput").attr("theme"));
+        // console.log($(".themeInput").attr("theme"));
 
         $("button.menu-bar_section").removeClass("menu-bar_section_click-BackgroundDark");
 
@@ -2084,7 +2112,7 @@ function linked(CategoryID){
 	    $("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
     }
     else if(themeAttr == "dark") {
-        console.log($(".themeInput").attr("theme"));
+        // console.log($(".themeInput").attr("theme"));
 
         $("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
 
