@@ -1660,7 +1660,7 @@ $(document).ready(function(){
     detectDvice();
 });
 
-
+// ********************* detect device (just mobile and desktop)  *********************
 function detectDvice(){
     /* Storing user's device details in a variable*/
     let details = navigator.userAgent; 
@@ -1748,10 +1748,11 @@ function changeLanguage()
     getAndSetTranslateLanguage();
 }
 
+// ********************* abouat us  *********************
+
 function openPopup(divPopup) {
 	$(divPopup).fadeIn(250);
 }
-
 function closePopup(divPopup) {
 	$(divPopup).fadeOut(250);
 }
@@ -1778,10 +1779,12 @@ function changeTheme(){
     if (themeAttr == "light") {
         $(".themeInput").attr("theme", "dark");
         console.log($(".themeInput").attr("theme"));
+        linked(1)
     }
     else if(themeAttr == "dark") {
         $(".themeInput").attr("theme", "light");
         console.log($(".themeInput").attr("theme"));
+        linked(1)
     }
 
     $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
@@ -2127,13 +2130,6 @@ function linked(CategoryID){
     $("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
 }
 
-// function linked(CategoryID){
-// 	$("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
-// 	$("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
-// 	var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
-// 	menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
-// 	$("div.menu_contant"+"[CategoryID ='"+CategoryID+"']").show().siblings("div").hide();
-// }
 
 /* Open when someone clicks on the span element */
 function openNav() {

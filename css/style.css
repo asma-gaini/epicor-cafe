@@ -306,11 +306,11 @@ body{
   }
   
   input:checked + .sliderTheme {
-    background-color: #2196F3;
+    background-color: #8396a5;
   }
   
   input:focus + .sliderTheme {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #8396a5;
   }
   
   input:checked + .sliderTheme:before {
@@ -726,32 +726,31 @@ a:hover {
 .bodyBackgroundlight{
     background-color:var(--body);
 }
-.bodyBackgroundDark{
-    background-color:rgb(129 126 126);
+.bodyBackgroundDark {
+    background-color: rgb(0 0 0);
 }
 .menu_contant-Backgroundlight{
     background-color: var(--menu-item);
 }
-.menu_contant-BackgroundDark{
-    background-color: rgb(16 16 16 / 80%);
+.menu_contant-BackgroundDark {
+    background-color: #dea6239c;
 }
 .menu_contant_info_price_btn-Backgroundlight{
     background-color: var(--btn-order);
 }
-.menu_contant_info_price_btn-BackgroundDark{
+.menu_contant_info_price_btn-BackgroundDark {
     /* background-color: #b6a193; */
-    background-color: #544f4c;
-    border: 1px solid aqua;
+    background-color: #be8b2796;
+    /* border: 1px solid aqua; */
 }
 .headerBtn-Backgroundlight{
     background-color: rgb(205 171 44);
     /* color: #000000; */
-
 }
-.headerBtn-BackgroundDark{
+.headerBtn-BackgroundDark {
     background-color: rgb(129 126 126);
     color: #ffffff !important;
-    border: 1px solid aqua;
+    /* border: 1px solid #ebf8f8; */
 }
 .menu-bar_section_click-Backgroundlight{
     background-color: var(--menubar-click-primary) ;
@@ -812,14 +811,14 @@ a:hover {
 .hrTheme-Backgroundlight{
 	background-color:var(--hrLineBack);
 }
-.hrTheme-BackgroundDark{
-	background-color:aqua !important;
+.hrTheme-BackgroundDark {
+    background-color: #fbffff !important;
 }
 .popular-Backgroundlight{
     color: #ffffff;
 }
 .popular-BackgroundDark{
-    color: aqua;
+    color: white;
 }
 .hover-overlay-content-Backgroundlight {
     background: rgb(235,173,96);
