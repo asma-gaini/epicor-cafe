@@ -1787,18 +1787,12 @@ function changeTheme(){
         linked(1)
     }
 
-    $(".switchBackgroundColor").toggleClass("bodyBackgroundlight bodyBackgroundDark");
-    $(".menu_contant , .modal-content").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
+    $(".switchBackgroundColor  , .modal-content").toggleClass("bodyBackgroundlight bodyBackgroundDark");
+    $(".menu_contant").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
     $(".menu_contant_info_price_btn").toggleClass("menu_contant_info_price_btn-Backgroundlight menu_contant_info_price_btn-BackgroundDark");
     $(".form-select").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
     $(".aboutUsLink").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
-    // $(".menu-bar_section_click").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    // $("::-webkit-scrollbar").toggleClass("bodyBackgroundlight bodyBackgroundDark");
     $(".pay-off").toggleClass("pay-off-Backgroundlight pay-off-BackgroundDark");
-    // $(".modal-body").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
-    // $(".modal-content").toggleClass("bodyBackgroundlight menu_contant-BackgroundDark");
-    // $(".menu_contant_bill").toggleClass("menu_contant_bill-Backgroundlight menu_contant_bill-BackgroundDark");
-    // $(".content_pay").toggleClass("menu_contant-Backgroundlight menu_contant-BackgroundDark");
     $(".box").toggleClass("box-Backgroundlight box-BackgroundDark");
     $(".title").toggleClass("title-Backgroundlight title-BackgroundDark");
     $(".box button").toggleClass("innerAboutBtn-Backgroundlight innerAboutBtn-BackgroundDark");
@@ -1818,12 +1812,12 @@ function changeTheme(){
     $(".btn-info").hover(function(){
         $(this).toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
     });
-    $(".btn-info").active(function(){
-        $(this).toggleClass("active_menu-bar_section_click-Backgroundlight active_menu-bar_section_click-BackgroundDark");
-    });
-    $(".btn-info").focus(function(){
-        $(this).toggleClass("focus_menu-bar_section_click-Backgroundlight focus_menu-bar_section_click-BackgroundDark");
-    });
+    // $(".btn-info").active(function(){
+    //     $(".btn-info").toggleClass("active_menu-bar_section_click-Backgroundlight active_menu-bar_section_click-BackgroundDark");
+    // });
+    // $(".btn-info").focus(function(){
+    //     $(".btn-info").toggleClass("focus_menu-bar_section_click-Backgroundlight focus_menu-bar_section_click-BackgroundDark");
+    // });
 
     
     // $( ".btn-info" ).on( "focus", function() {
@@ -1831,8 +1825,8 @@ function changeTheme(){
     // } );
     
     // $(".btn-info .hover").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    // $(".btn-info .focus").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
-    // $(".btn-info .active").toggleClass("menu-bar_section_click-Backgroundlight menu-bar_section_click-BackgroundDark");
+    $(".btn-info .focus").toggleClass("focus_menu-bar_section_click-Backgroundlight focus_menu-bar_section_click-BackgroundDark");
+    $(".btn-info .active").toggleClass("active_menu-bar_section_click-Backgroundlight active_menu-bar_section_click-BackgroundDark");
 
     
     // $(".btn-info .active").focus(function(){

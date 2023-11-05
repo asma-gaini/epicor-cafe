@@ -192,80 +192,6 @@ body{
 	border-radius:5px;
 }
          /* ******************************* header of page ---->change theme ******************************* */
-/* :root {
-    --light: #d8dbe0;
-    --dark: #28292c;
-    --link: rgb(27, 129, 112);
-    --link-hover: rgb(24, 94, 82);
-  }
-  .toggle-switch {
-    position: relative;
-    width: 100px;
-  }
-  
-  .themeLabel {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: var(--dark);
-    border-radius: 50px;
-    cursor: pointer;
-    left: 200px;
-    top: -105px;
-  }
-  
-  .themeInput {
-    position: absolute;
-    display: none;
-  }
-  
-  .sliderTheme {
-    position: absolute;
-    width: 120px;
-    height: 100%;
-    border-radius: 50px;
-    transition: 0.3s;
-  }
-  
-  .themeInput:checked ~ .sliderTheme {
-    background-color: var(--light);
-  }
-  
-  .sliderTheme::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 5px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    box-shadow: inset 8px -4px 0px 0px var(--light);
-    background-color: var(--dark);
-    transition: 0.3s;
-  }
-  
-  .themeInput:checked ~ .sliderTheme::before {
-    transform: translateX(95px);
-    background-color: var(--dark);
-    box-shadow: none;
-  }
-  
-  .switch {
-    position: relative;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    top: 150px;
-    left: 10px;
-    font-size: 10px;
-    text-decoration: none;
-    color: var(--link);
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .switch:hover {
-    color: var(--link-hover);
-  } */
-
 
   .changeTheme{
     position: absolute;
@@ -325,7 +251,8 @@ body{
   }
   
   .sliderTheme.round:before {
-    border-radius: 50%;}
+    border-radius: 50%;
+  }
     
     
 
@@ -605,7 +532,8 @@ a:hover {
     opacity: 0.6;
 }
 
-/* //////////////////////////////////////////// css popup//////////////////////////////////////////////// */
+         /* ******************************* popup ******************************* */
+
 .modal{
     height: 600px;
     overflow-y: scroll !important;
@@ -713,21 +641,13 @@ a:hover {
     display: block;
 }
 
-
-
-
-
-
-
-
-/* //////////////////////////////////////////// change theme //////////////////////////////////////////////// */
-
+         /* ******************************* change theme ******************************* */
 
 .bodyBackgroundlight{
     background-color:var(--body);
 }
 .bodyBackgroundDark {
-    background-color: rgb(0 0 0);
+    background-color: rgb(0 0 0) ;
 }
 .menu_contant-Backgroundlight{
     background-color: var(--menu-item);
@@ -753,8 +673,8 @@ a:hover {
     /* border: 1px solid #ebf8f8; */
 }
 .menu-bar_section_click-Backgroundlight{
-    background-color: var(--menubar-click-primary) ;
-    background-image: var(--menubar-click) ;
+    background-color: var(--menubar-click-primary);
+    background-image: var(--menubar-click) !important;
 }
 .menu-bar_section_click-BackgroundDark{
     background-color: rgb(0, 0, 0) !important;
@@ -823,11 +743,11 @@ a:hover {
 .hover-overlay-content-Backgroundlight {
     background: rgb(235,173,96);
     background: radial-gradient(circle, rgba(235,173,96,1) 0%, rgba(133,90,37,1) 100%);
-  }
-  .hover-overlay-content-BackgroundDark {
-    /* background: rgb(235,173,96); */
+}
+.hover-overlay-content-BackgroundDark {
+    /* background: rgb(59, 58, 57) !important; */
     background: radial-gradient(circle, rgb(182 181 178) 0%, rgb(68 63 56) 100%) !important;
-  }
+}
 
          /* ******************************* media ******************************* */
   
