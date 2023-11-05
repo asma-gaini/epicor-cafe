@@ -860,9 +860,9 @@ a:hover {
     .optionSelectBox{
         width:80px;
     }
-    .themeLabel {
-        left: 13px;
-        top: -70px;
+    .changeTheme {
+        left: 25px;
+        top: 60px;
     }
     
 }
@@ -887,9 +887,9 @@ a:hover {
         width:50px !important;
         height: 20px;
     }
-    .themeLabel {
-        left: 13px;
-        top: -70px;
+    .changeTheme {
+        left: 25px;
+        top: 60px;
     }
 }
 
@@ -903,10 +903,6 @@ a:hover {
     }
     .menu_contant_info_price_btn{
         width: 50px;
-    }
-    .themeLabel {
-        left: 13px;
-        top: -60px;
     }
 } 
 @media only screen and (max-width: 960px) and (min-width: 768px) {
