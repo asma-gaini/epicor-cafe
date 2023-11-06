@@ -2,7 +2,13 @@
 var menu = {
     "Information":
     [
-       
+
+        // {
+        //     "CategoryID" : 0,
+        //     "headerNameFA": "popular",
+        //     "headerNameEN": "popularEn",
+        //     "headerImg": "./img/breakfast/63fd588c75bdd.png"
+        // },
         {
             "CategoryID" : 1,
             "headerNameFA": "breakfast",
@@ -1375,6 +1381,8 @@ var menuFa ={
     "GrilledLeaves": "کباب برگ",
 
     // generaltext
+    "popular": "پر طرفدار",
+    "popularEn": "popular",
     "AddToNotebook": "افزودن",
     "MonetaryUnit" : "تومان",
     "menuGathe" : "مشاهده کل منوها یکجا",
@@ -1596,6 +1604,8 @@ var menuEn ={
     "GrilledLeaves": "Grilled Leaves",
 
     // generaltext
+    "popular": "popular",
+    "popularEn": "popular",
     "AddToNotebook": "Add",
     "MonetaryUnit" : "toman",
     "menuGathe" : "View all menus at once",
@@ -1845,6 +1855,22 @@ function popularFoodShape(menuInformation){
     // main menu in top 
 function showMenubar(){
     var getItemClass = $("div.items");
+
+        // popular food 
+    var DivItemPopular = $("<div>").addClass("item").addClass("item1");
+    getItemClass.append(DivItemPopular);
+    var menuBarButtonPopular = $("<button>").attr("CategoryID", "21").addClass(menubarItem).attr('onclick' , 'linked(\'21\')');
+    DivItemPopular.append(menuBarButtonPopular);
+    var menuBarImagePoular = $("<img>").attr("src" , "./img/popular/icons8-food-menu-53.png").attr("alt" , "popular").addClass(menubarImageClass);
+    menuBarButtonPopular.append(menuBarImagePoular);
+    var MenuContentPopular = $("<div>").addClass(menubarInfoClass);
+    menuBarButtonPopular.append(MenuContentPopular);
+    var headerNameMenubarPopularEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", "popularEn").html("popular");
+    MenuContentPopular.append(headerNameMenubarPopularEn);
+    var headerNameMenubarPopularFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", "popular").html("پرطرفدار");
+    MenuContentPopular.append(headerNameMenubarPopularFa);
+
+        // main food 
     for (let i = 1; i <= menu.Information.length; i++) {  
 
         var DivItem = $("<div>").addClass("item").addClass("item1");
