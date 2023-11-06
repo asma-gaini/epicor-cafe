@@ -1,3 +1,5 @@
+
+// ********************* json file  *********************
 var login_key= {
     "image": "./img/admin panel/logo/61ae15e0a4b5f.jpg",
     "brand" : "brandName",
@@ -27,7 +29,6 @@ var login_key= {
  var loginFaJsonString = JSON.stringify(login_Fa);
  var loginFaJson = JSON.parse(loginFaJsonString);
  
- 
  var loginEnJsonString = JSON.stringify(login_En);
  var loginEnJson = JSON.parse(loginEnJsonString);
  
@@ -37,21 +38,18 @@ var login_key= {
      createLogin();
      
  
-     // getAndSetTranslateLanguageNavAdminPanel();
+     getAndSetTranslateLanguageNavAdminPanel();
  
  })  
  
- 
+// ********************* create login page  ********************* 
  function createLogin(){
      const template = document.createElement('template');
  
      $("template").html(JqueryLogin())
  
-     var navigationBar = document.getElementById("login");
-     navigationBar.append(template.content);
- 
-     
- 
+     var login = document.getElementById("login");
+     login.append(template.content);
  }
  
  function JqueryLogin(){
@@ -110,6 +108,29 @@ var login_key= {
 
  }
  
+// ********************* change language  *********************
+ function getAndSetTranslateLanguageNavAdminPanel(){
+    var ContainsKeyName = $("*[text_key]");
+    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+
+        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+            
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+
+                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+                var translatedValueNav;
+                if(window.localStorage.getItem("language") == "En"){
+                    translatedValueNav = loginEnJson[keyValue];
+                }
+                else{
+                    translatedValueNav = loginFaJson[keyValue];
+                }
+                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+            }
+        }
+    }
+}
+
  function changeLanguageNavAdminPanel()
  {
      var getLangAdmin = $("#languageAdmin").val();
