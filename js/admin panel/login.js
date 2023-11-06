@@ -90,12 +90,11 @@ var login_key= {
 
     var remembermeField = $("<div>").attr("id" , "remember").addClass("checkbox");
     formLogin.append(remembermeField);
-    var labelRemember = $("<label>");
+    var rememberInput = $("<input>").attr("type" , "checkbox").attr("value" , "remember-me").attr("id" , login_key.remmemberMe);
+    remembermeField.append(rememberInput);
+    var labelRemember = $("<label>").attr("text_key" , login_key.remmemberMe).attr("for" , login_key.remmemberMe).html(login_key.remmemberMe);
     remembermeField.append(labelRemember);
-    var rememberInput = $("<input>").attr("type" , "checkbox").attr("value" , "remember-me").attr("text_key" , login_key.remmemberMe).html(login_key.remmemberMe);
-    labelRemember.append(rememberInput);
-    // var p = $("<p>").html("asma");
-    // labelRemember.append(p);
+   
 
 
     var buttonLogin = $("<button>").addClass("btn").addClass("mt-3").attr("text_key" , login_key.loginBtn).html(login_key.loginBtn);

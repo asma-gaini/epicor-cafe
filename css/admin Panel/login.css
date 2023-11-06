@@ -73,6 +73,11 @@ body {
 .wrapper .form-field .fas {
     color: #555;
 }
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: absolute;
+    /* margin-top: 4px\9; */
+    margin-left: 2px;
+}
 
 .wrapper .btn {
     box-shadow: none;
