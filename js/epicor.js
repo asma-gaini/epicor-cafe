@@ -2,13 +2,6 @@
 var menu = {
     "Information":
     [
-
-        // {
-        //     "CategoryID" : 0,
-        //     "headerNameFA": "popular",
-        //     "headerNameEN": "popularEn",
-        //     "headerImg": "./img/breakfast/63fd588c75bdd.png"
-        // },
         {
             "CategoryID" : 1,
             "headerNameFA": "breakfast",
@@ -25,7 +18,7 @@ var menu = {
                 },
                 {
                     "codeNumber" : 2,
-                    "isPopular": "false",
+                    "isPopular": "true",
                     "Title": "IranianOmelette",
                     "Description": "Toast-eggs-tomatoes",
                     "Price": 155,
@@ -1648,9 +1641,7 @@ var map = new Map();
 var storage = [];
 var temp = {};
 var mobileDevice = 0;
-// var mobileTemp = 0;
 var desktopDevice = 0;
-// var desktopTemp = 0;
 
 
 
@@ -1672,16 +1663,10 @@ $(document).ready(function(){
 
 // ********************* detect device (just mobile and desktop)  *********************
 function detectDvice(){
-    /* Storing user's device details in a variable*/
     let details = navigator.userAgent; 
     
-    /* Creating a regular expression  
-    containing some mobile devices keywords  
-    to search it in details string*/
     let regexp = /android|iphone|kindle|ipad/i; 
     
-    /* Using test() method to search regexp in details 
-    it returns boolean value*/
     let isMobileDevice = regexp.test(details); 
     
     if (isMobileDevice) { 
@@ -1698,7 +1683,6 @@ function detectDvice(){
 // ********************* chap chin rast chin kardan  *********************
 function changeDirection(){
     var valueLanguage = $("#language").val();
-    // console.log(valueLanguage)
     
     $(".menu_contant_info_price_btn").removeClass("Direction-rtl");
     $(".menu_contant_info_price_btn").removeClass("Direction-ltr");
@@ -2232,24 +2216,18 @@ function linked(CategoryID){
     //change theme 
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
-
-        // console.log($(".themeInput").attr("theme"));
-
         $("button.menu-bar_section").removeClass("menu-bar_section_click-BackgroundDark");
 
         $("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
 	    $("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-Backgroundlight"); //on menu k rush click mishe hover kone va focus kone rush
     }
     else if(themeAttr == "dark") {
-        // console.log($(".themeInput").attr("theme"));
-
         $("button.menu-bar_section").removeClass("menu-bar_section_click-Backgroundlight");
 
         $("button.menu-bar_section").removeClass("menu-bar_section_click-BackgroundDark");
 	    $("button.menu-bar_section"+"[CategoryID ='"+CategoryID+"']").focus().addClass("menu-bar_section_click-BackgroundDark"); //on menu k rush click mishe hover kone va focus kone rush
 
     }
-
 
     var menuBarSlide = $( "div.slider"+"[CategoryID ='"+CategoryID+"']" ); 
     menuBarSlide.show().siblings("div").fadeOut(300);  //on lide k rush click mishe negah dare baghiye slide menu ha ru fade kone ba time 300ms
@@ -2337,7 +2315,6 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
-    // changeLanguage();
         
 	IncrementPrice(codeNumber);
     changeDirection();
@@ -2352,7 +2329,6 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap(map);
-    // changeLanguage();
 	
 	if(numberOfPurchase < 1)
 	{
