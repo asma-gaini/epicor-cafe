@@ -77,7 +77,7 @@ var login_key= {
     formLogin.append(usernameField);
     var usernameShape = $("<span>").addClass("far").addClass("fa-user");
     usernameField.append(usernameShape);
-    var usernameInput = $("<input>").attr("type" , "text").attr("name" , "userName").attr("id" , "userName").attr("text_key" , login_key.userName).attr("placeholder" , login_key.userName);
+    var usernameInput = $("<input>").attr("type" , "text").attr("name" , "userName").attr("id" , "userName").attr("text_key" , login_key.userName).attr("placeholder" , "User name");
     usernameField.append(usernameInput);
 
      // create password field 
@@ -85,7 +85,7 @@ var login_key= {
     formLogin.append(passwordField);
     var passwordShape = $("<span>").addClass("fas").addClass("fa-key");
     passwordField.append(passwordShape);
-    var passwordInput = $("<input>").attr("type" , "password").attr("name" , "password").attr("id" , "pwd").attr("text_key" , login_key.pasword).attr("placeholder" , login_key.pasword);
+    var passwordInput = $("<input>").attr("type" , "password").attr("name" , "password").attr("id" , "pwd").attr("text_key" , login_key.pasword).attr("placeholder" , "Password");
     passwordField.append(passwordInput);
 
     var remembermeField = $("<div>").attr("id" , "remember").addClass("checkbox");
