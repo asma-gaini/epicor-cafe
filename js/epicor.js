@@ -1696,7 +1696,7 @@ function changeDirection(){
     if(valueLanguage == "En"){
         $(".menu_contant").css("direction","ltr");
         $(".payment-modal").css("direction","ltr");
-        $(".title").css("direction","ltr");
+        $(".titleAboutUs").css("direction","ltr");
 
         $(".menu_contant_info_price_btn").addClass("Direction-ltr");
         $(".Purchase-count").addClass("Direction-ltr");
@@ -1706,7 +1706,7 @@ function changeDirection(){
     else{
         $(".menu_contant").css("direction","rtl");
         $(".payment-modal").css("direction","rtl");
-        $(".title").css("direction","rtl");
+        $(".titleAboutUs").css("direction","rtl");
         
         $(".menu_contant_info_price_btn").addClass("Direction-rtl");
         $(".Purchase-count").addClass("Direction-rtl");
@@ -1787,9 +1787,9 @@ function changeTheme(){
     $(".form-select").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
     $(".aboutUsLink").toggleClass("headerBtn-Backgroundlight headerBtn-BackgroundDark");
     $(".pay-off").toggleClass("pay-off-Backgroundlight pay-off-BackgroundDark");
-    $(".box").toggleClass("box-Backgroundlight box-BackgroundDark");
-    $(".title").toggleClass("title-Backgroundlight title-BackgroundDark");
-    $(".box button").toggleClass("innerAboutBtn-Backgroundlight innerAboutBtn-BackgroundDark");
+    $(".boxAboutUs").toggleClass("box-Backgroundlight box-BackgroundDark");
+    $(".titleAboutUs").toggleClass("title-Backgroundlight title-BackgroundDark");
+    $(".boxAboutUs button").toggleClass("innerAboutBtn-Backgroundlight innerAboutBtn-BackgroundDark");
     $(".hrTheme").toggleClass("hrTheme-Backgroundlight hrTheme-BackgroundDark");
     $(".posPopular").toggleClass("popular-Backgroundlight popular-BackgroundDark");
     $(".overlay-content a button").hover(function(){

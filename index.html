@@ -44,34 +44,28 @@
             <option  class="optionSelectBox" value="En">English</option>
         </select>
             <!-- ***********************header ---- about us button *************************** -->
-        <div class="wrap" >
-            <div class="intro">
-                <a class="aboutUsLink" text_key="aboutUs" onClick="openPopup('#wrap_popup1')">درباره ما</a>
+        <div class="wrapAbout" >
+            <div class="introAboutUs">
+                <a class="aboutUsLink" text_key="aboutUs" onClick="openPopup('#wrap_aboutUs')">درباره ما</a>
             </div>
         
-            <div id="wrap_popup1" class="wrap_popup"  >
-                <div class="popup">
-                    <div class="title">
+            <div id="wrap_aboutUs" class="wrapAbout_popup"  >
+                <div class="popupContainAboutUs">
+                    <div class="titleAboutUs">
                         <p  text_key="aboutUs">درباره ما</p>
                     </div>
                     <!-- popup  -->
-                    <div class="box" >
+                    <div class="boxAboutUs" >
                         <p text_key="ContactUs" >راه های ارتباط با ما</p>
                         <p text_key="tel" >تلفن: 02186128863</p>
                         <p text_key="adresse" >آدرس</p>
     
     
                         <center>
-                            <!-- <h1 style="color:whitesmoke">
-                                <i>CodingNinjas</i>
-                            </h1> -->
-                    
-                            <!-- <h3>Simple Google Map using jQuery</h3> -->
-                    
                             <div id="MapID" style="width:500px; height:400px;"></div>
                         </center>
     
-                        <center><button class="innerAboutBtn" text_key="closeAboutUsBtn" onClick="closePopup('#wrap_popup1')">بستن</button></center>
+                        <center><button class="innerAboutBtn" text_key="closeAboutUsBtn" onClick="closePopup('#wrap_aboutUs')">بستن</button></center>
                     </div>
                 </div>
             </div>
