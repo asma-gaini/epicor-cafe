@@ -97,7 +97,6 @@ body{
     width: 140px;
     height: 25px;
     font-size: 11px;
-    /* background-color: #cf871c; */
     background-color: rgb(205 171 44);
     border: none;
     border-radius: 5px;
@@ -116,7 +115,6 @@ body{
 	cursor:pointer;
     text-decoration: none;
     padding: 5px;
-    /* border: 1px solid; */
     border-radius: 5px;
     position: absolute;
     right: 20px;
@@ -165,8 +163,6 @@ body{
 
 .titleAboutUs p{
 	margin:5px;
-    /* direction: rtl; */
-
 }
 
 .boxAboutUs{
@@ -188,7 +184,6 @@ body{
 	margin:10px 0px 10px 0px;
 	background:#c38710;
 	color:#DFDFDF;
-	/* border:3px solid #0C63A4; */
 	border-radius:5px;
 }
          /* ******************************* header of page ---->change theme ******************************* */
@@ -297,7 +292,6 @@ body{
 }
         
 .main {
-    /* color: lighten(gray, 25%); */
     background-color: inherit;
     grid-area: main;
     padding: 0;
@@ -314,17 +308,12 @@ body{
     cursor: pointer;
 }
 .items.active {
-    /* background: rgba(255,255,255,0.3); */
     cursor: grabbing;
     cursor: -webkit-grabbing;
     transform: scale(1);
 }
 .item {
     display: inline-block;
-    /* background: #b74476; */
-    /* min-height: 250px; */
-    /* min-width: 400px; */
-    /* margin: 2em 1em; */
 }
 a:hover {
     cursor: pointer;
@@ -334,15 +323,14 @@ a:hover {
 
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
     height: 100%;
     width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1; 
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgb(46 36 18 / 95%); /* Black w/opacity */
+    background-color: rgb(0,0,0); 
+    background-color: rgb(46 36 18 / 95%);
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   }
@@ -371,7 +359,7 @@ a:hover {
     text-decoration: none;
     font-size: 36px;
     color: #818181;
-    display: block; /* Display block instead of inline */
+    display: block;
     transition: 0.3s; /* Transition effects on hover (color) */
   }
   
@@ -423,7 +411,6 @@ a:hover {
 }
 .hrLine p{
     color: var(--hrLineFont);
-    /* margin-right: -50px; */
 }
 .hrLine span{
     background-color:var(--hrLineBack);
@@ -439,7 +426,6 @@ a:hover {
     display: flex;
     margin: 10px;
     max-width: 100%;
-    /* width: 600px; */
     width: 47%;
     background-color: var(--menu-item);
     border-radius: 5px;
@@ -489,7 +475,6 @@ a:hover {
     color: var(--white);
     border-radius: 5px;
     position: absolute;
-    /* left: 15px; */
     bottom: 20px;
     font-size: 9px;
     font-family: 'iransans';
@@ -503,15 +488,12 @@ a:hover {
 }
 .Purchase-count{
     border: none;
-    /* width: 70px; */
     cursor: pointer;
     padding: 3px;
     color: var(--white);
     border-radius: 5px;
     position: absolute;
-    /* left: 15px; */
     bottom: 20px;
-    /* display: none; */
 }
 
 .btn-counter{
@@ -578,7 +560,6 @@ a:hover {
     align-items: center;
     padding-right: 20px;
     position: absolute;
-    /* left: 15px; */
 }
 .button-counter button{
     width: 17px;
@@ -587,10 +568,8 @@ a:hover {
     border: none;
 }
 .spanPurchase{
-    /* margin: 0px 5px; */
     font-size: 12px;
     padding: 0px 10px;
-    /* padding-left: 0px; */
 }
 .btn-default {
     color: #ffffff;
@@ -612,8 +591,6 @@ a:hover {
     background-image: var(--menubar-click);
 }
 .btn-info:focus{
-    /* outline: 5px auto -webkit-focus-ring-color; */
-    /* outline-offset: -2px; */
     outline: none;
 }
 .payment-modal{
@@ -762,8 +739,7 @@ a:hover {
   }
 
 @media only screen and (max-width: 380px) {
-    /* For mobile phones: 
-    vaghti safhe barek tar v akochik tar az 768*/
+
     .menu_contant {
         width: 100%;
         height: 180px;
@@ -788,8 +764,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 720px) and (min-width: 380px) {
-    /* For mobile phones: 
-    vaghti safhe barek tar v akochik tar az 768*/
+
     .menu_contant {
         width: 100%;
         height: 140px;
@@ -890,9 +865,5 @@ a:hover {
     right: 20%;
     left: 20%;
   }
-  /* .item1{
-    position: absolute;
-    right: 25%;
-    left: 25%;
-  } */
+
 } 

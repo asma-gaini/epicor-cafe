@@ -2155,11 +2155,8 @@ function getInformationWithMap(){
         }
     }
 
-    // chane theme 
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
-
-        // console.log($(".themeInput").attr("theme"));
 
         $(".modal-content").removeClass("menu_contant-BackgroundDark");
         $(".modal-content").removeClass("menu_contant-Backgroundlight");
@@ -2171,7 +2168,6 @@ function getInformationWithMap(){
 
     }
     else if(themeAttr == "dark") {
-        // console.log($(".themeInput").attr("theme"));
 
         $(".modal-content").removeClass("menu_contant-Backgroundlight");
         $(".modal-content").removeClass("menu_contant-BackgroundDark");
@@ -2213,7 +2209,6 @@ slider.addEventListener('mousemove', (e) => {
 });
 
 function linked(CategoryID){
-    //change theme 
     var themeAttr = $(".themeInput").attr("theme");
     if (themeAttr == "light") {
         $("button.menu-bar_section").removeClass("menu-bar_section_click-BackgroundDark");
