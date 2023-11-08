@@ -1912,7 +1912,7 @@ function unifyingHrline(getSlidersClass, number , object , nameFa ,  nameEn){
             var mainDivSlide = $("<div>").attr("CategoryID", number).addClass("slider");
         }
         
-        var sliderContentsHeader_json = $("<div>").addClass("hrLine");
+        var headerSlides = $("<div>").addClass("hrLine");
         if(object!= null){
             var lineNameFA = $("<p>").attr("text_key", object[number].headerNameFA).html(object[number].headerNameFA);
             var lineSpan = $("<span>").addClass("hrTheme");
@@ -1924,10 +1924,10 @@ function unifyingHrline(getSlidersClass, number , object , nameFa ,  nameEn){
             var lineNameEN = $("<p>").attr("text_key", nameEn).html(nameEn);
         }
         
-        sliderContentsHeader_json.append(lineNameFA);
-        sliderContentsHeader_json.append(lineSpan);
-        sliderContentsHeader_json.append(lineNameEN);
-        mainDivSlide.append(sliderContentsHeader_json);
+        headerSlides.append(lineNameFA);
+        headerSlides.append(lineSpan);
+        headerSlides.append(lineNameEN);
+        mainDivSlide.append(headerSlides);
         getSlidersClass.append(mainDivSlide);
 }
 function unifyingSlides(mainDivSlide , number ,counter , object , nameFa ,  nameEn){
