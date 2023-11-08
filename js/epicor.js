@@ -1640,8 +1640,7 @@ var totalPrice = 0;
 var map = new Map();
 var storage = [];
 var temp = {};
-var mobileDevice = 0;
-var desktopDevice = 0;
+
 
 
 
@@ -1671,12 +1670,8 @@ function detectDvice(){
     
     if (isMobileDevice) { 
         console.log("You are using a Mobile Device"); 
-        mobileDevice++;
-        console.log("mobile =  "+mobileDevice);
     } else { 
         console.log("You are using Desktop"); 
-        desktopDevice++;
-        console.log("desktop =  "+desktopDevice);
     }
 }
    
