@@ -6,7 +6,8 @@ var login_key= {
     "userName":"usernamePlaceHolder",
     "pasword": "paswordPlaceHolder",
     "remmemberMe": "remmemberMe",
-    "loginBtn": "login"
+    "loginBtn": "login",
+    "forgetPass": "forgetPass"
  }
  
  var login_Fa={
@@ -15,7 +16,7 @@ var login_key= {
      "paswordPlaceHolder": "رمز",
      "remmemberMe": "مرا بخاطر بسپار",
      "login":"وارد شدن",
- 
+     "forgetPass" : "رمز را فراموش کردی ؟"
  }
  
  var login_En={
@@ -24,6 +25,7 @@ var login_key= {
      "paswordPlaceHolder": "Password",
      "remmemberMe": "Remmember me",
      "login": "Login",
+     "forgetPass":"Forget password?"
  }
  
  var loginFaJsonString = JSON.stringify(login_Fa);
@@ -102,7 +104,7 @@ var login_key= {
 
     var forgetPass = $("<div>").addClass("text-center").addClass("fs-6");
     mainDivLogin.append(forgetPass);
-    var forgetPassLink = $("<a>").attr("href" , "#").html("Forget password?");
+    var forgetPassLink = $("<a>").attr("href" , "#").attr("text_key" , login_key.forgetPass).html(login_key.forgetPass);
     forgetPass.append(forgetPassLink);
 
  }
