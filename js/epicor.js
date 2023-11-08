@@ -1930,7 +1930,68 @@ function unifyingHrline(getSlidersClass, number , object , nameFa ,  nameEn){
         mainDivSlide.append(sliderContentsHeader_json);
         getSlidersClass.append(mainDivSlide);
 }
+function unifyingSlides(mainDivSlide , number ,counter , object , nameFa ,  nameEn){
 
+        //------START : menu_contant ------
+        var mainDiv = $("<div>").addClass("menu_contant");
+
+            //-------START : menu_contant_image-------
+            var containSlideImg = $("<div>").addClass(slideImageClass);
+            var slideImage = $("<img>")
+                            .attr("src" , object[number].Info[counter].ImageURL)
+                            .attr("alt" , object[number].Info[counter].Title);
+            containSlideImg.append(slideImage);
+            mainDiv.append(containSlideImg);
+            //-------END : menu_contant_image-------
+
+            //-------START : menu_contant_info------
+            var menuInformation = $("<div>").addClass(slideInformationClass);
+            var name = $("<h4>").attr("text_key", object[number].Info[counter].Title).html(object[number].Info[counter].Title);
+            var descriptionMenu = $("<p>").attr("text_key", object[number].Info[counter].Description).html(object[number].Info[counter].Description);
+            menuInformation.append(name);
+            menuInformation.append(descriptionMenu);
+            // popular food 
+            if(object[number].Info[counter].isPopular == "true"){
+                popularFoodShape(menuInformation);
+            }
+            
+
+                //ُ------START : menut_contant_info_price-----
+                var containPriceAndMainbtnInfo = $("<div>").addClass(slidePriceInformation);
+                    //--------START : menu_contant_info_price_contant------
+                    var priceInfo = $("<div>").addClass(slidePriceContent);
+                    var price = $("<h4>").addClass("price").attr("codeNumber", object[number].Info[counter].codeNumber).attr("CategoryID", object[number].CategoryID).html(object[number].Info[counter].Price+".000");
+                    var toman = $("<p>").attr("text_key" , "MonetaryUnit").html("تومان");
+                    priceInfo.append(price);
+                    priceInfo.append(toman);
+                    containPriceAndMainbtnInfo.append(priceInfo);
+                    //--------START : menu_contant_info_price_contant------
+
+                    //--------START : btn-class -------
+                    var containMainBtn = $("<div>").addClass("btn-class");
+                    var MainButton = $("<button>")
+                                     .attr("codeNumber", object[number].Info[counter].codeNumber)
+                                     .attr("CategoryID", object[number].CategoryID)
+                                     .addClass(mainButtonClass)
+                                     .attr("text_key" , "AddToNotebook")
+                                     .attr('onclick' , AddPurchaseNumBtnFunction+'(\''+object[number].Info[counter].codeNumber+'\',\''+object[number].CategoryID+'\')')
+                                     .html("افزودن");
+                    containMainBtn.append(MainButton);
+                    containPriceAndMainbtnInfo.append(containMainBtn);
+                    //--------START : btn-class -------
+
+                menuInformation.append(containPriceAndMainbtnInfo);
+                //ُ------END : menut_contant_info_price-----
+            
+            mainDiv.append(menuInformation);
+            //-------END : menu_contant_info------
+
+        mainDivSlide.append(mainDiv);
+        //------END : menu_contant ------
+    // }
+
+    // getSlidersClass.append(mainDivSlide);
+}
 
     // slides popular food 
 function showSlidesPopularFood(){
@@ -1942,68 +2003,14 @@ function showSlidesPopularFood(){
 
     var mainDivSlide = $(".slider"+"[CategoryID ='21']");
 
+     //------create slides ------
     for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++){
         for (var InfoNum =0; InfoNum < menu.Information[IDNumMain].Info.length; InfoNum++) {
 
                  //------START : find popular ------
             if(menu.Information[IDNumMain].Info[InfoNum].isPopular == "true"){
 
-                        //------START : menu_contant ------
-                    var mainDiv = $("<div>").addClass("menu_contant");
-
-                    //-------START : menu_contant_image-------
-                    var containSlideImg = $("<div>").addClass(slideImageClass);
-                    var slideImage = $("<img>")
-                                    .attr("src" , menu.Information[IDNumMain].Info[InfoNum].ImageURL)
-                                    .attr("alt" , menu.Information[IDNumMain].Info[InfoNum].Title);
-                    containSlideImg.append(slideImage);
-                    mainDiv.append(containSlideImg);
-                    //-------END : menu_contant_image-------
-
-                    //-------START : menu_contant_info------
-                    var menuInformation = $("<div>").addClass(slideInformationClass);
-                    var name = $("<h4>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Title).html(menu.Information[IDNumMain].Info[InfoNum].Title);
-                    var descriptionMenu = $("<p>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Description).html(menu.Information[IDNumMain].Info[InfoNum].Description);
-                    menuInformation.append(name);
-                    menuInformation.append(descriptionMenu);
-                    // popular food 
-                    if(menu.Information[IDNumMain].Info[InfoNum].isPopular == "true"){
-                        popularFoodShape(menuInformation);
-                    }
-                    
-
-                        //ُ------START : menut_contant_info_price-----
-                        var containPriceAndMainbtnInfo = $("<div>").addClass(slidePriceInformation);
-                            //--------START : menu_contant_info_price_contant------
-                            var priceInfo = $("<div>").addClass(slidePriceContent);
-                            var price = $("<h4>").addClass("price").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).html(menu.Information[IDNumMain].Info[InfoNum].Price+".000");
-                            var toman = $("<p>").attr("text_key" , "MonetaryUnit").html("تومان");
-                            priceInfo.append(price);
-                            priceInfo.append(toman);
-                            containPriceAndMainbtnInfo.append(priceInfo);
-                            //--------START : menu_contant_info_price_contant------
-
-                            //--------START : btn-class -------
-                            var containMainBtn = $("<div>").addClass("btn-class");
-                            var MainButton = $("<button>")
-                                            .attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber)
-                                            .attr("CategoryID", menu.Information[IDNumMain].CategoryID)
-                                            .addClass(mainButtonClass)
-                                            .attr("text_key" , "AddToNotebook")
-                                            .attr('onclick' , AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain].Info[InfoNum].codeNumber+'\',\''+menu.Information[IDNumMain].CategoryID+'\')')
-                                            .html("افزودن");
-                            containMainBtn.append(MainButton);
-                            containPriceAndMainbtnInfo.append(containMainBtn);
-                            //--------START : btn-class -------
-
-                        menuInformation.append(containPriceAndMainbtnInfo);
-                        //ُ------END : menut_contant_info_price-----
-                    
-                    mainDiv.append(menuInformation);
-                    //-------END : menu_contant_info------
-
-                mainDivSlide.append(mainDiv);
-                //------END : menu_contant ------
+                unifyingSlides(mainDivSlide ,IDNumMain, InfoNum, menu.Information)
 
             }
                  //------END : find popular ------
@@ -2016,7 +2023,7 @@ function showSlidesPopularFood(){
     // slides food 
 function showSlides(){
      // first show popular food 
-    showSlidesPopularFood()
+    showSlidesPopularFood();
 
      // show main slides food 
     var getSlidersClass = $("div.sliders");
@@ -2026,66 +2033,10 @@ function showSlides(){
         unifyingHrline(getSlidersClass ,IDNumMain , menu.Information);
         //------END : hrLine ------
 
-        var mainDivSlide = $(".slider"+"[CategoryID ='"+menu.Information[IDNumMain].CategoryID+"']");
-        
+        //------create slides ------
         for (var InfoNum =0; InfoNum < menu.Information[IDNumMain].Info.length; InfoNum++) {
-            
-            //------START : menu_contant ------
-            var mainDiv = $("<div>").addClass("menu_contant");
-
-                //-------START : menu_contant_image-------
-                var containSlideImg = $("<div>").addClass(slideImageClass);
-                var slideImage = $("<img>")
-                                .attr("src" , menu.Information[IDNumMain].Info[InfoNum].ImageURL)
-                                .attr("alt" , menu.Information[IDNumMain].Info[InfoNum].Title);
-                containSlideImg.append(slideImage);
-                mainDiv.append(containSlideImg);
-                //-------END : menu_contant_image-------
-
-                //-------START : menu_contant_info------
-                var menuInformation = $("<div>").addClass(slideInformationClass);
-                var name = $("<h4>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Title).html(menu.Information[IDNumMain].Info[InfoNum].Title);
-                var descriptionMenu = $("<p>").attr("text_key", menu.Information[IDNumMain].Info[InfoNum].Description).html(menu.Information[IDNumMain].Info[InfoNum].Description);
-                menuInformation.append(name);
-                menuInformation.append(descriptionMenu);
-                // popular food 
-                if(menu.Information[IDNumMain].Info[InfoNum].isPopular == "true"){
-                    popularFoodShape(menuInformation);
-                }
-                
-
-                    //ُ------START : menut_contant_info_price-----
-                    var containPriceAndMainbtnInfo = $("<div>").addClass(slidePriceInformation);
-                        //--------START : menu_contant_info_price_contant------
-                        var priceInfo = $("<div>").addClass(slidePriceContent);
-                        var price = $("<h4>").addClass("price").attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber).attr("CategoryID", menu.Information[IDNumMain].CategoryID).html(menu.Information[IDNumMain].Info[InfoNum].Price+".000");
-                        var toman = $("<p>").attr("text_key" , "MonetaryUnit").html("تومان");
-                        priceInfo.append(price);
-                        priceInfo.append(toman);
-                        containPriceAndMainbtnInfo.append(priceInfo);
-                        //--------START : menu_contant_info_price_contant------
-
-                        //--------START : btn-class -------
-                        var containMainBtn = $("<div>").addClass("btn-class");
-                        var MainButton = $("<button>")
-                                         .attr("codeNumber", menu.Information[IDNumMain].Info[InfoNum].codeNumber)
-                                         .attr("CategoryID", menu.Information[IDNumMain].CategoryID)
-                                         .addClass(mainButtonClass)
-                                         .attr("text_key" , "AddToNotebook")
-                                         .attr('onclick' , AddPurchaseNumBtnFunction+'(\''+menu.Information[IDNumMain].Info[InfoNum].codeNumber+'\',\''+menu.Information[IDNumMain].CategoryID+'\')')
-                                         .html("افزودن");
-                        containMainBtn.append(MainButton);
-                        containPriceAndMainbtnInfo.append(containMainBtn);
-                        //--------START : btn-class -------
-
-                    menuInformation.append(containPriceAndMainbtnInfo);
-                    //ُ------END : menut_contant_info_price-----
-                
-                mainDiv.append(menuInformation);
-                //-------END : menu_contant_info------
-
-            mainDivSlide.append(mainDiv);
-            //------END : menu_contant ------
+            var mainDivSlide = $(".slider"+"[CategoryID ='"+menu.Information[IDNumMain].CategoryID+"']");
+            unifyingSlides(mainDivSlide ,IDNumMain, InfoNum, menu.Information);
         }
 
         getSlidersClass.append(mainDivSlide);
