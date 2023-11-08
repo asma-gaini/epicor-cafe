@@ -110,6 +110,7 @@ var login_key= {
  }
  
 // ********************* change language  *********************
+
  function getAndSetTranslateLanguageNavAdminPanel(){
     var ContainsKeyName = $("*[text_key]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
@@ -126,7 +127,13 @@ var login_key= {
                 else{
                     translatedValueNav = loginFaJson[keyValue];
                 }
-                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+
+                // if("[placeholder]"==true){
+                //     console.log("asma")
+                // }
+                // else{
+                    ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+                // }
             }
         }
     }
