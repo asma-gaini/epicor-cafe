@@ -1885,6 +1885,7 @@ function showMenubar(){
         unifyingMenubar (DivItem , i ,menu.Information );
     }
 }
+
     // collapsible menu
 function showMenuGathe(){
     var menuGatherClass = $("div.overlay-content");
@@ -1892,32 +1893,14 @@ function showMenuGathe(){
     var menubarGatherLink = $("<a>").attr('onclick' , 'closeNav()').attr("href", "#");
     menuGatherClass.append(menubarGatherLink);
 
+
      // popular food 
-    var menuBarButtonPopular = $("<button>").attr("CategoryID", "21").addClass(menubarItem).attr('onclick' , 'linked(\'21\')');
-    menubarGatherLink.append(menuBarButtonPopular);
-    var menuBarImagePoular = $("<img>").attr("src" , "./img/popular/icons8-food-menu-53.png").attr("alt" , "popular").addClass(menubarImageClass);
-    menuBarButtonPopular.append(menuBarImagePoular);
-    var MenuContentPopular = $("<div>").addClass(menubarInfoClass);
-    menuBarButtonPopular.append(MenuContentPopular);
-    var headerNameMenubarPopularEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", "popularEn").html("popular");
-    MenuContentPopular.append(headerNameMenubarPopularEn);
-    var headerNameMenubarPopularFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", "popular").html("پرطرفدار");
-    MenuContentPopular.append(headerNameMenubarPopularFa);
+    var urlImagePopular = "./img/popular/icons8-food-menu-53.png"
+    unifyingMenubar (menubarGatherLink , 21 , null, urlImagePopular,"popular", "popularEn");
 
-     //  main food 
-    for (let i = 1; i <= menu.Information.length; i++) {
-
-        var menuBarButton = $("<button>").attr("CategoryID", i).addClass(menubarItem).attr('onclick' , 'linked(\''+i+'\')');
-        menubarGatherLink.append(menuBarButton);
-        var menuBarImage = $("<img>").attr("src" , menu.Information[i-1].headerImg).attr("alt" , menu.Information[i-1].headerNameEN).addClass(menubarImageClass);
-        menuBarButton.append(menuBarImage);
-        var MenuContent = $("<div>").addClass(menubarInfoClass);
-        menuBarButton.append(MenuContent);
-        var headerNameMenubarEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", menu.Information[i-1].headerNameEN).html(menu.Information[i-1].headerNameEN);
-        MenuContent.append(headerNameMenubarEn);
-        var headerNameMenubarFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", menu.Information[i-1].headerNameFA).html(menu.Information[i-1].headerNameFA);
-        MenuContent.append(headerNameMenubarFa);
-        
+         // main food 
+    for (let i = 1; i <= menu.Information.length; i++) {  
+        unifyingMenubar (menubarGatherLink , i ,menu.Information );
     }
 }
 
