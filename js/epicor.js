@@ -1203,7 +1203,7 @@ var menuFa ={
     "Americans": "آمریکانو",
     "latte": "لاته",
     "Affogato": "آفوگاتو",
-    "IceCoffeeE": "قهوه های سرد",
+    "IceCoffee": "قهوه های سرد",
     "IceCoffeeEn": "Ice Coffee",
     "IcedLatte": "آیس لاته",
     "IcedAmerican": "آیس آمریکانو",
@@ -1875,7 +1875,9 @@ function showMenubar(){
     var getItemClass = $("div.items");
         // popular food 
     var urlImagePopular = "./img/popular/icons8-food-menu-53.png"
-    unifyingMenubar (getItemClass , 22 , null, urlImagePopular,"popular", "popularEn");
+    unifyingMenubar (getItemClass , 21 , null, urlImagePopular,"popular", "popularEn");
+
+
 
         // main food 
     for (let i = 1; i <= menu.Information.length; i++) {  
