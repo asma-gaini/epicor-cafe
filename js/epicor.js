@@ -1835,9 +1835,8 @@ function popularFoodShape(menuInformation){
     menuInformation.append(createPopularFoodShape);
 }
 
-function unifyingMenubar (getItemClass , number ,object ,urlImage , nameFa, nameEn){
-    var DivItem = $("<div>").addClass("item").addClass("item1");
-    getItemClass.append(DivItem);
+function unifyingMenubar (DivItem , number ,object ,urlImage , nameFa, nameEn){
+   
     var menuBarButton = $("<button>").attr("CategoryID", number).addClass(menubarItem).attr('onclick' , 'linked(\''+number+'\')');
     DivItem.append(menuBarButton);
 
@@ -1873,15 +1872,17 @@ function unifyingMenubar (getItemClass , number ,object ,urlImage , nameFa, name
     // main menu in top 
 function showMenubar(){
     var getItemClass = $("div.items");
+    var DivItem = $("<div>").addClass("item").addClass("item1");
+    getItemClass.append(DivItem);
         // popular food 
     var urlImagePopular = "./img/popular/icons8-food-menu-53.png"
-    unifyingMenubar (getItemClass , 21 , null, urlImagePopular,"popular", "popularEn");
+    unifyingMenubar (DivItem , 21 , null, urlImagePopular,"popular", "popularEn");
 
 
 
         // main food 
     for (let i = 1; i <= menu.Information.length; i++) {  
-        unifyingMenubar (getItemClass , i ,menu.Information );
+        unifyingMenubar (DivItem , i ,menu.Information );
     }
 }
     // collapsible menu
