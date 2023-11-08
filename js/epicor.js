@@ -1865,7 +1865,7 @@ function unifyingMenubar (DivItem , number ,object ,urlImage , nameFa, nameEn){
         MenuContent.append(headerNameMenubarFa);
    }
 
-   
+
 }
 
 // ********************* display menu and biil va cearte this from json  *********************
@@ -1904,20 +1904,43 @@ function showMenuGathe(){
     }
 }
 
+function unifyingHrline(getSlidersClass, number , object , nameFa ,  nameEn){
+        if(object!= null){
+            var mainDivSlide = $("<div>").attr("CategoryID", object[number].CategoryID).addClass("slider");
+        }
+        else{
+            var mainDivSlide = $("<div>").attr("CategoryID", number).addClass("slider");
+        }
+        
+        var sliderContentsHeader_json = $("<div>").addClass("hrLine");
+        if(object!= null){
+            var lineNameFA = $("<p>").attr("text_key", object[number].headerNameFA).html(object[number].headerNameFA);
+            var lineSpan = $("<span>").addClass("hrTheme");
+            var lineNameEN = $("<p>").attr("text_key", object[number].headerNameEN).html(object[number].headerNameEN);
+        }
+        else{
+            var lineNameFA = $("<p>").attr("text_key", nameFa).html(nameFa);
+            var lineSpan = $("<span>").addClass("hrTheme");
+            var lineNameEN = $("<p>").attr("text_key", nameEn).html(nameEn);
+        }
+        
+        sliderContentsHeader_json.append(lineNameFA);
+        sliderContentsHeader_json.append(lineSpan);
+        sliderContentsHeader_json.append(lineNameEN);
+        mainDivSlide.append(sliderContentsHeader_json);
+        getSlidersClass.append(mainDivSlide);
+}
+
+
     // slides popular food 
 function showSlidesPopularFood(){
     var getSlidersClass = $("div.sliders");
-    var mainDivSlide = $("<div>").attr("CategoryID", "21").addClass("slider");
+
      //------START : hrLine ------
-     var sliderContentsHeader_json = $("<div>").addClass("hrLine");
-     var lineNameFA = $("<p>").attr("text_key", "popular").html("پرطرفدار");
-     var lineSpan = $("<span>").addClass("hrTheme");
-     var lineNameEN = $("<p>").attr("text_key", "popularEn").html("popular");
-     sliderContentsHeader_json.append(lineNameFA);
-     sliderContentsHeader_json.append(lineSpan);
-     sliderContentsHeader_json.append(lineNameEN);
-     mainDivSlide.append(sliderContentsHeader_json);
+    unifyingHrline(getSlidersClass ,21 , null , "popular", "popularEn");
      //------END : hrLine ------
+
+    var mainDivSlide = $(".slider"+"[CategoryID ='21']");
 
     for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++){
         for (var InfoNum =0; InfoNum < menu.Information[IDNumMain].Info.length; InfoNum++) {
@@ -1998,18 +2021,12 @@ function showSlides(){
      // show main slides food 
     var getSlidersClass = $("div.sliders");
     for (var IDNumMain = 0; IDNumMain < menu.Information.length; IDNumMain++) {
-        var mainDivSlide = $("<div>").attr("CategoryID", menu.Information[IDNumMain].CategoryID).addClass("slider");
-        
+
         //------START : hrLine ------
-        var sliderContentsHeader_json = $("<div>").addClass("hrLine");
-        var lineNameFA = $("<p>").attr("text_key", menu.Information[IDNumMain].headerNameFA).html(menu.Information[IDNumMain].headerNameFA);
-        var lineSpan = $("<span>").addClass("hrTheme");
-        var lineNameEN = $("<p>").attr("text_key", menu.Information[IDNumMain].headerNameEN).html(menu.Information[IDNumMain].headerNameEN);
-        sliderContentsHeader_json.append(lineNameFA);
-        sliderContentsHeader_json.append(lineSpan);
-        sliderContentsHeader_json.append(lineNameEN);
-        mainDivSlide.append(sliderContentsHeader_json);
+        unifyingHrline(getSlidersClass ,IDNumMain , menu.Information);
         //------END : hrLine ------
+
+        var mainDivSlide = $(".slider"+"[CategoryID ='"+menu.Information[IDNumMain].CategoryID+"']");
         
         for (var InfoNum =0; InfoNum < menu.Information[IDNumMain].Info.length; InfoNum++) {
             
