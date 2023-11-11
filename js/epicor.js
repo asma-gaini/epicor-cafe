@@ -1888,11 +1888,15 @@ function showMenuGathe(){
 
      // popular food 
     var urlImagePopular = "./img/popular/icons8-food-menu-53.png"
-    unifyingMenubar (menubarGatherLink , 21 , null, urlImagePopular,"popular", "popularEn");
+    unifyingMenubar (menubarGatherLink , 0, urlImagePopular,"popular", "popularEn");
 
          // main food 
     for (let i = 1; i <= menu.Information.length; i++) {  
-        unifyingMenubar (menubarGatherLink , i ,menu.Information );
+        var urlImageMainMenuBar = menu.Information[i-1].headerImg;
+        var titleFaMenuBar = menu.Information[i-1].headerNameFA;
+        var titleEnMenuBar = menu.Information[i-1].headerNameEN
+
+        unifyingMenubar (menubarGatherLink , i , urlImageMainMenuBar , titleFaMenuBar , titleEnMenuBar);
     }
 }
 
