@@ -1,10 +1,9 @@
 var navigationBar_key= {
-    "headerNav":[
+    "headerNav":
         {
             "berandName": "nameCoffe",
             "logoImg": "./img/header/61ae15e0a4b5f.jpg",
-        }
-    ],
+        },
     "Information":
     [
         {
@@ -107,7 +106,7 @@ $( document ).ready(function() {
     createNave();
     
 
-    // getAndSetTranslateLanguageNavAdminPanel();
+    getAndSetTranslateLanguageNavAdminPanel();
 
 })  
 
@@ -131,10 +130,10 @@ function JqueryNavigationBar(){
     var createHeaderNav = $("<div>").addClass("headerVerticalNav");
     verticalNavigation.append(createHeaderNav);
     var logoImage = $("<img>").addClass("logoVerticalNav")
-      .attr("src" , navigationBar_key.headerNav[0].logoImg)
-      .attr("alt", "epicor cafe");
+      .attr("src" , navigationBar_key.headerNav.logoImg)
+      .attr("alt", navigationBar_key.headerNav.berandName);
     createHeaderNav.append(logoImage);
-    var berandNme = $("<span>").addClass("brandName").addClass("displayNone").attr("text_key" , navigationBar_key.headerNav[0].berandName).html( navigationBar_key.headerNav[0].berandName);
+    var berandNme = $("<span>").addClass("brandName").addClass("displayNone").attr("text_key" , navigationBar_key.headerNav.berandName).html( navigationBar_key.headerNav.berandName);
     createHeaderNav.append(berandNme);
     var mainList = $("<ul>");
     verticalNavigation.append(mainList);
@@ -147,10 +146,11 @@ function JqueryNavigationBar(){
 
         if (navigationBar_key.Information[listNumber].subLink) {
             var linkList = $("<a>").addClass("link").addClass("displayNone").attr("href" , "#")
+            // .attr("text_key" , navigationBar_key.Information[listNumber].Name)
             .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
             .css("display" , "none").html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
-            var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon").addClass("glyphicon-menu-right");
+            var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].glyphinCollapsible);
             linkList.append(glyphinCollapsible);
 
             var subLinkList = $("<ul>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("subLink").addClass("closeDropdown");
@@ -159,13 +159,14 @@ function JqueryNavigationBar(){
             for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[listNumber].subLink.length; subLinkNumber++) {
                 var subListLi = $("<li>");
                 subLinkList.append(subListLi);
-                var subLink = $("<a>").attr("href" , "#").html( navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name);
+                var subLink = $("<a>").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name)
+                    .html( navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name);
                 subListLi.append(subLink);
             }
 
         }
         else{
-            var linkList = $("<a>").addClass("link").attr("href" , "#").css("display" , "none").html(navigationBar_key.Information[listNumber].Name);
+            var linkList = $("<a>").addClass("link").attr("href" , "#").css("display" , "none").attr("text_key" , navigationBar_key.Information[listNumber].Name).html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
         }
         
@@ -179,12 +180,12 @@ function JqueryNavigationBar(){
 }
 
 function getAndSetTranslateLanguageNavAdminPanel(){
-    var ContainsKeyName = $("*[keyname]");
+    var ContainsKeyName = $("*[text_key]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "keyname") {
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
 
                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
                 var translatedValueNav;

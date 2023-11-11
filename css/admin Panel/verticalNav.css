@@ -3,7 +3,6 @@
     src: url(../../fonts/FontsFree-Net-ir_sans.ttf);
 }
 body{
-    font-family: 'iransans';
     box-sizing: border-box;
     max-width: 1600px;
 }
@@ -22,6 +21,7 @@ body{
     padding-bottom: 5px;
   }
   .sidebar {
+    font-family: 'iransans';
     height: 100%;
     width: 120px;
     position: fixed;
@@ -45,7 +45,7 @@ body{
     margin-left: -10px;
   }
   .sidebar ul li a{
-    font-size: 18px;
+    font-size: 14px;
     /* display: inline; */
     padding-left: 3px;
     /* display: none; */
