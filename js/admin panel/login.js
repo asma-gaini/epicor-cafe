@@ -57,7 +57,7 @@ var login_key= {
  function JqueryLogin(){
     var loginId = $("#login");
     
-    var mainDivLogin = $("<div>").addClass("wrapper");
+    var mainDivLogin = $("<div>").addClass("wrapperLogin");
     loginId.append(mainDivLogin);
 
      // create logo 
