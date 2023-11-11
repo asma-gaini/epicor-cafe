@@ -1835,40 +1835,28 @@ function popularFoodShape(menuInformation){
     menuInformation.append(createPopularFoodShape);
 }
 
-function unifyingMenubar (DivItem , number ,object ,urlImage , nameFa, nameEn){
-   
-    var menuBarButton = $("<button>").attr("CategoryID", number).addClass(menubarItem).attr('onclick' , 'linked(\''+number+'\')');
-    DivItem.append(menuBarButton);
 
-    if(object!= null){
-        var menuBarImage = $("<img>").attr("src" , object[number-1].headerImg).attr("alt" , object[number-1].headerNameEN).addClass(menubarImageClass);
-        menuBarButton.append(menuBarImage);
-    }
-    else{
-        var menuBarImage = $("<img>").attr("src" , urlImage).attr("alt" , "nameFa").addClass(menubarImageClass);
-        menuBarButton.append(menuBarImage);
-    }
+// ********************* display menu and biil va cearte this from json  *********************
+
+    // Using a function to create a popular menu bar in the drop-down and top menu
+function unifyingMenubar (mainDiv , category ,urlImage , titleFa, titleEn){
+   
+    var menuBarButton = $("<button>").attr("CategoryID", category).addClass(menubarItem).attr('onclick' , 'linked(\''+category+'\')');
+    mainDiv.append(menuBarButton);
+
+    var menuBarImage = $("<img>").attr("src" , urlImage).attr("alt" , titleFa).addClass(menubarImageClass);
+    menuBarButton.append(menuBarImage);
 
     var MenuContent = $("<div>").addClass(menubarInfoClass);
     menuBarButton.append(MenuContent);
 
-    if(object!= null){
-        var headerNameMenubarEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", object[number-1].headerNameEN).html(object[number-1].headerNameEN);
-        MenuContent.append(headerNameMenubarEn);
-        var headerNameMenubarFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", object[number-1].headerNameFA).html(object[number-1].headerNameFA);
-        MenuContent.append(headerNameMenubarFa);
-    }
-   else{
-        var headerNameMenubarEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", nameEn).html(nameEn);
-        MenuContent.append(headerNameMenubarEn);
-        var headerNameMenubarFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", nameFa).html(nameFa);
-        MenuContent.append(headerNameMenubarFa);
-   }
-
-
+    var headerNameMenubarEn = $("<p>").addClass(menubarNumeENClass).attr("text_key", titleEn).html(titleEn);
+    MenuContent.append(headerNameMenubarEn);
+    var headerNameMenubarFa = $("<p>").addClass(menubarNameFAClass).attr("text_key", titleFa).html(titleFa);
+    MenuContent.append(headerNameMenubarFa);
 }
 
-// ********************* display menu and biil va cearte this from json  *********************
+
     // main menu in top 
 function showMenubar(){
     var getItemClass = $("div.items");
@@ -1876,13 +1864,17 @@ function showMenubar(){
     getItemClass.append(DivItem);
         // popular food 
     var urlImagePopular = "./img/popular/icons8-food-menu-53.png"
-    unifyingMenubar (DivItem , 21 , null, urlImagePopular,"popular", "popularEn");
+    unifyingMenubar (DivItem , 0, urlImagePopular,"popular", "popularEn");
 
 
 
         // main food 
     for (let i = 1; i <= menu.Information.length; i++) {  
-        unifyingMenubar (DivItem , i ,menu.Information );
+        var urlImageMainMenuBar = menu.Information[i-1].headerImg;
+        var titleFaMenuBar = menu.Information[i-1].headerNameFA;
+        var titleEnMenuBar = menu.Information[i-1].headerNameEN
+
+        unifyingMenubar (DivItem , i , urlImageMainMenuBar , titleFaMenuBar , titleEnMenuBar);
     }
 }
 
