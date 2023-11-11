@@ -1,9 +1,10 @@
 var navigationBar_key= {
-    "headerNav":
+    "headerNav":[
         {
             "berandName": "nameCoffe",
             "logoImg": "./img/header/61ae15e0a4b5f.jpg",
-        },
+        }
+    ],
     "Information":
     [
         {
@@ -103,42 +104,43 @@ var navigationBarEnJson = JSON.parse(navigationBarEnJsonString);
 
 $( document ).ready(function() {
 
-    // createNave();
-    JqueryNavigationBar()
+    createNave();
+    
 
     // getAndSetTranslateLanguageNavAdminPanel();
 
 })  
 
 
-// function createNave(){
-//     const template = document.createElement('template');
+function createNave(){
+    const template = document.createElement('template');
 
-//     $("template").html(JqueryNavigationBar())
+    $("template").html(JqueryNavigationBar())
 
-//     var navigationBar = document.getElementById("navBar");
-//     navigationBar.append(template.content);
+    var navigationBar = document.getElementById("navBar");
+    navigationBar.append(template.content);
 
     
 
-// }
+}
 
 function JqueryNavigationBar(){
     var navId = $("#navBar");
     var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthClose");
     navId.append(verticalNavigation);
-    var createHeaderNav = $("<div>").addClass("header");
+    var createHeaderNav = $("<div>").addClass("headerVerticalNav");
     verticalNavigation.append(createHeaderNav);
-    var logoImage = $("<img>").addClass("logo")
-        .attr("src" , navigationBar_key.headerNav.logoImg)
-        .attr("alt", "epicor cafe");
+    var logoImage = $("<img>").addClass("logoVerticalNav")
+      .attr("src" , navigationBar_key.headerNav[0].logoImg)
+      .attr("alt", "epicor cafe");
     createHeaderNav.append(logoImage);
-    var berandNme = $("<span>").addClass("brandName").addClass("displayNone").attr("text_key" , navigationBar_key.headerNav.berandName).html( navigationBar_key.headerNav.berandName);
+    var berandNme = $("<span>").addClass("brandName").addClass("displayNone").attr("text_key" , navigationBar_key.headerNav[0].berandName).html( navigationBar_key.headerNav[0].berandName);
     createHeaderNav.append(berandNme);
     var mainList = $("<ul>");
     verticalNavigation.append(mainList);
+
     for (let listNumber = 0; listNumber < navigationBar_key.Information.length; listNumber++) {
-        console.log(navigationBar_key.Information.length);
+        // console.log(navigationBar_key.Information.length);
         var mainListLi =  $("<li>");
         mainList.append(mainListLi);
         var glyphin = $("<span>").addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].Image);
@@ -177,36 +179,34 @@ function JqueryNavigationBar(){
     openNavBarBtn.append(openBtnShape);
 }
 
+function getAndSetTranslateLanguageNavAdminPanel(){
+    var ContainsKeyName = $("*[keyname]");
+    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
-
-// function getAndSetTranslateLanguageNavAdminPanel(){
-//     var ContainsKeyName = $("*[keyname]");
-//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
-
-//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "keyname") {
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "keyname") {
 
-//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-//                 var translatedValueNav;
-//                 if(window.localStorage.getItem("language") == "En"){
-//                     translatedValueNav = navigationBarEnJson[keyValue];
-//                 }
-//                 else{
-//                     translatedValueNav = navigationBarFaJson[keyValue];
-//                 }
-//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-//             }
-//         }
-//     }
-// }
+                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+                var translatedValueNav;
+                if(window.localStorage.getItem("language") == "En"){
+                    translatedValueNav = navigationBarEnJson[keyValue];
+                }
+                else{
+                    translatedValueNav = navigationBarFaJson[keyValue];
+                }
+                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+            }
+        }
+    }
+}
 
-// function changeLanguageNavAdminPanel()
-// {
-//     var getLangAdmin = $("#languageAdmin").val();
-//     var setValueLang = window.localStorage.setItem("language" ,getLangAdmin );
-//     getAndSetTranslateLanguageNavAdminPanel();
-// }
+function changeLanguageNavAdminPanel()
+{
+    var getLangAdmin = $("#languageAdmin").val();
+    var setValueLang = window.localStorage.setItem("language" ,getLangAdmin );
+    getAndSetTranslateLanguageNavAdminPanel();
+}
 
 function openAndClose(){
     $(".link").toggleClass("displayNone displayInline");
@@ -216,18 +216,36 @@ function openAndClose(){
     $("#mySidebar").toggleClass("mySidebarWidthClose mySidebarWidthOpen");
 }
 
-function dropdownSubLink(subID){
+// function openNav() {
+//     document.getElementById("mySidebar").style.width = "280px";
+//     $('.link').css('display', 'inline');
+//     $(".glyphicon").css('display', 'inline');
+//     $(".brandName").css('display', 'inline');
+//     $(".openbtn").css('left', '280px');
+//     document.getElementById("main").style.marginLeft = "250px";
+//   }
+  
+//   function closeNav() {
+//     $(".glyphicon").css('display', 'inline');
+//     $(".glyphinAccount").css('padding-left','10px');
+//     $('.link').css('display', 'none');
+//     $(".brandName").css('display', 'none');
+//     $(".openbtn").css('left', '120px');
+//     document.getElementById("mySidebar").style.width = "120px";
+//     document.getElementById("main").style.marginLeft= "0";
+//   }
+  
+  function dropdownSubLink(subID){
     var subLink = $("ul.subLink[subId='"+subID+"']");
     subLink.toggleClass("closeDropdown openDropdown");
     var glyphinIcon = $("span.glyphicon[subId='"+subID+"']");
     glyphinIcon.toggleClass("glyphicon-menu-right glyphicon-menu-down");
-}
+  }
   
-function createVerticalNavBar(){
+  function createVerticalNavBar(){
     var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar");
     var closeBtnNavBar = $("<a>").attr("href" , "javascript:void(0)")
     .addClass("closebtn")
     .attr("onclick" , "closeNav()");
     verticalNavigation.append(closeBtnNavBar);
-}
-
+  }

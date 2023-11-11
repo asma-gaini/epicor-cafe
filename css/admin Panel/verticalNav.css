@@ -1,59 +1,210 @@
-/* @font-face {
+@font-face {
     font-family: iransans;
-    src: url(./FontsFree-Net-ir_sans.ttf);
-} */
+    src: url(../../fonts/FontsFree-Net-ir_sans.ttf);
+}
 body{
-    /* font-family: 'iransans'; */
+    font-family: 'iransans';
     box-sizing: border-box;
     max-width: 1600px;
 }
-
-/* ///////////////////////////////navigation bar/////////////////////////////// */
-.navbar-inverse {
-    box-shadow: rgb(134, 53, 0) 0px -20px 30px -30px inset;
-    background-color: rgb(192, 160, 40);
-    border-color: rgb(134 53 0 / 78%);
-    margin-top: 20px;
-}
-.navbar-inverse .navbar-brand {
-    color: rgb(255, 255, 255);
-}
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    background-color: inherit;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-}
-.navbar-inverse .navbar-nav>li>a {
-    color: rgb(255, 255, 255);
-}
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    background-color: inherit;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-}
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-    color: #fff;
-    background-color: inherit;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-}
-.dropdown-menu {
-    box-shadow: rgb(134, 53, 0) 0px -20px 30px -30px inset;
-    background-color: rgb(192, 160, 40);
-}
-.dropdown-menu>li>a{
-    color: #fff;
-    background-color: inherit;
-    /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
-}
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: #fefbfb;
+.sidebar a:active, .sidebar a:focus-within{
+    color: rgb(95, 97, 180) !important;
+  }
+  .glyphicon{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 5px;
+    color: #818181;
+    display: inline;
+  }
+  .glyphinAccount{
+    padding-left: 10px;
+    padding-bottom: 5px;
+  }
+  .sidebar {
+    height: 100%;
+    width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .mySidebarWidthOpen{
+    width: 280px;
+  }
+  .mySidebarWidthClose{
+    width: 120px;
+  }
+  .sidebar ul li{
+    padding: 10px 0px;
+    list-style-type: none;
+    margin-left: -10px;
+  }
+  .sidebar ul li a{
+    font-size: 18px;
+    /* display: inline; */
+    padding-left: 3px;
+    /* display: none; */
+  
+  }
+  /* .glyphinLink span{
+    width: 20px;
+    display: inline;
+  }
+  .glyphinLink{
+    width: 20px;
+  }
+  .glyphinLink:hover span{
+    color: rgb(108, 88, 176);
+  } */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    background-color: rgb(245, 245, 245,0.3);
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    font-size: 25px;
+    color: #818181;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 60px;
+  }
+  
+  .openbtn {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+    /* border: 1px solid rgb(95, 97, 180); */
+    color: rgb(9, 9, 9);
+    /* padding: 10px; */
+    left: 120px;
+  }
+.openbtnToggleOpen{
+    left: 280px !important;
 }
-@media (max-width: 767px){
-    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-        color: #ffffff;
-    }
+.openbtnToggleClose{
+    left: 120px !important;
 }
+  .glyphicon-triangle-right{
+    padding-left: 0px;
+    padding-right: 0px;
+    color: rgb(9, 9, 9);
+  }
+  
+  .openbtn:hover .glyphicon-triangle-right{
+    color: rgb(95, 97, 180);
 
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    /* padding: 16px; */
+  }
+  .mainMarginleftOpen{
+    margin-left: 250px;
+  } 
+  .mainMarginleftClose{
+    margin-left: 0px;
+  } 
+  .headerVerticalNav{
+    background-color: rgb(37 37 37 / 70%);
+    margin-bottom: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .logoVerticalNav{
+    width: 60px;
+    margin: 30px;
+    border-radius: 10px;
+  }
+  .brandName{
+    color: white;
+    font-size: 20px;
+    display: none;
+  }
+  .subLink{
+    padding-left: 65px;
+  }
+  .subLink li a{
+    font-size: 15px !important;
+  }
+  .subLink li{
+    list-style-type: circle !important;
+  }
+  .openDropdown{
+    /* max-height: 250px; */
+    display: block;
+  }
+  .closeDropdown{
+    /* height: 0px; */
+    display: none;
+  }
+  
+  .account {
+    position: absolute;
+    bottom: 0;
+  }
+  .account a span:active, .account a span:focus-within, .account a span:hover{
+    color: blueviolet !important;
+  }
+  .account a, .account span{
+    font-size: 15px;
+  }
+  .glyphicon-menu-right, .glyphicon-menu-down{
+    font-size: 15px;
+    padding-left: 5px;
+  
+  }
+  .profile, .logout{
+    display: none ;
+    /* padding-left: 0px; */
+  }
+  
+  .displayInline {
+    display: inline !important;
+  }
 
-
+  displayNone{
+    display: none !important;
+  }
+  
+  /* scrroll  */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(108, 88, 176); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 114, 170); 
+   
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
