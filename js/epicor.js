@@ -1739,10 +1739,10 @@ function changeLanguage()
 
 // ********************* abouat us  *********************
 
-function openPopup(divPopup) {
+function openPopupAboutUs(divPopup) {
 	$(divPopup).fadeIn(250);
 }
-function closePopup(divPopup) {
+function closePopupAboutUs(divPopup) {
 	$(divPopup).fadeOut(250);
 }
 function CN() {

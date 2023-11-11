@@ -104,7 +104,7 @@ body{
 }
          /* ******************************* header of page ---->about us ******************************* */
 
-.wrapAbout{
+.wrapAboutUs{
 	width:80%;
 	display:block;
 	margin:20px auto 20px auto;
@@ -127,7 +127,7 @@ body{
 
 /* Popup CSS */
 
-.wrapAbout_popup{
+.wrapAboutUs_popup{
 	display:none;
 	position: fixed;
 	z-index: 1;
