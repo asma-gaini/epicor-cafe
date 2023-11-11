@@ -51,16 +51,7 @@ body{
     /* display: none; */
   
   }
-  /* .glyphinLink span{
-    width: 20px;
-    display: inline;
-  }
-  .glyphinLink{
-    width: 20px;
-  }
-  .glyphinLink:hover span{
-    color: rgb(108, 88, 176);
-  } */
+
   .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -84,7 +75,6 @@ body{
     font-size: 20px;
     cursor: pointer;
     background-color: #ffffff;
-    /* border: 1px solid rgb(95, 97, 180); */
     color: rgb(9, 9, 9);
     /* padding: 10px; */
     left: 120px;
@@ -143,11 +133,9 @@ body{
     list-style-type: circle !important;
   }
   .openDropdown{
-    /* max-height: 250px; */
     display: block;
   }
   .closeDropdown{
-    /* height: 0px; */
     display: none;
   }
   
@@ -168,7 +156,6 @@ body{
   }
   .profile, .logout{
     display: none ;
-    /* padding-left: 0px; */
   }
   
   .displayInline {

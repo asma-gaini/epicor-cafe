@@ -140,7 +140,6 @@ function JqueryNavigationBar(){
     verticalNavigation.append(mainList);
 
     for (let listNumber = 0; listNumber < navigationBar_key.Information.length; listNumber++) {
-        // console.log(navigationBar_key.Information.length);
         var mainListLi =  $("<li>");
         mainList.append(mainListLi);
         var glyphin = $("<span>").addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].Image);
@@ -216,24 +215,7 @@ function openAndClose(){
     $("#mySidebar").toggleClass("mySidebarWidthClose mySidebarWidthOpen");
 }
 
-// function openNav() {
-//     document.getElementById("mySidebar").style.width = "280px";
-//     $('.link').css('display', 'inline');
-//     $(".glyphicon").css('display', 'inline');
-//     $(".brandName").css('display', 'inline');
-//     $(".openbtn").css('left', '280px');
-//     document.getElementById("main").style.marginLeft = "250px";
-//   }
-  
-//   function closeNav() {
-//     $(".glyphicon").css('display', 'inline');
-//     $(".glyphinAccount").css('padding-left','10px');
-//     $('.link').css('display', 'none');
-//     $(".brandName").css('display', 'none');
-//     $(".openbtn").css('left', '120px');
-//     document.getElementById("mySidebar").style.width = "120px";
-//     document.getElementById("main").style.marginLeft= "0";
-//   }
+
   
   function dropdownSubLink(subID){
     var subLink = $("ul.subLink[subId='"+subID+"']");
