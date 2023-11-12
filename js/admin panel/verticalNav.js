@@ -106,7 +106,7 @@ $( document ).ready(function() {
     createNave();
 
 
-    // getAndSetTranslateLanguageNavAdminPanel();
+    getAndSetTranslateLanguageNavAdminPanel();
 
 })  
 
@@ -225,10 +225,3 @@ function openAndClose(){
     glyphinIcon.toggleClass("glyphicon-menu-right glyphicon-menu-down");
   }
   
-  function createVerticalNavBar(){
-    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar");
-    var closeBtnNavBar = $("<a>").attr("href" , "javascript:void(0)")
-    .addClass("closebtn")
-    .attr("onclick" , "closeNav()");
-    verticalNavigation.append(closeBtnNavBar);
-  }
