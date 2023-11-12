@@ -150,7 +150,8 @@ function JqueryNavigationBar(){
             .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
             .css("display" , "none").html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
-            var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].glyphinCollapsible);
+            var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon")
+                .addClass(navigationBar_key.Information[listNumber].glyphinCollapsible).addClass("collapsibleGlyph").addClass("collapsibleGlyphHide");
             mainListLi.append(glyphinCollapsible);
 
             var subLinkList = $("<ul>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("subLink").addClass("closeDropdown");
@@ -213,6 +214,8 @@ function openAndClose(){
     $(".openbtn").toggleClass("openbtnToggleClose openbtnToggleOpen");
     $("#main").toggleClass("mainMarginleftClose mainMarginleftOpen");
     $("#mySidebar").toggleClass("mySidebarWidthClose mySidebarWidthOpen");
+    $(".collapsibleGlyph").toggleClass("collapsibleGlyphHide collapsibleGlyphShow");
+
 }
 
   function dropdownSubLink(subID){
