@@ -1,0 +1,102 @@
+.navbar-inverse {
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    border-color: #080808;
+    border: none;
+}
+.horizontalNavLogo{
+    width: 40px;
+    border-radius: 10px;
+}
+.horizontalNavBerand{
+    font-size: 17px;
+}
+
+.navbar-brand>img {
+    display: inline-block;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.profileUserHorizontalNav{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+.profileUser{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.fa {
+    color: rgb(5, 5, 5);
+    padding: 8px;
+}
+.notifications{
+    font-size: 18px !important;
+    padding-top: 1px;
+}
+.navbar-inverse .navbar-brand {
+    color: #000000;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #000000;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #000000;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+.nav>li {
+    position: relative;
+    display: block;
+    margin: auto 10px;
+}
+.dropdown-toggle{
+    /* height: 10px; */
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: inherit;
+    box-shadow: 2px 2px 2px #b2a7a7, -2px -2px 2px #b2a7a7;
+    border-radius: 10px;
+
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #010101;
+    background-color: transparent;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    left: 37px;
+}
+.dropdown-menu {
+    border-radius: 9px;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
