@@ -1,7 +1,7 @@
 
 // ********************* json file  *********************
 var login_key= {
-    "image": "./img/admin panel/logo/61ae15e0a4b5f.jpg",
+    "image": "../../img/admin panel/logo/logo.jpg",
     "brand" : "brandName",
     "userName":"usernamePlaceHolder",
     "pasword": "paswordPlaceHolder",
