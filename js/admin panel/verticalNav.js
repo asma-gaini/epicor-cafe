@@ -2,7 +2,7 @@ var navigationBar_key= {
     "headerNav":
         {
             "berandName": "nameCoffe",
-            "logoImg": "./img/header/61ae15e0a4b5f.jpg",
+            "logoImg": "../../img/admin panel/logo/logo.jpg",
         },
     "Information":
     [
@@ -189,7 +189,7 @@ function getAndSetTranslateLanguageNavAdminPanel(){
 
                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
                 var translatedValueNav;
-                if(window.localStorage.getItem("language") == "En"){
+                if(window.localStorage.getItem("lang") == "En"){
                     translatedValueNav = navigationBarEnJson[keyValue];
                 }
                 else{
@@ -204,7 +204,7 @@ function getAndSetTranslateLanguageNavAdminPanel(){
 function changeLanguageNavAdminPanel()
 {
     var getLangAdmin = $("#languageAdmin").val();
-    var setValueLang = window.localStorage.setItem("language" ,getLangAdmin );
+    var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
     getAndSetTranslateLanguageNavAdminPanel();
 }
 
