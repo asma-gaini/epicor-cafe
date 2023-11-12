@@ -104,7 +104,7 @@ var navigationBarEnJson = JSON.parse(navigationBarEnJsonString);
 $( document ).ready(function() {
 
     createNave();
-    
+
 
     // getAndSetTranslateLanguageNavAdminPanel();
 
