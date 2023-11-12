@@ -35,9 +35,11 @@ body{
   }
   .mySidebarWidthOpen{
     width: 280px;
+    transition: width 1s;
   }
   .mySidebarWidthClose{
     width: 120px;
+    transition: width 1s;
   }
   .sidebar ul li{
     padding: 10px 0px;
@@ -81,9 +83,11 @@ body{
   }
 .openbtnToggleOpen{
     left: 280px !important;
+    transition: left 1s;
 }
 .openbtnToggleClose{
     left: 120px !important;
+    transition: left 1s;
 }
   .glyphicon-triangle-right{
     padding-left: 0px;
