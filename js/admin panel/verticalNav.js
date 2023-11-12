@@ -174,7 +174,7 @@ function JqueryNavigationBar(){
 
     var openNavBarBtn = $("<div>").attr("id" , "main").addClass("mainMarginleftClose");
     navId.append(openNavBarBtn);
-    var Collapsibleflesh = $("<span>").addClass("glyphicon").addClass("glyphicon-triangle-right")
+    var Collapsibleflesh = $("<span>").addClass("glyphicon").addClass("glyphicon-triangle-right").addClass("openerOcloser")
     var openBtnShape = $("<button>").addClass("openbtn").addClass("openbtnToggleClose").attr("onclick" , "openAndClose()").html(Collapsibleflesh);
     openNavBarBtn.append(openBtnShape);
 }

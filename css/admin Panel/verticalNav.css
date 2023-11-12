@@ -204,3 +204,165 @@ body{
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+  
+@media only screen and (max-width: 720px) {
+  .sidebar ul li a{
+    font-size: 11px ;
+  }
+  .subLink li a{
+    font-size: 9px !important;
+  }
+  .glyphicon-menu-right, .glyphicon-menu-down{
+    font-size: 5px !important;
+    padding-left: 0;
+    margin-left: -3px !important;
+  }
+  .glyphicon{
+    font-size: 13px;
+    margin-left: -15px;
+  }
+  .mySidebarWidthOpen{
+    width: 130px;
+  }
+  .mySidebarWidthClose{
+    width: 50px;
+  }
+  .openbtnToggleOpen {
+    left: 130px !important;
+  }
+  .openbtnToggleClose{
+    left: 50px !important;
+  }
+  .logoVerticalNav{
+    width: 30px;
+    margin: 10px;
+  }
+  .brandName{
+    font-size: 12px;
+  }
+  .openbtn {
+    font-size: 11px;
+  }
+  ol, ul {
+    margin-left: -18px !important;
+  }
+  .openerOcloser{
+    font-size: 13px !important;
+    margin-left: -3px !important;
+  }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 720px) {
+  .sidebar ul li a{
+    font-size: 13px ;
+  }
+  .subLink li a{
+    font-size: 10px !important;
+  }
+  .glyphicon-menu-right, .glyphicon-menu-down{
+    font-size: 8px !important;
+    padding-left: 0;
+  }
+  .glyphicon{
+    font-size: 15px;
+  }
+  .mySidebarWidthOpen{
+    width: 180px;
+  }
+  .mySidebarWidthClose{
+    width: 80px;
+  }
+  .openbtnToggleOpen {
+    left: 180px !important;
+  }
+  .openbtnToggleClose{
+    left: 80px !important;
+  }
+  .logoVerticalNav{
+    width: 50px;
+    margin: 20px;
+  }
+  .brandName{
+    font-size: 12px;
+  }
+  .openbtn {
+    font-size: 13px;
+  }
+  ol, ul {
+    margin-left: -10px !important;
+}
+} 
+
+@media only screen and (max-width: 1140px) and (min-width: 960px) {
+  .sidebar ul li a{
+    font-size: 14px ;
+  }
+  .subLink li a{
+    font-size: 11px !important;
+  }
+  .glyphicon-menu-right, .glyphicon-menu-down{
+    font-size: 8px !important;
+    padding-left: 0;
+  }
+  .glyphicon{
+    font-size: 18px;
+  }
+  .mySidebarWidthOpen{
+    width: 200px;
+  }
+  .mySidebarWidthClose{
+    width: 90px;
+  }
+  .openbtnToggleOpen {
+    left: 200px !important;
+  }
+  .openbtnToggleClose{
+    left: 90px !important;
+  }
+  .logoVerticalNav{
+    width: 60px;
+    margin: 25px;
+  }
+  .brandName{
+    font-size: 14px;
+  }
+  .openbtn {
+    font-size: 15px;
+  }
+} 
+
+@media only screen and (max-width: 1400px) and (min-width: 1140px) {
+  .sidebar ul li a{
+    font-size: 14px ;
+  }
+  .subLink li a{
+    font-size: 11px !important;
+  }
+  .glyphicon-menu-right, .glyphicon-menu-down{
+    font-size: 10px !important;
+  }
+  .glyphicon{
+    font-size: 20px;
+  }
+  .mySidebarWidthOpen{
+    width: 230px;
+  }
+  .mySidebarWidthClose{
+    width: 100px;
+  }
+  .openbtnToggleOpen {
+    left: 230px !important;
+  }
+  .openbtnToggleClose{
+    left: 100px !important;
+  }
+  .logoVerticalNav{
+    width: 60px;
+    margin: 30px;
+  }
+  .brandName{
+    font-size: 18px;
+  }
+} 
+
