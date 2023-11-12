@@ -106,7 +106,7 @@ $( document ).ready(function() {
     createNave();
     
 
-    getAndSetTranslateLanguageNavAdminPanel();
+    // getAndSetTranslateLanguageNavAdminPanel();
 
 })  
 
@@ -146,16 +146,15 @@ function JqueryNavigationBar(){
 
         if (navigationBar_key.Information[listNumber].subLink) {
             var linkList = $("<a>").addClass("link").addClass("displayNone").attr("href" , "#")
-            // .attr("text_key" , navigationBar_key.Information[listNumber].Name)
+            .attr("text_key" , navigationBar_key.Information[listNumber].Name)
             .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
             .css("display" , "none").html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
             var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].glyphinCollapsible);
-            linkList.append(glyphinCollapsible);
+            mainListLi.append(glyphinCollapsible);
 
             var subLinkList = $("<ul>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("subLink").addClass("closeDropdown");
             mainListLi.append(subLinkList);
-            // console.log(navigationBar_key.Information[listNumber].subLink)
             for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[listNumber].subLink.length; subLinkNumber++) {
                 var subListLi = $("<li>");
                 subLinkList.append(subListLi);
@@ -216,8 +215,6 @@ function openAndClose(){
     $("#mySidebar").toggleClass("mySidebarWidthClose mySidebarWidthOpen");
 }
 
-
-  
   function dropdownSubLink(subID){
     var subLink = $("ul.subLink[subId='"+subID+"']");
     subLink.toggleClass("closeDropdown openDropdown");
