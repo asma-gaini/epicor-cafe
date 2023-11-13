@@ -279,8 +279,23 @@ function openAndClose(){
     $(".openbtn").toggleClass("openbtnToggleOpen openbtnToggleClose");
     $("#main").toggleClass("mainMarginleftOpen mainMarginleftClose");
     $("#mySidebar").toggleClass("mySidebarWidthOpen mySidebarWidthClose");
-    $(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");
-    $(".link").toggleClass("displayInline displayNone");
+    if( $(".link").hasClass("displayNone")){
+        setTimeout(function () {
+            $(".link").removeClass("displayNone");
+            $(".link").addClass("displayInline");
+        }, 300);
+        
+    }
+    else{$(".link").toggleClass("displayInline displayNone");}
+    
+    if( $(".collapsibleGlyph").hasClass("collapsibleGlyphHide")){
+        setTimeout(function () {
+            $(".collapsibleGlyph").removeClass("collapsibleGlyphHide");
+            $(".collapsibleGlyph").addClass("collapsibleGlyphShow");
+        }, 300);
+        
+    }
+    else{$(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");}
     $(".brandName").toggleClass("displayInline displayNone");
    
     var listContainSubLink = $("ul.subLink");
