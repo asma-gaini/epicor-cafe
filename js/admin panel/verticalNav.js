@@ -303,14 +303,9 @@ function openAndClose(){
         listContainSubLink.removeClass("openDropdown");
         listContainSubLink.addClass("closeDropdown");
     }
-    console.log(linkMainId)
-    console.log(linkMainId[0])
     if (linkMainId.attr("subid")!= null &&  $("#mySidebar").hasClass("mySidebarWidthOpen")) {
-        console.log("yes");
         var subIdValue = linkMainId.attr("subid");
-        console.log(subIdValue);
         var subLink = $("ul[subId='"+subIdValue+"']");
-        console.log(subLink)
         if(subLink.hasClass("closeDropdown")){
             subLink.removeClass("closeDropdown");
             subLink.addClass("openDropdown");
