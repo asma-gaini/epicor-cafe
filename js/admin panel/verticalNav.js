@@ -274,9 +274,7 @@ function openAndClose(){
     var allContainMainId = $("*[mainId]");
     allContainMainId.removeClass("colorLink");
     var linkMainId = $("a[mainId='"+holdMaimId+"']");
-    // console.log(linkMainId.html());
     linkMainId.addClass("colorLink");
-    // console.log(holdMaimId);
 
     $(".link").toggleClass("displayInline displayNone");
     $(".brandName").toggleClass("displayInline displayNone");
