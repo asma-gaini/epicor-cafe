@@ -150,7 +150,7 @@ function createNave(){
 
 function NavigationBar(){
     var navId = $("#navBar");
-    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthClose");
+    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthOpen");
     navId.append(verticalNavigation);
     var createHeaderNav = $("<div>").addClass("headerVerticalNav");
     verticalNavigation.append(createHeaderNav);
@@ -158,7 +158,7 @@ function NavigationBar(){
       .attr("src" , navigationBar_key.headerNav.logoImg)
       .attr("alt", navigationBar_key.headerNav.berandName);
     createHeaderNav.append(logoImage);
-    var berandNme = $("<span>").addClass("brandName").addClass("displayNone").attr("text_key" , navigationBar_key.headerNav.berandName).html( navigationBar_key.headerNav.berandName);
+    var berandNme = $("<span>").addClass("brandName").addClass("displayInline").attr("text_key" , navigationBar_key.headerNav.berandName).html( navigationBar_key.headerNav.berandName);
     createHeaderNav.append(berandNme);
     var mainList = $("<ul>");
     verticalNavigation.append(mainList);
@@ -170,13 +170,13 @@ function NavigationBar(){
         mainListLi.append(glyphin);
 
         if (navigationBar_key.Information[listNumber].subLink != "null") {
-            var linkList = $("<a>").addClass("link").addClass("displayNone").attr("href" , "#")
+            var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#")
             .attr("text_key" , navigationBar_key.Information[listNumber].Name)
             .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
-            .css("display" , "none").html(navigationBar_key.Information[listNumber].Name);
+            .html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
             var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon")
-                .addClass(navigationBar_key.Information[listNumber].glyphinCollapsible).addClass("collapsibleGlyph").addClass("collapsibleGlyphHide");
+                .addClass(navigationBar_key.Information[listNumber].glyphinCollapsible).addClass("collapsibleGlyph").addClass("collapsibleGlyphShow");
             mainListLi.append(glyphinCollapsible);
 
             var subLinkList = $("<ul>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("subLink").addClass("closeDropdown");
@@ -191,16 +191,16 @@ function NavigationBar(){
 
         }
         else{
-            var linkList = $("<a>").addClass("link").attr("href" , "#").css("display" , "none").attr("text_key" , navigationBar_key.Information[listNumber].Name).html(navigationBar_key.Information[listNumber].Name);
+            var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].Name).html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
         }
         
     }
 
-    var openNavBarBtn = $("<div>").attr("id" , "main").addClass("mainMarginleftClose");
+    var openNavBarBtn = $("<div>").attr("id" , "main").addClass("mainMarginleftOpen");
     navId.append(openNavBarBtn);
     var Collapsibleflesh = $("<span>").addClass("glyphicon").addClass("glyphicon-triangle-right").addClass("openerOcloser")
-    var openBtnShape = $("<button>").addClass("openbtn").addClass("openbtnToggleClose").attr("onclick" , "openAndClose()").html(Collapsibleflesh);
+    var openBtnShape = $("<button>").addClass("openbtn").addClass("openbtnToggleOpen").attr("onclick" , "openAndClose()").html(Collapsibleflesh);
     openNavBarBtn.append(openBtnShape);
 }
 
@@ -234,12 +234,12 @@ function changeLanguageNavAdminPanel()
 }
 
 function openAndClose(){
-    $(".link").toggleClass("displayNone displayInline");
-    $(".brandName").toggleClass("displayNone displayInline");
-    $(".openbtn").toggleClass("openbtnToggleClose openbtnToggleOpen");
-    $("#main").toggleClass("mainMarginleftClose mainMarginleftOpen");
-    $("#mySidebar").toggleClass("mySidebarWidthClose mySidebarWidthOpen");
-    $(".collapsibleGlyph").toggleClass("collapsibleGlyphHide collapsibleGlyphShow");
+    $(".link").toggleClass("displayInline displayNone");
+    $(".brandName").toggleClass("displayInline displayNone");
+    $(".openbtn").toggleClass("openbtnToggleOpen openbtnToggleClose");
+    $("#main").toggleClass("mainMarginleftOpen mainMarginleftClose");
+    $("#mySidebar").toggleClass("mySidebarWidthOpen mySidebarWidthClose");
+    $(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");
 
 }
 
