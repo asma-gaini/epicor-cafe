@@ -35,11 +35,11 @@ body{
   }
   .mySidebarWidthOpen{
     width: 280px;
-    transition: width 1s;
+    transition: width 0.5s;
   }
   .mySidebarWidthClose{
     width: 120px;
-    transition: width 1s;
+    transition: width 0.5s;
   }
   .sidebar ul li{
     padding: 10px 0px;
@@ -83,11 +83,11 @@ body{
   }
 .openbtnToggleOpen{
     left: 280px !important;
-    transition: left 1s;
+    transition: left 0.5s;
 }
 .openbtnToggleClose{
     left: 120px !important;
-    transition: left 1s;
+    transition: left 0.5s;
 }
   .glyphicon-triangle-right{
     padding-left: 0px;
@@ -299,7 +299,7 @@ body{
 
 @media only screen and (max-width: 1140px) and (min-width: 960px) {
   .sidebar ul li a{
-    font-size: 14px ;
+    font-size: 13px ;
   }
   .subLink li a{
     font-size: 11px !important;
