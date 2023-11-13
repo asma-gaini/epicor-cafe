@@ -271,6 +271,13 @@ function changeLanguageNavAdminPanel()
 }
 
 function openAndClose(){
+    var allContainMainId = $("*[mainId]");
+    allContainMainId.removeClass("colorLink");
+    var linkMainId = $("a[mainId='"+holdMaimId+"']");
+    // console.log(linkMainId.html());
+    linkMainId.addClass("colorLink");
+    // console.log(holdMaimId);
+
     $(".link").toggleClass("displayInline displayNone");
     $(".brandName").toggleClass("displayInline displayNone");
     $(".openbtn").toggleClass("openbtnToggleOpen openbtnToggleClose");
@@ -289,5 +296,6 @@ function openAndClose(){
   
  function holdLink(id){
     holdMaimId = id;
-    console.log(holdMaimId);
+    var allContainMainId = $("*[mainId]");
+    allContainMainId.removeClass("colorLink");
  } 
