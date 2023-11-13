@@ -139,7 +139,7 @@ $( document ).ready(function() {
 function createNave(){
     const template = document.createElement('template');
 
-    $("template").html(JqueryNavigationBar())
+    $("template").html(NavigationBar())
 
     var navigationBar = document.getElementById("navBar");
     navigationBar.append(template.content);
@@ -148,7 +148,7 @@ function createNave(){
 
 }
 
-function JqueryNavigationBar(){
+function NavigationBar(){
     var navId = $("#navBar");
     var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthClose");
     navId.append(verticalNavigation);
