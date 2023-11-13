@@ -143,23 +143,55 @@ function createNave(){
 
     var navigationBar = document.getElementById("navBar");
     navigationBar.append(template.content);
+}
 
-    
+function headerVerticalNav(htmlId , urlLogo , brandName){
+    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthOpen");
+    htmlId.append(verticalNavigation);
+    var createHeaderNav = $("<div>").addClass("headerVerticalNav");
+    verticalNavigation.append(createHeaderNav);
+    var logoImage = $("<img>").addClass("logoVerticalNav")
+      .attr("src" , urlLogo)
+      .attr("alt", brandName);
+    createHeaderNav.append(logoImage);
+    var berandNme = $("<span>").addClass("brandName").addClass("displayInline").attr("text_key" , brandName).html( brandName);
+    createHeaderNav.append(berandNme);
+}
 
+function listContionSubLink(mainList , mainLinkName ,subNumber , glyphiconCollapsible , counter ){
+    var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#")
+    .attr("text_key" , mainLinkName)
+    .attr("subid" , subNumber).attr("onclick" , "dropdownSubLink("+subNumber+")")
+    .html(mainLinkName);
+    mainList.append(linkList);
+    var glyphinCollapsible = $("<span>").attr("subid" , subNumber).addClass("glyphicon")
+        .addClass(glyphiconCollapsible).addClass("collapsibleGlyph").addClass("collapsibleGlyphShow");
+        mainList.append(glyphinCollapsible);
+
+    var subLinkList = $("<ul>").attr("subid" , subNumber).addClass("subLink").addClass("closeDropdown");
+    mainList.append(subLinkList);
+    for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[counter].subLink.length; subLinkNumber++) {
+        var subLinkName = navigationBar_key.Information[counter].subLink[subLinkNumber].Name;
+        subLink(subLinkList ,subLinkName);
+    }
+}
+
+function subLink(mainList ,  subLinkName){
+    var subListLi = $("<li>");
+    mainList.append(subListLi);
+    var subLink = $("<a>").attr("href" , "#").attr("text_key" , subLinkName)
+        .html( subLinkName);
+    subListLi.append(subLink);
 }
 
 function NavigationBar(){
     var navId = $("#navBar");
-    var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthOpen");
-    navId.append(verticalNavigation);
-    var createHeaderNav = $("<div>").addClass("headerVerticalNav");
-    verticalNavigation.append(createHeaderNav);
-    var logoImage = $("<img>").addClass("logoVerticalNav")
-      .attr("src" , navigationBar_key.headerNav.logoImg)
-      .attr("alt", navigationBar_key.headerNav.berandName);
-    createHeaderNav.append(logoImage);
-    var berandNme = $("<span>").addClass("brandName").addClass("displayInline").attr("text_key" , navigationBar_key.headerNav.berandName).html( navigationBar_key.headerNav.berandName);
-    createHeaderNav.append(berandNme);
+    
+    var urlLogo = navigationBar_key.headerNav.logoImg;
+    var brandName = navigationBar_key.headerNav.berandName;
+    headerVerticalNav(navId , urlLogo , brandName);
+
+    var verticalNavigation = $("#mySidebar")
     var mainList = $("<ul>");
     verticalNavigation.append(mainList);
 
@@ -169,26 +201,11 @@ function NavigationBar(){
         var glyphin = $("<span>").addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].Image);
         mainListLi.append(glyphin);
 
-        if (navigationBar_key.Information[listNumber].subLink != "null") {
-            var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#")
-            .attr("text_key" , navigationBar_key.Information[listNumber].Name)
-            .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
-            .html(navigationBar_key.Information[listNumber].Name);
-            mainListLi.append(linkList);
-            var glyphinCollapsible = $("<span>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("glyphicon")
-                .addClass(navigationBar_key.Information[listNumber].glyphinCollapsible).addClass("collapsibleGlyph").addClass("collapsibleGlyphShow");
-            mainListLi.append(glyphinCollapsible);
-
-            var subLinkList = $("<ul>").attr("subid" , navigationBar_key.Information[listNumber].subid).addClass("subLink").addClass("closeDropdown");
-            mainListLi.append(subLinkList);
-            for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[listNumber].subLink.length; subLinkNumber++) {
-                var subListLi = $("<li>");
-                subLinkList.append(subListLi);
-                var subLink = $("<a>").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name)
-                    .html( navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name);
-                subListLi.append(subLink);
-            }
-
+        if (navigationBar_key.Information[listNumber].subLink != "null") { 
+            var mainLinkName =  navigationBar_key.Information[listNumber].Name;
+            var subNumber = navigationBar_key.Information[listNumber].subid;
+            var glyphiconCollapsible = navigationBar_key.Information[listNumber].glyphinCollapsible;
+            listContionSubLink(mainListLi , mainLinkName ,subNumber , glyphiconCollapsible ,listNumber)
         }
         else{
             var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].Name).html(navigationBar_key.Information[listNumber].Name);
