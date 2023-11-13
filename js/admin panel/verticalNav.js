@@ -176,7 +176,7 @@ function listContionSubLink(mainList , mainLinkName ,subNumber , glyphiconCollap
     var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("mainId" , mainId)
     
     .attr("text_key" , mainLinkName)
-    .attr("subid" , subNumber).attr("onclick" , "dropdownSubLink("+subNumber+"); holdLink("+mainId+");")
+    .attr("onclick" , "dropdownSubLink("+subNumber+"); holdLink("+mainId+");")
     .html(mainLinkName);
     mainList.append(linkList);
     var glyphinCollapsible = $("<span>").attr("subid" , subNumber).addClass("glyphicon")
@@ -275,6 +275,8 @@ function openAndClose(){
     allContainMainId.removeClass("colorLink");
     var linkMainId = $("a[mainId='"+holdMaimId+"']");
     linkMainId.addClass("colorLink");
+    
+  
 
     $(".link").toggleClass("displayInline displayNone");
     $(".brandName").toggleClass("displayInline displayNone");
@@ -282,7 +284,27 @@ function openAndClose(){
     $("#main").toggleClass("mainMarginleftOpen mainMarginleftClose");
     $("#mySidebar").toggleClass("mySidebarWidthOpen mySidebarWidthClose");
     $(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");
-
+   
+    var listContainSubLink = $("ul.subLink");
+    if(listContainSubLink.hasClass("openDropdown")){
+        listContainSubLink.removeClass("openDropdown");
+        listContainSubLink.addClass("closeDropdown");
+    }
+    console.log(linkMainId)
+    console.log(linkMainId[0])
+    if (linkMainId.attr("subid")!= null &&  $("#mySidebar").hasClass("mySidebarWidthOpen")) {
+        console.log("yes");
+        var subIdValue = linkMainId.attr("subid");
+        console.log(subIdValue);
+        var subLink = $("ul[subId='"+subIdValue+"']");
+        console.log(subLink)
+        if(subLink.hasClass("closeDropdown")){
+            subLink.removeClass("closeDropdown");
+            subLink.addClass("openDropdown");
+        }
+    }
+  
+    
 }
 
   function dropdownSubLink(subID){
