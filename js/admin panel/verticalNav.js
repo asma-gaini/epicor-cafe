@@ -9,14 +9,23 @@ var navigationBar_key= {
         {
             "Name": "home",
             "Image": "glyphicon-briefcase",
+            "target" : "#",
+            "glyphinCollapsible": "null",
+            "subid": "null",
+            "subLink":"null"
         },
         {
             "Name": "popular",
             "Image": "glyphicon-heart-empty",
+            "target" : "#",
+            "glyphinCollapsible": "null",
+            "subid": "null",
+            "subLink":"null"
         },
         {
             "Name": "addingMenu",
             "Image": "glyphicon-cutlery",
+            "target" : "#",
             "glyphinCollapsible": "glyphicon-menu-right",
             "subid": "1",
             "subLink":[
@@ -31,6 +40,10 @@ var navigationBar_key= {
         {
             "Name": "shortage",
             "Image": "glyphicon-shopping-cart",
+            "target" : "#",
+            "glyphinCollapsible": "null",
+            "subid": "null",
+            "subLink":"null"
         },
         {
             "Name": "charts",
@@ -49,14 +62,26 @@ var navigationBar_key= {
         {
             "Name": "commentes",
             "Image": "glyphicon-comment",
+            "target" : "#",
+            "glyphinCollapsible": "null",
+            "subid": "null",
+            "subLink":"null"
         },
         {
             "Name": "emaile",
             "Image": "glyphicon-envelope",
+            "target" : "#",
+            "glyphinCollapsible": "null",
+            "subid": "null",
+            "subLink":"null"
         },
         {
             "Name": "customerClub",
             "Image": "glyphicon-gift",
+            "target" : "#",
+            "glyphinCollapsible": "null",
+            "subid": "null",
+            "subLink":"null"
         }
     ]
 }
@@ -144,7 +169,7 @@ function JqueryNavigationBar(){
         var glyphin = $("<span>").addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].Image);
         mainListLi.append(glyphin);
 
-        if (navigationBar_key.Information[listNumber].subLink) {
+        if (navigationBar_key.Information[listNumber].subLink != "null") {
             var linkList = $("<a>").addClass("link").addClass("displayNone").attr("href" , "#")
             .attr("text_key" , navigationBar_key.Information[listNumber].Name)
             .attr("subid" , navigationBar_key.Information[listNumber].subid).attr("onclick" , "dropdownSubLink("+navigationBar_key.Information[listNumber].subid+")")
