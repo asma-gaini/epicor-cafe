@@ -7,6 +7,7 @@ var navigationBar_key= {
     "Information":
     [
         {
+            "mainId": "1",
             "Name": "home",
             "Image": "glyphicon-briefcase",
             "target" : "#",
@@ -15,6 +16,7 @@ var navigationBar_key= {
             "subLink":"null"
         },
         {
+            "mainId": "2",
             "Name": "popular",
             "Image": "glyphicon-heart-empty",
             "target" : "#",
@@ -23,6 +25,7 @@ var navigationBar_key= {
             "subLink":"null"
         },
         {
+            "mainId": "3",
             "Name": "addingMenu",
             "Image": "glyphicon-cutlery",
             "target" : "#",
@@ -30,14 +33,17 @@ var navigationBar_key= {
             "subid": "1",
             "subLink":[
                 {
+                    "mainId": "4",
                     "Name": "addingMenuBar",
                 },
                 {
+                    "mainId": "5",
                     "Name": "addingslide",
                 }
             ]
         },
         {
+            "mainId": "6",
             "Name": "shortage",
             "Image": "glyphicon-shopping-cart",
             "target" : "#",
@@ -46,20 +52,24 @@ var navigationBar_key= {
             "subLink":"null"
         },
         {
+            "mainId": "7",
             "Name": "charts",
             "Image": "glyphicon-stats",
             "glyphinCollapsible": "glyphicon-menu-right",
             "subid": "2",
             "subLink":[
                 {
+                    "mainId": "8",
                     "Name": "sales",
                 },
                 {
+                    "mainId": "9",
                     "Name": "incom",
                 }
             ]
         },
         {
+            "mainId": "10",
             "Name": "commentes",
             "Image": "glyphicon-comment",
             "target" : "#",
@@ -68,6 +78,7 @@ var navigationBar_key= {
             "subLink":"null"
         },
         {
+            "mainId": "11",
             "Name": "emaile",
             "Image": "glyphicon-envelope",
             "target" : "#",
@@ -76,6 +87,7 @@ var navigationBar_key= {
             "subLink":"null"
         },
         {
+            "mainId": "12",
             "Name": "customerClub",
             "Image": "glyphicon-gift",
             "target" : "#",
@@ -118,6 +130,8 @@ var navigationBar_En={
     "customerClub": "Customer Club"
 }
 
+var holdMaimId = 0;
+
 var navigationBarFaJsonString = JSON.stringify(navigationBar_Fa);
 var navigationBarFaJson = JSON.parse(navigationBarFaJsonString);
 
@@ -158,10 +172,11 @@ function headerVerticalNav(htmlId , urlLogo , brandName){
     createHeaderNav.append(berandNme);
 }
 
-function listContionSubLink(mainList , mainLinkName ,subNumber , glyphiconCollapsible , counter ){
-    var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#")
+function listContionSubLink(mainList , mainLinkName ,subNumber , glyphiconCollapsible , counter ,mainId){
+    var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("mainId" , mainId)
+    
     .attr("text_key" , mainLinkName)
-    .attr("subid" , subNumber).attr("onclick" , "dropdownSubLink("+subNumber+")")
+    .attr("subid" , subNumber).attr("onclick" , "dropdownSubLink("+subNumber+"); holdLink("+mainId+");")
     .html(mainLinkName);
     mainList.append(linkList);
     var glyphinCollapsible = $("<span>").attr("subid" , subNumber).addClass("glyphicon")
@@ -172,15 +187,16 @@ function listContionSubLink(mainList , mainLinkName ,subNumber , glyphiconCollap
     mainList.append(subLinkList);
     for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[counter].subLink.length; subLinkNumber++) {
         var subLinkName = navigationBar_key.Information[counter].subLink[subLinkNumber].Name;
-        subLink(subLinkList ,subLinkName);
+        var mainIdSubLink = navigationBar_key.Information[counter].subLink[subLinkNumber].mainId;
+        subLink(subLinkList ,subLinkName ,subNumber ,mainIdSubLink);
     }
 }
 
-function subLink(mainList ,  subLinkName){
+function subLink(mainList ,  subLinkName ,subNumber ,mainId){
     var subListLi = $("<li>");
     mainList.append(subListLi);
-    var subLink = $("<a>").attr("href" , "#").attr("text_key" , subLinkName)
-        .html( subLinkName);
+    var subLink = $("<a>").attr("href" , "#").attr("text_key" , subLinkName).attr("mainId" , mainId).attr("subid" , subNumber)
+        .attr("onclick" , "holdLink("+mainId+")").html( subLinkName);
     subListLi.append(subLink);
 }
 
@@ -205,10 +221,14 @@ function NavigationBar(){
             var mainLinkName =  navigationBar_key.Information[listNumber].Name;
             var subNumber = navigationBar_key.Information[listNumber].subid;
             var glyphiconCollapsible = navigationBar_key.Information[listNumber].glyphinCollapsible;
-            listContionSubLink(mainListLi , mainLinkName ,subNumber , glyphiconCollapsible ,listNumber)
+            var mainId = navigationBar_key.Information[listNumber].mainId;
+            listContionSubLink(mainListLi , mainLinkName ,subNumber , glyphiconCollapsible ,listNumber ,mainId)
         }
         else{
-            var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].Name).html(navigationBar_key.Information[listNumber].Name);
+            var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].Name)
+            .attr("mainId" , navigationBar_key.Information[listNumber].mainId)
+            .attr("onclick" , "holdLink("+navigationBar_key.Information[listNumber].mainId+")")
+            .html(navigationBar_key.Information[listNumber].Name);
             mainListLi.append(linkList);
         }
         
@@ -267,3 +287,7 @@ function openAndClose(){
     glyphinIcon.toggleClass("glyphicon-menu-right glyphicon-menu-down");
   }
   
+ function holdLink(id){
+    holdMaimId = id;
+    console.log(holdMaimId);
+ } 
