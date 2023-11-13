@@ -275,15 +275,13 @@ function openAndClose(){
     allContainMainId.removeClass("colorLink");
     var linkMainId = $("a[mainId='"+holdMaimId+"']");
     linkMainId.addClass("colorLink");
-    
-  
 
-    $(".link").toggleClass("displayInline displayNone");
-    $(".brandName").toggleClass("displayInline displayNone");
     $(".openbtn").toggleClass("openbtnToggleOpen openbtnToggleClose");
     $("#main").toggleClass("mainMarginleftOpen mainMarginleftClose");
     $("#mySidebar").toggleClass("mySidebarWidthOpen mySidebarWidthClose");
     $(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");
+    $(".link").toggleClass("displayInline displayNone");
+    $(".brandName").toggleClass("displayInline displayNone");
    
     var listContainSubLink = $("ul.subLink");
     if(listContainSubLink.hasClass("openDropdown")){
