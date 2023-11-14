@@ -109,11 +109,11 @@ function HorizontalNav(){
         if (horizontalNav_key.InformationLeftList[i].dropdownLink== "null") {
             var mainLeftLi = $("<li>");
             mainLeftList.append(mainLeftLi);
-            var mainLeftLink = $("<a>").attr("href" , "#");
+            var mainLeftLink = $("<a>").attr("href" , "#").addClass("mainLink");
             mainLeftLi.append(mainLeftLink);
-            var iconLink = $("<i>").addClass("fa").html(horizontalNav_key.InformationLeftList[i].icon);
-            mainLeftLink.append(iconLink);
-            var spanLinkName = $("<span>").attr("text_key" , horizontalNav_key.InformationLeftList[i].linkName).html(horizontalNav_key.InformationLeftList[i].linkName);
+            // var iconLink = $("<i>").addClass("fa").html(horizontalNav_key.InformationLeftList[i].icon);
+            // mainLeftLink.append(iconLink);
+            var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNav_key.InformationLeftList[i].linkName).html(horizontalNav_key.InformationLeftList[i].linkName);
             mainLeftLink.append(spanLinkName)
         }
         else{
