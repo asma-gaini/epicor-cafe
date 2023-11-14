@@ -65,10 +65,10 @@
     /* height: 10px; */
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-    color: #fff;
+    color: #000000;
     background-color: inherit;
-    box-shadow: 2px 2px 2px #b2a7a7, -2px -2px 2px #b2a7a7;
-    border-radius: 10px;
+    /* box-shadow: 2px 2px 2px #b2a7a7, -2px -2px 2px #b2a7a7;
+    border-radius: 10px; */
 
 }
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
@@ -106,3 +106,4 @@
 position: absolute;
 top: 100px;
 }
+

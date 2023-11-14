@@ -10,7 +10,7 @@ var horizontalNav_key= {
         [
             {
                 "linkName":"home",
-                "icon":"null",
+                "icon":"&#xf015;",
                 "badgesCounter":"null",
                 "collapsIcon": "null",
                 "dropdownLink":"null"
@@ -109,13 +109,17 @@ function HorizontalNav(){
         if (horizontalNav_key.InformationLeftList[i].dropdownLink== "null") {
             var mainLeftLi = $("<li>");
             mainLeftList.append(mainLeftLi);
-            var mainLeftLink = $("<a>").attr("href" , "#").attr("text_key" , horizontalNav_key.InformationLeftList[i].linkName).html(horizontalNav_key.InformationLeftList[i].linkName);
+            var mainLeftLink = $("<a>").attr("href" , "#");
             mainLeftLi.append(mainLeftLink);
+            var iconLink = $("<i>").addClass("fa").html(horizontalNav_key.InformationLeftList[i].icon);
+            mainLeftLink.append(iconLink);
+            var spanLinkName = $("<span>").attr("text_key" , horizontalNav_key.InformationLeftList[i].linkName).html(horizontalNav_key.InformationLeftList[i].linkName);
+            mainLeftLink.append(spanLinkName)
         }
         else{
             var badgesLi = $("<li>").addClass("dropdown");
             mainLeftList.append(badgesLi);
-            var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#");
+            var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#").html(horizontalNav_key.InformationLeftList[i].linkName);
             badgesLi.append(badgesLink);
             var badgesImage = $("<i>").addClass("fa").addClass("notifications").html(horizontalNav_key.InformationLeftList[i].icon);
             badgesLink.append(badgesImage);
