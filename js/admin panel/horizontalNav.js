@@ -1,45 +1,77 @@
 
 // ********************* json file  *********************
-var login_key= {
-    "image": "../../img/admin panel/logo/logo.jpg",
-    "brand" : "brandName",
-    "userName":"usernamePlaceHolder",
-    "pasword": "paswordPlaceHolder",
-    "remmemberMe": "remmemberMe",
-    "loginBtn": "login",
-    "forgetPass": "forgetPass"
+var horizontalNav_key= {
+    "headerNav":
+        {
+            "berandName": "nameCoffe",
+            "logoImg": "../../img/admin panel/logo/logo.jpg",
+        },
+        "InformationLeftList":
+        [
+            {
+                "linkName":"home",
+                "icon":"null",
+                "badgesCounter":"null",
+                "collapsIcon": "null",
+                "dropdownLink":"null"
+            },
+            {
+                "linkName":"",
+                "icon":"&#xf0a2;",
+                "badgesCounter":"3",
+                "collapsIcon": "caret",
+                "dropdownLink":[
+                    {
+                        "linkName":"checkInbox"
+                    },
+                    {
+                        "linkName":"PaymenOfSalary"
+                    },
+                    {
+                        "linkName":"StatementOfExpenses"
+                    }
+                ]
+            }
+            
+
+        ],
+        "InformationRightList":
+            {
+                "userName":"username",
+                "icon":"&#xf2be;"
+            }
  }
  
- var login_Fa={
-     "brandName": " کافه اپیکور",
-     "usernamePlaceHolder": "نام کاربری",
-     "paswordPlaceHolder": "رمز",
-     "remmemberMe": "مرا بخاطر بسپار",
-     "login":"وارد شدن",
-     "forgetPass" : "رمز را فراموش کردی ؟"
+ var horizontalNav_Fa={
+     "nameCoffe": " کافه اپیکور",
+     "home": "صفحه اصلی",
+     "checkInbox": "چک کردن پیام های ورودی",
+     "PaymenOfSalary":"پرداخت حقوق",
+     "StatementOfExpenses" : "بیانیه هزینه ها",
+     "username": "نام کاربری",
  }
  
- var login_En={
-     "brandName": "Epicor Cafe",
-     "usernamePlaceHolder": "User name",
-     "paswordPlaceHolder": "Password",
-     "remmemberMe": "Remmember me",
-     "login": "Login",
-     "forgetPass":"Forget password?"
+ var horizontalNav_En={
+     "nameCoffe": "Epicor Cafe",
+     "home": "Home",
+     "checkInbox": "check inbox",
+     "PaymenOfSalary": "Payment of salary",
+     "StatementOfExpenses":"Statement of expenses",
+     "username": "User name",
  }
  
- var loginFaJsonString = JSON.stringify(login_Fa);
- var loginFaJson = JSON.parse(loginFaJsonString);
+ var horizontalNavFaJsonString = JSON.stringify(horizontalNav_Fa);
+ var horizontalNavFaJson = JSON.parse(horizontalNavFaJsonString);
  
- var loginEnJsonString = JSON.stringify(login_En);
- var loginEnJson = JSON.parse(loginEnJsonString);
+ var horizontalNavEnJsonString = JSON.stringify(horizontalNav_En);
+ var horizontalNavEnJson = JSON.parse(horizontalNavEnJsonString);
 
  $( document ).ready(function() {
  
     createHorizontalNav();
     
 
-    // getAndSetTranslateLanguageNavAdminPanel();
+    getAndSetTranslateLanguage();
 
 })  
  
@@ -61,11 +93,11 @@ function HorizontalNav(){
 
     var headerDiv = $("<div>").addClass("navbar-header");
     mainDivHorizontalNav.append(headerDiv);
-    var headerLink = $("<a>").addClass("navbar-brand").attr("href" , "#")
+    var headerLink = $("<a>").addClass("navbar-brand").attr("href" , "#");
     headerDiv.append(headerLink);
-    var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , "../../img/admin panel/logo/logo.jpg").attr("alt" , "epicor cafe")
+    var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , horizontalNav_key.headerNav.logoImg).attr("alt" , horizontalNav_key.headerNav.berandName)
     headerLink.append(logoImageHorizontalNav);
-    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").html("Cafe Epicor");
+    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key" , horizontalNav_key.headerNav.berandName).html(horizontalNav_key.headerNav.berandName);
     headerLink.append(brandHorizontalNav);
 
 
@@ -73,43 +105,52 @@ function HorizontalNav(){
     var mainLeftList = $("<ul>").addClass("nav").addClass("navbar-nav");
     mainDivHorizontalNav.append(mainLeftList);
 
-    var mainLeftLi = $("<li>");
-    mainLeftList.append(mainLeftLi);
-    var mainLeftLink = $("<a>").attr("href" , "#").html("home");
-    mainLeftLi.append(mainLeftLink);
+    for (let i = 0; i < horizontalNav_key.InformationLeftList.length; i++) {
+        if (horizontalNav_key.InformationLeftList[i].dropdownLink== "null") {
+            var mainLeftLi = $("<li>");
+            mainLeftList.append(mainLeftLi);
+            var mainLeftLink = $("<a>").attr("href" , "#").attr("text_key" , horizontalNav_key.InformationLeftList[i].linkName).html(horizontalNav_key.InformationLeftList[i].linkName);
+            mainLeftLi.append(mainLeftLink);
+        }
+        else{
+            var badgesLi = $("<li>").addClass("dropdown");
+            mainLeftList.append(badgesLi);
+            var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#");
+            badgesLi.append(badgesLink);
+            var badgesImage = $("<i>").addClass("fa").addClass("notifications").html(horizontalNav_key.InformationLeftList[i].icon);
+            badgesLink.append(badgesImage);
+            var badgesCounter = $("<span>").addClass("badge").html(horizontalNav_key.InformationLeftList[i].badgesCounter);
+            badgesLink.append(badgesCounter);
+            var badgesCollapse = $("<span>").addClass(horizontalNav_key.InformationLeftList[i].collapsIcon);
+            badgesLink.append(badgesCollapse);
 
-    var badgesLi = $("<li>").addClass("dropdown");
-    mainLeftList.append(badgesLi);
-    var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#");
-    badgesLi.append(badgesLink);
-    var badgesImage = $("<i>").addClass("fa").addClass("notifications").html("&#xf0a2;");
-    badgesLink.append(badgesImage);
-    var badgesCounter = $("<span>").addClass("badge").html("3");
-    badgesLink.append(badgesCounter);
-    var badgesCollapse = $("<span>").addClass("caret");
-    badgesLink.append(badgesCollapse);
-
-    var dropdownList = $("<ul>").addClass("dropdown-menu");
-    badgesLi.append(dropdownList);
-    var dropdownLi = $("<li>");
-    dropdownList.append(dropdownLi);
-    var dropdownLink = $("<a>").attr("href" , "#").html("check inbox");
-    dropdownLi.append(dropdownLink);
+            var dropdownList = $("<ul>").addClass("dropdown-menu");
+            badgesLi.append(dropdownList);
+            for (let dropdownLinkCounter = 0; dropdownLinkCounter <horizontalNav_key.InformationLeftList[i].dropdownLink.length; dropdownLinkCounter++) {
+                var dropdownLi = $("<li>");
+                dropdownList.append(dropdownLi);
+                var dropdownLink = $("<a>").attr("href" , "#").attr("text_key" , horizontalNav_key.InformationLeftList[i].dropdownLink[dropdownLinkCounter].linkName)
+                    .html(horizontalNav_key.InformationLeftList[i].dropdownLink[dropdownLinkCounter].linkName);
+                dropdownLi.append(dropdownLink);  
+            }
+        }
+        
+    }
 
     var mainRightList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
     mainDivHorizontalNav.append(mainRightList);
 
     var userLi = $("<li>").addClass("profileUser");
     mainRightList.append(userLi);
-    var userShape = $("<i>").css("font-size", "24px").addClass("fa").html("&#xf2be;");
+    var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(horizontalNav_key.InformationRightList.icon);
     userLi.append(userShape);
-    var userName = $("<span>").addClass("profileUserHorizontalNav").html("user name");
+    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , horizontalNav_key.InformationRightList.userName).html(horizontalNav_key.InformationRightList.userName);
     userLi.append(userName);
 }
 
 // ********************* change language  *********************
 
-function getAndSetTranslateLanguageNavAdminPanel(){
+function getAndSetTranslateLanguage(){
    var ContainsKeyName = $("*[text_key]");
    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
@@ -119,28 +160,23 @@ function getAndSetTranslateLanguageNavAdminPanel(){
 
                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
                var translatedValueNav;
-               if(window.localStorage.getItem("language") == "En"){
-                   translatedValueNav = loginEnJson[keyValue];
+               if(window.localStorage.getItem("lang") == "En"){
+                   translatedValueNav = horizontalNavEnJson[keyValue];
                }
                else{
-                   translatedValueNav = loginFaJson[keyValue];
+                   translatedValueNav = horizontalNavFaJson[keyValue];
                }
 
-               // if("[placeholder]"==true){
-               //     console.log("asma")
-               // }
-               // else{
-                   ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-               // }
+                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
            }
        }
    }
 }
 
-function changeLanguageNavAdminPanel()
+function changeLanguage()
 {
-    var getLangAdmin = $("#languageAdmin").val();
-    var setValueLang = window.localStorage.setItem("language" ,getLangAdmin );
-    getAndSetTranslateLanguageNavAdminPanel();
+    var getLang = $("#language").val();
+    var setValueLang = window.localStorage.setItem("lang" ,getLang );
+    getAndSetTranslateLanguage();
 }
 
