@@ -33,7 +33,7 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 5px !important;
 }
 .fa {
     color: rgb(5, 5, 5);
