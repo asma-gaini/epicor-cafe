@@ -83,22 +83,26 @@ function createHorizontalNav(){
     HorizontalNavigation.append(template.content);
 }
 
+function createHeader(mainDiv , logoImageHorizontalNavigation ,brandNameHorizontalNavigation ){
+    var headerDiv = $("<div>").addClass("navbar-header");
+    mainDiv.append(headerDiv);
+    var headerLink = $("<a>").addClass("navbar-brand").attr("href" , "#");
+    headerDiv.append(headerLink);
+    var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , logoImageHorizontalNavigation).attr("alt" , brandNameHorizontalNavigation)
+    headerLink.append(logoImageHorizontalNav);
+    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key" , brandNameHorizontalNavigation).html(brandNameHorizontalNavigation);
+    headerLink.append(brandHorizontalNav);
+}
+
 function HorizontalNav(){
     var horizontalNavId = $("#horizontalNav");
-    
     var mainDivHorizontalNav = $("<div>").addClass("navbar").addClass("navbar-inverse");
     horizontalNavId.append(mainDivHorizontalNav);
 
-    var headerDiv = $("<div>").addClass("navbar-header");
-    mainDivHorizontalNav.append(headerDiv);
-    var headerLink = $("<a>").addClass("navbar-brand").attr("href" , "#");
-    headerDiv.append(headerLink);
-    var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , horizontalNav_key.InformationBrand.logoImg).attr("alt" , horizontalNav_key.InformationBrand.berandName)
-    headerLink.append(logoImageHorizontalNav);
-    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key" , horizontalNav_key.InformationBrand.berandName).html(horizontalNav_key.InformationBrand.berandName);
-    headerLink.append(brandHorizontalNav);
-
-
+    // create header of horizontal navigation 
+    var logoImageHorizontalNavigation = horizontalNav_key.InformationBrand.logoImg;
+    var brandNameHorizontalNavigation = horizontalNav_key.InformationBrand.berandName;
+    createHeader(mainDivHorizontalNav , logoImageHorizontalNavigation ,brandNameHorizontalNavigation )
 
     var mainLeftList = $("<ul>").addClass("nav").addClass("navbar-nav");
     mainDivHorizontalNav.append(mainLeftList);
