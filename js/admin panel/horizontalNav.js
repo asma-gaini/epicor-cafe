@@ -1,25 +1,23 @@
 
 // ********************* json file  *********************
 var horizontalNav_key= {
-    "headerNav":
+    "InformationBrand":
         {
             "berandName": "nameCoffe",
             "logoImg": "../../img/admin panel/logo/logo.jpg",
         },
-        "InformationLeftList":
+        "InformationLink":
         [
             {
                 "linkName":"home",
                 "icon":"&#xf015;",
-                "badgesCounter":"null",
-                "collapsIcon": "null",
+                "notificationCounter":"null",
                 "dropdownLink":"null"
             },
             {
                 "linkName":"",
                 "icon":"&#xf0a2;",
-                "badgesCounter":"3",
-                "collapsIcon": "caret",
+                "notificationCounter":"3",
                 "dropdownLink":[
                     {
                         "linkName":"checkInbox"
@@ -35,7 +33,7 @@ var horizontalNav_key= {
             
 
         ],
-        "InformationRightList":
+        "InformationUsers":
             {
                 "userName":"username",
                 "icon":"&#xf2be;"
@@ -95,9 +93,9 @@ function HorizontalNav(){
     mainDivHorizontalNav.append(headerDiv);
     var headerLink = $("<a>").addClass("navbar-brand").attr("href" , "#");
     headerDiv.append(headerLink);
-    var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , horizontalNav_key.headerNav.logoImg).attr("alt" , horizontalNav_key.headerNav.berandName)
+    var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , horizontalNav_key.InformationBrand.logoImg).attr("alt" , horizontalNav_key.InformationBrand.berandName)
     headerLink.append(logoImageHorizontalNav);
-    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key" , horizontalNav_key.headerNav.berandName).html(horizontalNav_key.headerNav.berandName);
+    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key" , horizontalNav_key.InformationBrand.berandName).html(horizontalNav_key.InformationBrand.berandName);
     headerLink.append(brandHorizontalNav);
 
 
@@ -105,36 +103,36 @@ function HorizontalNav(){
     var mainLeftList = $("<ul>").addClass("nav").addClass("navbar-nav");
     mainDivHorizontalNav.append(mainLeftList);
 
-    for (let i = 0; i < horizontalNav_key.InformationLeftList.length; i++) {
-        if (horizontalNav_key.InformationLeftList[i].dropdownLink== "null") {
+    for (let i = 0; i < horizontalNav_key.InformationLink.length; i++) {
+        if (horizontalNav_key.InformationLink[i].dropdownLink== "null") {
             var mainLeftLi = $("<li>");
             mainLeftList.append(mainLeftLi);
             var mainLeftLink = $("<a>").attr("href" , "#").addClass("mainLink");
             mainLeftLi.append(mainLeftLink);
             // var iconLink = $("<i>").addClass("fa").html(horizontalNav_key.InformationLeftList[i].icon);
             // mainLeftLink.append(iconLink);
-            var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNav_key.InformationLeftList[i].linkName).html(horizontalNav_key.InformationLeftList[i].linkName);
+            var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNav_key.InformationLink[i].linkName).html(horizontalNav_key.InformationLink[i].linkName);
             mainLeftLink.append(spanLinkName)
         }
         else{
             var badgesLi = $("<li>").addClass("dropdown");
             mainLeftList.append(badgesLi);
-            var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#").html(horizontalNav_key.InformationLeftList[i].linkName);
+            var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#").html(horizontalNav_key.InformationLink[i].linkName);
             badgesLi.append(badgesLink);
-            var badgesImage = $("<i>").addClass("fa").addClass("notifications").html(horizontalNav_key.InformationLeftList[i].icon);
+            var badgesImage = $("<i>").addClass("fa").addClass("notifications").html(horizontalNav_key.InformationLink[i].icon);
             badgesLink.append(badgesImage);
-            var badgesCounter = $("<span>").addClass("badge").html(horizontalNav_key.InformationLeftList[i].badgesCounter);
-            badgesLink.append(badgesCounter);
-            var badgesCollapse = $("<span>").addClass(horizontalNav_key.InformationLeftList[i].collapsIcon);
+            var notificationCounter = $("<span>").addClass("badge").html(horizontalNav_key.InformationLink[i].notificationCounter);
+            badgesLink.append(notificationCounter);
+            var badgesCollapse = $("<span>").addClass("caret");
             badgesLink.append(badgesCollapse);
 
             var dropdownList = $("<ul>").addClass("dropdown-menu");
             badgesLi.append(dropdownList);
-            for (let dropdownLinkCounter = 0; dropdownLinkCounter <horizontalNav_key.InformationLeftList[i].dropdownLink.length; dropdownLinkCounter++) {
+            for (let dropdownLinkCounter = 0; dropdownLinkCounter <horizontalNav_key.InformationLink[i].dropdownLink.length; dropdownLinkCounter++) {
                 var dropdownLi = $("<li>");
                 dropdownList.append(dropdownLi);
-                var dropdownLink = $("<a>").attr("href" , "#").attr("text_key" , horizontalNav_key.InformationLeftList[i].dropdownLink[dropdownLinkCounter].linkName)
-                    .html(horizontalNav_key.InformationLeftList[i].dropdownLink[dropdownLinkCounter].linkName);
+                var dropdownLink = $("<a>").attr("href" , "#").attr("text_key" , horizontalNav_key.InformationLink[i].dropdownLink[dropdownLinkCounter].linkName)
+                    .html(horizontalNav_key.InformationLink[i].dropdownLink[dropdownLinkCounter].linkName);
                 dropdownLi.append(dropdownLink);  
             }
         }
@@ -146,9 +144,9 @@ function HorizontalNav(){
 
     var userLi = $("<li>").addClass("profileUser");
     mainRightList.append(userLi);
-    var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(horizontalNav_key.InformationRightList.icon);
+    var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(horizontalNav_key.InformationUsers.icon);
     userLi.append(userShape);
-    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , horizontalNav_key.InformationRightList.userName).html(horizontalNav_key.InformationRightList.userName);
+    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , horizontalNav_key.InformationUsers.userName).html(horizontalNav_key.InformationUsers.userName);
     userLi.append(userName);
 }
 
