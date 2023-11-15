@@ -138,6 +138,18 @@ function cerateDropdownList(mainList , dropDownLinkName){
     dropdownLi.append(dropdownLink); 
 }
 
+function createUsers(mainDiv , userIcon , nserName){
+    var mainRightList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
+    mainDiv.append(mainRightList);
+
+    var userLi = $("<li>").addClass("profileUser");
+    mainRightList.append(userLi);
+    var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(userIcon);
+    userLi.append(userShape);
+    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , nserName).html(nserName);
+    userLi.append(userName);
+}
+
 function HorizontalNav(){
     var horizontalNavId = $("#horizontalNav");
     var mainDivHorizontalNav = $("<div>").addClass("navbar").addClass("navbar-inverse");
@@ -156,15 +168,11 @@ function HorizontalNav(){
         createhorizontalNavigationLinkes(mainLeftList , linkIcon ,  horizontalNavigationLinkName , i);
     }
 
-    var mainRightList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
-    mainDivHorizontalNav.append(mainRightList);
+    var userIcon = horizontalNav_key.InformationUsers.icon;
+    var nserName = horizontalNav_key.InformationUsers.userName;
+    createUsers(mainDivHorizontalNav , userIcon , nserName);
 
-    var userLi = $("<li>").addClass("profileUser");
-    mainRightList.append(userLi);
-    var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(horizontalNav_key.InformationUsers.icon);
-    userLi.append(userShape);
-    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , horizontalNav_key.InformationUsers.userName).html(horizontalNav_key.InformationUsers.userName);
-    userLi.append(userName);
+   
 }
 
 // ********************* change language  *********************
