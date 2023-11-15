@@ -149,12 +149,12 @@ function createNave(){
 
     $("template").html(createNavigationBar())
 
-    var navigationBar = document.getElementById("navBar");
+    var navigationBar = document.getElementById("verticalNavigation");
     navigationBar.append(template.content);
 }
 
 function createNavigationBar(){
-    var navId = $("#navBar");
+    var navId = $("#verticalNavigation");
     
     // create header of vertical navigation 
     var urlLogo = navigationBar_key.headerNav.logoImg;
