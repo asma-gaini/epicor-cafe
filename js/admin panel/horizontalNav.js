@@ -10,12 +10,12 @@ var horizontalNav_key= {
         [
             {
                 "linkName":"home",
-                "icon":"&#xf015;",
-                "notificationCounter":"null",
-                "dropdownLink":"null"
+                "icon":null,
+                "notificationCounter":null,
+                "dropdownLink":null
             },
             {
-                "linkName":"",
+                "linkName":null,
                 "icon":"&#xf0a2;",
                 "notificationCounter":"3",
                 "dropdownLink":[
@@ -94,6 +94,50 @@ function createHeader(mainDiv , logoImageHorizontalNavigation ,brandNameHorizont
     headerLink.append(brandHorizontalNav);
 }
 
+function createhorizontalNavigationLinkes(mainDiv , linkIcon ,  horizontalNavigationLinkName , counter){
+    var mainLeftLi = $("<li>");
+    mainDiv.append(mainLeftLi);
+    var mainLeftLink = $("<a>").attr("href" , "#").addClass("mainLink");
+    mainLeftLi.append(mainLeftLink);
+    var iconLink = $("<i>").addClass("fa").html(linkIcon);
+    mainLeftLink.append(iconLink);
+    var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNavigationLinkName).html(horizontalNavigationLinkName);
+    mainLeftLink.append(spanLinkName)
+
+    if (horizontalNav_key.InformationLink[counter].dropdownLink!= null) {
+
+        var notificationCounter = horizontalNav_key.InformationLink[counter].notificationCounter;
+        addDropdownClasses(mainLeftLi , mainLeftLink ,  notificationCounter);
+        var dropdownList = $("<ul>").addClass("dropdown-menu");
+        mainLeftLi.append(dropdownList);
+        for (let dropdownLinkCounter = 0; dropdownLinkCounter <horizontalNav_key.InformationLink[counter].dropdownLink.length; dropdownLinkCounter++)
+        {
+            var dropDownLinkName = horizontalNav_key.InformationLink[counter].dropdownLink[dropdownLinkCounter].linkName;
+            cerateDropdownList(dropdownList , dropDownLinkName)
+        }
+    }
+}
+
+function addDropdownClasses(mainLi , mainlink , notificationCounter){
+
+    mainLi.addClass("dropdown");
+    var badgesLink = mainlink.removeClass("mainLink").addClass("dropdown-toggle").attr("data-toggle" , "dropdown");
+    $("i.fa").addClass("notifications");
+    var notificationCounter = $("<span>").addClass("badge").html(notificationCounter);
+    badgesLink.append(notificationCounter);
+    var badgesCollapse = $("<span>").addClass("caret");
+    badgesLink.append(badgesCollapse);
+
+}
+
+function cerateDropdownList(mainList , dropDownLinkName){
+    var dropdownLi = $("<li>");
+    mainList.append(dropdownLi);
+    var dropdownLink = $("<a>").attr("href" , "#").attr("text_key" , dropDownLinkName)
+        .html(dropDownLinkName);
+    dropdownLi.append(dropdownLink); 
+}
+
 function HorizontalNav(){
     var horizontalNavId = $("#horizontalNav");
     var mainDivHorizontalNav = $("<div>").addClass("navbar").addClass("navbar-inverse");
@@ -106,41 +150,10 @@ function HorizontalNav(){
 
     var mainLeftList = $("<ul>").addClass("nav").addClass("navbar-nav");
     mainDivHorizontalNav.append(mainLeftList);
-
-    for (let i = 0; i < horizontalNav_key.InformationLink.length; i++) {
-        if (horizontalNav_key.InformationLink[i].dropdownLink== "null") {
-            var mainLeftLi = $("<li>");
-            mainLeftList.append(mainLeftLi);
-            var mainLeftLink = $("<a>").attr("href" , "#").addClass("mainLink");
-            mainLeftLi.append(mainLeftLink);
-            // var iconLink = $("<i>").addClass("fa").html(horizontalNav_key.InformationLeftList[i].icon);
-            // mainLeftLink.append(iconLink);
-            var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNav_key.InformationLink[i].linkName).html(horizontalNav_key.InformationLink[i].linkName);
-            mainLeftLink.append(spanLinkName)
-        }
-        else{
-            var badgesLi = $("<li>").addClass("dropdown");
-            mainLeftList.append(badgesLi);
-            var badgesLink = $("<a>").addClass("dropdown-toggle").attr("data-toggle" , "dropdown").attr("href" , "#").html(horizontalNav_key.InformationLink[i].linkName);
-            badgesLi.append(badgesLink);
-            var badgesImage = $("<i>").addClass("fa").addClass("notifications").html(horizontalNav_key.InformationLink[i].icon);
-            badgesLink.append(badgesImage);
-            var notificationCounter = $("<span>").addClass("badge").html(horizontalNav_key.InformationLink[i].notificationCounter);
-            badgesLink.append(notificationCounter);
-            var badgesCollapse = $("<span>").addClass("caret");
-            badgesLink.append(badgesCollapse);
-
-            var dropdownList = $("<ul>").addClass("dropdown-menu");
-            badgesLi.append(dropdownList);
-            for (let dropdownLinkCounter = 0; dropdownLinkCounter <horizontalNav_key.InformationLink[i].dropdownLink.length; dropdownLinkCounter++) {
-                var dropdownLi = $("<li>");
-                dropdownList.append(dropdownLi);
-                var dropdownLink = $("<a>").attr("href" , "#").attr("text_key" , horizontalNav_key.InformationLink[i].dropdownLink[dropdownLinkCounter].linkName)
-                    .html(horizontalNav_key.InformationLink[i].dropdownLink[dropdownLinkCounter].linkName);
-                dropdownLi.append(dropdownLink);  
-            }
-        }
-        
+    for (let i = 0; i < horizontalNav_key.InformationLink.length; i++){
+        var linkIcon = horizontalNav_key.InformationLink[i].icon;
+        var horizontalNavigationLinkName = horizontalNav_key.InformationLink[i].linkName;
+        createhorizontalNavigationLinkes(mainLeftList , linkIcon ,  horizontalNavigationLinkName , i);
     }
 
     var mainRightList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
