@@ -83,11 +83,11 @@ body{
     left: 120px;
   }
 .openbtnToggleOpen{
-    left: 243px !important;
+    left: 250px !important;
     transition: left 0.5s;
 }
 .openbtnToggleClose{
-    left: 80px !important;
+    left: 90px !important;
     transition: left 0.5s;
 }
   .glyphicon-triangle-right{
