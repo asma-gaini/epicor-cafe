@@ -139,7 +139,7 @@ $( document ).ready(function() {
     createNave();
 
 
-    getAndSetTranslateLanguageNavAdminPanel();
+    getAndSetTranslateLanguage();
 
 })  
 
@@ -159,19 +159,19 @@ function createNavigationBar(){
     // create header of vertical navigation 
     var urlLogo = navigationBar_key.headerNav.logoImg;
     var brandName = navigationBar_key.headerNav.berandName;
-    headerVerticalNav(navId , urlLogo , brandName);
+    createHeaderVerticalNavigation(navId , urlLogo , brandName);
 
     // create list of link of vertical navigation 
     createVerticalNavigationList();
 
-    var openNavBarBtn = $("<div>").attr("id" , "main").addClass("mainMarginleftOpen");
+    var openNavBarBtn = $("<div>").attr("id" , "VerticalNavigationButton").addClass("mainMarginleftOpen");
     navId.append(openNavBarBtn);
     var Collapsibleflesh = $("<span>").addClass("openerOcloser").addClass("glyphicon").addClass("glyphicon-align-justify");
     var openBtnShape = $("<button>").addClass("openbtn").addClass("openbtnToggleOpen").attr("onclick" , "openAndClose()").html(Collapsibleflesh);
     openNavBarBtn.append(openBtnShape);
 }
 
-function headerVerticalNav(htmlId , urlLogo , brandName){
+function createHeaderVerticalNavigation(htmlId , urlLogo , brandName){
     var verticalNavigation = $("<div>").attr("id" , "mySidebar").addClass("sidebar").addClass("mySidebarWidthOpen");
     htmlId.append(verticalNavigation);
     var createHeaderNav = $("<div>").addClass("headerVerticalNav");
@@ -210,7 +210,7 @@ function createVerticalNavigationList(){
                 var subLinkName = navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name;
                 var mainIdSubLink = navigationBar_key.Information[listNumber].subLink[subLinkNumber].mainId;
 
-                createSubLink(subLinkList ,  subLinkName ,subId ,mainIdSubLink);
+                createVerticalNavigationSubLink(subLinkList ,  subLinkName ,subId ,mainIdSubLink);
             }
         }
     }
@@ -223,7 +223,7 @@ function addSubLinkClasses( mainListSubLink,mainId , subId ){
     mainListSubLink.append(glyphinCollapsible);
 }
 
-// function createSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
+// function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
 //    {
 //     var subLinkList = $("<ul>").attr("subid" , subId).addClass("subLink").addClass("closeDropdown");
 //     mainListSubLink.append(subLinkList);
@@ -236,7 +236,7 @@ function addSubLinkClasses( mainListSubLink,mainId , subId ){
 //     }
 // }
 
-function createSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
+function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
     var subListLi = $("<li>");
     mainListSubLink.append(subListLi);
     var subLink = $("<a>").attr("href" , "#").attr("text_key" , subLinkName).attr("mainId" , mainId).attr("subid" , subId)
@@ -248,7 +248,7 @@ function createSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
 
 
 
-function getAndSetTranslateLanguageNavAdminPanel(){
+function getAndSetTranslateLanguage(){
     var ContainsKeyName = $("*[text_key]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
@@ -274,7 +274,7 @@ function changeLanguageNavAdminPanel()
 {
     var getLangAdmin = $("#languageAdmin").val();
     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-    getAndSetTranslateLanguageNavAdminPanel();
+    getAndSetTranslateLanguage();
 }
 
 function openAndClose(){
@@ -284,7 +284,7 @@ function openAndClose(){
     linkMainId.addClass("colorLink");
 
     $(".openbtn").toggleClass("openbtnToggleOpen openbtnToggleClose");
-    $("#main").toggleClass("mainMarginleftOpen mainMarginleftClose");
+    $("#VerticalNavigationButton").toggleClass("mainMarginleftOpen mainMarginleftClose");
     $("#mySidebar").toggleClass("mySidebarWidthOpen mySidebarWidthClose");
     if( $(".link").hasClass("displayNone")){
         setTimeout(function () {
