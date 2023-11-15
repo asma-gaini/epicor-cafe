@@ -75,18 +75,19 @@ body{
   .openbtn {
     position: absolute;
     font-size: 20px;
+    z-index: 10;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #000000;
     color: rgb(9, 9, 9);
     /* padding: 10px; */
     left: 120px;
   }
 .openbtnToggleOpen{
-    left: 280px !important;
+    left: 243px !important;
     transition: left 0.5s;
 }
 .openbtnToggleClose{
-    left: 120px !important;
+    left: 80px !important;
     transition: left 0.5s;
 }
   .glyphicon-triangle-right{
@@ -179,6 +180,15 @@ body{
   .colorLink{
     color: rgb(95, 97, 180) !important;
   }
+
+  .openerOcloser{
+    padding: 0px !important;
+    font-size: 13px !important;
+    color: white;
+    /* background-color: black; */
+    /* margin-left: -3px !important; */
+    margin: 0px !important;
+  }
   
   /* scrroll  */
   /* width */
@@ -234,10 +244,10 @@ body{
     width: 50px;
   }
   .openbtnToggleOpen {
-    left: 130px !important;
+    left: 101px !important;
   }
   .openbtnToggleClose{
-    left: 50px !important;
+    left: 22px !important;
   }
   .logoVerticalNav{
     width: 30px;
@@ -255,6 +265,9 @@ body{
   .openerOcloser{
     font-size: 13px !important;
     margin-left: -3px !important;
+  }
+  .glyphicon-align-justify{
+    margin-left: 0px !important;
   }
 }
 
@@ -279,10 +292,10 @@ body{
     width: 80px;
   }
   .openbtnToggleOpen {
-    left: 180px !important;
+    left: 152px !important;
   }
   .openbtnToggleClose{
-    left: 80px !important;
+    left: 52px !important;
   }
   .logoVerticalNav{
     width: 50px;
@@ -320,10 +333,10 @@ body{
     width: 90px;
   }
   .openbtnToggleOpen {
-    left: 200px !important;
+    left: 172px !important;
   }
   .openbtnToggleClose{
-    left: 90px !important;
+    left: 61px !important;
   }
   .logoVerticalNav{
     width: 60px;
@@ -357,10 +370,10 @@ body{
     width: 100px;
   }
   .openbtnToggleOpen {
-    left: 230px !important;
+    left: 201px !important;
   }
   .openbtnToggleClose{
-    left: 100px !important;
+    left: 72px !important;
   }
   .logoVerticalNav{
     width: 60px;
