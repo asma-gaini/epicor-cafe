@@ -66,7 +66,7 @@ var horizontalNav_key= {
 
  $( document ).ready(function() {
  
-    createHorizontalNav();
+    createHorizontalNavigationTemplate();
     
 
     getAndSetTranslateLanguage();
@@ -74,13 +74,38 @@ var horizontalNav_key= {
 })  
  
 // ********************* create login page  ********************* 
-function createHorizontalNav(){
+function createHorizontalNavigationTemplate(){
     const template = document.createElement('template');
 
-    $("template").html(HorizontalNav())
+    $("template").html(createHorizontalNav())
 
-    var HorizontalNavigation = document.getElementById("horizontalNav");
+    var HorizontalNavigation = document.getElementById("horizontalNavigation");
     HorizontalNavigation.append(template.content);
+}
+
+function createHorizontalNav(){
+    var horizontalNavId = $("#horizontalNavigation");
+    var mainDivHorizontalNav = $("<div>").addClass("navbar").addClass("navbar-inverse");
+    horizontalNavId.append(mainDivHorizontalNav);
+
+    // create header of horizontal navigation 
+    var logoImageHorizontalNavigation = horizontalNav_key.InformationBrand.logoImg;
+    var brandNameHorizontalNavigation = horizontalNav_key.InformationBrand.berandName;
+    createHeader(mainDivHorizontalNav , logoImageHorizontalNavigation ,brandNameHorizontalNavigation )
+
+    // create link list for Horizontal Navigation 
+    var mainLinkList = $("<ul>").addClass("nav").addClass("navbar-nav");
+    mainDivHorizontalNav.append(mainLinkList);
+    for (let i = 0; i < horizontalNav_key.InformationLink.length; i++){
+        var linkIcon = horizontalNav_key.InformationLink[i].icon;
+        var horizontalNavigationLinkName = horizontalNav_key.InformationLink[i].linkName;
+        createhorizontalNavigationLinkes(mainLinkList , linkIcon ,  horizontalNavigationLinkName , i);
+    }
+
+    // create users information 
+    var userIcon = horizontalNav_key.InformationUsers.icon;
+    var nserName = horizontalNav_key.InformationUsers.userName;
+    createUsers(mainDivHorizontalNav , userIcon , nserName);
 }
 
 function createHeader(mainDiv , logoImageHorizontalNavigation ,brandNameHorizontalNavigation ){
@@ -95,21 +120,21 @@ function createHeader(mainDiv , logoImageHorizontalNavigation ,brandNameHorizont
 }
 
 function createhorizontalNavigationLinkes(mainDiv , linkIcon ,  horizontalNavigationLinkName , counter){
-    var mainLeftLi = $("<li>");
-    mainDiv.append(mainLeftLi);
-    var mainLeftLink = $("<a>").attr("href" , "#").addClass("mainLink");
-    mainLeftLi.append(mainLeftLink);
+    var mainLi = $("<li>");
+    mainDiv.append(mainLi);
+    var mainLink = $("<a>").attr("href" , "#").addClass("mainLink");
+    mainLi.append(mainLink);
     var iconLink = $("<i>").addClass("fa").html(linkIcon);
-    mainLeftLink.append(iconLink);
+    mainLink.append(iconLink);
     var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNavigationLinkName).html(horizontalNavigationLinkName);
-    mainLeftLink.append(spanLinkName)
+    mainLink.append(spanLinkName)
 
     if (horizontalNav_key.InformationLink[counter].dropdownLink!= null) {
 
         var notificationCounter = horizontalNav_key.InformationLink[counter].notificationCounter;
-        addDropdownClasses(mainLeftLi , mainLeftLink ,  notificationCounter);
+        addDropdownClasses(mainLi , mainLink ,  notificationCounter);
         var dropdownList = $("<ul>").addClass("dropdown-menu");
-        mainLeftLi.append(dropdownList);
+        mainLi.append(dropdownList);
         for (let dropdownLinkCounter = 0; dropdownLinkCounter <horizontalNav_key.InformationLink[counter].dropdownLink.length; dropdownLinkCounter++)
         {
             var dropDownLinkName = horizontalNav_key.InformationLink[counter].dropdownLink[dropdownLinkCounter].linkName;
@@ -125,9 +150,8 @@ function addDropdownClasses(mainLi , mainlink , notificationCounter){
     $("i.fa").addClass("notifications");
     var notificationCounter = $("<span>").addClass("badge").html(notificationCounter);
     badgesLink.append(notificationCounter);
-    var badgesCollapse = $("<span>").addClass("caret");
-    badgesLink.append(badgesCollapse);
-
+    var collapseIcon = $("<span>").addClass("caret");
+    badgesLink.append(collapseIcon);
 }
 
 function cerateDropdownList(mainList , dropDownLinkName){
@@ -139,41 +163,17 @@ function cerateDropdownList(mainList , dropDownLinkName){
 }
 
 function createUsers(mainDiv , userIcon , nserName){
-    var mainRightList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
-    mainDiv.append(mainRightList);
+    var mainUserList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
+    mainDiv.append(mainUserList);
 
     var userLi = $("<li>").addClass("profileUser");
-    mainRightList.append(userLi);
+    mainUserList.append(userLi);
     var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(userIcon);
     userLi.append(userShape);
     var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , nserName).html(nserName);
     userLi.append(userName);
 }
 
-function HorizontalNav(){
-    var horizontalNavId = $("#horizontalNav");
-    var mainDivHorizontalNav = $("<div>").addClass("navbar").addClass("navbar-inverse");
-    horizontalNavId.append(mainDivHorizontalNav);
-
-    // create header of horizontal navigation 
-    var logoImageHorizontalNavigation = horizontalNav_key.InformationBrand.logoImg;
-    var brandNameHorizontalNavigation = horizontalNav_key.InformationBrand.berandName;
-    createHeader(mainDivHorizontalNav , logoImageHorizontalNavigation ,brandNameHorizontalNavigation )
-
-    var mainLeftList = $("<ul>").addClass("nav").addClass("navbar-nav");
-    mainDivHorizontalNav.append(mainLeftList);
-    for (let i = 0; i < horizontalNav_key.InformationLink.length; i++){
-        var linkIcon = horizontalNav_key.InformationLink[i].icon;
-        var horizontalNavigationLinkName = horizontalNav_key.InformationLink[i].linkName;
-        createhorizontalNavigationLinkes(mainLeftList , linkIcon ,  horizontalNavigationLinkName , i);
-    }
-
-    var userIcon = horizontalNav_key.InformationUsers.icon;
-    var nserName = horizontalNav_key.InformationUsers.userName;
-    createUsers(mainDivHorizontalNav , userIcon , nserName);
-
-   
-}
 
 // ********************* change language  *********************
 
