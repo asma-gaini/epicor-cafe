@@ -286,7 +286,9 @@ function openAndClose(){
         }, 300);
         
     }
-    else{$(".link").toggleClass("displayInline displayNone");}
+    else{
+        $(".link").toggleClass("displayInline displayNone");
+    }
     
     if( $(".collapsibleGlyph").hasClass("collapsibleGlyphHide")){
         setTimeout(function () {
@@ -295,7 +297,8 @@ function openAndClose(){
         }, 300);
         
     }
-    else{$(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");}
+    else{
+        $(".collapsibleGlyph").toggleClass("collapsibleGlyphShow collapsibleGlyphHide");}
     $(".brandName").toggleClass("displayInline displayNone");
    
     var listContainSubLink = $("ul.subLink");
