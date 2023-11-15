@@ -162,7 +162,15 @@ function createNavigationBar(){
     createHeaderVerticalNavigation(navId , urlLogo , brandName);
 
     // create list of link of vertical navigation 
-    createVerticalNavigationList();
+    var verticalNavigation = $("#mySidebar")
+    var mainList = $("<ul>");
+    verticalNavigation.append(mainList);
+    for (let listNumber = 0; listNumber < navigationBar_key.Information.length; listNumber++){
+        var linkIcon = navigationBar_key.Information[listNumber].Image;
+        var mainLinkName  = navigationBar_key.Information[listNumber].Name;
+        var mainIdLink = navigationBar_key.Information[listNumber].mainId;
+        createVerticalNavigationList( mainList, linkIcon , mainLinkName , mainIdLink ,listNumber);
+    }
 
     var openNavBarBtn = $("<div>").attr("id" , "VerticalNavigationButton").addClass("mainMarginleftOpen");
     navId.append(openNavBarBtn);
@@ -184,36 +192,31 @@ function createHeaderVerticalNavigation(htmlId , urlLogo , brandName){
     createHeaderNav.append(berandNme);
 }
 
-function createVerticalNavigationList(){
-    var verticalNavigation = $("#mySidebar")
-    var mainList = $("<ul>");
-    verticalNavigation.append(mainList);
-
-    for (let listNumber = 0; listNumber < navigationBar_key.Information.length; listNumber++) {
+function createVerticalNavigationList(mainList, icon , mainLinkName , mainId , counter){
         var mainListLi =  $("<li>");
         mainList.append(mainListLi);
-        var glyphin = $("<span>").addClass("glyphicon").addClass(navigationBar_key.Information[listNumber].Image);
+        var glyphin = $("<span>").addClass("glyphicon").addClass(icon);
         mainListLi.append(glyphin);
-        var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , navigationBar_key.Information[listNumber].Name)
-        .attr("mainId" , navigationBar_key.Information[listNumber].mainId)
-        .attr("onclick" , "holdLink("+navigationBar_key.Information[listNumber].mainId+")")
-        .html(navigationBar_key.Information[listNumber].Name);
+        var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , mainLinkName)
+        .attr("mainId" , mainId)
+        .attr("onclick" , "holdLink("+mainId+")")
+        .html(mainLinkName);
         mainListLi.append(linkList);
         
-        if (navigationBar_key.Information[listNumber].subLink != "null"){
-            var mainIdLink = navigationBar_key.Information[listNumber].mainId;
-            var subId = navigationBar_key.Information[listNumber].subid;
+        if (navigationBar_key.Information[counter].subLink != "null"){
+            var mainIdLink = navigationBar_key.Information[counter].mainId;
+            var subId = navigationBar_key.Information[counter].subid;
             addSubLinkClasses( mainListLi ,mainIdLink , subId );
             var subLinkList = $("<ul>").attr("subid" , subId).addClass("subLink").addClass("closeDropdown");
             mainListLi.append(subLinkList);
-            for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[listNumber].subLink.length; subLinkNumber++){
-                var subLinkName = navigationBar_key.Information[listNumber].subLink[subLinkNumber].Name;
-                var mainIdSubLink = navigationBar_key.Information[listNumber].subLink[subLinkNumber].mainId;
+            for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[counter].subLink.length; subLinkNumber++){
+                var subLinkName = navigationBar_key.Information[counter].subLink[subLinkNumber].Name;
+                var mainIdSubLink = navigationBar_key.Information[counter].subLink[subLinkNumber].mainId;
 
                 createVerticalNavigationSubLink(subLinkList ,  subLinkName ,subId ,mainIdSubLink);
             }
         }
-    }
+    // }
 }
 
 function addSubLinkClasses( mainListSubLink,mainId , subId ){
