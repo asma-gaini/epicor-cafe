@@ -53,7 +53,7 @@ $( document ).ready(function() {
     createCategoryMenuTemplate();
 
 
-    getAndSetTranslateLanguage();
+    // getAndSetTranslateLanguage();
 
 })  
 
