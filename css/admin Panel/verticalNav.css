@@ -21,6 +21,7 @@ body{
     padding-bottom: 5px;
   }
   .sidebar {
+    margin-top: 65px;
     font-family: 'iransans';
     height: 100%;
     width: 120px;
@@ -83,10 +84,12 @@ body{
     left: 120px;
   }
 .openbtnToggleOpen{
+  top: 65px;
     left: 250px !important;
     transition: left 0.5s;
 }
 .openbtnToggleClose{
+  top: 65px;
     left: 90px !important;
     transition: left 0.5s;
 }
