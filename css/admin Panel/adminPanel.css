@@ -3,3 +3,12 @@
     right: 0;
     /* left: 200px; */
 }
+body{
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #5f61b4 40%,
+        #319197 200%
+      );
+}

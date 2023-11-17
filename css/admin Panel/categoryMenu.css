@@ -19,6 +19,7 @@
 }
 input {
     border-radius: 5px;
+    border: none;
 }
 .chosePictureLabel_categoryMenu{
     margin-left: -40px;
@@ -28,6 +29,17 @@ input {
     padding-left: 50px;
 }
 .sendButton_category_menu{
+
+}
+input[type=submit]:hover{
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #319197 100%,
+        #319197 200%
+      );
+    color: white;
 
 }
 /* input::file-selector-button {
