@@ -12,7 +12,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../../css/admin Panel/adminPanel.css">
+
     <link rel="stylesheet" href="../../css/admin Panel/categoryMenu.css">
+   
+
+
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -22,50 +27,21 @@
 
 <body>
 
-  <select class="form-select" aria-label="Default select example" id="language"  onchange="changeLanguage()">
+  <select class="form-select languageAdminPanel" aria-label="Default select example" id="language"  onchange="changeLanguage()">
     <option class="optionSelectBox" selected value="Fa">فارسی </option>
     <option  class="optionSelectBox" value="En">English</option>
   </select>
 
-  <!-- <div id="categoryMenuForm"></div> -->
+  <div id="verticalNavigation"></div>
 
-  <div class="categoryMenuForm">
-    <form>
-      <div class="row_categoryMenu">
-        <div class="labelStyle_categoryMenu">
-          <label for="nameFoodFa">Persian name : </label><br>
-        </div>
-        <div class="inputStyle_categoryMenu">
-          <input type="text" id="nameFoodFa" name="nameFoodFa"><br>
-        </div>
-      </div>
-      
-      <div class="row_categoryMenu">
-        <div class="labelStyle_categoryMenu">
-          <label for="nameFoodEn">english name : </label><br>
-        </div>
-        <div class="inputStyle_categoryMenu">
-          <input type="text" id="nameFoodEn" name="nameFoodEn">
-        </div>
-      </div>
-      
-      <div class="row_categoryMenu">
-        <div class="chosePictureLabel_categoryMenu">
-          <label for="foodPicture_categoryMenu">choose picture :</label>
-        </div>
-        <div class="chosePictureInput_categoryMenu">
-          <input type="file" id="foodPicture_categoryMenu" name="foodPicture_categoryMenu" ><br><br>
-        </div>
-      </div>
+  <div id="horizontalNavigation"></div>
 
-      <div class="sendButton_category_menu">
-        <input type="submit" value="send">
-      </div>
-    </form>
-  </div>
+  <div id="categoryMenuForm"></div>
+    
+    <script src="../../js/admin panel/categoryMenu.js" async defer></script>
+    
 
-        
-    <!-- <script src="../../js/admin panel/horizontalNav.js" async defer></script> -->
+
 
 </body>
 
