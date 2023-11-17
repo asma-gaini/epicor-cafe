@@ -1,0 +1,79 @@
+.row_categoryMenu{
+    padding: 10px 0px;
+}
+.categoryMenuForm{
+    text-align: center !important;
+    background-color: #e2e2e2; 
+    box-shadow: 1px 1px 20px #cbced1, -1px -1px 20px #fff;
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    color: rgb(4, 4, 4);
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+.labelStyle_categoryMenu{
+    margin-left: -90px;
+}
+.inputStyle_categoryMenu{
+}
+input {
+    border-radius: 5px;
+}
+.chosePictureLabel_categoryMenu{
+    margin-left: -80px;
+
+}
+.chosePictureInput_categoryMenu{
+    padding-left: 50px;
+}
+.sendButton_category_menu{
+
+}
+/* input::file-selector-button {
+    font-weight: bold;
+    color: dodgerblue;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+    text-align: center;
+}   */
+input[type=file] {
+    display: inline-block;
+}
+input[type="file" i] {
+    font-size: 12px;
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    white-space: pre;
+    overflow: hidden !important;
+    overflow-x: hidden;
+}
+input::file-selector-button {
+    background-image: linear-gradient(
+      to right,
+      #bab9b8,
+      #535050,
+      #319197 100%,
+      #319197 200%
+    );
+    background-position-x: 0%;
+    background-size: 200%;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-shadow: 0 1px 1px #333;
+    transition: all 0.25s;
+  }
+  input::file-selector-button:hover {
+    background-position-x: 80%;
+    /* transform: scale(1.1); */
+  }
