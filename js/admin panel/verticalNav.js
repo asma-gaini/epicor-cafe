@@ -273,7 +273,7 @@ function getAndSetTranslateLanguage(){
     }
 }
 
-function changeLanguageNavAdminPanel()
+function changeLanguage()
 {
     var getLangAdmin = $("#language").val();
     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
