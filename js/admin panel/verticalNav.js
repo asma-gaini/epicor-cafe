@@ -275,7 +275,7 @@ function getAndSetTranslateLanguage(){
 
 function changeLanguageNavAdminPanel()
 {
-    var getLangAdmin = $("#languageAdmin").val();
+    var getLangAdmin = $("#language").val();
     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
     getAndSetTranslateLanguage();
 }
