@@ -100,6 +100,8 @@ function createCategoryMenu(){
     .attr("text_key" , categoryMenu_key.Information_submit.inlineAttributeValue)
     .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
+
+
 }
 
 function createCategoryMenuInformation(mainForm , labelValue , inlineAttribute ){
@@ -133,9 +135,18 @@ function createChoosePictureButton(mainForm , labelValuePicture , inlineAttribut
 
         var divContainInput = $("<div>").addClass("chosePictureInput_categoryMenu");
         rowOfForm.append(divContainInput);
-        var input = $("<input>").attr("type" , "file").attr("id" , inlineAttributePicture).attr("name" , inlineAttributePicture);
+        var input = $("<input>").attr("type" , "file").attr("id" , inlineAttributePicture)
+        .css("visibility" , "hidden").attr("name" , inlineAttributePicture);
         divContainInput.append(input)
         divContainInput.append(nextLine);
+        var displayChooseFile = $("<p>").addClass("picture").html("no choose picture");
+        divContainLabel.append(displayChooseFile);
+        
+        $("#"+inlineAttributePicture+"").change(function() {
+            filename = this.files[0].name;
+            $("p.picture").html(filename);
+            console.log(filename);
+        });
 }
 
 
@@ -147,13 +158,13 @@ function changeDirection(){
     // $(".chosePictureLabel_categoryMenu").removeClass("Direction-ltr");
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-        $(".chosePictureLabel_categoryMenu").css("margin-left","-20px");
+        // $(".chosePictureLabel_categoryMenu").css("margin-left","-20px");
         $(".labelStyle_categoryMenu").css("margin-left","-30px");
         
     }
     else{
         $("label").css("direction","rtl");
-        $(".chosePictureLabel_categoryMenu").css("margin-left","80px");
+        // $(".chosePictureLabel_categoryMenu").css("margin-left","80px");
         $(".labelStyle_categoryMenu").css("margin-left","90px");
         
     }

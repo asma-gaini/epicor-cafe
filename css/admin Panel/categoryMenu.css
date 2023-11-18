@@ -22,11 +22,22 @@ input {
     border: none;
 }
 .chosePictureLabel_categoryMenu{
-    margin-left: -20px;
-
+    /* margin-left: -20px; */
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #319197 100%,
+        #319197 200%
+      );
+    color: white;
+    border-radius: 10px;
+    width: 180px;
+    margin: auto;
 }
 .chosePictureInput_categoryMenu{
     padding-left: 50px;
+    
 }
 .sendButton_category_menu{
 
@@ -42,6 +53,7 @@ input[type=submit]:hover{
     color: white;
 
 }
+
 /* input::file-selector-button {
     font-weight: bold;
     color: dodgerblue;
