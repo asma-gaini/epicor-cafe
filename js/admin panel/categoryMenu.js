@@ -21,7 +21,8 @@ var categoryMenu_key= {
 
     "Information_submit":
     {
-        "inlineAttributeValue" : "send"
+        "inlineAttributeValue" : "send",
+        "sucsessSendValue" :"sucsessSend"
     }
 
 }
@@ -30,14 +31,16 @@ var categoryMenu_Fa={
     "PersianNameFood" : "نام فارسی منو :",
     "englishNameFood": "نام انگلیسی منو :",
     "choosePictureCategoryMenu": "انتخاب تصویر منو :",
-    "send": "ارسال"
+    "send": "ارسال",
+    "sucsessSend":"موفق"
 }
 
 var categoryMenu_En={
     "PersianNameFood": "Menu Persian Neme :",
     "englishNameFood": "Menu English Neme :",
     "choosePictureCategoryMenu": "Choose Menu Picture :",
-    "send": "send"
+    "send": "send",
+    "sucsessSend":"sucsess"
 }
 
 var categoryMenuFaJsonString = JSON.stringify(categoryMenu_Fa);
@@ -117,7 +120,9 @@ function createCategoryMenu(){
 
     var divContainSubmitButton = $("<div>").addClass("sendButton_category_menu")
     formCategoryMenu.append(divContainSubmitButton)
-    var inputSubmit = $("<input>").attr("type" , "submit").attr("value" , categoryMenu_key.Information_submit.inlineAttributeValue).attr("text_key" , categoryMenu_key.Information_submit.inlineAttributeValue);
+    var inputSubmit = $("<input>").addClass("sendCategoryMenuForm").attr("type" , "submit").attr("value" , categoryMenu_key.Information_submit.inlineAttributeValue)
+    .attr("text_key" , categoryMenu_key.Information_submit.inlineAttributeValue)
+    .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
 }
 
@@ -142,6 +147,10 @@ function changeDirection(){
     }
 }
 
+
+function sendAlert(){
+    $(".sendCategoryMenuForm").attr("value" , categoryMenu_key.Information_submit.sucsessSendValue);
+}
 function getAndSetTranslateLanguage(){
     var ContainsKeyName = $("*[text_key]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
