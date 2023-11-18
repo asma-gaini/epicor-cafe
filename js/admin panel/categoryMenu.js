@@ -36,7 +36,7 @@ var categoryMenu_Fa={
 var categoryMenu_En={
     "PersianNameFood": "Menu Persian Neme :",
     "englishNameFood": "Menu English Neme :",
-    "choosePictureCategoryMenu": "Choose Menu Picture",
+    "choosePictureCategoryMenu": "Choose Menu Picture :",
     "send": "send"
 }
 
@@ -53,8 +53,8 @@ $( document ).ready(function() {
     createCategoryMenuTemplate();
 
 
-    // getAndSetTranslateLanguage();
-
+    getAndSetTranslateLanguage();
+    changeDirection();
 })  
 
 
@@ -122,7 +122,25 @@ function createCategoryMenu(){
 }
 
 
-
+function changeDirection(){
+    var valueLanguage = $("#language").val();
+    $("label").removeClass("Direction-rtl");
+    $("label").removeClass("Direction-ltr");
+    // $(".chosePictureLabel_categoryMenu").removeClass("Direction-rtl");
+    // $(".chosePictureLabel_categoryMenu").removeClass("Direction-ltr");
+    if(valueLanguage == "En"){
+        $("label").css("direction","ltr");
+        $(".chosePictureLabel_categoryMenu").css("margin-left","-20px");
+        $(".labelStyle_categoryMenu").css("margin-left","-30px");
+        
+    }
+    else{
+        $("label").css("direction","rtl");
+        $(".chosePictureLabel_categoryMenu").css("margin-left","80px");
+        $(".labelStyle_categoryMenu").css("margin-left","90px");
+        
+    }
+}
 
 function getAndSetTranslateLanguage(){
     var ContainsKeyName = $("*[text_key]");
@@ -151,5 +169,6 @@ function changeLanguage()
     var getLangAdmin = $("#language").val();
     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
     getAndSetTranslateLanguage();
+    changeDirection();
 }
 
