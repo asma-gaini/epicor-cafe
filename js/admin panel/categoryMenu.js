@@ -161,7 +161,21 @@ function changeDirection(){
 
 
 function sendAlert(){
-    $(".sendCategoryMenuForm").attr("value" , categoryMenu_key.Information_submit.sucsessSendValue);
+    var valueLanguage = $("#language").val();
+    if(valueLanguage == "En"){
+        alert("sending this form is: "+categoryMenu_En.sucsessSend);
+    }
+    else if(valueLanguage == "Fa"){
+        alert("ارسال فرم شما: "+categoryMenu_Fa.sucsessSend);
+    }
+
+    // var valueLanguage = $("#language").val();
+    // if(valueLanguage == "En"){
+    //     $(".sendCategoryMenuForm").attr("value" , categoryMenu_En.sucsessSend);
+    // }
+    // else if(valueLanguage == "Fa"){
+    //     $(".sendCategoryMenuForm").attr("value" , categoryMenu_Fa.sucsessSend);
+    // }
 }
 function getAndSetTranslateLanguage(){
     var ContainsKeyName = $("*[text_key]");

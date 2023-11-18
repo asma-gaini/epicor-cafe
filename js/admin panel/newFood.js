@@ -187,7 +187,13 @@ function changeDirection(){
     }
 }
 function sendAlert(){
-    $(".sendNewFoodForm").attr("value" , newFood_key.Information_submit.sucsessSendValue);
+    var valueLanguage = $("#language").val();
+    if(valueLanguage == "En"){
+        alert("sending this form is: "+newFood_En.sucsessSend);
+    }
+    else if(valueLanguage == "Fa"){
+        alert("ارسال فرم شما: "+newFood_Fa.sucsessSend);
+    }
 }
 
 
