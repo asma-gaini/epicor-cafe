@@ -18,8 +18,12 @@ var newFood_key= {
             "label": "description"
         },
         {
-            "inlineAttributeValue" : "price",
-            "label": "price" 
+            "inlineAttributeValue" : "price_rial",
+            "label": "price_rial" 
+        },
+        {
+            "inlineAttributeValue" : "price_dollar",
+            "label": "price_dollar" 
         }
     ],
     
@@ -44,7 +48,8 @@ var newFood_Fa={
     "PersianNameFood" : "نام فارسی منو :",
     "englishNameFood": "نام انگلیسی منو :",
     "description": "توضیحات :",
-    "price": "قیمت :",
+    "price_rial": "قیمت به ریال :",
+    "price_dollar": "قیمت به دلار :",
     "choosePictureNewFood": "انتخاب تصویر منو :",
     "send": "ارسال",
     "sucsessSend":"موفق"
@@ -55,7 +60,8 @@ var newFood_En={
     "PersianNameFood": "Menu Persian Neme :",
     "englishNameFood": "Menu English Neme :",
     "description": "Description :",
-    "price": "price :",
+    "price_rial": "price(rial) :",
+    "price_dollar": "price(dollar) :",
     "choosePictureNewFood": "Choose Menu Picture :",
     "send": "send",
     "sucsessSend":"sucsess"
