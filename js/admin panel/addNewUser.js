@@ -120,12 +120,12 @@ function changeDirection(){
     $("label").removeClass("Direction-ltr");
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-        $(".labelStyle_addUser").css("margin-left","-30px");
+        $(".labelStyle_addUser").css("margin-left","-110px");
         
     }
     else{
         $("label").css("direction","rtl");
-        $(".labelStyle_addUser").css("margin-left","90px");
+        $(".labelStyle_addUser").css("margin-left","120px");
         
     }
 }
