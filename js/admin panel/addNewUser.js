@@ -130,7 +130,14 @@ function changeDirection(){
     }
 }
 function sendAlert(){
-    $(".sendAddUserForm").attr("value" , addUser_key.Information_submit.sucsessSendValue);
+    var valueLanguage = $("#language").val();
+    if(valueLanguage == "En"){
+        alert("sending this form is: "+addUser_En.sucsessSend);
+    }
+    else if(valueLanguage == "Fa"){
+        alert("ارسال فرم شما: "+addUser_Fa.sucsessSend);
+    }
+   
 }
 
 
