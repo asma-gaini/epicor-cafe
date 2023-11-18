@@ -1,0 +1,81 @@
+.row_newFood{
+    padding: 10px 0px;
+}
+.newFoodForm{
+    text-align: center !important;
+    background-color: #e2e2e2; 
+    box-shadow: 1px 1px 20px #cbced1, -1px -1px 20px #fff;
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    color: rgb(4, 4, 4);
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+.labelStyle_newFood{
+    margin-left: -30px;
+}
+input {
+    border-radius: 5px;
+    border: none;
+}
+.chosePictureLabel_newFood{
+    margin-left: -20px;
+
+}
+.chosePictureInput_newFood{
+    padding-left: 50px;
+}
+.description{
+    height: 60px;
+}
+input[type=submit]:hover{
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #319197 100%,
+        #319197 200%
+      );
+    color: white;
+
+}
+input[type=file] {
+    display: inline-block;
+}
+input[type="file" i] {
+    font-size: 12px;
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    white-space: pre;
+    overflow: hidden !important;
+    overflow-x: hidden;
+}
+input::file-selector-button {
+    background-image: linear-gradient(
+      to right,
+      #bab9b8,
+      #535050,
+      #319197 100%,
+      #319197 200%
+    );
+    background-position-x: 0%;
+    background-size: 200%;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-shadow: 0 1px 1px #333;
+    transition: all 0.25s;
+  }
+  input::file-selector-button:hover {
+    background-position-x: 80%;
+    /* transform: scale(1.1); */
+  }
