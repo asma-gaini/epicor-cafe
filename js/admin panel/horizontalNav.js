@@ -163,7 +163,7 @@ function cerateDropdownList(mainList , dropDownLinkName){
 }
 
 function createUsers(mainDiv , userIcon , nserName){
-    var mainUserList = $("<ul>").addClass("nav").addClass("navbar-nav").css("float" , "right");
+    var mainUserList = $("<ul>").addClass("nav").addClass("navbar-nav") .addClass("displayUser").css("float" , "right");
     mainDiv.append(mainUserList);
 
     var userLi = $("<li>").addClass("profileUser");
