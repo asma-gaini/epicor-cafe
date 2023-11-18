@@ -1,0 +1,33 @@
+.row_addUser{
+    padding: 10px 0px;
+}
+.addUserForm{
+    text-align: center !important;
+    background-color: #e2e2e2; 
+    box-shadow: 1px 1px 20px #cbced1, -1px -1px 20px #fff;
+    width: 350px;
+    margin: auto;
+    margin-top: 65px;
+    color: rgb(4, 4, 4);
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+.labelStyle_addUser{
+    margin-left: -130px;
+}
+input {
+    border-radius: 5px;
+    border: none;
+}
+
+input[type=submit]:hover{
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #319197 100%,
+        #319197 200%
+      );
+    color: white;
+
+}
