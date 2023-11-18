@@ -81,40 +81,16 @@ function createCategoryMenu(){
 
     for (let i = 0; i < categoryMenu_key.Information.length; i++) {
        
-        var rowOfForm = $("<div>").addClass("row_categoryMenu");
-        formCategoryMenu.append(rowOfForm);
-
-        var divContainLabel = $("<div>").addClass("labelStyle_categoryMenu");
-        rowOfForm.append(divContainLabel);
-        var label = $("<label>").attr("for" , categoryMenu_key.Information[i].inlineAttributeValue).attr("text_key" , categoryMenu_key.Information[i].label).html(categoryMenu_key.Information[i].label);
-        divContainLabel.append(label);
-        var nextLine = $("<br>");
-        divContainLabel.append(nextLine);
-
-        var divContainInput = $("<div>").addClass("inputStyle_categoryMenu");
-        rowOfForm.append(divContainInput);
-        var input = $("<input>").attr("type" , "text").attr("id" , categoryMenu_key.Information[i].inlineAttributeValue).attr("name" , categoryMenu_key.Information[i].inlineAttributeValue);
-        divContainInput.append(input)
-        divContainInput.append(nextLine);
+        var labelValue = categoryMenu_key.Information[i].label;
+        var inlineAttribute = categoryMenu_key.Information[i].inlineAttributeValue;
+        createCategoryMenuInformation(formCategoryMenu , labelValue , inlineAttribute );
     }
 
     for (let j = 0; j < categoryMenu_key.Information_choosePicture.length; j++) {
 
-        var rowOfForm = $("<div>").addClass("row_categoryMenu");
-        formCategoryMenu.append(rowOfForm);
-
-        var divContainLabel = $("<div>").addClass("chosePictureLabel_categoryMenu");
-        rowOfForm.append(divContainLabel);
-        var label = $("<label>").attr("for" , categoryMenu_key.Information_choosePicture[j].inlineAttributeValue).attr("text_key" , categoryMenu_key.Information_choosePicture[j].label).html(categoryMenu_key.Information_choosePicture[j].label);
-        divContainLabel.append(label);
-        var nextLine = $("<br>");
-        divContainLabel.append(nextLine);
-
-        var divContainInput = $("<div>").addClass("chosePictureInput_categoryMenu");
-        rowOfForm.append(divContainInput);
-        var input = $("<input>").attr("type" , "file").attr("id" , categoryMenu_key.Information_choosePicture[j].inlineAttributeValue).attr("name" , categoryMenu_key.Information_choosePicture[j].inlineAttributeValue);
-        divContainInput.append(input)
-        divContainInput.append(nextLine);
+        var labelValuePicture = categoryMenu_key.Information_choosePicture[j].label;
+        var inlineAttributePicture = categoryMenu_key.Information_choosePicture[j].inlineAttributeValue;
+        createChoosePictureButton(formCategoryMenu , labelValuePicture , inlineAttributePicture)
     }
 
 
@@ -124,6 +100,42 @@ function createCategoryMenu(){
     .attr("text_key" , categoryMenu_key.Information_submit.inlineAttributeValue)
     .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
+}
+
+function createCategoryMenuInformation(mainForm , labelValue , inlineAttribute ){
+    var rowOfForm = $("<div>").addClass("row_categoryMenu");
+    mainForm.append(rowOfForm);
+
+    var divContainLabel = $("<div>").addClass("labelStyle_categoryMenu");
+    rowOfForm.append(divContainLabel);
+    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key" , labelValue).html(labelValue);
+    divContainLabel.append(label);
+    var nextLine = $("<br>");
+    divContainLabel.append(nextLine);
+
+    var divContainInput = $("<div>").addClass("inputStyle_categoryMenu");
+    rowOfForm.append(divContainInput);
+    var input = $("<input>").attr("type" , "text").attr("id" , inlineAttribute).attr("name" , inlineAttribute);
+    divContainInput.append(input)
+    divContainInput.append(nextLine);
+}
+
+function createChoosePictureButton(mainForm , labelValuePicture , inlineAttributePicture){
+    var rowOfForm = $("<div>").addClass("row_categoryMenu");
+    mainForm.append(rowOfForm);
+
+        var divContainLabel = $("<div>").addClass("chosePictureLabel_categoryMenu");
+        rowOfForm.append(divContainLabel);
+        var label = $("<label>").attr("for" , inlineAttributePicture).attr("text_key" , labelValuePicture).html(labelValuePicture);
+        divContainLabel.append(label);
+        var nextLine = $("<br>");
+        divContainLabel.append(nextLine);
+
+        var divContainInput = $("<div>").addClass("chosePictureInput_categoryMenu");
+        rowOfForm.append(divContainInput);
+        var input = $("<input>").attr("type" , "file").attr("id" , inlineAttributePicture).attr("name" , inlineAttributePicture);
+        divContainInput.append(input)
+        divContainInput.append(nextLine);
 }
 
 
