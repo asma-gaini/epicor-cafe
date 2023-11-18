@@ -23,19 +23,7 @@
     font-size: 18px;
     line-height: 20px;
 }
-.navbar-nav {
-    margin: 7.5px -15px;
-    display: flex;
-    position: absolute;
-    top: -8px !important;
-    left: 150px;
-}
-.displayUser{
-    position: absolute;
-    top: -8px !important;
-    left: 650px !important;
-    float: right;
-}
+
 .profileUserHorizontalNav{
     color: rgb(0, 0, 0);
     font-size: 14px;
@@ -132,8 +120,23 @@ top: 100px;
     .fa{
         position: absolute;
         top: 10px;
-       }
+    }
+    .displayUser{
+        position: absolute;
+        top: -8px !important;
+        left: 650px !important;
+        float: right;
+    }
+    .navbar-nav {
+        margin: 7.5px -15px;
+        display: flex;
+        position: absolute;
+        top: -8px !important;
+        left: 150px;
+        height: 68px;
+    }
   }
+
 
 
  
