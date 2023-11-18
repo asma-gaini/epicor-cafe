@@ -118,17 +118,13 @@ function changeDirection(){
     var valueLanguage = $("#language").val();
     $("label").removeClass("Direction-rtl");
     $("label").removeClass("Direction-ltr");
-    // $(".chosePictureLabel_addUser").removeClass("Direction-rtl");
-    // $(".chosePictureLabel_addUser").removeClass("Direction-ltr");
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-        $(".chosePictureLabel_addUser").css("margin-left","-20px");
         $(".labelStyle_addUser").css("margin-left","-30px");
         
     }
     else{
         $("label").css("direction","rtl");
-        $(".chosePictureLabel_addUser").css("margin-left","80px");
         $(".labelStyle_addUser").css("margin-left","90px");
         
     }

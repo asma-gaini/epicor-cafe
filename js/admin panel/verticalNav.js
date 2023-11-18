@@ -139,7 +139,7 @@ $( document ).ready(function() {
     createNave();
 
 
-    // getAndSetTranslateLanguage();
+    getAndSetTranslateLanguage();
 
 })  
 

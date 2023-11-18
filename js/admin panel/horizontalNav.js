@@ -69,7 +69,7 @@ var horizontalNav_key= {
     createHorizontalNavigationTemplate();
     
 
-    // getAndSetTranslateLanguage();
+    getAndSetTranslateLanguage();
 
 })  
  
