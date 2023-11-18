@@ -154,17 +154,16 @@ function changeDirection(){
     var valueLanguage = $("#language").val();
     $("label").removeClass("Direction-rtl");
     $("label").removeClass("Direction-ltr");
-    // $(".chosePictureLabel_categoryMenu").removeClass("Direction-rtl");
-    // $(".chosePictureLabel_categoryMenu").removeClass("Direction-ltr");
+   
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-        // $(".chosePictureLabel_categoryMenu").css("margin-left","-20px");
+       
         $(".labelStyle_categoryMenu").css("margin-left","-30px");
         
     }
     else{
         $("label").css("direction","rtl");
-        // $(".chosePictureLabel_categoryMenu").css("margin-left","80px");
+       
         $(".labelStyle_categoryMenu").css("margin-left","90px");
         
     }
