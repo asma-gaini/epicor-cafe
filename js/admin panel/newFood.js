@@ -98,7 +98,7 @@ function createNewFood(){
     var mainDiv = $("<div>").addClass("newFoodForm");
     newFoodFormId.append(mainDiv);
 
-    var formNewFood = $("<form>");
+    var formNewFood = $("<form>").addClass("form_newFood");
     mainDiv.append(formNewFood);
 
     for (let i = 0; i < newFood_key.Information.length; i++) {
