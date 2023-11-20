@@ -109,6 +109,8 @@ function createAddUserInformation(mainForm , labelValue , inlineAttribute ){
 
 function AddTypeValue(){
     $("input[name='nikname_user']").attr("type" , "text");
+    $("input[name='email_User']").attr("type" , "email");
+    $("input[name='passWord_user']").attr("type" , "password");
 }
 
 function changeDirection(){
