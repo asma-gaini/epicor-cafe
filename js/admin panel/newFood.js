@@ -79,8 +79,6 @@ $( document ).ready(function() {
 
     createNewFoodTemplate();
 
-
-    getAndSetTranslateLanguage();
     changeDirection();
 })  
 
@@ -122,7 +120,7 @@ function createNewFood(){
     var divContainSubmitButton = $("<div>").addClass("sendButton_NewFood")
     formNewFood.append(divContainSubmitButton)
     var inputSubmit = $("<input>").addClass("sendNewFoodForm").attr("type" , "submit").attr("value" , newFood_key.Information_submit.inlineAttributeValue)
-    .attr("text_key" , newFood_key.Information_submit.inlineAttributeValue)
+    .attr("text_key_food" , newFood_key.Information_submit.inlineAttributeValue)
     .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
 }
@@ -133,7 +131,7 @@ function createNewFoodInformation(mainForm , labelValue , inlineAttribute ){
 
     var divContainLabel = $("<div>").addClass("labelStyle_newFood");
     rowOfForm.append(divContainLabel);
-    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key" , labelValue).html(labelValue);
+    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key_food" , labelValue).html(labelValue);
     divContainLabel.append(label);
     var nextLine = $("<br>");
     divContainLabel.append(nextLine);
@@ -151,7 +149,7 @@ function createChoosePictureButton(mainForm , labelValuePicture , inlineAttribut
 
         var divContainLabel = $("<div>").addClass("chosePictureLabel_newFood");
         rowOfForm.append(divContainLabel);
-        var label = $("<label>").attr("for" , inlineAttributePicture).attr("text_key" , labelValuePicture).html(labelValuePicture);
+        var label = $("<label>").attr("for" , inlineAttributePicture).attr("text_key_food" , labelValuePicture).html(labelValuePicture);
         divContainLabel.append(label);
         var nextLine = $("<br>");
         divContainLabel.append(nextLine);
@@ -194,37 +192,5 @@ function sendAlert(){
     else if(valueLanguage == "Fa"){
         alert("ارسال فرم شما: "+newFood_Fa.sucsessSend);
     }
-}
-
-
-
-function getAndSetTranslateLanguage(){
-    var ContainsKeyName = $("*[text_key]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
-
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
-
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = newFoodEnJson[keyValue];
-                }
-                else{
-                    translatedValueNav = newFoodFaJson[keyValue];
-                }
-                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
-}
-
-function changeLanguage()
-{
-    var getLangAdmin = $("#language").val();
-    var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-    getAndSetTranslateLanguage();
-    changeDirection();
 }
 

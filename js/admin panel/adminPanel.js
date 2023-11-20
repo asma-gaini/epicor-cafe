@@ -302,6 +302,84 @@ var categoryMenuFaJson = JSON.parse(categoryMenuFaJsonString);
 var categoryMenuEnJsonString = JSON.stringify(categoryMenu_En);
 var categoryMenuEnJson = JSON.parse(categoryMenuEnJsonString);
 
+// ********************* add category menu form json file  *********************
+var newFood_key= {
+    "Information":
+    [
+        {
+            "inlineAttributeValue" : "categoryId",
+            "label": "foodCategory",
+        },
+        {
+            "inlineAttributeValue" : "nameMenuFa",
+            "label": "PersianNameFood"
+        },
+        {
+            "inlineAttributeValue" : "nameMenuEn",
+            "label": "englishNameFood"
+        },
+        {
+            "inlineAttributeValue" : "explanation",
+            "label": "description"
+        },
+        {
+            "inlineAttributeValue" : "price_rial",
+            "label": "price_rial" 
+        },
+        {
+            "inlineAttributeValue" : "price_dollar",
+            "label": "price_dollar" 
+        }
+    ],
+    
+    "Information_choosePicture":
+    [
+        {
+            "inlineAttributeValue" : "foodPicture_newFood",
+            "label": "choosePictureNewFood"
+        }
+    ],
+
+    "Information_submit":
+    {
+        "inlineAttributeValue" : "send",
+        "sucsessSendValue" :"sucsessSend"
+    }
+
+}
+
+var newFood_Fa={
+    "foodCategory": "دسته بندی غذا :",
+    "PersianNameFood" : "نام فارسی منو :",
+    "englishNameFood": "نام انگلیسی منو :",
+    "description": "توضیحات غذا :",
+    "price_rial": "قیمت به ریال :",
+    "price_dollar": "قیمت به دلار :",
+    "choosePictureNewFood": "انتخاب تصویر منو :",
+    "send": "ارسال",
+    "sucsessSend":"موفق"
+}
+
+var newFood_En={
+    "foodCategory": "Food Category :",
+    "PersianNameFood": "Menu Persian Neme :",
+    "englishNameFood": "Menu English Neme :",
+    "description": "Description Food :",
+    "price_rial": "price(rial) :",
+    "price_dollar": "price(dollar) :",
+    "choosePictureNewFood": "Choose Menu Picture :",
+    "send": "send",
+    "sucsessSend":"sucsess"
+}
+
+var newFoodFaJsonString = JSON.stringify(newFood_Fa);
+var newFoodFaJson = JSON.parse(newFoodFaJsonString);
+
+
+var newFoodEnJsonString = JSON.stringify(newFood_En);
+var newFoodEnJson = JSON.parse(newFoodEnJsonString);
+
+
 
 
 $( document ).ready(function() {
@@ -408,6 +486,35 @@ function getAndSetTranslateLanguage_vertical_navigation(){
         }
     }
  }
+
+ // ********************* json file for bilanguage add new food form  *********************
+ function getAndSetTranslateLanguage_addNewFood_form(){
+    var ContainsKeyName = $("*[text_key_food]");
+    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+ 
+        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+            
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_food") {
+ 
+                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+                var translatedValueNav;
+                if(window.localStorage.getItem("lang") == "En"){
+
+                    translatedValueNav = newFoodEnJson[keyValue];
+                }
+                else{
+
+                    translatedValueNav = newFoodFaJson[keyValue];
+                }
+ 
+                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+            }
+        }
+    }
+ }
+
+
+
 // ********************* main function ffor change language on html onchange *********************
  function changeLanguage()
  {
@@ -417,4 +524,5 @@ function getAndSetTranslateLanguage_vertical_navigation(){
      getAndSetTranslateLanguage_vertical_navigation();
      getAndSetTranslateLanguage_addUser_form();
      getAndSetTranslateLanguage_addCategoryMenu_form();
+     getAndSetTranslateLanguage_addNewFood_form();
  }
