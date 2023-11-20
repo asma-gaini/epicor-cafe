@@ -385,12 +385,12 @@ function getAndSetTranslateLanguage_vertical_navigation(){
 
  // ********************* json file for bilanguage add new category menu form  *********************
  function getAndSetTranslateLanguage_addCategoryMenu_form(){
-    var ContainsKeyName = $("*[text_key]");
+    var ContainsKeyName = $("*[text_key_category_menu]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
  
         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_category_menu") {
  
                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
                 var translatedValueNav;

@@ -97,7 +97,7 @@ function createCategoryMenu(){
     var divContainSubmitButton = $("<div>").addClass("sendButton_category_menu")
     formCategoryMenu.append(divContainSubmitButton)
     var inputSubmit = $("<input>").addClass("sendCategoryMenuForm").attr("type" , "submit").attr("value" , categoryMenu_key.Information_submit.inlineAttributeValue)
-    .attr("text_key" , categoryMenu_key.Information_submit.inlineAttributeValue)
+    .attr("text_key_category_menu" , categoryMenu_key.Information_submit.inlineAttributeValue)
     .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
 
@@ -110,7 +110,7 @@ function createCategoryMenuInformation(mainForm , labelValue , inlineAttribute )
 
     var divContainLabel = $("<div>").addClass("labelStyle_categoryMenu");
     rowOfForm.append(divContainLabel);
-    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key" , labelValue).html(labelValue);
+    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key_category_menu" , labelValue).html(labelValue);
     divContainLabel.append(label);
     var nextLine = $("<br>");
     divContainLabel.append(nextLine);
@@ -128,7 +128,7 @@ function createChoosePictureButton(mainForm , labelValuePicture , inlineAttribut
 
         var divContainLabel = $("<div>").addClass("chosePictureLabel_categoryMenu");
         rowOfForm.append(divContainLabel);
-        var label = $("<label>").attr("for" , inlineAttributePicture).attr("text_key" , labelValuePicture).html(labelValuePicture);
+        var label = $("<label>").attr("for" , inlineAttributePicture).attr("text_key_category_menu" , labelValuePicture).html(labelValuePicture);
         divContainLabel.append(label);
         var nextLine = $("<br>");
         divContainLabel.append(nextLine);
@@ -188,12 +188,12 @@ function sendAlert(){
     // }
 }
 // function getAndSetTranslateLanguage(){
-//     var ContainsKeyName = $("*[text_key]");
+//     var ContainsKeyName = $("*[text_key_category_menu]");
 //     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
 //         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_category_menu") {
 
 //                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
 //                 var translatedValueNav;
