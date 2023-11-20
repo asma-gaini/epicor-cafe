@@ -90,7 +90,9 @@ function createHorizontalNav(){
     createHeader(mainDivHorizontalNav , logoImageHorizontalNavigation ,brandNameHorizontalNavigation )
 
     // create link list for Horizontal Navigation 
-    var mainLinkList = $("<ul>").addClass("nav").addClass("navbar-nav");
+    var responsivMenu = $("<span>").addClass("glyphicon").addClass("glyphicon-align-center").addClass("collapseIconPosition").attr("onclick" , "mobileDisplaye()");
+    mainDivHorizontalNav.append(responsivMenu);
+    var mainLinkList = $("<ul>").addClass("nav").addClass("navbar-nav").addClass("dashbord_horizontalList");
     mainDivHorizontalNav.append(mainLinkList);
     for (let i = 0; i < horizontalNav_key.InformationLink.length; i++){
         var linkIcon = horizontalNav_key.InformationLink[i].icon;
@@ -168,4 +170,9 @@ function createUsers(mainDiv , userIcon , nserName){
     userLi.append(userShape);
     var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key_horizontal_navigation" , nserName).html(nserName);
     userLi.append(userName);
+}
+
+function mobileDisplaye(){
+    // $(".dashbord_horizontalList").css("display" , "none");
+    $(".dashbord_horizontalList").toggleClass("dashbord_horizontalList_none","dashbord_horizontalList_black")
 }

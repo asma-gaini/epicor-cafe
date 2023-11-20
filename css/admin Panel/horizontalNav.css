@@ -114,26 +114,59 @@ top: 100px;
     margin-bottom: 3px;
 }
 
-
+.collapseIconPosition{
+    position: absolute;
+    left: 165px;
+    top: 20px;
+    font-size: 24px;
+    display: none;
+}
 
 @media only screen and (max-width: 777px) {
-    .fa{
-        position: absolute;
-        top: 10px;
+    .navbar-inverse{
+        height: 65px !important;
+        max-width: 100% !important;
     }
+   
     .displayUser{
-        position: absolute;
-        top: -8px !important;
-        left: 650px !important;
-        float: right;
+       
     }
-    .navbar-nav {
-        margin: 7.5px -15px;
-        display: flex;
-        position: absolute;
-        top: -8px !important;
-        left: 150px;
-        height: 68px;
+
+    .collapseIconPosition{
+        display: block;
+    }
+    .profileUserHorizontalNav {
+  
+    }
+    .profileUser{
+        position: absolute !important;
+        top: 0px;
+        z-index: 20;
+        right: 5px;
+    }
+    .dashbord_horizontalList {
+        position: absolute !important;
+        top: 58px;
+        z-index: 25;
+        left: 175px;
+        display: flex !important;
+        flex-direction: column;
+        background-color: #e4e6f3;
+        border-radius: 5px;
+    }
+    .dashbord_horizontalList_none {
+        display: none !important;
+    }
+    .dashbord_horizontalList_black {
+        position: absolute !important;
+        top: 58px;
+        z-index: 25;
+        left: 175px;
+        display: flex !important;
+        flex-direction: column;
+        background-color: #e4e6f3;
+        border-radius: 5px;
+
     }
   }
 
