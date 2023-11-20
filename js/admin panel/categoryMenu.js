@@ -55,8 +55,6 @@ $( document ).ready(function() {
 
     createCategoryMenuTemplate();
 
-
-    // getAndSetTranslateLanguage();
     changeDirection();
 })  
 
@@ -178,42 +176,4 @@ function sendAlert(){
     else if(valueLanguage == "Fa"){
         alert("ارسال فرم شما: "+categoryMenu_Fa.sucsessSend);
     }
-
-    // var valueLanguage = $("#language").val();
-    // if(valueLanguage == "En"){
-    //     $(".sendCategoryMenuForm").attr("value" , categoryMenu_En.sucsessSend);
-    // }
-    // else if(valueLanguage == "Fa"){
-    //     $(".sendCategoryMenuForm").attr("value" , categoryMenu_Fa.sucsessSend);
-    // }
 }
-// function getAndSetTranslateLanguage(){
-//     var ContainsKeyName = $("*[text_key_category_menu]");
-//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
-
-//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_category_menu") {
-
-//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-//                 var translatedValueNav;
-//                 if(window.localStorage.getItem("lang") == "En"){
-//                     translatedValueNav = categoryMenuEnJson[keyValue];
-//                 }
-//                 else{
-//                     translatedValueNav = categoryMenuFaJson[keyValue];
-//                 }
-//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-//             }
-//         }
-//     }
-// }
-
-// function changeLanguage()
-// {
-//     var getLangAdmin = $("#language").val();
-//     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-//     getAndSetTranslateLanguage();
-//     changeDirection();
-// }
-
