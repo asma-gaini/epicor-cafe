@@ -137,10 +137,6 @@ var navigationBarEnJson = JSON.parse(navigationBarEnJsonString);
 $( document ).ready(function() {
 
     createNave();
-
-
-    // getAndSetTranslateLanguage();
-
 })  
 
 
@@ -226,19 +222,6 @@ function addSubLinkClasses( mainListSubLink,mainId , subId ){
     mainListSubLink.append(glyphinCollapsible);
 }
 
-// function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
-//    {
-//     var subLinkList = $("<ul>").attr("subid" , subId).addClass("subLink").addClass("closeDropdown");
-//     mainListSubLink.append(subLinkList);
-//     for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[counter].subLink.length; subLinkNumber++)
-//         var subListLi = $("<li>");
-//         subLinkList.append(subListLi);
-//         var subLink = $("<a>").attr("href" , "#").attr("text_key_vertical_navigation" , subLinkName).attr("mainId" , mainId).attr("subid" , subId)
-//             .attr("onclick" , "holdLink("+mainId+")").html( subLinkName);
-//         subListLi.append(subLink);
-//     }
-// }
-
 function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
     var subListLi = $("<li>");
     mainListSubLink.append(subListLi);
@@ -246,39 +229,6 @@ function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,
         .attr("onclick" , "holdLink("+mainId+")").html( subLinkName);
     subListLi.append(subLink);
  }
-
-
-
-
-
-// function getAndSetTranslateLanguage(){
-//     var ContainsKeyName = $("*[text_key_vertical_navigation]");
-//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
-
-//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_vertical_navigation") {
-
-//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-//                 var translatedValueNav;
-//                 if(window.localStorage.getItem("lang") == "En"){
-//                     translatedValueNav = navigationBarEnJson[keyValue];
-//                 }
-//                 else{
-//                     translatedValueNav = navigationBarFaJson[keyValue];
-//                 }
-//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-//             }
-//         }
-//     }
-// }
-
-// function changeLanguage()
-// {
-//     var getLangAdmin = $("#language").val();
-//     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-//     getAndSetTranslateLanguage();
-// }
 
 function openAndClose(){
     var allContainMainId = $("*[mainId]");

@@ -51,8 +51,6 @@ $( document ).ready(function() {
 
     createAddNewUserTemplate();
 
-
-    // getAndSetTranslateLanguage();
     changeDirection();
 })  
 
@@ -113,7 +111,6 @@ function AddTypeValue(){
     $("input[name='nikname_user']").attr("type" , "text");
 }
 
-
 function changeDirection(){
     var valueLanguage = $("#language").val();
     $("label").removeClass("Direction-rtl");
@@ -129,6 +126,7 @@ function changeDirection(){
         
     }
 }
+
 function sendAlert(){
     var valueLanguage = $("#language").val();
     if(valueLanguage == "En"){
@@ -140,35 +138,4 @@ function sendAlert(){
    
 }
 
-
-
-// function getAndSetTranslateLanguage(){
-//     var ContainsKeyName = $("*[text_keyadd]");
-//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
-
-//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_keyadd") {
-
-//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-//                 var translatedValueNav;
-//                 if(window.localStorage.getItem("lang") == "En"){
-//                     translatedValueNav = addUserEnJson[keyValue];
-//                 }
-//                 else{
-//                     translatedValueNav = addUserFaJson[keyValue];
-//                 }
-//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-//             }
-//         }
-//     }
-// }
-
-// function changeLanguageadd()
-// {
-//     var getLangAdmin = $("#language").val();
-//     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-//     getAndSetTranslateLanguage();
-//     changeDirection();
-// }
 

@@ -67,10 +67,6 @@ var horizontalNav_key= {
  $( document ).ready(function() {
  
     createHorizontalNavigationTemplate();
-    
-
-    // getAndSetTranslateLanguage();
-
 })  
  
 // ********************* create login page  ********************* 
@@ -173,37 +169,3 @@ function createUsers(mainDiv , userIcon , nserName){
     var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key_horizontal_navigation" , nserName).html(nserName);
     userLi.append(userName);
 }
-
-
-// ********************* change language  *********************
-
-// function getAndSetTranslateLanguage(){
-//    var ContainsKeyName = $("*[text_key_horizontal_navigation]");
-//    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
-
-//        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-           
-//            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_horizontal_navigation") {
-
-//                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-//                var translatedValueNav;
-//                if(window.localStorage.getItem("lang") == "En"){
-//                    translatedValueNav = horizontalNavEnJson[keyValue];
-//                }
-//                else{
-//                    translatedValueNav = horizontalNavFaJson[keyValue];
-//                }
-
-//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-//            }
-//        }
-//    }
-// }
-
-// function changeLanguage()
-// {
-//     var getLang = $("#language").val();
-//     var setValueLang = window.localStorage.setItem("lang" ,getLang );
-//     getAndSetTranslateLanguage();
-// }
-

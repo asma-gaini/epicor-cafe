@@ -252,22 +252,12 @@ var addUserEnJson = JSON.parse(addUserEnJsonString);
 
 
 
-
-
-
-
-
-
-
-
 $( document ).ready(function() {
 
     changeLanguage();
 })  
 
-
-
-
+// ********************* json file for bilanguage horizontal navigation  *********************
 function getAndSetTranslateLanguage_horizontal_navigation(){
     var ContainsKeyName = $("*[text_key_horizontal_navigation]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
@@ -292,7 +282,7 @@ function getAndSetTranslateLanguage_horizontal_navigation(){
     }
  }
 
-
+// ********************* json file for bilanguage vertical navigation  *********************
 function getAndSetTranslateLanguage_vertical_navigation(){
     var ContainsKeyName = $("*[text_key_vertical_navigation]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
@@ -316,7 +306,8 @@ function getAndSetTranslateLanguage_vertical_navigation(){
         }
     }
  }
- 
+
+// ********************* json file for bilanguage add new user form  *********************
  function getAndSetTranslateLanguage(){
     var ContainsKeyName = $("*[text_key]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
@@ -339,6 +330,8 @@ function getAndSetTranslateLanguage_vertical_navigation(){
         }
     }
  }
+
+// ********************* main function ffor change language on html onchange *********************
  function changeLanguage()
  {
      var getLang = $("#language").val();
