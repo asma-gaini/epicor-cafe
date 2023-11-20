@@ -84,7 +84,7 @@ function createAddNewUser(){
     var divContainSubmitButton = $("<div>").addClass("sendButton_addUser")
     formAddUser.append(divContainSubmitButton)
     var inputSubmit = $("<input>").addClass("sendAddUserForm").attr("type" , "submit").attr("value" , addUser_En.send_addUser)
-    .attr("text_key" , addUser_key.Information_submit.inlineAttributeValue)
+    .attr("text_key_adduser" , addUser_key.Information_submit.inlineAttributeValue)
     .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
 }
@@ -95,7 +95,7 @@ function createAddUserInformation(mainForm , labelValue , inlineAttribute ){
 
     var divContainLabel = $("<div>").addClass("labelStyle_addUser");
     rowOfForm.append(divContainLabel);
-    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key" , labelValue).html(labelValue);
+    var label = $("<label>").attr("for" , inlineAttribute).attr("text_key_adduser" , labelValue).html(labelValue);
     divContainLabel.append(label);
     var nextLine = $("<br>");
     divContainLabel.append(nextLine);
