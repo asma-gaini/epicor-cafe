@@ -56,7 +56,7 @@ $( document ).ready(function() {
     createCategoryMenuTemplate();
 
 
-    getAndSetTranslateLanguage();
+    // getAndSetTranslateLanguage();
     changeDirection();
 })  
 
@@ -187,33 +187,33 @@ function sendAlert(){
     //     $(".sendCategoryMenuForm").attr("value" , categoryMenu_Fa.sucsessSend);
     // }
 }
-function getAndSetTranslateLanguage(){
-    var ContainsKeyName = $("*[text_key]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+// function getAndSetTranslateLanguage(){
+//     var ContainsKeyName = $("*[text_key]");
+//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = categoryMenuEnJson[keyValue];
-                }
-                else{
-                    translatedValueNav = categoryMenuFaJson[keyValue];
-                }
-                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
-}
+//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+//                 var translatedValueNav;
+//                 if(window.localStorage.getItem("lang") == "En"){
+//                     translatedValueNav = categoryMenuEnJson[keyValue];
+//                 }
+//                 else{
+//                     translatedValueNav = categoryMenuFaJson[keyValue];
+//                 }
+//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+//             }
+//         }
+//     }
+// }
 
-function changeLanguage()
-{
-    var getLangAdmin = $("#language").val();
-    var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-    getAndSetTranslateLanguage();
-    changeDirection();
-}
+// function changeLanguage()
+// {
+//     var getLangAdmin = $("#language").val();
+//     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
+//     getAndSetTranslateLanguage();
+//     changeDirection();
+// }
 

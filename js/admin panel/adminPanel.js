@@ -249,6 +249,58 @@ var addUserFaJson = JSON.parse(addUserFaJsonString);
 var addUserEnJsonString = JSON.stringify(addUser_En);
 var addUserEnJson = JSON.parse(addUserEnJsonString);
 
+// ********************* add category menu form json file  *********************
+var categoryMenu_key= {
+    "Information":
+    [
+        {
+            "inlineAttributeValue" : "nameMenuFa",
+            "label": "PersianNameFood"
+        },
+        {
+            "inlineAttributeValue" : "nameMenuEn",
+            "label": "englishNameFood"
+        }
+    ],
+    
+    "Information_choosePicture":
+    [
+        {
+            "inlineAttributeValue" : "foodPicture_categoryMenu",
+            "label": "choosePictureCategoryMenu"
+        }
+    ],
+
+    "Information_submit":
+    {
+        "inlineAttributeValue" : "send",
+        "sucsessSendValue" :"sucsessSend"
+    }
+
+}
+
+var categoryMenu_Fa={
+    "PersianNameFood" : "نام فارسی منو :",
+    "englishNameFood": "نام انگلیسی منو :",
+    "choosePictureCategoryMenu": "انتخاب تصویر منو :",
+    "send": "ارسال",
+    "sucsessSend":"موفق"
+}
+
+var categoryMenu_En={
+    "PersianNameFood": "Menu Persian Neme :",
+    "englishNameFood": "Menu English Neme :",
+    "choosePictureCategoryMenu": "Choose Menu Picture :",
+    "send": "send",
+    "sucsessSend":"sucsess"
+}
+
+var categoryMenuFaJsonString = JSON.stringify(categoryMenu_Fa);
+var categoryMenuFaJson = JSON.parse(categoryMenuFaJsonString);
+
+
+var categoryMenuEnJsonString = JSON.stringify(categoryMenu_En);
+var categoryMenuEnJson = JSON.parse(categoryMenuEnJsonString);
 
 
 
@@ -308,7 +360,7 @@ function getAndSetTranslateLanguage_vertical_navigation(){
  }
 
 // ********************* json file for bilanguage add new user form  *********************
- function getAndSetTranslateLanguage(){
+ function getAndSetTranslateLanguage_addUser_form(){
     var ContainsKeyName = $("*[text_key]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
  
@@ -331,6 +383,31 @@ function getAndSetTranslateLanguage_vertical_navigation(){
     }
  }
 
+ // ********************* json file for bilanguage add new category menu form  *********************
+ function getAndSetTranslateLanguage_addCategoryMenu_form(){
+    var ContainsKeyName = $("*[text_key]");
+    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+ 
+        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+            
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+ 
+                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+                var translatedValueNav;
+                if(window.localStorage.getItem("lang") == "En"){
+
+                    translatedValueNav = categoryMenuEnJson[keyValue];
+                }
+                else{
+
+                    translatedValueNav = categoryMenuFaJson[keyValue];
+                }
+ 
+                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+            }
+        }
+    }
+ }
 // ********************* main function ffor change language on html onchange *********************
  function changeLanguage()
  {
@@ -338,5 +415,6 @@ function getAndSetTranslateLanguage_vertical_navigation(){
      var setValueLang = window.localStorage.setItem("lang" ,getLang );
      getAndSetTranslateLanguage_horizontal_navigation();
      getAndSetTranslateLanguage_vertical_navigation();
-     getAndSetTranslateLanguage();
+     getAndSetTranslateLanguage_addUser_form();
+     getAndSetTranslateLanguage_addCategoryMenu_form();
  }
