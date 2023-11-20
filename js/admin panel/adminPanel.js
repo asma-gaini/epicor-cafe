@@ -387,23 +387,24 @@ $( document ).ready(function() {
     changeLanguage();
 })  
 
-// ********************* json file for bilanguage horizontal navigation  *********************
-function getAndSetTranslateLanguage_horizontal_navigation(){
-    var ContainsKeyName = $("*[text_key_horizontal_navigation]");
+
+// ********************* get json file for bilanguage  *********************
+function getAndSetTranslateLanguage(text_key , jsonEn , jsonFa){
+    var ContainsKeyName = $("*["+text_key+"]");
     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
  
         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_horizontal_navigation") {
- 
+            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == ""+text_key+"") {
+
                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
                 var translatedValueNav;
                 if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = horizontalNavEnJson[keyValue];
+                    translatedValueNav = jsonEn[keyValue];
 
                 }
                 else{
-                    translatedValueNav = horizontalNavFaJson[keyValue];
+                    translatedValueNav = jsonFa[keyValue];
                 }
  
                  ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
@@ -412,106 +413,6 @@ function getAndSetTranslateLanguage_horizontal_navigation(){
     }
  }
 
-// ********************* json file for bilanguage vertical navigation  *********************
-function getAndSetTranslateLanguage_vertical_navigation(){
-    var ContainsKeyName = $("*[text_key_vertical_navigation]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
- 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_vertical_navigation") {
- 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = navigationBarEnJson[keyValue];
-
-                }
-                else{
-                    translatedValueNav = navigationBarFaJson[keyValue];
-                }
- 
-                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
- }
-
-// ********************* json file for bilanguage add new user form  *********************
- function getAndSetTranslateLanguage_addUser_form(){
-    var ContainsKeyName = $("*[text_key_adduser]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
- 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_adduser") {
- 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = addUserEnJson[keyValue];
-                }
-                else{
-                    translatedValueNav = addUserFaJson[keyValue];
-                }
- 
-                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
- }
-
- // ********************* json file for bilanguage add new category menu form  *********************
- function getAndSetTranslateLanguage_addCategoryMenu_form(){
-    var ContainsKeyName = $("*[text_key_category_menu]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
- 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_category_menu") {
- 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-
-                    translatedValueNav = categoryMenuEnJson[keyValue];
-                }
-                else{
-
-                    translatedValueNav = categoryMenuFaJson[keyValue];
-                }
- 
-                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
- }
-
- // ********************* json file for bilanguage add new food form  *********************
- function getAndSetTranslateLanguage_addNewFood_form(){
-    var ContainsKeyName = $("*[text_key_food]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
- 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
-            
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_food") {
- 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-
-                    translatedValueNav = newFoodEnJson[keyValue];
-                }
-                else{
-
-                    translatedValueNav = newFoodFaJson[keyValue];
-                }
- 
-                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
- }
 
 
 
@@ -520,9 +421,10 @@ function getAndSetTranslateLanguage_vertical_navigation(){
  {
      var getLang = $("#language").val();
      var setValueLang = window.localStorage.setItem("lang" ,getLang );
-     getAndSetTranslateLanguage_horizontal_navigation();
-     getAndSetTranslateLanguage_vertical_navigation();
-     getAndSetTranslateLanguage_addUser_form();
-     getAndSetTranslateLanguage_addCategoryMenu_form();
-     getAndSetTranslateLanguage_addNewFood_form();
+     getAndSetTranslateLanguage("text_key_horizontal_navigation" , horizontalNavEnJson , horizontalNavFaJson);
+     getAndSetTranslateLanguage("text_key_vertical_navigation" , navigationBarEnJson , navigationBarFaJson);
+     getAndSetTranslateLanguage("text_key_adduser" , addUserEnJson , addUserFaJson);
+     getAndSetTranslateLanguage("text_key_category_menu" , categoryMenuEnJson , categoryMenuFaJson);
+     getAndSetTranslateLanguage("text_key_food" , newFoodEnJson , newFoodFaJson);
+ 
  }
