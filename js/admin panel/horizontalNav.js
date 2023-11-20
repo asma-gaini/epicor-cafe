@@ -173,6 +173,5 @@ function createUsers(mainDiv , userIcon , nserName){
 }
 
 function mobileDisplaye(){
-    // $(".dashbord_horizontalList").css("display" , "none");
     $(".dashbord_horizontalList").toggleClass("dashbord_horizontalList_none","dashbord_horizontalList_black")
 }

@@ -127,16 +127,8 @@ top: 100px;
         height: 65px !important;
         max-width: 100% !important;
     }
-   
-    .displayUser{
-       
-    }
-
     .collapseIconPosition{
         display: block;
-    }
-    .profileUserHorizontalNav {
-  
     }
     .profileUser{
         position: absolute !important;
