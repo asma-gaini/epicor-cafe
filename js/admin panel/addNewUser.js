@@ -3,40 +3,40 @@ var addUser_key= {
     [
         {
             "inlineAttributeValue" : "email_User",
-            "label": "email",
+            "label": "email_addUser",
         },
         {
             "inlineAttributeValue" : "passWord_user",
-            "label": "password"
+            "label": "password_addUser"
         },
         {
             "inlineAttributeValue" : "nikname_user",
-            "label": "nikName"
+            "label": "nikName_addUser"
         }
     ],
     
     "Information_submit":
     {
-        "inlineAttributeValue" : "send",
-        "sucsessSendValue" :"sucsessSend"
+        "inlineAttributeValue" : "send_addUser",
+        "sucsessSendValue" :"sucsessSend_addUser"
     }
 
 }
 
 var addUser_Fa={
-    "email": "ایمیل :",
-    "password" : "رمز :",
-    "nikName": "نام مستعار :",
-    "send": "ارسال",
-    "sucsessSend":"موفق"
+    "email_addUser": "ایمیل :",
+    "password_addUser" : "رمز :",
+    "nikName_addUser": "نام مستعار :",
+    "send_addUser": "ارسال",
+    "sucsessSend_addUser":"موفق"
 }
 
 var addUser_En={
-    "email": "Email :",
-    "password": "Password :",
-    "nikName": "Nikname :",
-    "send": "send",
-    "sucsessSend":"sucsess"
+    "email_addUser": "Email :",
+    "password_addUser": "Password :",
+    "nikName_addUser": "Nikname :",
+    "send_addUser": "send",
+    "sucsessSend_addUser":"sucsess"
 }
 
 var addUserFaJsonString = JSON.stringify(addUser_Fa);
@@ -52,7 +52,7 @@ $( document ).ready(function() {
     createAddNewUserTemplate();
 
 
-    getAndSetTranslateLanguage();
+    // getAndSetTranslateLanguage();
     changeDirection();
 })  
 
@@ -85,7 +85,7 @@ function createAddNewUser(){
 
     var divContainSubmitButton = $("<div>").addClass("sendButton_addUser")
     formAddUser.append(divContainSubmitButton)
-    var inputSubmit = $("<input>").addClass("sendAddUserForm").attr("type" , "submit").attr("value" , addUser_key.Information_submit.inlineAttributeValue)
+    var inputSubmit = $("<input>").addClass("sendAddUserForm").attr("type" , "submit").attr("value" , addUser_En.send_addUser)
     .attr("text_key" , addUser_key.Information_submit.inlineAttributeValue)
     .attr("onclick" , "sendAlert()");
     divContainSubmitButton.append(inputSubmit)
@@ -142,33 +142,33 @@ function sendAlert(){
 
 
 
-function getAndSetTranslateLanguage(){
-    var ContainsKeyName = $("*[text_key]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+// function getAndSetTranslateLanguage(){
+//     var ContainsKeyName = $("*[text_keyadd]");
+//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_keyadd") {
 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = addUserEnJson[keyValue];
-                }
-                else{
-                    translatedValueNav = addUserFaJson[keyValue];
-                }
-                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
-}
+//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+//                 var translatedValueNav;
+//                 if(window.localStorage.getItem("lang") == "En"){
+//                     translatedValueNav = addUserEnJson[keyValue];
+//                 }
+//                 else{
+//                     translatedValueNav = addUserFaJson[keyValue];
+//                 }
+//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+//             }
+//         }
+//     }
+// }
 
-function changeLanguage()
-{
-    var getLangAdmin = $("#language").val();
-    var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-    getAndSetTranslateLanguage();
-    changeDirection();
-}
+// function changeLanguageadd()
+// {
+//     var getLangAdmin = $("#language").val();
+//     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
+//     getAndSetTranslateLanguage();
+//     changeDirection();
+// }
 

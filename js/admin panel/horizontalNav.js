@@ -3,13 +3,13 @@
 var horizontalNav_key= {
     "InformationBrand":
         {
-            "berandName": "nameCoffe",
+            "berandName": "nameCoffe_horizontalNavigation",
             "logoImg": "../../img/admin panel/logo/logo.jpg",
         },
         "InformationLink":
         [
             {
-                "linkName":"home",
+                "linkName":"home_horizontalNavigation",
                 "icon":null,
                 "notificationCounter":null,
                 "dropdownLink":null
@@ -35,27 +35,27 @@ var horizontalNav_key= {
         ],
         "InformationUsers":
             {
-                "userName":"username",
+                "userName":"username_horizontalNavigation",
                 "icon":"&#xf2be;"
             }
  }
  
  var horizontalNav_Fa={
-     "nameCoffe": " کافه اپیکور",
-     "home": "صفحه اصلی",
+     "nameCoffe_horizontalNavigation": " کافه اپیکور",
+     "home_horizontalNavigation": "صفحه اصلی",
      "checkInbox": "چک کردن پیام های ورودی",
      "PaymenOfSalary":"پرداخت حقوق",
      "StatementOfExpenses" : "بیانیه هزینه ها",
-     "username": "نام کاربری",
+     "username_horizontalNavigation": "نام کاربری",
  }
  
  var horizontalNav_En={
-     "nameCoffe": "Epicor Cafe",
-     "home": "Home",
+     "nameCoffe_horizontalNavigation": "Epicor Cafe",
+     "home_horizontalNavigation": "Home",
      "checkInbox": "check inbox",
      "PaymenOfSalary": "Payment of salary",
      "StatementOfExpenses":"Statement of expenses",
-     "username": "User name",
+     "username_horizontalNavigation": "User name",
  }
  
  var horizontalNavFaJsonString = JSON.stringify(horizontalNav_Fa);
@@ -69,7 +69,7 @@ var horizontalNav_key= {
     createHorizontalNavigationTemplate();
     
 
-    getAndSetTranslateLanguage();
+    // getAndSetTranslateLanguage();
 
 })  
  
@@ -115,7 +115,7 @@ function createHeader(mainDiv , logoImageHorizontalNavigation ,brandNameHorizont
     headerDiv.append(headerLink);
     var logoImageHorizontalNav = $("<img>").addClass("horizontalNavLogo").attr("src" , logoImageHorizontalNavigation).attr("alt" , brandNameHorizontalNavigation)
     headerLink.append(logoImageHorizontalNav);
-    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key" , brandNameHorizontalNavigation).html(brandNameHorizontalNavigation);
+    var brandHorizontalNav = $("<span>").addClass("horizontalNavBerand").attr("text_key_horizontal_navigation" , brandNameHorizontalNavigation).html(brandNameHorizontalNavigation);
     headerLink.append(brandHorizontalNav);
 }
 
@@ -126,7 +126,7 @@ function createhorizontalNavigationLinkes(mainDiv , linkIcon ,  horizontalNaviga
     mainLi.append(mainLink);
     var iconLink = $("<i>").addClass("fa").html(linkIcon);
     mainLink.append(iconLink);
-    var spanLinkName = $("<span>").addClass("mainLink").attr("text_key" , horizontalNavigationLinkName).html(horizontalNavigationLinkName);
+    var spanLinkName = $("<span>").addClass("mainLink").attr("text_key_horizontal_navigation" , horizontalNavigationLinkName).html(horizontalNavigationLinkName);
     mainLink.append(spanLinkName)
 
     if (horizontalNav_key.InformationLink[counter].dropdownLink!= null) {
@@ -157,7 +157,7 @@ function addDropdownClasses(mainLi , mainlink , notificationCounter){
 function cerateDropdownList(mainList , dropDownLinkName){
     var dropdownLi = $("<li>");
     mainList.append(dropdownLi);
-    var dropdownLink = $("<a>").attr("href" , "#").attr("text_key" , dropDownLinkName)
+    var dropdownLink = $("<a>").attr("href" , "#").attr("text_key_horizontal_navigation" , dropDownLinkName)
         .html(dropDownLinkName);
     dropdownLi.append(dropdownLink); 
 }
@@ -170,40 +170,40 @@ function createUsers(mainDiv , userIcon , nserName){
     mainUserList.append(userLi);
     var userShape = $("<i>").css("font-size", "24px").addClass("fa").html(userIcon);
     userLi.append(userShape);
-    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key" , nserName).html(nserName);
+    var userName = $("<span>").addClass("profileUserHorizontalNav").attr("text_key_horizontal_navigation" , nserName).html(nserName);
     userLi.append(userName);
 }
 
 
 // ********************* change language  *********************
 
-function getAndSetTranslateLanguage(){
-   var ContainsKeyName = $("*[text_key]");
-   for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+// function getAndSetTranslateLanguage(){
+//    var ContainsKeyName = $("*[text_key_horizontal_navigation]");
+//    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
-       for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+//        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
            
-           if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+//            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_horizontal_navigation") {
 
-               var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-               var translatedValueNav;
-               if(window.localStorage.getItem("lang") == "En"){
-                   translatedValueNav = horizontalNavEnJson[keyValue];
-               }
-               else{
-                   translatedValueNav = horizontalNavFaJson[keyValue];
-               }
+//                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+//                var translatedValueNav;
+//                if(window.localStorage.getItem("lang") == "En"){
+//                    translatedValueNav = horizontalNavEnJson[keyValue];
+//                }
+//                else{
+//                    translatedValueNav = horizontalNavFaJson[keyValue];
+//                }
 
-                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-           }
-       }
-   }
-}
+//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+//            }
+//        }
+//    }
+// }
 
-function changeLanguage()
-{
-    var getLang = $("#language").val();
-    var setValueLang = window.localStorage.setItem("lang" ,getLang );
-    getAndSetTranslateLanguage();
-}
+// function changeLanguage()
+// {
+//     var getLang = $("#language").val();
+//     var setValueLang = window.localStorage.setItem("lang" ,getLang );
+//     getAndSetTranslateLanguage();
+// }
 

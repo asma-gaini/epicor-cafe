@@ -1,14 +1,14 @@
 var navigationBar_key= {
     "headerNav":
         {
-            "berandName": "nameCoffe",
+            "berandName": "nameCoffe_verticalNavigation",
             "logoImg": "../../img/admin panel/logo/logo.jpg",
         },
     "Information":
     [
         {
             "mainId": "1",
-            "Name": "home",
+            "Name": "home_verticalNavigation",
             "Image": "glyphicon-briefcase",
             "target" : "#",
             "subid": "null",
@@ -16,7 +16,7 @@ var navigationBar_key= {
         },
         {
             "mainId": "2",
-            "Name": "popular",
+            "Name": "popular_verticalNavigation",
             "Image": "glyphicon-heart-empty",
             "target" : "#",
             "subid": "null",
@@ -24,24 +24,24 @@ var navigationBar_key= {
         },
         {
             "mainId": "3",
-            "Name": "addingMenu",
+            "Name": "addingMenu_verticalNavigation",
             "Image": "glyphicon-cutlery",
             "target" : "#",
             "subid": "1",
             "subLink":[
                 {
                     "mainId": "4",
-                    "Name": "addingMenuBar",
+                    "Name": "addingMenuBar_verticalNavigation",
                 },
                 {
                     "mainId": "5",
-                    "Name": "addingslide",
+                    "Name": "addingslide_verticalNavigation",
                 }
             ]
         },
         {
             "mainId": "6",
-            "Name": "shortage",
+            "Name": "shortage_verticalNavigation",
             "Image": "glyphicon-shopping-cart",
             "target" : "#",
             "subid": "null",
@@ -49,24 +49,24 @@ var navigationBar_key= {
         },
         {
             "mainId": "7",
-            "Name": "charts",
+            "Name": "charts_verticalNavigation",
             "Image": "glyphicon-stats",
             "glyphinCollapsible": "glyphicon-menu-right",
             "subid": "2",
             "subLink":[
                 {
                     "mainId": "8",
-                    "Name": "sales",
+                    "Name": "sales_verticalNavigation",
                 },
                 {
                     "mainId": "9",
-                    "Name": "incom",
+                    "Name": "incom_verticalNavigation",
                 }
             ]
         },
         {
             "mainId": "10",
-            "Name": "commentes",
+            "Name": "commentes_verticalNavigation",
             "Image": "glyphicon-comment",
             "target" : "#",
             "subid": "null",
@@ -74,7 +74,7 @@ var navigationBar_key= {
         },
         {
             "mainId": "11",
-            "Name": "emaile",
+            "Name": "emaile_verticalNavigation",
             "Image": "glyphicon-envelope",
             "target" : "#",
             "glyphinCollapsible": "null",
@@ -83,7 +83,7 @@ var navigationBar_key= {
         },
         {
             "mainId": "12",
-            "Name": "customerClub",
+            "Name": "customerClub_verticalNavigation",
             "Image": "glyphicon-gift",
             "target" : "#",
             "subid": "null",
@@ -93,35 +93,35 @@ var navigationBar_key= {
 }
 
 var navigationBar_Fa={
-    "nameCoffe": " کافه اپیکور",
-    "home": "داشبورد",
-    "popular": "غذا های پرطرفدار",
-    "addingMenu": "اضافه کردن منو",
-    "addingMenuBar": "اضافه کردن سر منو",
-    "addingslide":"اضافه کردن غذا",
-    "shortage" : "کسری",
-    "charts": "نمودار ها",
-    "sales": "میزان فروش",
-    "incom":"میزان درآمد",
-    "commentes": "نظرات",
-    "emaile": "ایمیل",
-    "customerClub": "باشگاه مشتریان"
+    "nameCoffe_verticalNavigation": " کافه اپیکور",
+    "home_verticalNavigation": "داشبورد",
+    "popular_verticalNavigation": "غذا های پرطرفدار",
+    "addingMenu_verticalNavigation": "اضافه کردن منو",
+    "addingMenuBar_verticalNavigation": "اضافه کردن سر منو",
+    "addingslide_verticalNavigation":"اضافه کردن غذا",
+    "shortage_verticalNavigation" : "کسری",
+    "charts_verticalNavigation": "نمودار ها",
+    "sales_verticalNavigation": "میزان فروش",
+    "incom_verticalNavigation":"میزان درآمد",
+    "commentes_verticalNavigation": "نظرات",
+    "emaile_verticalNavigation": "ایمیل",
+    "customerClub_verticalNavigation": "باشگاه مشتریان"
 }
 
 var navigationBar_En={
-    "nameCoffe": "Epicor Cafe",
-    "home": "Dashboard",
-    "popular": "Popular",
-    "addingMenu": "Add new menu",
-    "addingMenuBar": "Add main menu",
-    "addingslide": "Add new Food",
-    "shortage": "Shortage",
-    "charts": "charts",
-    "sales": "sales amount",
-    "incom": "Amount of income",
-    "commentes": "Commentes",
-    "emaile":"Emailes",
-    "customerClub": "Customer Club"
+    "nameCoffe_verticalNavigation": "Epicor Cafe",
+    "home_verticalNavigation": "Dashboard",
+    "popular_verticalNavigation": "Popular",
+    "addingMenu_verticalNavigation": "Add new menu",
+    "addingMenuBar_verticalNavigation": "Add main menu",
+    "addingslide_verticalNavigation": "Add new Food",
+    "shortage_verticalNavigation": "Shortage",
+    "charts_verticalNavigation": "charts",
+    "sales_verticalNavigation": "sales amount",
+    "incom_verticalNavigation": "Amount of income",
+    "commentes_verticalNavigation": "Commentes",
+    "emaile_verticalNavigation":"Emailes",
+    "customerClub_verticalNavigation": "Customer Club"
 }
 
 var holdMaimId = 0;
@@ -139,7 +139,7 @@ $( document ).ready(function() {
     createNave();
 
 
-    getAndSetTranslateLanguage();
+    // getAndSetTranslateLanguage();
 
 })  
 
@@ -188,7 +188,7 @@ function createHeaderVerticalNavigation(htmlId , urlLogo , brandName){
       .attr("src" , urlLogo)
       .attr("alt", brandName);
     createHeaderNav.append(logoImage);
-    var berandNme = $("<span>").addClass("brandName").addClass("displayInline").attr("text_key" , brandName).html( brandName);
+    var berandNme = $("<span>").addClass("brandName").addClass("displayInline").attr("text_key_vertical_navigation" , brandName).html( brandName);
     createHeaderNav.append(berandNme);
 }
 
@@ -197,7 +197,7 @@ function createVerticalNavigationList(mainList, icon , mainLinkName , mainId , c
         mainList.append(mainListLi);
         var glyphin = $("<span>").addClass("glyphicon").addClass(icon);
         mainListLi.append(glyphin);
-        var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key" , mainLinkName)
+        var linkList = $("<a>").addClass("link").addClass("displayInline").attr("href" , "#").attr("text_key_vertical_navigation" , mainLinkName)
         .attr("mainId" , mainId)
         .attr("onclick" , "holdLink("+mainId+")")
         .html(mainLinkName);
@@ -233,7 +233,7 @@ function addSubLinkClasses( mainListSubLink,mainId , subId ){
 //     for (let subLinkNumber = 0; subLinkNumber < navigationBar_key.Information[counter].subLink.length; subLinkNumber++)
 //         var subListLi = $("<li>");
 //         subLinkList.append(subListLi);
-//         var subLink = $("<a>").attr("href" , "#").attr("text_key" , subLinkName).attr("mainId" , mainId).attr("subid" , subId)
+//         var subLink = $("<a>").attr("href" , "#").attr("text_key_vertical_navigation" , subLinkName).attr("mainId" , mainId).attr("subid" , subId)
 //             .attr("onclick" , "holdLink("+mainId+")").html( subLinkName);
 //         subListLi.append(subLink);
 //     }
@@ -242,7 +242,7 @@ function addSubLinkClasses( mainListSubLink,mainId , subId ){
 function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,mainId){
     var subListLi = $("<li>");
     mainListSubLink.append(subListLi);
-    var subLink = $("<a>").attr("href" , "#").attr("text_key" , subLinkName).attr("mainId" , mainId).attr("subid" , subId)
+    var subLink = $("<a>").attr("href" , "#").attr("text_key_vertical_navigation" , subLinkName).attr("mainId" , mainId).attr("subid" , subId)
         .attr("onclick" , "holdLink("+mainId+")").html( subLinkName);
     subListLi.append(subLink);
  }
@@ -251,34 +251,34 @@ function createVerticalNavigationSubLink(mainListSubLink ,  subLinkName ,subId ,
 
 
 
-function getAndSetTranslateLanguage(){
-    var ContainsKeyName = $("*[text_key]");
-    for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
+// function getAndSetTranslateLanguage(){
+//     var ContainsKeyName = $("*[text_key_vertical_navigation]");
+//     for(elementContainKeyName=0 ; elementContainKeyName<ContainsKeyName.length ; elementContainKeyName++){
 
-        for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
+//         for (let SpecificَAttrName = 0; SpecificَAttrName <ContainsKeyName[elementContainKeyName].attributes.length ; SpecificَAttrName++) {
             
-            if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key") {
+//             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == "text_key_vertical_navigation") {
 
-                var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = navigationBarEnJson[keyValue];
-                }
-                else{
-                    translatedValueNav = navigationBarFaJson[keyValue];
-                }
-                ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-            }
-        }
-    }
-}
+//                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
+//                 var translatedValueNav;
+//                 if(window.localStorage.getItem("lang") == "En"){
+//                     translatedValueNav = navigationBarEnJson[keyValue];
+//                 }
+//                 else{
+//                     translatedValueNav = navigationBarFaJson[keyValue];
+//                 }
+//                 ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
+//             }
+//         }
+//     }
+// }
 
-function changeLanguage()
-{
-    var getLangAdmin = $("#language").val();
-    var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
-    getAndSetTranslateLanguage();
-}
+// function changeLanguage()
+// {
+//     var getLangAdmin = $("#language").val();
+//     var setValueLang = window.localStorage.setItem("lang" ,getLangAdmin );
+//     getAndSetTranslateLanguage();
+// }
 
 function openAndClose(){
     var allContainMainId = $("*[mainId]");
