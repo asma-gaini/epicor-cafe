@@ -132,10 +132,10 @@ function changeDirection(){
 function sendAlert(){
     var valueLanguage = $("#language").val();
     if(valueLanguage == "En"){
-        alert("sending this form is: "+addUser_En.sucsessSend);
+        alert("sending this form is: "+addUser_En.sucsessSend_addUser);
     }
     else if(valueLanguage == "Fa"){
-        alert("ارسال فرم شما: "+addUser_Fa.sucsessSend);
+        alert("ارسال فرم شما: "+addUser_Fa.sucsessSend_addUser);
     }
    
 }
