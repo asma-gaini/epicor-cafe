@@ -924,36 +924,36 @@ var menu = {
                 {
                     "codeNumber" : 111,
                     "isPopular": "false",
-                    "Title": "IcedLatte",
-                    "Price": 69,
+                    "Title": "FiletMignon",
+                    "Price": 655,
                     "ImageURL": "./img/main page/food & this category menu/grill/1.jpg"
                 },
                 {
                     "codeNumber" : 112,
                     "isPopular": "false",
-                    "Title": "IceAmerican",
-                    "Price": 79,
+                    "Title": "LemChops",
+                    "Price": 555,
                     "ImageURL": "./img/main page/food & this category menu/grill/2.jpg"
                 },
                 {
                     "codeNumber" : 113,
                     "isPopular": "false",
-                    "Title": "IcedCaramelMacchiato",
-                    "Price": 95,
+                    "Title": "EpicorBerger",
+                    "Price": 330,
                     "ImageURL": "./img/main page/food & this category menu/grill/3.jpg"
                 },
                 {
                     "codeNumber" : 114,
                     "isPopular": "false",
-                    "Title": "IceMocha",
-                    "Price": 90,
+                    "Title": "ChickenSteak",
+                    "Price": 485,
                     "ImageURL": "./img/main page/food & this category menu/grill/4.jpg"
                 },
                 {
                     "codeNumber" : 115,
                     "isPopular": "false",
-                    "Title": "Coldbrew",
-                    "Price": 78,
+                    "Title": "EpicorSteak",
+                    "Price": 665,
                     "ImageURL": "./img/main page/food & this category menu/grill/noimagefood.png"
                 }
             ]
@@ -1170,6 +1170,7 @@ var menu = {
 
 var menuFa ={
   
+    // brakfast 
     "breakfast": "صبحانه",
     "breakfastEn": "breakfast",
     "PersianBreakfast": "صبحانه ایرانی",
@@ -1184,6 +1185,8 @@ var menuFa ={
     "MacBread-scrambledEggs-bacon-slicedCheese-lettuce-tomato": "نان مک،  تخم مرغ نیمرو، بیکن، پنیر ورقه ای، کاهو،  گوجه فرنگی",
     "beanFeed": "خوراک لوبیا",
     "friedEgg": "نیمرو",
+
+    // mina bar 
     "MinaBar": "مینا بار",
     "MinaBarEn": "mina bar",
     "Espresso": "اسپرسو",
@@ -1194,6 +1197,8 @@ var menuFa ={
     "Cappuccino": "کاپوچینو",
     "DoubleLatte": "لاته دبل",
     "SheikhCoffee": "قهوه شیخ",
+
+    // Espresso bar 
     "EspressoBar": "اسپرسو بلند",
     "EspressoBarEn": "Espresso Bar",
     "SingleEspresso": "اسپرسو سینگل",
@@ -1203,6 +1208,8 @@ var menuFa ={
     "Americans": "آمریکانو",
     "latte": "لاته",
     "Affogato": "آفوگاتو",
+
+    // ice coffee 
     "IceCoffee": "قهوه های سرد",
     "IceCoffeeEn": "Ice Coffee",
     "IcedLatte": "آیس لاته",
@@ -1210,6 +1217,8 @@ var menuFa ={
     "IcedCaramelMacchiato": "آیس کارامل ماکیاتو",
     "IceMocha": "آیس موکا",
     "Coldbrew": "کلدبرو",
+
+    // coffee bar 
     "CofeeBar": "سایفون بار و قهوه های دمی",
     "CofeeBarEn": "Cofee bar",
     "SingleSiphon": "سایفون تک نفره",
@@ -1220,6 +1229,8 @@ var menuFa ={
     "AThree-personCamp": "کمکس سه نفره",
     "Turkish": "ترک",
     "FrenchPressWithMilk": "فرنچ پرس به همراه شیر",
+
+    // hot drinks 
     "HotDrinks": "چای بار و نوشیدنی های گرم",
     "HotDrinksEn": "Hot Drinks",
     "SingleIranianBlackTea": "چای سیاه ایرونی تک نفره",
@@ -1235,10 +1246,14 @@ var menuFa ={
     "WhiteChocolateWithPeanutButter": "وایت چاکلت با کره بادام زمینی",
     "teaLatte": "چای لاته",
     "SingleMoroccanTea": "چای مراکشی تک نفره",
+
+    // drink your choice 
     "theDrinkOfYourChoice": "دمنوش انتخابی شما",
     "theDrinkOfYourChoiceEN": "the drink of your choice",
     "peaceOfMind": "آرامش",
     "Lemon-Ginger-Honey": "لیمو،زنجبیل،عسل",
+
+    // NaturalJuice 
     "NaturalJuice": "آبمیوه طبیعی،موکتل،اسموتی",
     "NaturalJuiceEn": "Natural juice",
     "NaturalJuice": "آبمیوه طبیعی",
@@ -1261,12 +1276,16 @@ var menuFa ={
     "Blucarasao-MintFlavoring-AloeVeraJuice-AppleJuice": "بلوکاراسائو/طعم دهنده نعنا/آب آلوورا/اب سیب",
     "Frappuccino": "فراپاچینو",
     "Espresso-VanillaIceCream-VanillaFlavor-CoconutFlavor": " اسپرسو/ بستنی وانیل/ طعم دهنده وانیل/ طعم دهنده نارگیل ",
+
+    // smoothies 
     "SmoothieBulls": "اسموتی بولز",
     "SmoothieBullsEn": "Smoothie bulls",
     "CrazyChocolate": "شکلات دیوانه",
     "ExcitingCombinationsOfChocolateGelato-PeanutButter-BananaWithChocolateTopping-Cornflakes": " ترکیبات هیجان انگیز جلاتو شکلاتی، کره بادام زمینی، موز به همراه تاپینک شکلات ، کرن فلکس",
     "wildBerry": "بری وحشی",
     "ACombinationOfStrawberries-CranberrySyrup-AndChocolateGelato": "ترکیب توت فرنگی ، سیروپ کرلبری،  جلاتو شاتوت",
+
+    // Milkshake
     "Milkshake": "شیک ها",
     "MilkshakeEn": "Milkshake",
     "Chocolate": "شکلات",
@@ -1279,6 +1298,8 @@ var menuFa ={
     "peanut": "بادام زمینی",
     "ChocolateBrownieFreakShake": "فریک شیک چاکلت براونی",
     "ChicLotus": "شیک لوتوس",
+
+    // cakes 
     "CakesAndSweets": "کیک و شیرینی",
     "CakesAndSweetsEn": "Cakes and sweets",
     "NewYorkCheesecake": "چیز کیک نیویورکی",
@@ -1295,6 +1316,8 @@ var menuFa ={
     "ClassicCroissant": "کروسان کلاسیک",
     "CroissantsWithNutellaAndStrawberries": "کروسان با نوتلا و توت فرنگی",
     "BrownieWithVanillaGelato": "براونی با جلاتو وانیل",
+
+    // Appetizars 
     "Appetizars": "پیش غذا ها و سالاد ها",
     "AppetizarsEn": "Appetizars",
     "CaesarSalad": "سالاد سزار",
@@ -1311,6 +1334,8 @@ var menuFa ={
     "Olive": "زیتون پرورده",
     "YogurtAndCucumber": "ماست و خیار",
     "Yogurt-Cucumber-Mint-Walnut": "ماست/خیار/نعنا/گردو",
+
+    // Fries 
     "Fries": "سرخ شدنی ها",
     "FriesEn": "Fries",
     "FrenchFries": "فرنچ فرایز",
@@ -1319,6 +1344,8 @@ var menuFa ={
     "SlicedPotatoes-PizzaCheese": "سیب زمینی خلال، پنیر پیتزا",
     "FryingPlate": "بشقاب سوخاری",
     "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces": "دوعددفیله/2عددبال/2عددکتف/قارچ/سبزیجات سوخاری فرانسوی/4 نوع سس",
+
+    // Sandwiches 
     "Sandwiches": "پنینی و ساندویچ ها",
     "SandwichesEn": "Sandwiches",
     "ChickenAndVegetablePanini": "پنی مرغ و سبزیجات",
@@ -1328,24 +1355,32 @@ var menuFa ={
     "HamPanini": "پنی ژامبون",
     "BaconPanini": "پنی بیکن",
     "RoastBeefPanini": "پنی رست بیف",
+
+    // pasta 
     "Pasta": "پاستا",
     "PastaEn": "Pasta",
     "AlfredoPasta": "پاستا آلفردو",
     "ArabicaPasta": "پاستا عربیتا",
+
+    // grill 
     "Grill": "گریل",
     "GrillEn": "Grill",
-    "IcedLatte": "آیس لاته",
-    "IceAmerican": "آیس آمریکانو",
-    "IcedCaramelMacchiato": "آیس کارامل ماکیاتو",
-    "IceMocha": "آیس موکا",
-    "Coldbrew": "کلدبرو",
+    "FiletMignon": "فیله مینیون",
+    "LemChops": "لم چاپس",
+    "EpicorBerger": "اپیکور برگر",
+    "ChickenSteak": "استیک مرغ",
+    "EpicorSteak": "استیک گوشت اپیکور",
+
+    // AccompanyingFood 
     "AccompanyingFood": "همراه های کنار غذا",
     "AccompanyingFoodEn": "Accompanying food",
     "Classic-lemonBeer": "آبجو کلاسیک/لیمویی",
     "SodaWithlemon": "سودا با لیمو",
     "Coca-Sprite-Zero-Fanta": "کوکا/اسپرایت/زیرو/فانتا",
     "mineralWater": "آب معدنی",
-    "Dough": "Dough",
+    "Dough": "دوغ",
+
+    // Sauces 
     "Sauces": "سس های انتخابی شما",
     "SaucesEn": "Sauces",
     "MushroomSauce": "سس قارچ",
@@ -1353,6 +1388,8 @@ var menuFa ={
     "CaesarDressing": "سس سزار",
     "sourSauce": "سس ترش",
     "ChiliThaiSauce": "سس چی لی تای",
+
+    // pizza 
     "pizza": "پیتزا",
     "pizzaEn": "pizza",
     "EpicureanPizza": "پیتزا مخصوص اپیکور",
@@ -1363,6 +1400,8 @@ var menuFa ={
     "PepperoniPizza": "پیتزا پپرونی",
     "ChickenAndMeatPizza": "پیتزا مرغ و گوشت",
     "garlicBread": "نان سیر",
+
+    // persianCuisine 
     "persianCuisine": "غذاهای ایرانی",
     "persianCuisineEn": "persian cuisine",
     "bonelessChicken": "جوجه بی استخوان",
@@ -1393,6 +1432,7 @@ var menuFa ={
 
 var menuEn ={
   
+    // breakfast 
     "breakfast": "breakfast",
     "breakfastEn": "breakfast",
     "PersianBreakfast": "Persian Breakfast",
@@ -1407,6 +1447,8 @@ var menuEn ={
     "MacBread-scrambledEggs-bacon-slicedCheese-lettuce-tomato": "Mac Bread , scrambled Eggs , bacon , sliced Cheese , lettuce , tomato",
     "beanFeed": "beanFeed",
     "friedEgg": "fried Egg",
+
+    // MinaBar 
     "MinaBar": "Mina Bar",
     "MinaBarEn": "Mina Bar",
     "Espresso": "Espresso",
@@ -1417,6 +1459,8 @@ var menuEn ={
     "Cappuccino": "Cappuccino",
     "DoubleLatte": "Double Latte",
     "SheikhCoffee": "Sheikh Coffee",
+
+    // Espresso bar 
     "EspressoBar": "Espresso Bar",
     "EspressoBarEn": "Espresso Bar",
     "SingleEspresso": "Single Espresso",
@@ -1426,6 +1470,8 @@ var menuEn ={
     "Americans": "Americans",
     "latte": "latte",
     "Affogato": "Affogato",
+
+    // ice coffee 
     "IceCoffee": "IceCoffee",
     "IceCoffeeEn": "IceCoffeeEn",
     "IcedLatte": "Iced Latte",
@@ -1433,6 +1479,8 @@ var menuEn ={
     "IcedCaramelMacchiato": "Iced Caramel Macchiato",
     "IceMocha": "Ice Mocha",
     "Coldbrew": "Coldbrew",
+
+    // coffee bar 
     "CofeeBar": "CofeeBar",
     "CofeeBarEn": "Cofee bar",
     "SingleSiphon": "Single siphon",
@@ -1443,6 +1491,8 @@ var menuEn ={
     "AThree-personCamp": "A three-person camp",
     "Turkish": "Turkish",
     "FrenchPressWithMilk": "French Press With Milk",
+
+    // hot Drinks
     "HotDrinks": "Hot Drinks",
     "HotDrinksEn": "Hot Drinks",
     "SingleIranianBlackTea": "Single Iranian BlackTea",
@@ -1458,10 +1508,14 @@ var menuEn ={
     "WhiteChocolateWithPeanutButter": "WhiteChocolateWithPeanutButter",
     "teaLatte": "tea Latte",
     "SingleMoroccanTea": "Single Moroccan Tea",
+
+    // drink your choice 
     "theDrinkOfYourChoice": "theDrinkOfYourChoice",
     "theDrinkOfYourChoiceEn": "the Drink Of Your Choice",
     "peaceOfMind": "peace Of Mind",
     "Lemon-Ginger-Honey": "Lemon , Ginger , Honey",
+
+    // NaturalJuice 
     "NaturalJuice": "Natural juice, mocktail, smoothie",
     "NaturalJuiceEn": "Natural Juice",
     "NaturalJuice": "NaturalJuice",
@@ -1484,12 +1538,16 @@ var menuEn ={
     "Blucarasao-MintFlavoring-AloeVeraJuice-AppleJuice": "Blucarasao / Mint Flavoring / Aloe Vera Juice / Apple Juice",
     "Frappuccino": "Frappuccino",
     "Espresso-VanillaIceCream-VanillaFlavor-CoconutFlavor": " Espresso / VanillaIceCream / VanillaFlavor / CoconutFlavor ",
+
+    // smoothies 
     "SmoothieBulls": "SmoothieBulls",
     "SmoothieBullsEn": "SmoothieBulls",
     "CrazyChocolate": "Crazy Chocolate",
     "ExcitingCombinationsOfChocolateGelato-PeanutButter-BananaWithChocolateTopping-Cornflakes": " Exciting Combinations Of Chocolate Gelato , Peanut Butter , Banana With Chocolate Topping , Corn flakes",
     "wildBerry": "wild Berry",
     "ACombinationOfStrawberries-CranberrySyrup-AndChocolateGelato": "A Combination Of Strawberries , Cranberry Syrup , And Chocolate Gelato",
+
+    // Milkshake 
     "Milkshake": "Milkshake",
     "MilkshakeEn": "Milkshake",
     "Chocolate": "Chocolate",
@@ -1502,6 +1560,8 @@ var menuEn ={
     "peanut": "peanut",
     "ChocolateBrownieFreakShake": "Chocolate Brownie Freak Shake",
     "ChicLotus": "Chic Lotus",
+
+    // cakes 
     "CakesAndSweets": "Cakes And Sweets ",
     "CakesAndSweetsEn": "Cakes and sweets",
     "NewYorkCheesecake": "New York cheesecake",
@@ -1518,6 +1578,8 @@ var menuEn ={
     "ClassicCroissant": "Classic Croissant",
     "CroissantsWithNutellaAndStrawberries": "Croissants With Nutella And Strawberries",
     "BrownieWithVanillaGelato": "Brownie With Vanilla Gelato",
+
+    // Appetizars 
     "Appetizars": "Appetizars",
     "AppetizarsEn": "Appetizars",
     "CaesarSalad": "Caesar Salad",
@@ -1534,6 +1596,8 @@ var menuEn ={
     "Olive": "Olive",
     "YogurtAndCucumber": "Yogurt And Cucumber",
     "Yogurt-Cucumber-Mint-Walnut": "Yogurt/cucumber/mint/walnut",
+
+    // Fries
     "Fries": "Fries",
     "FriesEn": "Fries",
     "FrenchFries": "French Fries",
@@ -1542,6 +1606,8 @@ var menuEn ={
     "SlicedPotatoes-PizzaCheese": "Sliced Potatoes , Pizza Cheese",
     "FryingPlate": "Frying Plate",
     "TwoFillets-2Wings-2Shoulders-Mushrooms-FrenchFriedVegetables-4TypesOfSauces": "Two fillets/2 wings/2 shoulders/mushrooms/French fried vegetables/4 types of sauces",
+    
+    // Sandwiches
     "Sandwiches": "Sandwiches",
     "SandwichesEn": "Sandwiches",
     "ChickenAndVegetablePanini": "Chicken And Vegetable Panini",
@@ -1551,17 +1617,23 @@ var menuEn ={
     "HamPanini": "Ham Panini",
     "BaconPanini": "Bacon Panini",
     "RoastBeefPanini": "Roast Beef Panini",
+
+    // Pasta
     "Pasta": "Pasta",
     "PastaEn": "Pasta",
     "AlfredoPasta": "Alfredo Pasta",
     "ArabicaPasta": "Arabica Pasta",
+
+    // Grill
     "Grill": "Grill",
     "GrillEn": "Grill",
-    "IcedLatte": "Iced Latte",
-    "IceAmerican": "Ice American",
-    "IcedCaramelMacchiato": "Iced Caramel Macchiato",
-    "IceMocha": "Ice Mocha",
-    "Coldbrew": "Coldbrew",
+    "FiletMignon": "Filet Mignon",
+    "LemChops": "Lem Chops",
+    "EpicorBerger": "Epicor Berger",
+    "ChickenSteak": "Chicken Steak",
+    "EpicorSteak": "Epicor Steak",
+
+    // AccompanyingFood
     "AccompanyingFood": "Accompanying Food",
     "AccompanyingFoodEN": "Accompanying food",
     "Classic-lemonBeer": "Classic / lemon beer",
@@ -1569,6 +1641,8 @@ var menuEn ={
     "Coca-Sprite-Zero-Fanta": "Coca/Sprite/Zero/Fanta",
     "mineralWater": "mineral Water",
     "Dough": "Dough",
+
+    // Sauces
     "Sauces": "Sauces",
     "SaucesEn": "Sauces",
     "MushroomSauce": "Mushroom Sauce",
@@ -1576,6 +1650,8 @@ var menuEn ={
     "CaesarDressing": "CaesarDressing",
     "sourSauce": "sour Sauce",
     "ChiliThaiSauce": "Chili Thai Sauce",
+
+    // pizza
     "pizza": "pizza",
     "pizzaEn": "pizza",
     "EpicureanPizza": "Epicurean Pizza",
@@ -1586,6 +1662,8 @@ var menuEn ={
     "PepperoniPizza": "Pepperoni Pizza",
     "ChickenAndMeatPizza": "Chicken And Meat Pizza",
     "garlicBread": "garlic Bread",
+
+    // persianCuisine
     "persianCuisine": "persian cuisine",
     "persianCuisineEn": "persian cuisine",
     "bonelessChicken": "boneless Chicken",
