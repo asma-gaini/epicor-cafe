@@ -527,8 +527,8 @@ a:hover {
     border-radius: 30px;
 
 }
-.modal-title{
-    margin-right: 25px;
+.modal-title {
+    text-align: center
 }
 .content_pay{
     height: 35px;
