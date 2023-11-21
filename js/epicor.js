@@ -2100,7 +2100,7 @@ function getInformationWithMap(){
                         var informationSelected = $("<div>").addClass("menu_contant_info-modal")
                         mainSelectedDiv.append(informationSelected);
     
-                        var nameSelected = $("<h4>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(menu.Information[categoryI].Info[codNumI].Title);
+                        var nameSelected = $("<h4>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(choosenFoodName);
                         informationSelected.append(nameSelected);
     
                         var priceAndButton = $("<div>").addClass("menu_contant_info_price");
@@ -2244,7 +2244,7 @@ function AddPurchaseNumBtn (codeNumber )
 	}else{
 		$("div.totalPrice").show();
 	}
-    changeLanguage();
+    // changeLanguage();
    
 }
 

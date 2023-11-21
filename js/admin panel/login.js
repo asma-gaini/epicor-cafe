@@ -79,7 +79,7 @@ var login_key= {
     formLogin.append(usernameField);
     var usernameShape = $("<span>").addClass("far").addClass("fa-user");
     usernameField.append(usernameShape);
-    var usernameInput = $("<input>").attr("type" , "text").attr("name" , "userName").attr("id" , "userName").attr("text_key" , login_key.userName).attr("placeholder" , "User name");
+    var usernameInput = $("<input>").attr("type" , "text").attr("name" , "userName").attr("id" , "userName").attr("text_key" , login_key.userName).attr("placeholder" , login_Fa.usernamePlaceHolder);
     usernameField.append(usernameInput);
 
      // create password field 
@@ -87,7 +87,7 @@ var login_key= {
     formLogin.append(passwordField);
     var passwordShape = $("<span>").addClass("fas").addClass("fa-key");
     passwordField.append(passwordShape);
-    var passwordInput = $("<input>").attr("type" , "password").attr("name" , "password").attr("id" , "pwd").attr("text_key" , login_key.pasword).attr("placeholder" , "Password");
+    var passwordInput = $("<input>").attr("type" , "password").attr("name" , "password").attr("id" , "pwd").attr("text_key" , login_key.pasword).attr("placeholder" , login_Fa.paswordPlaceHolder);
     passwordField.append(passwordInput);
 
     var remembermeField = $("<div>").attr("id" , "remember").addClass("checkbox");
@@ -127,15 +127,22 @@ var login_key= {
                 else{
                     translatedValueNav = loginFaJson[keyValue];
                 }
-
-                // if("[placeholder]"==true){
-                //     console.log("asma")
-                // }
-                // else{
                     ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
-                // }
             }
         }
+    }
+}
+
+function changeLanguagePlaceHolder(text_keyAttr ){
+    // $("input[text_key="+text_keyAttr+"]").attr("placeholder" , placeHolder_text_key);
+    // var placeHolder_text_keyValue = placeHolder_text_key
+    console.log("asma")
+    var valueLanguage = $("#languageAdmin").val();
+    if(valueLanguage == "En"){
+        $("input[text_key="+text_keyAttr+"]").attr("placeholder" , loginEnJson[text_keyAttr]);
+    }
+    else if(valueLanguage == "Fa"){
+        $("input[text_key="+text_keyAttr+"]").attr("placeholder" , loginFaJson[text_keyAttr]);
     }
 }
 
@@ -144,6 +151,9 @@ var login_key= {
      var getLangAdmin = $("#languageAdmin").val();
      var setValueLang = window.localStorage.setItem("language" ,getLangAdmin );
      getAndSetTranslateLanguageNavAdminPanel();
+    changeLanguagePlaceHolder(login_key.userName );
+    changeLanguagePlaceHolder(login_key.pasword );
+
  }
  
  
