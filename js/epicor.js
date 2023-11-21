@@ -1720,6 +1720,7 @@ function getAndSetTranslateLanguage(){
                 var keyValue = ContainsKey[elementContainKey].attributes[SpecificَAttr].value;
                 var translatedValue;
                 if(window.localStorage.getItem("lang") == "En"){
+                    changeFontEn();
                     translatedValue = menuEnJson[keyValue];
                 }
                 else{
@@ -1737,6 +1738,9 @@ function changeLanguage()
     getAndSetTranslateLanguage();
 }
 
+function changeFontEn(){
+    $("body").css("font-family" , "Nunito");
+}
 // ********************* abouat us  *********************
 
 function openPopupAboutUs(divPopup) {

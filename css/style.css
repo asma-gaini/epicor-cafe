@@ -5,6 +5,7 @@
     font-family: iransans;
     src: url(../fonts/FontsFree-Net-ir_sans.ttf);
 }
+
 body{
     background-color:var(--body);
     font-family: 'iransans';
