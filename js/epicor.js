@@ -1733,7 +1733,8 @@ $(document).ready(function(){
 	$(".payment").html(" "+totalPrice + "/000 ");
     $(".menu_contant_info_price_btn").addClass("Direction-rtl");
 
-    getAndSetTranslateLanguage();
+    
+    changeLanguage()
     changeDirection();
     detectDvice();
 });
