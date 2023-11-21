@@ -2056,7 +2056,8 @@ function removeFromBill(key)
 }
 
 function getInformationWithMap(){
-    getAndSetTranslateLanguage();
+
+    // getAndSetTranslateLanguage();
 
     $("div.modal-body").empty();
     for (let key of map.keys()) {
@@ -2070,7 +2071,17 @@ function getInformationWithMap(){
                     if (menu.Information[categoryI].Info[codNumI].codeNumber == key) {
    
                         var imageUrlChosen = menu.Information[categoryI].Info[codNumI].ImageURL; 
-                        var nameChosen = menu.Information[categoryI].Info[codNumI].Title;
+
+
+                            var valueLanguage = $("#language").val();
+                            var nameChooseText_key =  menu.Information[categoryI].Info[codNumI].Title
+                            if(valueLanguage == "En"){
+                                var nameChosen = menuEnJson[nameChooseText_key]
+                            }
+                            else if(valueLanguage == "Fa"){
+                                var nameChosen = menuFaJson[nameChooseText_key];
+                            }
+
                         var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
                         
                         var increamentSelectedFunc = "increaseNumOfProduct('span','"+key+"')";
