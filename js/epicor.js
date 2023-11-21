@@ -1725,6 +1725,7 @@ function getAndSetTranslateLanguage(){
                 }
                 else{
                     translatedValue = menuFaJson[keyValue];
+                    changeFontFa();
                 }
                 ContainsKey[elementContainKey].innerHTML = translatedValue;
             }
@@ -1740,6 +1741,9 @@ function changeLanguage()
 
 function changeFontEn(){
     $("body").css("font-family" , "Nunito");
+}
+function changeFontFa(){
+    $("body").css("font-family" , "iransans");
 }
 // ********************* abouat us  *********************
 
