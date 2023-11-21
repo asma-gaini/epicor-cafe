@@ -2072,15 +2072,15 @@ function getInformationWithMap(){
    
                         var imageUrlChosen = menu.Information[categoryI].Info[codNumI].ImageURL; 
 
-
-                            var valueLanguage = $("#language").val();
-                            var nameChooseText_key =  menu.Information[categoryI].Info[codNumI].Title
-                            if(valueLanguage == "En"){
-                                var nameChosen = menuEnJson[nameChooseText_key]
-                            }
-                            else if(valueLanguage == "Fa"){
-                                var nameChosen = menuFaJson[nameChooseText_key];
-                            }
+                        // change languagetitle food 
+                        var valueLanguage = $("#language").val();
+                        var nameChooseText_key =  menu.Information[categoryI].Info[codNumI].Title
+                        if(valueLanguage == "En"){
+                            var choosenFoodName = menuEnJson[nameChooseText_key]
+                        }
+                        else if(valueLanguage == "Fa"){
+                            var choosenFoodName = menuFaJson[nameChooseText_key];
+                        }
 
                         var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
                         
@@ -2094,7 +2094,7 @@ function getInformationWithMap(){
                         var imageDiv = $("<div>").addClass("menu_contant_image").addClass("image_pay");
                         mainSelectedDiv.append(imageDiv);
     
-                        var imageSelected = $("<img>").attr("src", imageUrlChosen).attr("alt", nameChosen);
+                        var imageSelected = $("<img>").attr("src", imageUrlChosen).attr("alt", choosenFoodName);
                         imageDiv.append(imageSelected);
     
                         var informationSelected = $("<div>").addClass("menu_contant_info-modal")
