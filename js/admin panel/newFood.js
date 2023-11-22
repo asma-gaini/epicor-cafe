@@ -174,14 +174,15 @@ function changeDirection(){
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
         $(".chosePictureLabel_newFood").css("margin-left","-20px");
-        $(".labelStyle_newFood").css("margin-left","-30px");
-        
+        $(".labelStyle_newFood").css("margin-left","80px");
+        $(".labelStyle_newFood").css("text-align","left");
+
     }
     else{
         $("label").css("direction","rtl");
         $(".chosePictureLabel_newFood").css("margin-left","80px");
-        $(".labelStyle_newFood").css("margin-left","90px");
-        
+        $(".labelStyle_newFood").css("margin-right","80px");
+        $(".labelStyle_newFood").css("text-align","right");
     }
 }
 function sendAlert(){
