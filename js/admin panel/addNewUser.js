@@ -119,13 +119,15 @@ function changeDirection(){
     $("label").removeClass("Direction-ltr");
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-        $(".labelStyle_addUser").css("margin-left","-110px");
-        
+        // $(".labelStyle_addUser").css("margin-left","-110px");
+        $(".labelStyle_addUser").css("margin-left","80px");
+        $(".labelStyle_addUser").css("text-align","left");
     }
     else{
         $("label").css("direction","rtl");
-        $(".labelStyle_addUser").css("margin-left","120px");
-        
+        // $(".labelStyle_addUser").css("margin-left","120px");
+        $(".labelStyle_addUser").css("margin-right","80px");
+        $(".labelStyle_addUser").css("text-align","right");
     }
 }
 
