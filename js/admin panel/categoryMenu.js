@@ -155,15 +155,13 @@ function changeDirection(){
    
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-       
-        $(".labelStyle_categoryMenu").css("margin-left","-30px");
-        
+        $(".labelStyle_categoryMenu").css("margin-left","80px");
+        $(".labelStyle_categoryMenu").css("text-align","left");
     }
     else{
         $("label").css("direction","rtl");
-       
-        $(".labelStyle_categoryMenu").css("margin-left","90px");
-        
+        $(".labelStyle_categoryMenu").css("margin-right","80px");
+        $(".labelStyle_categoryMenu").css("text-align","right");
     }
 }
 
