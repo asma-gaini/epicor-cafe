@@ -407,8 +407,8 @@ a:hover {
 .hrLine{
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: 30px;
+    width: 99%;
+    margin: 30px 20px;
 }
 .hrLine p{
     color: var(--hrLineFont);
