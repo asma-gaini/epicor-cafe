@@ -516,6 +516,18 @@ a:hover {
 }
 
          /* ******************************* popup ******************************* */
+.glyphicon {
+    position: relative;
+    margin: 0 -5px;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 .modal{
     height: 600px;
