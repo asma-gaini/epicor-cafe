@@ -426,13 +426,22 @@ function getAndSetTranslateLanguage(text_key , jsonEn , jsonFa){
 //  translate by value language
  function changeLanguageTitle (languageValu, chooseTextKey,jsonNameFa ,jsonNameEn){
     if(languageValu == "En"){
+        changeFont("En");
        return(jsonNameEn[chooseTextKey]);
     }
     else if(languageValu == "Fa"){
+        changeFont("Fa");
         return(jsonNameFa[chooseTextKey]);
     }
 }
-
+function changeFont(language){
+    if (language=="En"){
+        $("body").css("font-family" , "Nunito");
+    }
+    else if(language=="Fa"){
+        $("body").css("font-family" , "iransans");
+    }
+}
 
 // ********************* main function ffor change language on html onchange *********************
  function changeLanguage()

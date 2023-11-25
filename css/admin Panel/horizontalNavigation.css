@@ -1,3 +1,8 @@
+@font-face {
+  font-family: iransans;
+  src: url(../../fonts/FontsFree-Net-ir_sans.ttf);
+}
+
 .headerHorizontalNavigation {
   overflow: hidden;
   background-color: #111;
@@ -11,7 +16,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none !important;
-  font-size: 17px;
+  font-size: 14px;
   margin: 5px;
 }
 /* #04AA6D */
@@ -63,6 +68,7 @@
   text-decoration: none;
   display: block;
   text-align: left;
+  font-size: 12px;
 }
 
 .headerHorizontalNavigation a:hover, .dropdownHorizontalNavigation:hover .dropbtn {
