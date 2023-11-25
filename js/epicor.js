@@ -1815,7 +1815,7 @@ function getAndSetTranslateLanguage(){
 function changeLanguage()
 {
     var getLang = $("#language").val();
-    var setValueLang = window.localStorage.setItem("lang" ,getLang );
+    window.localStorage.setItem("lang" ,getLang );
     getAndSetTranslateLanguage();
 }
 

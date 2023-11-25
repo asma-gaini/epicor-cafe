@@ -436,7 +436,7 @@ function getAndSetTranslateLanguage(text_key , jsonEn , jsonFa){
  function changeLanguage()
  {
      var getLang = $("#language").val();
-     var setValueLang = window.localStorage.setItem("lang" ,getLang );
+     window.localStorage.setItem("lang" ,getLang );
      getAndSetTranslateLanguage("text_key_horizontal_navigation" , horizontalNavEnJson , horizontalNavFaJson);
      getAndSetTranslateLanguage("text_key_vertical_navigation" , navigationBarEnJson , navigationBarFaJson);
      getAndSetTranslateLanguage("text_key_adduser" , addUserEnJson , addUserFaJson);
