@@ -134,8 +134,7 @@ var login_key= {
 }
 
 function changeLanguagePlaceHolder(text_keyAttr ){
-    // $("input[text_key="+text_keyAttr+"]").attr("placeholder" , placeHolder_text_key);
-    // var placeHolder_text_keyValue = placeHolder_text_key
+
     console.log("asma")
     var valueLanguage = $("#languageAdmin").val();
     if(valueLanguage == "En"){
@@ -149,7 +148,7 @@ function changeLanguagePlaceHolder(text_keyAttr ){
  function changeLanguageNavAdminPanel()
  {
      var getLangAdmin = $("#languageAdmin").val();
-     var setValueLang = window.localStorage.setItem("language" ,getLangAdmin );
+     window.localStorage.setItem("language" ,getLangAdmin );
      getAndSetTranslateLanguageNavAdminPanel();
     changeLanguagePlaceHolder(login_key.userName );
     changeLanguagePlaceHolder(login_key.pasword );
