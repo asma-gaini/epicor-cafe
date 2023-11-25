@@ -134,8 +134,6 @@ var login_key= {
 }
 
 function changeLanguagePlaceHolder(text_keyAttr ){
-
-    console.log("asma")
     var valueLanguage = $("#languageAdmin").val();
     if(valueLanguage == "En"){
         $("input[text_key="+text_keyAttr+"]").attr("placeholder" , loginEnJson[text_keyAttr]);
