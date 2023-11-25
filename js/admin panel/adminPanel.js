@@ -414,22 +414,24 @@ function getAndSetTranslateLanguage(text_key , jsonEn , jsonFa){
             if (ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].name == ""+text_key+"") {
 
                 var keyValue = ContainsKeyName[elementContainKeyName].attributes[SpecificَAttrName].value;
-                var translatedValueNav;
-                if(window.localStorage.getItem("lang") == "En"){
-                    translatedValueNav = jsonEn[keyValue];
 
-                }
-                else{
-                    translatedValueNav = jsonFa[keyValue];
-                }
- 
+                var languageValu = window.localStorage.getItem("lang");
+                var translatedValueNav = changeLanguageTitle (languageValu, keyValue,jsonFa ,jsonEn)
                  ContainsKeyName[elementContainKeyName].innerHTML = translatedValueNav;
             }
         }
     }
  }
 
-
+//  translate by value language
+ function changeLanguageTitle (languageValu, chooseTextKey,jsonNameFa ,jsonNameEn){
+    if(languageValu == "En"){
+       return(jsonNameEn[chooseTextKey]);
+    }
+    else if(languageValu == "Fa"){
+        return(jsonNameFa[chooseTextKey]);
+    }
+}
 
 
 // ********************* main function ffor change language on html onchange *********************
