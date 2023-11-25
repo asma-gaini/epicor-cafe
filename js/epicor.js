@@ -1800,12 +1800,12 @@ function getAndSetTranslateLanguage(){
                 var keyValue = ContainsKey[elementContainKey].attributes[SpecificَAttr].value;
                 var translatedValue;
                 if(window.localStorage.getItem("lang") == "En"){
-                    changeFontEn();
+                    changeFont("En");
                     translatedValue = menuEnJson[keyValue];
                 }
-                else{
+                else if(window.localStorage.getItem("lang") == "Fa"){
+                    changeFont("Fa");
                     translatedValue = menuFaJson[keyValue];
-                    changeFontFa();
                 }
                 ContainsKey[elementContainKey].innerHTML = translatedValue;
             }
@@ -1819,11 +1819,13 @@ function changeLanguage()
     getAndSetTranslateLanguage();
 }
 
-function changeFontEn(){
-    $("body").css("font-family" , "Nunito");
-}
-function changeFontFa(){
-    $("body").css("font-family" , "iransans");
+function changeFont(language){
+    if (language=="En"){
+        $("body").css("font-family" , "Nunito");
+    }
+    else if(language=="Fa"){
+        $("body").css("font-family" , "iransans");
+    }
 }
 // ********************* abouat us  *********************
 
