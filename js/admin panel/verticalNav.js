@@ -2,7 +2,7 @@ var navigationBar_key= {
     "headerNav":
         {
             "berandName": "nameCoffe_verticalNavigation",
-            "logoImg": "../../img/admin panel/logo/logo.jpg",
+            "logoImg": "../../img/general image/logo.jpg",
         },
     "Information":
     [

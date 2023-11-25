@@ -4,7 +4,7 @@ var horizontalNav_key= {
     "InformationBrand":
         {
             "berandName": "nameCoffe_horizontalNavigation",
-            "logoImg": "../../img/admin panel/logo/logo.jpg",
+            "logoImg": "../../img/general image/logo.jpg",
         },
         "InformationLink":
         [
@@ -85,7 +85,7 @@ var navigationBar_key= {
     "headerNav":
         {
             "berandName": "nameCoffe_verticalNavigation",
-            "logoImg": "../../img/admin panel/logo/logo.jpg",
+            "logoImg": "../../img/general image/logo.jpg",
         },
     "Information":
     [
