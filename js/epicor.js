@@ -2156,13 +2156,10 @@ function getInformationWithMap(){
 
                         // change languagetitle food 
                         var valueLanguage = $("#language").val();
-                        var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title
-                        if(valueLanguage == "En"){
-                            var choosenFoodName = menuEnJson[nameChooseTextKey]
-                        }
-                        else if(valueLanguage == "Fa"){
-                            var choosenFoodName = menuFaJson[nameChooseTextKey];
-                        }
+                        console.log(valueLanguage);
+                        var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title;
+                        console.log(nameChooseTextKey);
+                        var choosenFoodName = changeLanguageTitle (valueLanguage, nameChooseTextKey,menuFaJson , menuEnJson);
 
                         var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
                         
@@ -2239,7 +2236,14 @@ function getInformationWithMap(){
     }
 }
 
-
+function changeLanguageTitle (languageValu, chooseTextKey,jsonNameFa ,jsonNameEn){
+    if(languageValu == "En"){
+       return(jsonNameEn[chooseTextKey]);
+    }
+    else if(languageValu == "Fa"){
+        return(jsonNameFa[chooseTextKey]);
+    }
+}
 /////////scroll new/////////
 const slider = document.querySelector('.items');
 let isDown = false;
