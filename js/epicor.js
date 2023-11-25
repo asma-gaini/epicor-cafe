@@ -2156,12 +2156,12 @@ function getInformationWithMap(){
 
                         // change languagetitle food 
                         var valueLanguage = $("#language").val();
-                        var nameChooseText_key =  menu.Information[categoryI].Info[codNumI].Title
+                        var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title
                         if(valueLanguage == "En"){
-                            var choosenFoodName = menuEnJson[nameChooseText_key]
+                            var choosenFoodName = menuEnJson[nameChooseTextKey]
                         }
                         else if(valueLanguage == "Fa"){
-                            var choosenFoodName = menuFaJson[nameChooseText_key];
+                            var choosenFoodName = menuFaJson[nameChooseTextKey];
                         }
 
                         var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
