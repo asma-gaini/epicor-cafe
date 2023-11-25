@@ -2156,9 +2156,7 @@ function getInformationWithMap(){
 
                         // change languagetitle food 
                         var valueLanguage = $("#language").val();
-                        console.log(valueLanguage);
                         var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title;
-                        console.log(nameChooseTextKey);
                         var choosenFoodName = changeLanguageTitle (valueLanguage, nameChooseTextKey,menuFaJson , menuEnJson);
 
                         var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
