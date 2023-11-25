@@ -15,6 +15,18 @@ var horizontalNav_key= {
                 "dropdownLink":null
             },
             {
+              "linkName":"news_horizontalNavigation",
+              "icon":null,
+              "notificationCounter":null,
+              "dropdownLink":null
+            },
+            {
+              "linkName":"contact_horizontalNavigation",
+              "icon":null,
+              "notificationCounter":null,
+              "dropdownLink":null
+            },
+            {
                 "linkName":null,
                 "icon":"&#xf0a2;",
                 "notificationCounter":"3",
@@ -29,34 +41,38 @@ var horizontalNav_key= {
                         "linkName":"StatementOfExpenses"
                     }
                 ]
+            },
+            {
+                "linkName":"username_horizontalNavigation",
+                "icon":"&#xf2be;",
+                "notificationCounter":null,
+                "dropdownLink":null
             }
             
-
-        ],
-        "InformationUsers":
-            {
-                "userName":"username_horizontalNavigation",
-                "icon":"&#xf2be;"
-            }
- }
- 
- var horizontalNav_Fa={
+        ]
+  }
+  
+  var horizontalNav_Fa={
      "nameCoffe_horizontalNavigation": " کافه اپیکور",
      "home_horizontalNavigation": "صفحه اصلی",
+     "news_horizontalNavigation":"اخبار",
+     "contact_horizontalNavigation":"مخاطب",
      "checkInbox": "چک کردن پیام های ورودی",
      "PaymenOfSalary":"پرداخت حقوق",
      "StatementOfExpenses" : "بیانیه هزینه ها",
      "username_horizontalNavigation": "نام کاربری",
- }
- 
- var horizontalNav_En={
+  }
+  
+  var horizontalNav_En={
      "nameCoffe_horizontalNavigation": "Epicor Cafe",
      "home_horizontalNavigation": "Home",
+     "news_horizontalNavigation":"News",
+     "contact_horizontalNavigation":"Contact",
      "checkInbox": "check inbox",
      "PaymenOfSalary": "Payment of salary",
      "StatementOfExpenses":"Statement of expenses",
      "username_horizontalNavigation": "User name",
- }
+  }
 
  var horizontalNavFaJsonString = JSON.stringify(horizontalNav_Fa);
  var horizontalNavFaJson = JSON.parse(horizontalNavFaJsonString);
