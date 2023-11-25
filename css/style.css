@@ -439,9 +439,8 @@ a:hover {
     height: 100%;
 }
 .posPopular{
-    position: absolute;
-    /* left: 15px; */
-    top: 15px;
+    position: absolute !important;
+    top: 15px !important;
     font-size: 20px;
 }
 .menu_contant_info h4{
