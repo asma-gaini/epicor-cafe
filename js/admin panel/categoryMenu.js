@@ -129,7 +129,7 @@ function createChoosePictureButton(mainForm , labelValuePicture , inlineAttribut
         var label = $("<label>").attr("for" , inlineAttributePicture).attr("text_key_category_menu" , labelValuePicture).html(labelValuePicture);
         divContainLabel.append(label);
         var nextLine = $("<br>");
-        divContainLabel.append(nextLine);
+        // divContainLabel.append(nextLine);
 
         var divContainInput = $("<div>").addClass("chosePictureInput_categoryMenu");
         rowOfForm.append(divContainInput);
@@ -137,8 +137,11 @@ function createChoosePictureButton(mainForm , labelValuePicture , inlineAttribut
         .css("visibility" , "hidden").attr("name" , inlineAttributePicture);
         divContainInput.append(input)
         divContainInput.append(nextLine);
-        var displayChooseFile = $("<p>").addClass("picture").html("no choose picture");
-        divContainLabel.append(displayChooseFile);
+        var divImageName = $("<div>");
+        divContainLabel.append(divImageName);
+
+        var displayChooseFile = $("<p>").addClass("picture");
+        divImageName.append(displayChooseFile);
         
         $("#"+inlineAttributePicture+"").change(function() {
             filename = this.files[0].name;

@@ -31,19 +31,15 @@ label {
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 700;
+    width: fit-content;
 }
 .chosePictureLabel_categoryMenu{
     /* margin-left: -20px; */
-    background-image: linear-gradient(
-        to right,
-        #bab9b8,
-        #535050,
-        #319197 100%,
-        #319197 200%
-      );
+ 
+    background-color: #e2e2e2;
     color: white;
     border-radius: 10px;
-    width: 180px;
+    width: 90px;
     margin: auto;
 }
 .chosePictureInput_categoryMenu{
@@ -112,3 +108,17 @@ input::file-selector-button {
     background-position-x: 80%;
     /* transform: scale(1.1); */
   }
+  .picture{
+    background-color: #e2e2e2;
+    width: fit-content;
+  }
+  .chosePictureLabel_categoryMenu:hover{
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #319197 100%,
+        #319197 200%
+      );
+  }
+ 
