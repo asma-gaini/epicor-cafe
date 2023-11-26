@@ -2493,8 +2493,10 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     changeDirection();
 }
 
-
-
+function show_Hide(){
+    $(".receipt").css("display","none");
+    $(".modal-content").css("display","block");
+}
 
 
 
