@@ -2407,6 +2407,7 @@ function AddPurchaseNumBtn (codeNumber )
 	var numberOfPurchase = $("span."+purchaseSpanClass+"[codeNumber='"+codeNumber+"']").html();
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
+    displayReceipt();
     $(".Purchase-count").addClass("Direction-rtl");
     changeDirection();
     IncrementPrice(codeNumber);
@@ -2460,6 +2461,7 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
+    displayReceipt();
         
 	IncrementPrice(codeNumber);
     changeDirection();
@@ -2474,6 +2476,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     removeFromBill(codeNumber);
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap(map);
+    displayReceipt();
 	
 	if(numberOfPurchase < 1)
 	{
@@ -2496,6 +2499,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
 
 
 function displayReceipt(){
+    $("#receipt").empty();
     $(".modal-content").css("display","none");
     createReceiptTemplate();
     setPersianDate();
