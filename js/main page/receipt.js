@@ -9,32 +9,32 @@ var receipt_key= {
         },
 
         "InformationReceipt":
-        [
             {
                 "receiptNumber":"receiptNumber",
                 "resiptDate":"resiptDate",
                 "receiptTime":"receiptTime"
-            }
-        ],
+            },
 
         "InformationCustomer":
-        [
             {
-              "headerCustomerText":"receiptHeaderCustomer"
-            },
-            {
+              "headerCustomerText":"receiptHeaderCustomer",
               "receiptCustomerName":"receiptCustomerName",
               "receiptCustomerPhone":"receiptCustomerPhone"
-            }
-        ],
+            },
 
         "InformationTable":
         [
             {
-                "PurchaseItems":"receiptListOfItems",
-                "numberOfProducts":"receiptQuantity",
-                "UnitPrice":"receiptUnitCost",
-                "TotalPrice":"receiptAmount"
+                "hederTable":"receiptListOfItems"
+            },
+            {
+                "hederTable":"receiptQuantity"
+            },
+            {
+                "hederTable":"receiptUnitCost"
+            },
+            {
+                "hederTable":"receiptAmount"
             }
         ]
   }
@@ -120,22 +120,22 @@ $(document).ready(function(){
   function createReceiptDetails(mainReceiptDiv){
     var receiptDetailDiv = $("<div>").addClass("receiptDetails");
     mainReceiptDiv.append(receiptDetailDiv);
-    var receiptNumber = $("<p>").addClass("numberReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptNumber).html("Receipt No: ");
+    var receiptNumber = $("<p>").addClass("numberReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptNumber).html(receipt_key.InformationReceipt.receiptNumber);
     receiptDetailDiv.append(receiptNumber);
-    var receiptDate = $("<p>").addClass("dateReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptDate).html("Date: ");
+    var receiptDate = $("<p>").addClass("dateReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.resiptDate).html(receipt_key.InformationReceipt.resiptDate);
     receiptDetailDiv.append(receiptDate);
-    var receiptTime = $("<p>").addClass("timeReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptTime).html("Time: ");
+    var receiptTime = $("<p>").addClass("timeReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptTime).html(receipt_key.InformationReceipt.receiptTime);
     receiptDetailDiv.append(receiptTime);
   }
 
   function createReceiptCustomerDetails(mainReceiptDiv){
-    var receiptHeaderCustomer = $("<h4>").addClass("headerCustomerDetails").attr("text_key_receipt",receipt_key.InformationCustomer.receiptHeaderCustomer).html("customer details:");
+    var receiptHeaderCustomer = $("<h4>").addClass("headerCustomerDetails").attr("text_key_receipt",receipt_key.InformationCustomer.headerCustomerText).html(receipt_key.InformationCustomer.headerCustomerText);
     mainReceiptDiv.append(receiptHeaderCustomer);
     var containCustomerDetail = $("<div>").addClass("receiptCustomerDetails");
     mainReceiptDiv.append(containCustomerDetail);
-    var customerName = $("<p>").addClass("customerName").attr("text_key_receipt",receipt_key.InformationCustomer.receiptCustomerName).html("name: asma gaini");
+    var customerName = $("<p>").addClass("customerName").attr("text_key_receipt",receipt_key.InformationCustomer.receiptCustomerName).html(receipt_key.InformationCustomer.receiptCustomerName);
     containCustomerDetail.append(customerName);
-    var customerPhone = $("<p>").addClass("customerPhone").attr("text_key_receipt",receipt_key.InformationCustomer.receiptCustomerPhone).html("phone: 09333404259");
+    var customerPhone = $("<p>").addClass("customerPhone").attr("text_key_receipt",receipt_key.InformationCustomer.receiptCustomerPhone).html(receipt_key.InformationCustomer.receiptCustomerPhone);
     containCustomerDetail.append(customerPhone);
   }
 
@@ -146,6 +146,12 @@ $(document).ready(function(){
     receiptTableDiv.append(divContainTable);
     var table = $("<table>");
     divContainTable.append(table);
+    var headerTable = $("<tr>");
+    table.append(headerTable);
+    for (let i = 0; i < receipt_key.InformationTable.length; i++) {
+        var headerTableItem = $("<th>").attr("text_key_receipt",receipt_key.InformationTable[i]).html(receipt_key.InformationTable[i].hederTable);
+        headerTable.append(headerTableItem);
+    }
     
   }
 
