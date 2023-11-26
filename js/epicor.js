@@ -1905,6 +1905,7 @@ function changeLanguage()
     window.localStorage.setItem("lang" ,getLang );
     getAndSetTranslateLanguage("text_key",menuFaJson,menuEnJson);
     getAndSetTranslateLanguage("text_key_receipt",receiptFaJson,receiptEnJson);
+    setDateAndTimeInnerHtml();
 }
 
 function changeFont(language){
@@ -2515,6 +2516,11 @@ function createReceiptTemplate(){
   
     var receipt = document.getElementById("receipt");
     receipt.append(template.content);
+
+    var getLang = $("#language").val();
+    window.localStorage.setItem("lang" ,getLang );
+    getAndSetTranslateLanguage("text_key_receipt",receiptFaJson,receiptEnJson);
+    setDateAndTimeInnerHtml();
   }
   
   function createReceipt(){
@@ -2624,4 +2630,14 @@ function createReceiptItem(table){
         
         }
     }
+}
+
+function setDateAndTimeInnerHtml(){
+    var valueLanguage = $("#language").val();
+    var dateTextKey = receipt_key.InformationReceipt.resiptDate;
+    var date = changeLanguageTitle (valueLanguage, dateTextKey,receiptFaJson , receiptEnJson);
+    var timeTextKey = receipt_key.InformationReceipt.receiptTime;
+    var time = changeLanguageTitle (valueLanguage, timeTextKey,receiptFaJson , receiptEnJson);
+    $(".dateReceipt").html(date+setPersianDate());
+    $(".timeReceipt").html(time+setTime());
 }
