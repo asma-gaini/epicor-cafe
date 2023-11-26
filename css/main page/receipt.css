@@ -1,3 +1,7 @@
+body{
+    font-family: Nunito;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -54,6 +58,20 @@ table {
 
   }
   .timeReceipt{
+
+  }
+  .receiptCustomerDetails{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+  }
+  .headerCustomerDetails{
+    text-align: center;
+  }
+  .customerName{
+
+  }
+  .customerPhone{
 
   }
   .receiptTable{

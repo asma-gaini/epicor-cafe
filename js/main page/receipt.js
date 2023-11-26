@@ -12,6 +12,5 @@ function setTime(){
 }
 
 function setPersianDate(){
-    let today = new Date().toLocaleDateString('fa-IR');
-    $(".dateReceipt").html("Date: "+today);
+    $(".dateReceipt").text("Date: "+moment().locale('fa').format('YYYY/M/D'));
 }
