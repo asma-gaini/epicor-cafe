@@ -90,8 +90,8 @@ $(document).ready(function(){
   
     $("template").html(createReceipt())
   
-    var HorizontalNavigation = document.getElementById("receipt");
-    HorizontalNavigation.append(template.content);
+    var receipt = document.getElementById("receipt");
+    receipt.append(template.content);
   }
   
   function createReceipt(){
@@ -122,9 +122,9 @@ $(document).ready(function(){
     mainReceiptDiv.append(receiptDetailDiv);
     var receiptNumber = $("<p>").addClass("numberReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptNumber).html(receipt_key.InformationReceipt.receiptNumber);
     receiptDetailDiv.append(receiptNumber);
-    var receiptDate = $("<p>").addClass("dateReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.resiptDate).html(receipt_key.InformationReceipt.resiptDate);
+    var receiptDate = $("<p>").addClass("dateReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.resiptDate).html(receipt_key.InformationReceipt.resiptDate+setPersianDate());
     receiptDetailDiv.append(receiptDate);
-    var receiptTime = $("<p>").addClass("timeReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptTime).html(receipt_key.InformationReceipt.receiptTime);
+    var receiptTime = $("<p>").addClass("timeReceipt").attr("text_key_receipt",receipt_key.InformationReceipt.receiptTime).html(receipt_key.InformationReceipt.receiptTime+setTime());
     receiptDetailDiv.append(receiptTime);
   }
 
