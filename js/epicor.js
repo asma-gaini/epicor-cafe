@@ -2569,6 +2569,7 @@ function createReceiptTemplate(){
         var headerTableItem = $("<th>").attr("text_key_receipt",receipt_key.InformationTable[i].hederTable).html(receipt_key.InformationTable[i].hederTable);
         headerTable.append(headerTableItem);
     }
+    createReceiptItem(table)
     
   }
 
@@ -2580,4 +2581,41 @@ function setTime(){
 
 function setPersianDate(){
     $(".dateReceipt").text("Date: "+moment().locale('fa').format('YYYY/M/D'));
+}
+
+function createReceiptItem(table){
+    for (let key of map.keys())
+    {
+        for (let categoryI = 0; categoryI < menu.Information.length; categoryI++) {
+            for (let codNumI = 0; codNumI < menu.Information[categoryI].Info.length; codNumI++) {
+
+                if (menu.Information[categoryI].Info[codNumI].codeNumber == key) {
+
+                    var rowTable = $("<tr>")
+                    table.append(rowTable)
+                    // change languagetitle food 
+                    var valueLanguage = $("#language").val();
+                    var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title;
+                    var choosenFoodName = changeLanguageTitle (valueLanguage, nameChooseTextKey,menuFaJson , menuEnJson);
+
+                    var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
+
+                    var nameSelected = $("<th>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(choosenFoodName);
+                    rowTable.append(nameSelected);
+                    var counterSelected = $("<th>").html(map.get(key));
+                    rowTable.append(counterSelected);
+                    var priceSelected = $("<th>").html(priceChosen + ".000");
+                    var count = map.get(key);
+                    rowTable.append(priceSelected);
+                    var total = priceChosen * count;
+                    var totalPrice = $("<th>").html(total+ ".000");
+                    rowTable.append(totalPrice);
+
+                    continue;
+                }
+
+            }
+        
+        }
+    }
 }
