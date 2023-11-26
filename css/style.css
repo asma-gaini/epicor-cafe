@@ -738,6 +738,96 @@ a:hover {
     background: radial-gradient(circle, rgb(182 181 178) 0%, rgb(68 63 56) 100%) !important;
 }
 
+
+
+
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  th {
+    text-align: center;
+    background-color: #d6b642;
+    color: white;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  .receipt{
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: antiquewhite;
+  }
+  .receiptHeader{
+
+  }
+  .brandNameReceipt{
+    font-weight: 800;
+  }
+  .receipLogo{
+    border-radius: 20px;
+    width: 90px;
+  }
+  .addressReceipt{
+    padding: 5px;
+    padding-top: 10px;
+  }
+  .telephoneReceipt{
+
+  }
+  .receiptDetails{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px
+  }
+  .numberReceipt{
+
+  }
+  .dateReceipt{
+
+  }
+  .timeReceipt{
+
+  }
+  .receiptCustomerDetails{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+  }
+  .headerCustomerDetails{
+    text-align: center;
+  }
+  .customerName{
+
+  }
+  .customerPhone{
+
+  }
+  .receiptTable{
+    margin: 50px;
+    margin-bottom: 80px;
+  }
+
+
+
+
+
+
          /* ******************************* media ******************************* */
   
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
