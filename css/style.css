@@ -760,6 +760,7 @@ table {
     text-align: center;
     background-color: #d6b642;
     color: white;
+    font-size: 11px;
   }
   
   tr:nth-child(even){background-color: #f2f2f2}
@@ -774,10 +775,11 @@ table {
     background-color: antiquewhite;
   }
   .receiptHeader{
-
+    margin: 50px;
   }
   .brandNameReceipt{
     font-weight: 800;
+    margin-bottom: 10px;
   }
   .receipLogo{
     border-radius: 20px;
@@ -786,14 +788,16 @@ table {
   .addressReceipt{
     padding: 5px;
     padding-top: 10px;
+    font-size: 10px;
   }
   .telephoneReceipt{
-
+    font-size: 10px;
   }
   .receiptDetails{
     display: flex;
     justify-content: space-between;
-    margin: 50px
+    margin: 50px;
+    font-size: 12px;
   }
   .numberReceipt{
 
@@ -808,9 +812,11 @@ table {
     display: flex;
     justify-content: space-between;
     margin: 0px 50px;
+    font-size: 12px;
   }
   .headerCustomerDetails{
     text-align: center;
+    font-size: 14px;
   }
   .customerName{
 
