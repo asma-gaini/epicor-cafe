@@ -828,7 +828,11 @@ table {
     margin: 50px;
     margin-bottom: 80px;
   }
-
+.receiptCloser{
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
 
 
 

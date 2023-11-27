@@ -2524,6 +2524,8 @@ function createReceiptTemplate(){
   
   function createReceipt(){
     var receiptId = $("#receipt");
+    var closer = $("<button>").attr("type","button").addClass("close").addClass("receiptCloser").attr("data-dismiss","modal").html("&times;");
+    receiptId.append(closer);
     var mainReceiptDiv = $("<div>").addClass("receipt");
     receiptId.append(mainReceiptDiv);
     createReceiptHeader(mainReceiptDiv);
