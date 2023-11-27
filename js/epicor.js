@@ -2463,6 +2463,7 @@ function increaseNumOfProduct(purchaseSpanClass ,codeNumber )
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap();
     displayReceipt();
+    show_Hide();
         
 	IncrementPrice(codeNumber);
     changeDirection();
@@ -2478,6 +2479,7 @@ function decreaseNumOfProduct(purchaseSpanClass ,codeNumber)
     setPurchaseMap(codeNumber , numberOfPurchase);
     getInformationWithMap(map);
     displayReceipt();
+    show_Hide();
 	
 	if(numberOfPurchase < 1)
 	{
@@ -2597,37 +2599,43 @@ function setPersianDate(){
 function createReceiptItem(table){
     for (let key of map.keys())
     {
-        for (let categoryI = 0; categoryI < menu.Information.length; categoryI++) {
-            for (let codNumI = 0; codNumI < menu.Information[categoryI].Info.length; codNumI++) {
-
-                if (menu.Information[categoryI].Info[codNumI].codeNumber == key) {
-
-                    var rowTable = $("<tr>")
-                    table.append(rowTable)
-                    // change languagetitle food 
-                    var valueLanguage = $("#language").val();
-                    var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title;
-                    var choosenFoodName = changeLanguageTitle (valueLanguage, nameChooseTextKey,menuFaJson , menuEnJson);
-
-                    var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
-
-                    var nameSelected = $("<th>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(choosenFoodName);
-                    rowTable.append(nameSelected);
-                    var counterSelected = $("<th>").html(map.get(key));
-                    rowTable.append(counterSelected);
-                    var priceSelected = $("<th>").html(priceChosen + ".000");
-                    var count = map.get(key);
-                    rowTable.append(priceSelected);
-                    var total = priceChosen * count;
-                    var totalPrice = $("<th>").html(total+ ".000");
-                    rowTable.append(totalPrice);
-
-                    continue;
-                }
-
-            }
-        
+        if(map.get(key)== 0 ){
+            // $("th[text_key = "+menu.Information[categoryI].Info[codNumI].Title+"]").remove();
         }
+        else{
+            for (let categoryI = 0; categoryI < menu.Information.length; categoryI++) {
+                for (let codNumI = 0; codNumI < menu.Information[categoryI].Info.length; codNumI++) {
+    
+                    if (menu.Information[categoryI].Info[codNumI].codeNumber == key) {
+    
+                        var rowTable = $("<tr>")
+                        table.append(rowTable)
+                        // change languagetitle food 
+                        var valueLanguage = $("#language").val();
+                        var nameChooseTextKey =  menu.Information[categoryI].Info[codNumI].Title;
+                        var choosenFoodName = changeLanguageTitle (valueLanguage, nameChooseTextKey,menuFaJson , menuEnJson);
+    
+                        var priceChosen = menu.Information[categoryI].Info[codNumI].Price;
+    
+                        var nameSelected = $("<th>").attr("text_key" , menu.Information[categoryI].Info[codNumI].Title).html(choosenFoodName);
+                        rowTable.append(nameSelected);
+                        var counterSelected = $("<th>").html(map.get(key));
+                        rowTable.append(counterSelected);
+                        var priceSelected = $("<th>").html(priceChosen + ".000");
+                        var count = map.get(key);
+                        rowTable.append(priceSelected);
+                        var total = priceChosen * count;
+                        var totalPrice = $("<th>").html(total+ ".000");
+                        rowTable.append(totalPrice);
+    
+                        continue;
+                    }
+    
+                }
+            
+            }
+        }
+       
     }
 }
 
