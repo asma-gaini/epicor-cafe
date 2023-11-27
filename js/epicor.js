@@ -2559,8 +2559,6 @@ function createReceiptTemplate(){
   }
 
   function createReceiptCustomerDetails(mainReceiptDiv){
-    var receiptHeaderCustomer = $("<h4>").addClass("headerCustomerDetails").attr("text_key_receipt",receipt_key.InformationCustomer.headerCustomerText).html(receipt_key.InformationCustomer.headerCustomerText);
-    mainReceiptDiv.append(receiptHeaderCustomer);
     var containCustomerDetail = $("<div>").addClass("receiptCustomerDetails");
     mainReceiptDiv.append(containCustomerDetail);
     var customerName = $("<p>").addClass("customerName").attr("text_key_receipt",receipt_key.InformationCustomer.receiptCustomerName).html(receipt_key.InformationCustomer.receiptCustomerName);
