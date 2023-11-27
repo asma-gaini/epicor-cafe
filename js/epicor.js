@@ -2505,8 +2505,7 @@ function displayReceipt(){
     $("#receipt").empty();
     $(".modal-content").css("display","none");
     createReceiptTemplate();
-    setPersianDate();
-    setTime();
+    setDateAndTimeInnerHtml()
 }
 
 function createReceiptTemplate(){
@@ -2588,11 +2587,11 @@ function createReceiptTemplate(){
 function setTime(){
     var date = new Date();
 	var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
-    $(".timeReceipt").html("Time: "+current_time);
+    return(current_time)
 }
 
 function setPersianDate(){
-    $(".dateReceipt").text("Date: "+moment().locale('fa').format('YYYY/M/D'));
+    return(moment().locale('fa').format('YYYY/M/D'))
 }
 
 function createReceiptItem(table){
