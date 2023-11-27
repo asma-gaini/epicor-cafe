@@ -1737,6 +1737,19 @@ var receipt_key= {
             {
                 "hederTable":"receiptAmount"
             }
+        ],
+
+        "InformationPaymentTable":
+        [
+            {
+                "paymentTable":"totalAmount"
+            },
+            {
+                "paymentTable":"vat"
+            },
+            {
+                "paymentTable":"NetAmount"
+            }
         ]
   }
   
@@ -1753,7 +1766,10 @@ var receipt_key= {
      "receiptListOfItems": "اقلام سفارش",
      "receiptQuantity": "تعداد",
      "receiptUnitCost": " فی قیمت",
-     "receiptAmount": "قیمت کل"
+     "receiptAmount": "قیمت کل",
+     "totalAmount": "جمع کل",
+     "vat": "مالیات بر ارزش افزوده",
+     "NetAmount": "قابل پرداخت"
   }
   
   var receipt_En={
@@ -1770,6 +1786,9 @@ var receipt_key= {
      "receiptQuantity": "Quantity",
      "receiptUnitCost": "Unit Cost",
      "receiptAmount": "Amount",
+     "totalAmount": "total amount",
+     "vat": "vat @9%",
+     "NetAmount": "Net amount"
   }
   
   var receiptFaJsonString = JSON.stringify(receipt_Fa);
@@ -2625,8 +2644,8 @@ function createReceiptItem(table){
                         var count = map.get(key);
                         rowTable.append(priceSelected);
                         var total = priceChosen * count;
-                        var totalPrice = $("<th>").html(total+ ".000");
-                        rowTable.append(totalPrice);
+                        var totalPriceItem = $("<th>").html(total+ ".000");
+                        rowTable.append(totalPriceItem);
     
                         continue;
                     }
@@ -2637,7 +2656,33 @@ function createReceiptItem(table){
         }
        
     }
+
+    for (let j = 0; j < receipt_key.InformationPaymentTable.length; j++) {
+       
+        var paymentRow = $("<tr>");
+        table.append(paymentRow);
+        var blankItem = $("<th>");
+        paymentRow.append(blankItem);
+        var blankItem = $("<th>");
+        paymentRow.append(blankItem);
+        var paymentItemName =  $("<th>").attr("text_key_receipt" , receipt_key.InformationPaymentTable[j].paymentTable).html(receipt_key.InformationPaymentTable[j].paymentTable);
+        paymentRow.append(paymentItemName);
+        var paymentAmount =  $("<th>").attr("peyment" , receipt_key.InformationPaymentTable[j].paymentTable+"amount");
+        paymentRow.append(paymentAmount); 
+    }
+    var sumItemes = receipt_key.InformationPaymentTable[0].paymentTable;
+    var van = receipt_key.InformationPaymentTable[1].paymentTable;
+    var totalAmount = receipt_key.InformationPaymentTable[2].paymentTable;
+    var vanAmount = parseInt((totalPrice*(9/100)).toFixed(1));
+    var sumToTalAndVan = totalPrice+vanAmount;
+    setPaymentItemTable( sumItemes+"amount",totalPrice);
+    setPaymentItemTable( van+"amount",vanAmount);
+    setPaymentItemTable( totalAmount+"amount",sumToTalAndVan);
+
 }
+ function setPaymentItemTable(textKey ,amount){
+    $("th[peyment="+textKey+"").html(amount+"000");
+ }
 
 function setDateAndTimeInnerHtml(){
     var valueLanguage = $("#language").val();
