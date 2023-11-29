@@ -50,7 +50,7 @@ var newFood_Fa={
     "description": "توضیحات غذا :",
     "price_rial": "قیمت به ریال :",
     "price_dollar": "قیمت به دلار :",
-    "choosePictureNewFood": "انتخاب تصویر منو :",
+    "choosePictureNewFood": "انتخاب تصویر",
     "send": "ارسال",
     "sucsessSend":"موفق"
 }
@@ -62,7 +62,7 @@ var newFood_En={
     "description": "Description Food :",
     "price_rial": "price(rial) :",
     "price_dollar": "price(dollar) :",
-    "choosePictureNewFood": "Choose Menu Picture :",
+    "choosePictureNewFood": "Choose Picture",
     "send": "send",
     "sucsessSend":"sucsess"
 }
@@ -156,9 +156,20 @@ function createChoosePictureButton(mainForm , labelValuePicture , inlineAttribut
 
         var divContainInput = $("<div>").addClass("chosePictureInput_newFood");
         rowOfForm.append(divContainInput);
-        var input = $("<input>").attr("type" , "file").attr("id" , inlineAttributePicture).attr("name" , inlineAttributePicture);
+        var input = $("<input>").attr("type" , "file").attr("id" , inlineAttributePicture)
+        .css("visibility" , "hidden").attr("name" , inlineAttributePicture);
         divContainInput.append(input)
         divContainInput.append(nextLine);
+        var divImageName = $("<div>");
+        divContainLabel.append(divImageName);
+        var displayChooseFile = $("<p>").addClass("picture");
+        divImageName.append(displayChooseFile);
+        
+        $("#"+inlineAttributePicture+"").change(function() {
+            filename = this.files[0].name;
+            $("p.picture").html(filename);
+            console.log(filename);
+        });
 }
 
 function addDescriptionClasses(){
@@ -169,18 +180,15 @@ function changeDirection(){
     var valueLanguage = $("#language").val();
     $("label").removeClass("Direction-rtl");
     $("label").removeClass("Direction-ltr");
-    // $(".chosePictureLabel_newFood").removeClass("Direction-rtl");
-    // $(".chosePictureLabel_newFood").removeClass("Direction-ltr");
+    
     if(valueLanguage == "En"){
         $("label").css("direction","ltr");
-        $(".chosePictureLabel_newFood").css("margin-left","-20px");
         $(".labelStyle_newFood").css("margin-left","80px");
         $(".labelStyle_newFood").css("text-align","left");
 
     }
     else{
         $("label").css("direction","rtl");
-        $(".chosePictureLabel_newFood").css("margin-left","80px");
         $(".labelStyle_newFood").css("margin-right","80px");
         $(".labelStyle_newFood").css("text-align","right");
     }

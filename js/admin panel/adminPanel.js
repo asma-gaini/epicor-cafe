@@ -371,7 +371,7 @@ var newFood_Fa={
     "description": "توضیحات غذا :",
     "price_rial": "قیمت به ریال :",
     "price_dollar": "قیمت به دلار :",
-    "choosePictureNewFood": "انتخاب تصویر منو :",
+    "choosePictureNewFood": "انتخاب تصویر",
     "send": "ارسال",
     "sucsessSend":"موفق"
 }
@@ -383,7 +383,7 @@ var newFood_En={
     "description": "Description Food :",
     "price_rial": "price(rial) :",
     "price_dollar": "price(dollar) :",
-    "choosePictureNewFood": "Choose Menu Picture :",
+    "choosePictureNewFood": "Choose Picture",
     "send": "send",
     "sucsessSend":"sucsess"
 }

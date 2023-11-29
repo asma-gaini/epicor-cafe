@@ -32,9 +32,22 @@ input {
     border: none;
 }
 .chosePictureLabel_newFood{
-    margin-left: -20px;
-
+    /* margin-left: -20px; */
+    background-color: #352a2a;
+    color: white;
+    border-radius: 10px;
+    width: 90px;
+    margin: auto;
 }
+ .chosePictureLabel_newFood:hover{
+    background-image: linear-gradient(
+        to right,
+        #bab9b8,
+        #535050,
+        #319197 100%,
+        #319197 200%
+      );
+  }
 .chosePictureInput_newFood{
     padding-left: 50px;
 }
@@ -91,7 +104,10 @@ input::file-selector-button {
     background-position-x: 80%;
   }
  
-
+  .picture {
+    background-color: #e2e2e2;
+    width: fit-content;
+}
   @media only screen and (max-width: 540px) {
     .newFoodForm{
        font-size: 12px;
