@@ -453,5 +453,18 @@ function changeFont(language){
      getAndSetTranslateLanguage("text_key_adduser" , addUserEnJson , addUserFaJson);
      getAndSetTranslateLanguage("text_key_category_menu" , categoryMenuEnJson , categoryMenuFaJson);
      getAndSetTranslateLanguage("text_key_food" , newFoodEnJson , newFoodFaJson);
+     translateValue(".sendCategoryMenuForm" ,"value", categoryMenu_En , categoryMenu_Fa);
+     translateValue(".sendNewFoodForm" ,"value", newFood_En , newFood_Fa);
+
+    // translateValue()
  
  }
+ function translateValue(selector , attribiute , jsonEn , jsonFa){
+    var valueLanguage = $("#language").val();
+    if(valueLanguage == "En"){
+        $(selector).attr(attribiute , jsonEn.send);
+     }
+     else if(valueLanguage == "Fa"){
+        $(selector).attr(attribiute , jsonFa.send);
+     }
+}
