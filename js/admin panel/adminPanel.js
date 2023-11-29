@@ -298,7 +298,7 @@ var categoryMenu_key= {
 var categoryMenu_Fa={
     "PersianNameFood" : "نام فارسی منو :",
     "englishNameFood": "نام انگلیسی منو :",
-    "choosePictureCategoryMenu": "انتخاب تصویر :",
+    "choosePictureCategoryMenu": "انتخاب تصویر",
     "send": "ارسال",
     "sucsessSend":"موفق"
 }
@@ -306,7 +306,7 @@ var categoryMenu_Fa={
 var categoryMenu_En={
     "PersianNameFood": "Menu Persian Neme :",
     "englishNameFood": "Menu English Neme :",
-    "choosePictureCategoryMenu": "Choose Menu Picture :",
+    "choosePictureCategoryMenu": "Choose Picture",
     "send": "send",
     "sucsessSend":"sucsess"
 }
@@ -318,7 +318,7 @@ var categoryMenuFaJson = JSON.parse(categoryMenuFaJsonString);
 var categoryMenuEnJsonString = JSON.stringify(categoryMenu_En);
 var categoryMenuEnJson = JSON.parse(categoryMenuEnJsonString);
 
-// ********************* add category menu form json file  *********************
+// ********************* add new food form json file  *********************
 var newFood_key= {
     "Information":
     [

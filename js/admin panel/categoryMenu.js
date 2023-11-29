@@ -30,7 +30,7 @@ var categoryMenu_key= {
 var categoryMenu_Fa={
     "PersianNameFood" : "نام فارسی منو :",
     "englishNameFood": "نام انگلیسی منو :",
-    "choosePictureCategoryMenu": "انتخاب تصویر منو :",
+    "choosePictureCategoryMenu": "انتخاب تصویر",
     "send": "ارسال",
     "sucsessSend":"موفق"
 }
@@ -38,7 +38,7 @@ var categoryMenu_Fa={
 var categoryMenu_En={
     "PersianNameFood": "Menu Persian Neme :",
     "englishNameFood": "Menu English Neme :",
-    "choosePictureCategoryMenu": "Choose Menu Picture :",
+    "choosePictureCategoryMenu": "Choose Picture",
     "send": "send",
     "sucsessSend":"sucsess"
 }
